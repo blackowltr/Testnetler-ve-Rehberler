@@ -4,7 +4,7 @@
 ```
 2 CPU
 8 RAM
-50 SSD
+80 SSD
 ```
 Node kurduktan sonra sonda söyleyeceğim işlemleri yapmayı unutmayın!!
 
