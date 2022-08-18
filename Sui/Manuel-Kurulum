@@ -1,0 +1,68 @@
+# Sui-Devnet-Node-Kurulumu
+
+## Gereksinimler (minimum)
+```
+2 CPU
+8 RAM
+50 SSD
+```
+
+## Makinemizi Kuralım
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+## Ayarları yükleyelim
+
+```
+sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.23.1/yq_linux_amd64 && chmod +x /usr/local/bin/yq
+sudo apt-get install jq -y
+```
+
+## Sui Binary İndirelim
+
+```
+version=$(wget -qO- https://api.github.com/repos/SecorD0/Sui/releases/latest | jq -r ".tag_name")
+wget -qO- "https://github.com/SecorD0/Sui/releases/download/${version}/sui-linux-amd64-${version}.tar.gz" | sudo tar -C /usr/local/bin/ -xzf -
+```
+
+## Config ayarlarını indirip ve güncelleyiyoruz
+
+```
+mkdir -p $HOME/.sui
+wget -qO $HOME/.sui/fullnode.yaml https://github.com/MystenLabs/sui/raw/main/crates/sui-config/data/fullnode-template.yaml
+wget -qO $HOME/.sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
+yq -i ".db-path = \"$HOME/.sui/db\"" $HOME/.sui/fullnode.yaml
+yq -i '.metrics-address = "0.0.0.0:9184"' $HOME/.sui/fullnode.yaml
+yq -i '.json-rpc-address = "0.0.0.0:9000"' $HOME/.sui/fullnode.yaml
+yq -i ".genesis.genesis-file-location = \"$HOME/.sui/genesis.blob\"" $HOME/.sui/fullnode.yaml
+```
+
+## Sui Servisini Oluşturalım
+
+```
+sudo tee /etc/systemd/system/suid.service > /dev/null <<EOF
+[Unit]
+Description=Sui node
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which sui-node) --config-path $HOME/.sui/fullnode.yaml
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+## Sui Node'umuzu Başlatalım
+```
+sudo systemctl daemon-reload
+sudo systemctl enable suid
+sudo systemctl restart suid
+```
+
+### Herkese Kolay Gelsin.
