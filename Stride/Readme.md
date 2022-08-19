@@ -23,6 +23,12 @@
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
+### Log kontrol komutundan sonra log komutu tepki vermiyorsa şu komutu girip ardından yeniden log kontrol yapın.
+
+```
+systemctl restart systemd-journald
+```
+
 ### Sync Durumunuzu öğrenmek için;
 
 ```
