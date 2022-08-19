@@ -1,5 +1,7 @@
 # Stride Yükseltme - STRIDE-TESTNET-4
 
+> Halihazırda stride kuruluysa sunucunuzda buradaki adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
+
 ## Binary Dosyamızı İndirelim
 ```
 sudo systemctl stop strided
