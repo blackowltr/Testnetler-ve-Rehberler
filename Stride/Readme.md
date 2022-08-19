@@ -4,6 +4,8 @@
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
+> [Snapshotla kurmak için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/snapshot.md)
+
 ### Sistem Gereksinimleri 
 
 ```
