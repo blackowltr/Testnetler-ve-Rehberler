@@ -12,6 +12,8 @@ Sistem Gereksinimleri
 ```
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
+> Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
+
 
 Makinemizi kuruyoruz.
 
