@@ -12,7 +12,7 @@ bash_profile=$HOME/.bash_profile
 if [ -f "$bash_profile" ]; then
     . $HOME/.bash_profile
 fi
-sleep 1 && curl -s https://raw.githubusercontent.com/brsbrc/Sei-Atlantic-1-Rehber/main/logo.sh | bash && sleep 1
+sleep 1 && curl -s https://raw.githubusercontent.com/brsbrc/BlackOwl/main/blackowl-logo.sh | bash && sleep 1
 
 
 if [ ! $NODENAME ]; then
