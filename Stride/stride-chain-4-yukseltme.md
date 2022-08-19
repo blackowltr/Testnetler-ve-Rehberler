@@ -65,7 +65,7 @@ strided tx staking create-validator \
 
 ## Kendi Validatorumuze Delege Etme Komutu
 ```
-strided tx staking delegate stridevaloperadresimiz <AMOUNT>ustrd --from=Cüzdanismi --chain-id=STRIDE-TESTNET-4 --gas=auto
+strided tx staking delegate stridevaloperadresimiz 1000000ustrd --from=Cüzdanismi --chain-id=STRIDE-TESTNET-4 --gas=auto
 ```
 
 ### Herkese Kolay Gelsin..
