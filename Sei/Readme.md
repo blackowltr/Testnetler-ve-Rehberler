@@ -11,7 +11,7 @@ wget -q -O sei.sh https://raw.githubusercontent.com/brsbrc/Sei-Atlantic-1-Rehber
 
 ## Snapshotla hızlı kurulum için
 
-Hızlı Kurulum için [Sei-Snapshot](https://github.com/brsbrc/Sei-Atlantic-1-Rehber/blob/main/sei-snapshot.md)
+Hızlı Kurulum için [Sei-Snapshot](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Sei/snapshot.md)
 
 
 ## Cüzdan oluşturmak için şu komutu kullanalım, cüzdanismi yerine isim koyalım.
