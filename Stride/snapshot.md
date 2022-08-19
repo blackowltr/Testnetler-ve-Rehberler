@@ -28,7 +28,7 @@ sudo systemctl restart strided && journalctl -u strided -f -o cat
 
 ```
 
-## State Sync İle Başlamak İsterseniz
+## State Sync 
 
 ```
 sudo systemctl stop strided
