@@ -66,7 +66,7 @@ https://stride.explorers.guru/
 
 ## Stride Önemli Komutlar
 
-Cüzdandan cüzdana token transfer
+### Cüzdandan cüzdana token transfer
 
 ```
 strided tx bank send gönderencüzdanadresi alıcıcüzdanadresi 1000000ustrd --chain-id=STRIDE-TESTNET-4 --from cüzdanisminiz --fees=250ustrd -y
