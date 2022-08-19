@@ -107,6 +107,18 @@ Unjail komutu
 strided tx slashing unjail --from=rues --chain-id=STRIDE-TESTNET-2 --gas-prices=0.025ustrd
 ```
 
+## Node'u silmek için gerekli komut
+
+```
+sudo systemctl stop strided
+sudo systemctl disable strided
+sudo rm /etc/systemd/system/stride* -rf
+sudo rm $(which strided) -rf
+sudo rm $HOME/.stride* -rf
+sudo rm $HOME/stride -rf
+sed -i '/STRIDE_/d' ~/.bash_profile
+```
+
 # Gaia Kurulumu İçin
 
 ```
