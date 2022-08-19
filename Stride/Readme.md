@@ -11,9 +11,9 @@
 
 ### Sistem Gereksinimleri 
 
-| Node İsmi |CPU | RAM  | Disk  | 
-|-----------|----|------|----------|
-| Stride   |   4| 8GB  | 250GB    |
+|CPU | RAM  | Disk  | 
+|----|------|----------|
+|   4| 8GB  | 250GB    |
 
 ### Kuruluma başlayalım.
 
