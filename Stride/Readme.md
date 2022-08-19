@@ -17,7 +17,6 @@
 250 GB SSD
 ```
 
-
 ### Makinemizi kuruyoruz.
 
 ```
