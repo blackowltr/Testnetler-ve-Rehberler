@@ -17,16 +17,6 @@
 250 GB SSD
 ```
 
-### Makinemizi kuruyoruz.
-
-```
-apt update && apt upgrade -y 
-```
-
-```
-apt install build-essential git curl gcc make jq -y
-```
-
 ### Kuruluma başlayalım.
 
 ```
