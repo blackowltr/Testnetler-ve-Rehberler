@@ -4,7 +4,7 @@
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
-Sistem Gereksinimleri 
+### Sistem Gereksinimleri 
 
 ```
 4 CPU
@@ -12,10 +12,10 @@ Sistem Gereksinimleri
 250 GB SSD
 ```
 
-> Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
+> Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme.md) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
 
 
-Makinemizi kuruyoruz.
+### Makinemizi kuruyoruz.
 
 ```
 apt update && apt upgrade -y 
@@ -25,21 +25,21 @@ apt update && apt upgrade -y
 apt install build-essential git curl gcc make jq -y
 ```
 
-Kuruluma başlayalım.
+### Kuruluma başlayalım.
 
 ```
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
-Sync Durumunuzu öğrenmek için;
+### Sync Durumunuzu öğrenmek için;
 
 ```
 strided status 2>&1 | jq .SyncInfo
 ```
 
-Faucet için; Discorda katılmayı unutmayın. ( https://discord.gg/rDZPaqYd )
+### Faucet için; Discorda katılmayı unutmayın. ( https://discord.gg/rDZPaqYd )
 
-Validator Olmak İçin;
+### Validator Olmak İçin;
 
 ```
 strided tx staking create-validator \
@@ -54,13 +54,13 @@ strided tx staking create-validator \
   --chain-id=STRIDE-TESTNET-4 
 ```
 
-Explorer
+### Explorer
 
 ```
 https://stride.explorers.guru/
 ```
 
-Discorddan Role-Request Odasına Explorerdan validator linkinizi atıp rol almayı unutmayın.
+### Discorddan Role-Request Odasına Explorerdan validator linkinizi atıp rol almayı unutmayın.
 
 ## Stride Önemli Komutlar
 
