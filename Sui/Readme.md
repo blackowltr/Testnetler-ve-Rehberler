@@ -1,11 +1,11 @@
 # Sui-Devnet-Node-Kurulumu
 
 ## Gereksinimler (minimum)
-```
-2 CPU
-8 RAM
-80 SSD
-```
+
+|CPU | RAM  | Disk  | 
+|----|------|----------|
+|   2| 8GB  | 50GB    |
+
 Node kurduktan sonra sonda söyleyeceğim işlemleri yapmayı unutmayın!!
 
 ## Bir screen oluşturalım:
