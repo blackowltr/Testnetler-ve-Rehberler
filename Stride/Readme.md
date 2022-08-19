@@ -24,7 +24,7 @@ apt install build-essential git curl gcc make jq -y
 Kuruluma başlayalım.
 
 ```
-wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Stride-Testnet/main/stride.sh && chmod +x stride.sh && ./stride.sh
+wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
 # BLOCK=155420 Güncellemesi İçin
