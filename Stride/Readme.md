@@ -2,6 +2,7 @@
 
 <img width="431" alt="stride111" src="https://user-images.githubusercontent.com/107190154/184557695-bc92418f-1eb8-4514-ae06-d89802efda9a.png">
 
+> Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
 Sistem Gereksinimleri 
 
@@ -11,7 +12,6 @@ Sistem Gereksinimleri
 250 GB SSD
 ```
 
-> Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 > Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
 
 
