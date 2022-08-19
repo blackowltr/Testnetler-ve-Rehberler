@@ -4,7 +4,7 @@
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
-> [Snapshotla kurmak için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/snapshot.md)
+> [Snapshotla ya da state sync ile kurmak için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/snapshot.md)
 
 > Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme.md) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
 
