@@ -2,6 +2,12 @@
 
 ![seiaaa](https://user-images.githubusercontent.com/107190154/184557653-f4a3a698-020c-4197-ab14-ec30fef8d8e1.png)
 
+## Sistem Gereksinimleri (Minimum)
+
+|CPU | RAM  | Disk  | 
+|----|------|----------|
+|   4| 16GB  | 500GB    |
+
 
 ## Kurulumu başlatalım
 
