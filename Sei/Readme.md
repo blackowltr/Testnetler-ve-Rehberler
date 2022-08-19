@@ -6,7 +6,7 @@
 ## Kurulumu başlatalım
 
 ```
-wget -q -O sei.sh https://raw.githubusercontent.com/brsbrc/Sei-Atlantic-1-Rehber/main/sei.sh && chmod +x sei.sh && sudo /bin/bash sei.sh
+wget -q -O sei.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Sei/sei.sh && chmod +x sei.sh && sudo /bin/bash sei.sh
 ```
 
 ## Snapshotla hızlı kurulum için
