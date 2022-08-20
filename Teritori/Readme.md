@@ -38,6 +38,11 @@ teritorid tendermint unsafe-reset-all --home $HOME/.teritorid
 sudo systemctl restart teritorid && journalctl -fu teritorid -o cat
 ```
 
+## Cüzdan Oluşturma
+```
+teritorid keys add $WALLET
+```
+
 ## Test tokeni için discorda gidelim: https://discord.gg/F7pYBrHE
 ```
 $request Cüzdan adresi
