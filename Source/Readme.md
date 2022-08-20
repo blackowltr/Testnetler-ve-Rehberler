@@ -7,3 +7,6 @@
 |      CPU        |   RAM    |  Disk    | 
 |-----------------|----------|----------|
 |1.4 GHz amd64 CPU|   4GB    | 250GB    |
+
+
+### Kuruluma Geçelim.
