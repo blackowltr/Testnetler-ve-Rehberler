@@ -111,15 +111,15 @@ Description=Source-protocol Node
 After=network.target
 
 [Service]
-User=$USER
+User=root
 Type=simple
 ExecStart=$(which sourced) start
 Restart=on-failure
 LimitNOFILE=65535
 
 [Install]
-WantedBy=multi-user.target" > $HOME/sourced.service
-sudo mv $HOME/sourced.service /etc/systemd/system
+WantedBy=multi-user.target" > root/sourced.service
+sudo mv root/sourced.service /etc/systemd/system
 sudo tee <<EOF >/dev/null /etc/systemd/journald.conf
 Storage=persistent
 EOF
