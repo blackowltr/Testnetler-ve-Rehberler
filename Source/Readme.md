@@ -30,7 +30,7 @@ echo 'export GO111MODULE=on' >> $HOME/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bashrc && . $HOME/.bashrc
 go version
 ```
-## Klonlama Yapıyoruz
+## Klonlama Yapıyoruz.
 ```
 git clone -b testnet https://github.com/Source-Protocol-Cosmos/source.git
 ```
