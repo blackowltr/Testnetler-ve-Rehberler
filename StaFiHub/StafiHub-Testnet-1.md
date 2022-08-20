@@ -20,7 +20,7 @@ Minimum
 ## Scriptle Kurmak isterseniz bu komutla kurabilirsiniz. Dileyen Manuel de kurabilir.
 
 ```
-wget -O kurulum.sh https://raw.githubusercontent.com/brsbrc/StaFihub-Testnet-1/main/kurulum.sh && chmod +x kurulum.sh && ./kurulum.sh
+wget -O kurulum.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/StaFiHub/kurulum.sh && chmod +x kurulum.sh && ./kurulum.sh
 ```
 
 ## Hızlıca manuel kuruluma geçelim.
