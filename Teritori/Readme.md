@@ -22,6 +22,11 @@ apt install build-essential git curl gcc make jq -y
 wget -O teritori.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Teritori/teritori.sh && chmod +x teritori.sh && ./teritori.sh
 ```
 
+## Log kontrol
+```
+journalctl -fu teritorid -o cat
+```
+
 ## State Sync (Şart Değil)
 
 ```
@@ -61,3 +66,25 @@ teritorid tx staking create-validator --chain-id teritori-testnet-v2 --commissio
 ## Validator oluşturduktan sonra discordda role request kanalından rol alın
 
 [Explorer](https://teritori.explorers.guru/)
+
+## Unjail 
+```
+teritorid tx slashing unjail \
+  --broadcast-mode=block \
+  --from=$WALLET \
+  --chain-id=$TERITORI_CHAIN_ID \
+  --gas=auto
+```
+
+## Node Silme
+```
+sudo systemctl stop teritorid
+sudo systemctl disable teritorid
+sudo rm /etc/systemd/system/teritori* -rf
+sudo rm $(which teritorid) -rf
+sudo rm $HOME/.teritorid* -rf
+sudo rm $HOME/teritori -rf
+sed -i '/TERITORI_/d' ~/.bash_profile
+```
+
+### Kolay Gelsin.
