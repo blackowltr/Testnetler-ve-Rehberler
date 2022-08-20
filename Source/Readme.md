@@ -103,8 +103,8 @@ sudo tee <<EOF >/dev/null /etc/systemd/journald.conf
 Storage=persistent
 EOF
 ```
-## Tekrar Başlatıyoruz, Sistemizi.
 
+## Tekrar Başlatıyoruz, Sistemizi.
 ```
 systemctl restart systemd-journald
 systemctl daemon-reload
@@ -112,8 +112,17 @@ systemctl enable sourced
 systemctl restart sourced
 ```
 
-## Cüzdan Oluşturma
+## Log Kontrol
+```
+journalctl -fu sourced -o cat
+```
 
+## Sync Durumu
+```
+sourced status 2>&1 | jq .SyncInfo
+```
+
+## Cüzdan Oluşturma
 ```
 sourced keys add cüzdanismi
 ```
@@ -138,8 +147,5 @@ sourced tx staking create-validator \
 --fees=5000usource \
 -y
 ```
-
-
-
 
 ### Kolay Gelsin.
