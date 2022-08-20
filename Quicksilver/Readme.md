@@ -1,5 +1,7 @@
 # Quicksilver Testnet
 
+![qq](https://user-images.githubusercontent.com/107190154/185763787-fd8a0cdf-af74-42d0-a6d5-dd415be82c31.png)
+
 ## Sistem Gereksinimleri
 
 |     RAM     |       Cpu      |      Disk      |
