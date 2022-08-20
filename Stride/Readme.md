@@ -13,7 +13,7 @@
 
 |CPU | RAM  | Disk  | 
 |----|------|----------|
-|   4| 8GB  | 250GB    |
+|   4| 8GB  | 400GB    |
 
 ### Kuruluma başlayalım.
 
