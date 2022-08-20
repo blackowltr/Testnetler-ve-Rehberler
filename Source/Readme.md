@@ -4,7 +4,6 @@
 
 ## Gereksinimler
 
-|CPU | RAM  | Disk  | 
-|----|------|----------|
-|   1.4 GHz amd64 CPU
-| 4GB  | 250GB    |
+|      CPU        |   RAM    |  Disk    | 
+|-----------------|----------|----------|
+|1.4 GHz amd64 CPU|   8GB    | 250GB    |
