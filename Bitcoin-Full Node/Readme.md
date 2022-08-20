@@ -5,7 +5,7 @@
 ## Alttaki komutu çalıştırarak full node'unuzu kurabilirsiniz.
 
 ```
-wget -O kurulum.sh https://raw.githubusercontent.com/brsbrc/Bitcoin-Full-Node-Kurulum/main/kurulum.sh && chmod +x kurulum.sh && ./kurulum.sh
+wget -O kurulum.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Bitcoin-Full%20Node/kurulum.sh && chmod +x kurulum.sh && ./kurulum.sh
 ```
 
 ## Log kontrol için
