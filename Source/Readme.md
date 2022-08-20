@@ -148,4 +148,8 @@ sourced tx staking create-validator \
 -y
 ```
 
+### Explorer
+
+> https://explorer.testnet.sourceprotocol.io/source
+
 ### Kolay Gelsin.
