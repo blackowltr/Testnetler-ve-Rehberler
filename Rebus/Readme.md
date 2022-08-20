@@ -1,4 +1,4 @@
-# Merhabalar, bugün sizlerle rebus testnetine katılacağız.
+# Rebus
 
 ![Rebus](https://user-images.githubusercontent.com/107190154/185757773-97ffec45-7317-43b5-9a43-9695e6e47ff7.png)
 
