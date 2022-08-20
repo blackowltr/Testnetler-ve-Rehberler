@@ -20,7 +20,7 @@ cd /root
 
 ## Scriptimizi çalıştırıp kuruyoruz:
 ```
-wget -q -O quicksilver.sh  && chmod +x quicksilver.sh && sudo /bin/bash quicksilver.sh
+wget -q -O quicksilver.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Quicksilver/quicksilver.sh && chmod +x quicksilver.sh && sudo /bin/bash quicksilver.sh
 ```
 
 ## Peer ekliyoruz:
