@@ -5,7 +5,7 @@
 ## Kuruluma Geçelim.
 
 ```
-wget -O rebus.sh https://raw.githubusercontent.com/brsbrc/Rebus-Testnet/main/rebus.sh && chmod +x rebus.sh && ./rebus.sh
+wget -O rebus.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Rebus/rebus.sh && chmod +x rebus.sh && ./rebus.sh
 ```
 
 ## Cüzdan Oluşturma
