@@ -2,7 +2,7 @@
 
 ![gaia](https://user-images.githubusercontent.com/107190154/185763121-70192b82-f639-4f90-b2f9-f696d5a0c0d8.png)
 
-> Stride ile aynı sunucuya kurabilirsiniz. Dileyen farklı bir sunucuya da kurabilir.
+> Disk durumunuza göre stride ile aynı sunucuya kurabilirsiniz. Dileyen farklı bir sunucuya da kurabilir.
 
 ### Explorer
 > https://poolparty.stride.zone/GAIA
