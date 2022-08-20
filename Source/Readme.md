@@ -122,6 +122,10 @@ journalctl -fu sourced -o cat
 sourced status 2>&1 | jq .SyncInfo
 ```
 
+## Discorddan Token Alalım.
+
+> https://discord.gg/r8aPh4hR
+
 ## Cüzdan Oluşturma
 ```
 sourced keys add cüzdanismi
