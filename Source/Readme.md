@@ -123,4 +123,23 @@ sourced keys add cüzdanismi
 sourced keys add cüzdanismi --recover
 ```
 
+## Validator Oluşturma
+```
+sourced tx staking create-validator \
+--amount=950000usource \
+--pubkey=$(sourced tendermint show-validator) \
+--moniker=nodeismi \
+--chain-id=sourcechain-testnet \
+--commission-rate="0.10" \
+--commission-max-rate="0.20" \
+--commission-max-change-rate="0.1" \
+--min-self-delegation="1" \
+--from=cüzdanismi \
+--fees=5000usource \
+-y
+```
+
+
+
+
 ### Kolay Gelsin.
