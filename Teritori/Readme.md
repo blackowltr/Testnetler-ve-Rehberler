@@ -19,7 +19,7 @@ apt install build-essential git curl gcc make jq -y
 ## Node Kurulumuna başlayalım.
 
 ```
-wget -O teritori.sh https://raw.githubusercontent.com/brsbrc/Teritori-Testnet/main/teritori.sh && chmod +x teritori.sh && ./teritori.sh
+wget -O teritori.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Teritori/teritori.sh && chmod +x teritori.sh && ./teritori.sh
 ```
 
 ## Test tokeni için discorda gidelim: https://discord.gg/F7pYBrHE
