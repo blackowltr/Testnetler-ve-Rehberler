@@ -1,6 +1,7 @@
 #Task-9 Rehber
 
 ## 1. Binary Dosyasını İndirelim
+```
 cd $HOME
 git clone https://github.com/Stride-Labs/interchain-queries.git
 cd interchain-queries
