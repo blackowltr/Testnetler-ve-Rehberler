@@ -1,6 +1,6 @@
 #Task-9 Rehber
 
-## 1. Binary Dosyasını İndirelim
+## Binary Dosyasını İndirelim
 ```
 cd $HOME
 git clone https://github.com/Stride-Labs/interchain-queries.git
@@ -9,7 +9,7 @@ go build
 sudo mv interchain-queries /usr/local/bin/icq
 ```
 
-## 2. Yapılandırma Dosyamızı Ayarlayalım
+## Yapılandırma Dosyamızı Ayarlayalım
 ```
 cd $HOME && mkdir .icq
 sudo tee $HOME/.icq/config.yaml > /dev/null <<EOF
@@ -114,6 +114,9 @@ Send batch of 4 messages
 Sent batch of 2 (deduplicated) messages
 ```
 
-**Explorerdan Kontrol Edelim**
+**Tx'leri, explorerdan Kontrol Edelim**
+
+**Form**
+> https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
 
 ### Herkese Kolay Gelsin.
