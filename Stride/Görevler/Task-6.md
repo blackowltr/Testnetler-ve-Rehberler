@@ -1,24 +1,24 @@
 # Görevler
 
-## Add liquid stake
+### Add liquid stake
 
 ```
 strided tx stakeibc liquid-stake 1000 uatom --from <WALLET> --chain-id STRIDE-TESTNET-4
 ```
 
-## Redeem stake
+### Redeem stake
 
 ```
 strided tx stakeibc redeem-stake 1000 GAIA <COSMOS_ADDRESS_YOU_WANT_TO_REDEEM_TO> --chain-id STRIDE-TESTNET-4 --from cüzdanismi
 ```
 
 
-## Check if tokens are claimable
+### Check if tokens are claimable
 
 ```
 strided q records list-user-redemption-record --limit 10000 --output json | jq '.UserRedemptionRecord | map(select(.sender == "stride15rdc0pzpr4x88wee3tjlu6f2alknh79ph03y2t"))'
 ```
-Çıktı örneği;
+**Çıktı örneği;**
 
 ```
 [
@@ -35,7 +35,7 @@ strided q records list-user-redemption-record --limit 10000 --output json | jq '
 ]
 ```
 
-## Claim your stake
+### Claim your stake
 
 ```
 strided tx stakeibc claim-undelegated-tokens GAIA 280 stride15rdc0pzpr4x88wee3tjlu6f2alknh79ph03y2t --chain-id STRIDE-TESTNET-4 --from cüzdanismi --yes
