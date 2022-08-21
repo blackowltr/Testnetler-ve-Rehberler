@@ -307,6 +307,8 @@ configs/stride/paths/stride-gaia.json
 **İşlemler bu kadardı, arkdaşlar.
 Tx'i alıp aynı zamanda bu oluşturduğumuz github repomuzun linkini de formda yollamayı unutmayalım.**
 
+![image](https://user-images.githubusercontent.com/107190154/185781611-93c56281-1bcf-4829-9d3e-81c7b95a216f.png)
+
 ### Görev Form Linki
 
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
