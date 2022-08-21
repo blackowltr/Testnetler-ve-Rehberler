@@ -160,7 +160,6 @@ Success: performed health check for all chains in the config
 
 ## Cüzdan Recover Yapacağız.
 > Direkt Girebilirsiniz Çünkü Az Önce Değişkenlerle Ayarlarımızı Yapmış Olduk.
-Before you proceed with this step, please make sure you have created and funded with tokens seperate wallets on each chain
 ```
 sudo tee $HOME/.hermes/${CHAIN_ID_A}.mnemonic > /dev/null <<EOF
 ${MNEMONIC_A}
