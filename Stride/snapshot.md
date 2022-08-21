@@ -6,7 +6,7 @@
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
-## Snapshot, Blok Yüksekliği --> 8550
+## Snapshot, Blok Yüksekliği --> 14950
 
 ```
 sudo systemctl stop strided
