@@ -4,7 +4,6 @@
 
 | #      | Pts |  Task                                                                        | Evidence                           | Instructions       |
 | ------ | --- | ---------------------------------------------------------------------------- |:----------------------------------:| ------------------ |
-| **10** | 100 | run validator for at least 7 days (being inactive is OK, it still qualifies) | link to your validator address     | -                  |
 | **11** | 10  | delegate to another validator                                                | link to the delegation transaction | -                  |
 
 ## Delegate to another validator	
