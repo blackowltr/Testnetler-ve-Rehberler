@@ -41,7 +41,7 @@ sudo systemctl restart gaiad && journalctl -u gaiad -f -o cat
 
 ## Cüzdan Oluşturma
 ```
-gaiad keys add $WALLET
+gaiad keys add cüzdanismi
 ```
 ## Cüzdan Recover
 ```
