@@ -1,5 +1,12 @@
 # Task-7 Rehber
 
+## 🛰  Relayer Tasks 
+
+| #     | Pts |  Task                                                                                                             | Evidence                                                                           | Instructions      |
+| ----- | --- | ----------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------:| ----------------- |
+| **7** | 100 | run a relayer on ICA channels specified in #validator-announcements for at least 7 days                           | link to the stride relayer account and to one relayed tx                           | Task 7 |
+
+
 ## Sistemimizi Güncelleyelim
 ```
 sudo apt update && sudo apt upgrade -y
