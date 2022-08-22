@@ -207,7 +207,7 @@ journalctl -u relayerd -f -o cat
 
 ### İşlem Tx'lerimizi explorerdan kontrol edebiliriz. Bu tx'ler bizler için öenmli. Formu doldururken kullanacağız.
 
-![rrrrrr](https://user-images.githubusercontent.com/107190154/185777236-8f16ee1b-4d66-46b6-9025-52b6fc166230.png)
+![image](https://user-images.githubusercontent.com/107190154/185924980-25f80a73-5309-42ea-9f0f-47df9bb7be9a.png)
 
 ## Kalan İşlemlere Devam Edelim
 
