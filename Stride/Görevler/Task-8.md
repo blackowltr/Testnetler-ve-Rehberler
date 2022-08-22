@@ -313,7 +313,7 @@ configs/stride/paths/stride-gaia.json
 **İşlemler bu kadardı, arkdaşlar.
 Tx'i alıp aynı zamanda bu oluşturduğumuz github repomuzun linkini de formda yollamayı unutmayalım.**
 
-![rlyr111](https://user-images.githubusercontent.com/107190154/185786889-2a2393d4-65aa-4dfe-b24f-5ae046532264.png)
+![image](https://user-images.githubusercontent.com/107190154/185924818-f83697cb-f02e-403e-9586-e96f205c9a7f.png)
 
 **Kendi forkladığınız reponun linkini bırakacaksınız, forma.**
 
