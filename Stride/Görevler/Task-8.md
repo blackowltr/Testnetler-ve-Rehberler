@@ -2,6 +2,13 @@
 
 ![TT](https://user-images.githubusercontent.com/107190154/185767388-ef38d0bd-d138-413c-bf06-4a7a21c80877.png)
 
+## 🛰  Relayer Tasks 
+
+| #     | Pts |  Task                                                                                                             | Evidence                                                                           | Instructions      |
+| ----- | --- | ----------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------:| ----------------- |
+| **8** | 250 | relay using the new [v2 go relayer](https://github.com/cosmos/relayer/releases/tag/v2.0.0-rc4)                    | link to packets relayed and link to the configured relayer fork on your github     | - |
+
+
 ### Not;
 
 ```
