@@ -207,7 +207,7 @@ journalctl -u relayerd -f -o cat
 
 ### İşlem Tx'lerimizi explorerdan kontrol edebiliriz. Bu tx'ler bizler için öenmli. Formu doldururken kullanacağız.
 
-![image](https://user-images.githubusercontent.com/107190154/185924980-25f80a73-5309-42ea-9f0f-47df9bb7be9a.png)
+![rrrrrr](https://user-images.githubusercontent.com/107190154/185925166-ef5b7a75-660e-47d9-a6d8-a424c9c7f288.png)
 
 ## Kalan İşlemlere Devam Edelim
 
@@ -312,8 +312,6 @@ configs/stride/paths/stride-gaia.json
 
 **İşlemler bu kadardı, arkdaşlar.
 Tx'i alıp aynı zamanda bu oluşturduğumuz github repomuzun linkini de formda yollamayı unutmayalım.**
-
-![image](https://user-images.githubusercontent.com/107190154/185924818-f83697cb-f02e-403e-9586-e96f205c9a7f.png)
 
 **Kendi forkladığınız reponun linkini bırakacaksınız, forma.**
 
