@@ -1,5 +1,7 @@
 # Stride ve GAIA arasında GO Relayer v2'yi Kurma Rehberi
 
+**Bu rehber stride ve gaia'nın aynı sunucuya kurulduğunu varsayarak hazırlanmıştır.**
+
 ![TT](https://user-images.githubusercontent.com/107190154/185767388-ef38d0bd-d138-413c-bf06-4a7a21c80877.png)
 
 ## 🛰  Relayer Tasks 
@@ -14,10 +16,6 @@
 ```
 İşlemlere geçmeden önce cüzdanınızda bakiye olduğundan emin olun çünkü tokeniniz olmadan bu işlemleri yapamazsınız.
 ```
-
-### Şu an bu rehberle yapacağımız görev;
-
-![gt5555](https://user-images.githubusercontent.com/107190154/185777034-a89de6f4-5ac0-40fb-a0de-78862cd7564b.png)
 
 > Öncelikle RPC bilgilerimizi öğreneceğiz.
 ```
