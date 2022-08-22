@@ -212,7 +212,7 @@ sudo systemctl restart hermesd
 journalctl -u hermesd -f -o cat
 ```
 
-## Başarılı Çıkktı Örneği:
+## Başarılı Çıktı Örneği:
 ```
 2022-07-27T22:43:08.019651Z  INFO ThreadId(01) Scanned chains:
 2022-07-27T22:43:08.019675Z  INFO ThreadId(01) # Chain: STRIDE-TESTNET-4
@@ -306,6 +306,11 @@ journalctl -u hermesd -f -o cat
 2022-07-27T22:44:20.902820Z  INFO ThreadId(453) packet_cmd{src_chain=GAIA src_port=icahost src_channel=channel-4 dst_chain=STRIDE-TESTNET-4}:relay{odata=d169839a ->Destination @0-16135; len=1}: [Async~>STRIDE-TESTNET-4] response(s): 1; Ok:150EEF4C0EB3EF413115C192C7A5575190AA1E0B8EFC8A52389E556C16A71C57
 2022-07-27T22:44:20.902852Z  INFO ThreadId(453) packet_cmd{src_chain=GAIA src_port=icahost src_channel=channel-4 dst_chain=STRIDE-TESTNET-4}:relay{odata=d169839a ->Destination @0-16135; len=1}: success
 ```
+
+**Explorer Görüntüsü;**
+
+![image](https://user-images.githubusercontent.com/107190154/185925576-d245577a-13f3-4d3f-aad1-22bc2af84600.png)
+
 **Form**
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
 
