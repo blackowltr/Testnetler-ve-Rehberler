@@ -53,7 +53,9 @@ strided tx staking create-validator \
 ### Explorer
 
 ```
-https://stride.explorers.guru/
+Ping Pub - https://poolparty.stride.zone
+NodesGuru - https://stride.explorers.guru
+Cosmostation - https://testnet.mintscan.io/stride-testnet
 ```
 
 ### Discorddan Role-Request Odasına Explorerdan validator linkinizi atıp rol almayı unutmayın.
