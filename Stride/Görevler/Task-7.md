@@ -4,7 +4,7 @@
 
 | #     | Pts |  Task                                                                                                             | Evidence                                                                           | Instructions      |
 | ----- | --- | ----------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------:| ----------------- |
-| **7** | 100 | run a relayer on ICA channels specified in #validator-announcements for at least 7 days                           | link to the stride relayer account and to one relayed tx                           | Task 7 |
+| **7** | 100 | run a relayer on ICA channels specified in #validator-announcements for at least 7 days                           | link to the stride relayer account and to one relayed tx                           | - |
 
 
 ## Sistemimizi Güncelleyelim
