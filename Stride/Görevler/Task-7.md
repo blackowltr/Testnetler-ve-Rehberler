@@ -158,6 +158,9 @@ hermes health-check
 Success: performed health check for all chains in the config
 ```
 
+![image](https://user-images.githubusercontent.com/107190154/185923042-ff08b512-30f8-4885-a9cd-153573384aa9.png)
+
+
 ## Cüzdan Recover Yapacağız.
 > Direkt Girebilirsiniz Çünkü Az Önce Değişkenlerle Ayarlarımızı Yapmış Olduk.
 ```
@@ -178,6 +181,8 @@ Success: Restored key 'wallet' (stride1eardm7w7v9el9d3khkwlj9stdj9hexnfv8pea8) o
 2022-07-21T19:54:14.956171Z  INFO ThreadId(01) using default configuration from '/root/.hermes/config.toml'
 Success: Restored key 'wallet' (juno1ypnerpxuqezq2vfqxm74ddkuqnektveezh5uaa) on chain GAIA
 ```
+
+![image](https://user-images.githubusercontent.com/107190154/185922982-755f08ce-0dc9-40aa-8b35-d7fff2977ab0.png)
 
 ## Hermes İçin Servis Oluşturalım
 ```
