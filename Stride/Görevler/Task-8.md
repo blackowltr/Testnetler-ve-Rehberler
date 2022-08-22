@@ -309,6 +309,8 @@ Tx'i alıp aynı zamanda bu oluşturduğumuz github repomuzun linkini de formda 
 
 ![rlyr111](https://user-images.githubusercontent.com/107190154/185786889-2a2393d4-65aa-4dfe-b24f-5ae046532264.png)
 
+**Kendi forkladığınız reponun linkini bırakacaksınız, forma.**
+
 ### Görev Form Linki
 
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
