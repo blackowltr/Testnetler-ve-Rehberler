@@ -1,5 +1,10 @@
 # Görevler
 
+## 🌊 Product Tasks
+| #     | Pts |  Task                                                                |                                     Evidence | Instructions      |
+| ----- | --- | -------------------------------------------------------------------- |:--------------------------------------------:| ----------------- |
+| **6** | 50  | complete the stake, redeem, and claim flow (including 6hr unbonding) | link to all the txs: liqstake, redeem, claim | - |
+
 ### Add liquid stake
 
 ```
