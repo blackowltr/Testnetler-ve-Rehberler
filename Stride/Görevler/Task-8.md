@@ -185,6 +185,12 @@ WantedBy=multi-user.target
 EOF
 ```
 
+## Halihazırda Hermes çalışıyorsa önce onu durdurmalısınız.
+```
+sudo systemctl stop hermesd
+sudo systemctl disable hermesd
+```
+
 ## Servisi Başlatalım
 ```
 sudo systemctl daemon-reload
