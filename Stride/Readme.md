@@ -8,6 +8,8 @@
 
 > Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme.md) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
 
+> Stride Testneti hakkında yazmış olduğum [şu yazıya da](https://forum.rues.info/index.php?threads/stride-testnet.2314/) bakabilirsiniz.
+
 
 ### Sistem Gereksinimleri 
 
