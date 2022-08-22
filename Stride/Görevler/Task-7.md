@@ -8,7 +8,7 @@ sudo apt install unzip -y
 
 ## Değişkenleri Ayarlayalım
 ```
-RELAYER_NAME='discord#1234' # discord id yazalım
+RELAYER_NAME='discord#1234' # discord id yazalım.
 ```
 
 ### Chain A
