@@ -1,5 +1,11 @@
 # Task-9 Rehber
 
+## 🛰  Relayer Tasks 
+
+| #     | Pts |  Task                                                                                                             | Evidence                                                                           | Instructions      |
+| ----- | --- | ----------------------------------------------------------------------------------------------------------------- |:----------------------------------------------------------------------------------:| ----------------- |
+| **9** | 750 | relay interchain queries using the new [v2 go relayer](https://github.com/cosmos/relayer/releases/tag/v2.0.0-rc4) | link to ICQ packets relayed and link to the configured relayer fork on your github | - |
+
 ## Binary Dosyasını İndirelim
 ```
 cd $HOME
