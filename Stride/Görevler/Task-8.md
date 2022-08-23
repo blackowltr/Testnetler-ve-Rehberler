@@ -18,6 +18,7 @@
 ```
 
 > Öncelikle RPC bilgilerimizi öğreneceğiz.
+> RPC laddr yazan kısımdadır.
 ```
 Stride için ---> nano $HOME/.stride/config/config.toml
 ```
@@ -130,7 +131,7 @@ rly chains list
 2: STRIDE-TESTNET-4 -> type(cosmos) key(✘) bal(✘) path(✘)
 ```
 ## Cüzdanları Aktarıcıya Yükleyelim.
-> Stride cüzdanımızın kelimelerini kullanalım, her ikisi için de.
+> Cüzdan Kelimelerimizi Girelim.
 ```
 rly keys restore stride wallet "cüzdankelimeleriniziyazın"
 rly keys restore gaia wallet "cüzdankelimeleriniziyazın"
