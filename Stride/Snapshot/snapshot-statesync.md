@@ -1,6 +1,6 @@
 # Stride Snapshot ile kurulum (Stride-Chain-4)
 
-## Kurulumumuzu sağlayalım
+## Kurulu değilse, kurulumumuzu sağlayalım
 ```
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
