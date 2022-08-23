@@ -129,3 +129,6 @@ sudo systemctl restart strided
 echo '=============== Yükleme, Başarıyla Tamamlandı. ==================='
 echo -e 'Log Kontrol: \e[1m\e[32mjournalctl -u strided -f -o cat\e[0m'
 echo -e "Sync Durumu: \e[1m\e[32mcurl -s localhost:${STRIDE_PORT}657/status | jq .result.sync_info\e[0m"
+echo -e "\e[1m\e[32mAktif-İnaktif Setin Önemi Yoktur...\e[0m" && sleep 1
+
+
