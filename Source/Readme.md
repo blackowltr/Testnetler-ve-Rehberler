@@ -197,6 +197,17 @@ sourced tx staking create-validator \
 -y
 ```
 
+## Node Silme
+```
+sudo systemctl stop sourced
+sudo systemctl disable sourced
+sudo rm /etc/systemd/system/source* -rf
+sudo rm $(which sourced) -rf
+sudo rm $HOME/.source* -rf
+sudo rm $HOME/source -rf
+sed -i '/SOURCE_/d' ~/.bash_profile
+```
+
 ### Explorer
 
 > https://explorer.testnet.sourceprotocol.io/source
