@@ -197,7 +197,7 @@ sourced tx staking create-validator \
 -y
 ```
 
-## Node Silme
+## Node Silme Komutu
 ```
 sudo systemctl stop sourced
 sudo systemctl disable sourced
