@@ -5,7 +5,7 @@
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
-## Snapshot, Blok Yüksekliği --> 14950
+## Snapshot, Blok Yüksekliği --> 68780
 ```
 sudo systemctl stop strided
 strided tendermint unsafe-reset-all --home $HOME/.stride --keep-addr-book
@@ -43,6 +43,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.stride/config/config.toml
+wget -O $HOME/.stride/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/stride/STRIDE-TESTNET-4/addrbook.json"
 sudo systemctl restart strided && journalctl -u strided -f -o cat
 ```
 
