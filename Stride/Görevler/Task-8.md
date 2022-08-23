@@ -47,7 +47,7 @@ Gaia için ---> nano $HOME/.gaia/config/config.toml
 
 ## Değişkenlerin Ayarlamasını Yapalım
 ```
-RELAYER_ID='discord#1234'            # Discord id'nizi yazabilirsiniz. (Şart Değil)
+RELAYER_ID='discord#1234'            # Discord id'nizi yazabilirsiniz.
 STRIDE_RPC_ADDR='127.0.0.1:16657'    # Az önce kopyaladığımız Stride RPC yazın
 GAIA_RPC_ADDR='127.0.0.1:23657'      # Az önce kopyaladığımız Gaia RPC yazın
 ```
