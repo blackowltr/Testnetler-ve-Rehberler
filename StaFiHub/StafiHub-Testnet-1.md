@@ -25,8 +25,6 @@ wget -O kurulum.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehber
 
 ## Hızlıca manuel kuruluma geçelim.
 
-Dilerseniz [Snapshotla](https://github.com/brsbrc/StaFihub-Testnet-1/blob/main/snapshot.md) da kurabilirsiniz.
-
 ```
 cd $HOME
 sudo apt update
@@ -112,6 +110,46 @@ sudo systemctl restart stafihubd
 
 ```
 journalctl -u stafihubd -f
+```
+
+## Snapshot (Blok; 265013)
+> Şart Değil.
+```
+sudo systemctl stop stafihubd
+stafihubd tendermint unsafe-reset-all --home $HOME/.stafihub --keep-addr-book
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.stafihub/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.stafihub/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.stafihub/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.stafihub/config/app.toml
+cd
+rm -rf ~/.stafihub/data; \
+wget -O - http://snap.stake-take.com:8000/stafi.tar.gz | tar xf -
+mv $HOME/root/.stafihub/data $HOME/.stafihub
+rm -rf $HOME/root
+sudo systemctl restart stafihubd && journalctl -u stafihubd -f -o cat
+```
+
+## State Sync
+> Şart Değil.
+```
+sudo systemctl stop stafihubd
+stafihubd tendermint unsafe-reset-all --home $HOME/.stafihub
+wget -O $HOME/.stafihub/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/stafihub/stafihub-testnet-1/addrbook.json"
+SNAP_RPC="http://stafi.stake-take.com:16657"
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
+s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.stafihub/config/config.toml
+sudo systemctl restart stafihubd && journalctl -u stafihubd -f -o cat
 ```
 
 ## Yeni cüzdan için 
