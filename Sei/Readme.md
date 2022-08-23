@@ -15,7 +15,7 @@
 wget -q -O sei.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Sei/sei.sh && chmod +x sei.sh && sudo /bin/bash sei.sh
 ```
 
-Hızlı Kurulum için [Sei-Snapshot](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Sei/snapshot.md)
+Hızlı Kurulum için [Sei-Snapshot](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Sei/Snapshot/snapshot-statesync.md)
 
 ## Cüzdan oluşturmak için şu komutu kullanalım, cüzdanismi yerine isim koyalım.
 ```
