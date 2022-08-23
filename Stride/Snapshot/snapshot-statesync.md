@@ -54,4 +54,4 @@ wget -O $HOME/.stride/config/addrbook.json "https://raw.githubusercontent.com/St
 sudo systemctl restart strided && journalctl -u strided -f -o cat
 ```
 
-### Hepinize Kolay Gelsin.
+### Hepinize Kolay Gelsin..
