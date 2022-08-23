@@ -4,9 +4,9 @@
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
-> [Snapshotla ya da state sync ile kurmak için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/snapshot.md)
+> [Snapshotla ya da state sync ile kurmak için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/Snapshot/snapshot-statesync.md)
 
-> Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/stride-chain-4-yukseltme.md) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
+> Halihazırda stride kuruluysa sunucunuzda [buradaki](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/Y%C3%BCkseltmeler/Stride-Testnet-4.md) adımları takip ederek yeni chaine yani chain-4'e geçebilirsiniz.
 
 > Stride Testneti hakkında yazmış olduğum [şu yazıya da](https://forum.rues.info/index.php?threads/stride-testnet.2314/) bakabilirsiniz.
 
