@@ -83,8 +83,8 @@ sudo mkdir $HOME/.relayer/paths
 ```
 
 ## Stride için Json DosyasI Oluşturalım.
-> Direkt yapıştırın. Değişiklik yapmanıza gerek yok.
 > Key ksımına cüzdan isminizi yazabilirsiniz.
+
 > Wallet olarak da kalabilir.
 ```
 sudo tee $HOME/.relayer/chains/stride.json > /dev/null <<EOF
@@ -108,8 +108,8 @@ sudo tee $HOME/.relayer/chains/stride.json > /dev/null <<EOF
 EOF
 ```
 ## Gaia için Json DosyasI Oluşturalım.
-> Direkt yapıştırın. Değişiklik yapmanıza gerek yok.
 > Key ksımına cüzdan isminizi yazabilirsiniz.
+
 > Wallet olarak da kalabilir.
 ```
 sudo tee $HOME/.relayer/chains/gaia.json > /dev/null <<EOF
