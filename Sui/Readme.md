@@ -22,7 +22,7 @@ wget -O sui.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/
 ## Güncelleme için
 
 ```
-wget -O sui.guncelleme.sh https://raw.githubusercontent.com/brsbrc/Sui-Devnet-Node-Kurulumu/main/sui.guncelleme.sh && chmod +x sui.guncelleme.sh && ./sui.guncelleme.sh
+wget -O sui.guncelleme.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Sui/sui-guncelleme.sh && chmod +x sui.guncelleme.sh && ./sui.guncelleme.sh
 ```
 
 ## Logları kontrol:
