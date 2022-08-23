@@ -314,6 +314,9 @@ journalctl -u hermesd -f -o cat
 2022-07-27T22:44:20.902852Z  INFO ThreadId(453) packet_cmd{src_chain=GAIA src_port=icahost src_channel=channel-4 dst_chain=STRIDE-TESTNET-4}:relay{odata=d169839a ->Destination @0-16135; len=1}: success
 ```
 
+![image](https://user-images.githubusercontent.com/107190154/186266667-1af66b8b-20d3-41e6-9a00-febdce2b5624.png)
+
+
 **Explorer Görüntüsü;**
 
 ![image](https://user-images.githubusercontent.com/107190154/185925576-d245577a-13f3-4d3f-aad1-22bc2af84600.png)
