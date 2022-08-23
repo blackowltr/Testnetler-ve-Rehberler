@@ -1,6 +1,5 @@
 # Testnetler-ve-Rehberler
-Node Runner
 
-Bazı testler ve rehberlere buradan ulaşabilirsiniz.
+**Bazı testler ve rehberlere buradan ulaşabilirsiniz.**
 
-Herkese Kolay Gelsin.
+**Herkese Kolay Gelsin.**
