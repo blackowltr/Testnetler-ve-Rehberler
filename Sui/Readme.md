@@ -16,7 +16,7 @@ screen -S sui
 ## Full nodeumuzu yükleyelim
 
 ```
-wget -O sui.sh https://raw.githubusercontent.com/brsbrc/Sui-Devnet-Node-Kurulumu/main/sui.sh && chmod +x sui.sh && ./sui.sh
+wget -O sui.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Sui/sui.sh && chmod +x sui.sh && ./sui.sh
 ```
 
 ## Güncelleme için
