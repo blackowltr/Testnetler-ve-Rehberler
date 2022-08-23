@@ -167,7 +167,7 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.source/config/config.toml
 sudo systemctl restart sourced && journalctl -u sourced -f -o cat
 ```
 
-## Discorddan Token Alalım.
+## Discorda Katılıp Cüzdanımıza Token Alalım.
 
 > https://discord.gg/r8aPh4hR
 
