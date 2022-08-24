@@ -144,6 +144,16 @@ Send batch of 4 messages
 Sent batch of 2 (deduplicated) messages
 ```
 
+### Icq Silme Komutu
+```
+sudo systemctl stop icqd
+sudo systemctl disable icqd
+sudo rm /etc/systemd/system/icqd* -rf
+sudo rm $(which icq) -rf
+sudo rm -rf $HOME/.icq
+sudo rm -rf $HOME/interchain-queries
+```
+
 **Tx'leri, explorerdan Kontrol Edelim**
 
 **Form**
