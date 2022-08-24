@@ -178,7 +178,6 @@ sudo mv interchain-queries /usr/local/bin/icq
 
 **Yapılandırma dosyanızdaki satırlarda kaydırma ya da kaymalar olmamalıdır.**
 
-
 **Tx'leri, explorerdan Kontrol Edelim**
 
 **Ardından bu repoyu forklayacağız.**
@@ -187,7 +186,7 @@ https://github.com/Stride-Labs/interchain-queries
 
 ![image](https://user-images.githubusercontent.com/107190154/186484524-26d30412-bc05-4e21-abd4-b36c90acb94e.png)
 
-**Forkladıktan sonra kendi profilimizde gözükecektir. Üstüne tıklayıp açıyoruz ve add file diyoruz `config.yaml` isimli dosya oluşturuyoruz. **
+**Forkladıktan sonra kendi profilimizde gözükecektir. Üstüne tıklayıp açıyoruz ve add file diyoruz `config.yaml` isimli dosya oluşturuyoruz.**
 
 ![image](https://user-images.githubusercontent.com/107190154/186484894-47de1d29-a473-4ba4-96ee-f54b83207c13.png)
 
