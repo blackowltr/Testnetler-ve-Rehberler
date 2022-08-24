@@ -55,9 +55,9 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 
 ## Değişkenlerin Ayarlamasını Yapalım
 ```
-RELAYER_ID='discord#1234'            # Discord id'nizi yazabilirsiniz.
-STRIDE_RPC_ADDR='127.0.0.1:16657'    # Az önce kopyaladığımız Stride RPC yazın
-GAIA_RPC_ADDR='127.0.0.1:23657'      # Az önce kopyaladığımız Gaia RPC yazın
+RELAYER_ID='discord#1234'                                                # Discord id'nizi yazabilirsiniz.
+STRIDE_RPC_ADDR='buraya rpc öğrenme komutunun çıktısını yazacaksınız'    # Az önce kopyaladığımız Stride RPC yazın
+GAIA_RPC_ADDR='buraya rpc öğrenme komutunun çıktısını yazacaksınız'      # Az önce kopyaladığımız Gaia RPC yazın
 ```
 **Örneğin;**
 
@@ -92,8 +92,6 @@ sudo mkdir $HOME/.relayer/paths
 
 ## Stride için Json DosyasI Oluşturalım.
 > Key ksımına cüzdan isminizi yazabilirsiniz.
-
-> Wallet olarak da kalabilir.
 ```
 sudo tee $HOME/.relayer/chains/stride.json > /dev/null <<EOF
 {
@@ -117,8 +115,6 @@ EOF
 ```
 ## Gaia için Json DosyasI Oluşturalım.
 > Key ksımına cüzdan isminizi yazabilirsiniz.
-
-> Wallet olarak da kalabilir.
 ```
 sudo tee $HOME/.relayer/chains/gaia.json > /dev/null <<EOF
 {
