@@ -61,7 +61,7 @@ GAIA_RPC_ADDR='127.0.0.1:23657'      # Az önce kopyaladığımız Gaia RPC yaz�
 ```
 **Örneğin;**
 
-![image](https://user-images.githubusercontent.com/107190154/185777640-9a2a5586-8da3-46b2-b1c8-f98c1d77244b.png)
+![image](https://user-images.githubusercontent.com/107190154/186512948-0ab6b50a-cf56-4238-98a1-fa446663a0c5.png)
 
 ## Sistemi Güncelleyelim.
 ```
@@ -264,9 +264,9 @@ configs/stride/chains/gaia.json
 {
   "type": "cosmos",
   "value": {
-    "key": "wallet",
+    "key": "wallet",                      ## cüzdan İsmimizi Yazalım
     "chain-id": "STRIDE-TESTNET-4",
-    "rpc-addr": "http://127.0.0.1:26657",
+    "rpc-addr": "http://127.0.0.1:26657", ## Stride RPC Yazalım
     "account-prefix": "stride",
     "keyring-backend": "test",
     "gas-adjustment": 1.2,
@@ -292,9 +292,9 @@ configs/stride/chains/stride.json
 {
   "type": "cosmos",
   "value": {
-    "key": "wallet",
+    "key": "wallet",                      ## cüzdan İsmimizi Yazalım
     "chain-id": "GAIA",
-    "rpc-addr": "http://127.0.0.1:23657",
+    "rpc-addr": "http://127.0.0.1:23657", ## Gaia RPC Yazalım
     "account-prefix": "cosmos",
     "keyring-backend": "test",
     "gas-adjustment": 1.2,
