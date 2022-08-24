@@ -39,6 +39,7 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 
 ## Yapılandırma Dosyamızı Ayarlayalım
 > Wallet yazan kısma cüzdan adınızı yazın
+
 ```
 cd $HOME && mkdir .icq
 sudo tee $HOME/.icq/config.yaml > /dev/null <<EOF
@@ -80,13 +81,17 @@ EOF
 
 ## Cüzdanımızı İmport Edelim
 > `Cüzdan` yazan kısma cüzdan adınızı yazın
+
 ```
 icq keys restore --chain stride-testnet Cüzdan
 icq keys restore --chain gaia-testnet Cüzdan
+```
+
 > Cüzdan kelimelerinizi girmenizi isteyecek.
 
 ## Icq Servis Dosyamızı Oluşturalım
 > Direkt Girin.
+
 ```
 sudo tee /etc/systemd/system/icqd.service > /dev/null <<EOF
 [Unit]
