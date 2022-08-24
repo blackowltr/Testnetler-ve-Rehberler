@@ -1,7 +1,5 @@
 # Stride ve GAIA arasında GO Relayer v2'yi Kurma Rehberi
 
-**Bu rehber stride ve gaia'nın aynı sunucuya kurulduğunu varsayarak hazırlanmıştır.**
-
 ![TT](https://user-images.githubusercontent.com/107190154/185767388-ef38d0bd-d138-413c-bf06-4a7a21c80877.png)
 
 ## 🛰  Relayer Tasks 
@@ -55,9 +53,9 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 
 ## Değişkenlerin Ayarlamasını Yapalım
 ```
-RELAYER_ID='discord#1234'                                                # Discord id'nizi yazabilirsiniz.
-STRIDE_RPC_ADDR='buraya rpc öğrenme komutunun çıktısını yazacaksınız'    # Az önce kopyaladığımız Stride RPC yazın
-GAIA_RPC_ADDR='buraya rpc öğrenme komutunun çıktısını yazacaksınız'      # Az önce kopyaladığımız Gaia RPC yazın
+RELAYER_ID='discord#1234'                                                       # Discord id'nizi yazabilirsiniz.
+STRIDE_RPC_ADDR='buraya stride rpc öğrenme komutunun çıktısını yazacaksınız'    # Az önce kopyaladığımız Stride RPC yazın
+GAIA_RPC_ADDR='buraya gaia rpc öğrenme komutunun çıktısını yazacaksınız'        # Az önce kopyaladığımız Gaia RPC yazın
 ```
 **Örneğin;**
 
@@ -91,7 +89,7 @@ sudo mkdir $HOME/.relayer/paths
 ```
 
 ## Stride için Json DosyasI Oluşturalım.
-> Key ksımına cüzdan isminizi yazabilirsiniz.
+> Key kısımında bulunan `wallet` yerine cüzdan isminizi yazabilirsiniz.
 ```
 sudo tee $HOME/.relayer/chains/stride.json > /dev/null <<EOF
 {
@@ -114,7 +112,7 @@ sudo tee $HOME/.relayer/chains/stride.json > /dev/null <<EOF
 EOF
 ```
 ## Gaia için Json DosyasI Oluşturalım.
-> Key ksımına cüzdan isminizi yazabilirsiniz.
+> Key kısımında bulunan `wallet` yerine cüzdan isminizi yazabilirsiniz.
 ```
 sudo tee $HOME/.relayer/chains/gaia.json > /dev/null <<EOF
 {
