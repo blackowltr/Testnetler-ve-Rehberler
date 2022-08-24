@@ -47,8 +47,8 @@ chains:
   gaia-testnet:
     key: wallet
     chain-id: GAIA
-    rpc-addr: http://127.0.0.1:buraya      # Gaia RPC yazacağız
-    grpc-addr: http://127.0.0.1:buraya     # Gaia GRPC yazacağız
+    rpc-addr: http://xxxxxx                # Gaia RPC yazacağız
+    grpc-addr: http://xxxxx                # Gaia GRPC yazacağız
     account-prefix: cosmos
     keyring-backend: test
     gas-adjustment: 1.2
@@ -62,8 +62,8 @@ chains:
   stride-testnet:
     key: wallet
     chain-id: STRIDE-TESTNET-4
-    rpc-addr: http://127.0.0.1:buraya      # Stride RPC yazacağız
-    grpc-addr: http://127.0.0.1:buraya     # Stride GRPC yazacağıze
+    rpc-addr: http://xxxxxx            # Stride RPC yazacağız
+    grpc-addr: http://xxxxxx           # Stride GRPC yazacağıze
     account-prefix: stride
     keyring-backend: test
     gas-adjustment: 1.2
@@ -79,15 +79,14 @@ EOF
 ```
 
 ## Cüzdanımızı İmport Edelim
-> Wallet yazan kısma cüzdan adınızı yazın
-> NOT: Lütfen, aynı cüzdanınızı kullanın. Node cüzdanınız, relayer çalıştırdığınız cüzdanınız olsun.
+> `Cüzdan` yazan kısma cüzdan adınızı yazın
 ```
-icq keys restore --chain stride-testnet wallet
-icq keys restore --chain gaia-testnet wallet
-```
+icq keys restore --chain stride-testnet Cüzdan
+icq keys restore --chain gaia-testnet Cüzdan
 > Cüzdan kelimelerinizi girmenizi isteyecek.
 
 ## Icq Servis Dosyamızı Oluşturalım
+> Direkt Girin.
 ```
 sudo tee /etc/systemd/system/icqd.service > /dev/null <<EOF
 [Unit]
@@ -143,7 +142,9 @@ Send batch of 4 messages
 1 SubmitResponse message
 Sent batch of 2 (deduplicated) messages
 ```
-
+                                                            
+![183242421-ca5e8f83-4d54-4ddb-bdbc-31430da23046](https://user-images.githubusercontent.com/107190154/186514770-9781ebac-a8d6-4fcf-9a78-049586f7ef1f.png)
+                                                          
 ### Icq Command Not Found Alanlar
 
 **Icq'yi tamamen siliyoruz.**
