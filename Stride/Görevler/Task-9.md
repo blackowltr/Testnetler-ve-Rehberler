@@ -167,7 +167,7 @@ echo 'export GO111MODULE=on' >> $HOME/.bash_profile
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile && . $HOME/.bash_profile
 ```
 
-## Icq Kurulum yapalım
+## Tekrar Icq Kurulum yapalım
 ```
 cd $HOME
 git clone https://github.com/Stride-Labs/interchain-queries.git
