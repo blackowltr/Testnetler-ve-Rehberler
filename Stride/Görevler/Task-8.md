@@ -28,20 +28,28 @@ sed -i -e "s/^indexer *=.*/indexer = \"kv\"/" $HOME/.stride/config/config.toml
 ```
 sed -i -e "s/^indexer *=.*/indexer = \"kv\"/" $HOME/.gaia/config/config.toml
 ```
+## Öncelikle RPC bilgilerimizi öğreneceğiz.
+> RPC-GRPC nasıl öğreneceğinize dair komut bıraktım.
 
-> Öncelikle RPC bilgilerimizi öğreneceğiz.
-> RPC laddr yazan kısımdadır.
+**Gaia RPC**
 ```
-Stride için ---> nano $HOME/.stride/config/config.toml
+echo "$(curl -s ifconfig.me)$(grep -A 3 "\[rpc\]" ~/.gaia/config/config.toml | egrep -o ":[0-9]+")"
 ```
-![Ekran görüntüsü 2022-08-21 000944](https://user-images.githubusercontent.com/107190154/185766598-8d39ce09-210b-4b76-90a0-647b632d7348.png)
 
+**Gaia GRPC**
 ```
-Gaia için ---> nano $HOME/.gaia/config/config.toml  
+echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.gaia/config/app.toml | egrep -o ":[0-9]+")"
 ```
-![g2](https://user-images.githubusercontent.com/107190154/185766607-de776257-46c9-455a-998d-613843948c34.png)
 
-> Not: laddr: "tcp://0.0.0.0:16657" bu kısmı kopyalıyoruz. Kendi sunucumuzun ip'sini yazmıyoruz. Laddr kısmında yazan neyse onu yazıyoruz.
+**Stride RPC**
+```
+echo "$(curl -s ifconfig.me)$(grep -A 3 "\[rpc\]" ~/.stride/config/config.toml | egrep -o ":[0-9]+")"
+```
+
+**Stride GRPC**
+```
+echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | egrep -o ":[0-9]+")"
+```
 
 > Tekrar ifade ediyorum; bu işlemleri tokensiz yapamazsınız, cüzdanınızda tokeniniz mutlaka olmalıdır.
 
