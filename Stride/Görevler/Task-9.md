@@ -38,6 +38,7 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 ```
 
 ## Yapılandırma Dosyamızı Ayarlayalım
+> Wallet yazan kısma cüzdan adınızı yazın
 ```
 cd $HOME && mkdir .icq
 sudo tee $HOME/.icq/config.yaml > /dev/null <<EOF
@@ -78,7 +79,8 @@ EOF
 ```
 
 ## Cüzdanımızı İmport Edelim
-> NOT: Lütfen, aynı cüzdanınızı kullanın. Farklı cüzdanlar kullanmayın. Node cüzdanınız, relayer çalıştırdığınız cüzdanınız olsun.
+> Wallet yazan kısma cüzdan adınızı yazın
+> NOT: Lütfen, aynı cüzdanınızı kullanın. Node cüzdanınız, relayer çalıştırdığınız cüzdanınız olsun.
 ```
 icq keys restore --chain stride-testnet wallet
 icq keys restore --chain gaia-testnet wallet
@@ -116,7 +118,7 @@ sudo systemctl restart icqd
 journalctl -u icqd -f -o cat
 ```
 
-**Logların görünmesi 10-15 dakika sürebilir, beklemelisiniz:**
+**Logların görünmesi 30 dakika hatta 1 saatten fazla sürebilir, beklemelisiniz:**
 
 ### Örnek Çıktı;
 ```
