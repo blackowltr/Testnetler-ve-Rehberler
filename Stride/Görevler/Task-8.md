@@ -17,7 +17,7 @@
 İşlemlere geçmeden önce cüzdanınızda bakiye olduğundan emin olun çünkü tokeniniz olmadan bu işlemleri yapamazsınız.
 ```
 
-Bu Görevi Yapabilmek İçin İndexer Açık Olmalıdır. Kapalıysa Şu komutla Açalım
+### Bu Görevi Yapabilmek İçin İndexer Açık Olmalıdır. Kapalıysa Şu komutla Açalım
 > Stride
 ```
 sed -i -e "s/^indexer *=.*/indexer = \"kv\"/" $HOME/.stride/config/config.toml
