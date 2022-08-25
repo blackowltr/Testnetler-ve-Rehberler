@@ -52,10 +52,14 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 > Tekrar ifade ediyorum; bu işlemleri tokensiz yapamazsınız, cüzdanınızda tokeniniz mutlaka olmalıdır.
 
 ## Değişkenlerin Ayarlamasını Yapalım
+> RPC-GRPC komutunun çıktısında bulunan sunucu ip kullanmayacağız.
+**Örneğin;**
+`127.0.0.1:16657`
+
 ```
-RELAYER_ID='discord#1234'                                                       # Discord id'nizi yazabilirsiniz.
-STRIDE_RPC_ADDR='buraya stride rpc öğrenme komutunun çıktısını yazacaksınız'    # Az önce kopyaladığımız Stride RPC yazın
-GAIA_RPC_ADDR='buraya gaia rpc öğrenme komutunun çıktısını yazacaksınız'        # Az önce kopyaladığımız Gaia RPC yazın
+RELAYER_ID='discord#1234'                           # Discord id'nizi yazabilirsiniz.
+STRIDE_RPC_ADDR='127.0.0.1:RPCYAZIN'                # Stride RPC yazın
+GAIA_RPC_ADDR='127.0.0.1:RPCYAZIN'                  # Gaia RPC yazın
 ```
 **Örneğin;**
 
