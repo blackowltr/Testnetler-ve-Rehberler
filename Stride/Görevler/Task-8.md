@@ -61,9 +61,6 @@ RELAYER_ID='discord#1234'                           # Discord id'nizi yazabilirs
 STRIDE_RPC_ADDR='127.0.0.1:RPCYAZIN'                # Stride RPC yazın
 GAIA_RPC_ADDR='127.0.0.1:RPCYAZIN'                  # Gaia RPC yazın
 ```
-**Örneğin;**
-
-![image](https://user-images.githubusercontent.com/107190154/186512948-0ab6b50a-cf56-4238-98a1-fa446663a0c5.png)
 
 ## Sistemi Güncelleyelim.
 ```
