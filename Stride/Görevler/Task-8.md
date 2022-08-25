@@ -257,6 +257,7 @@ configs/stride/chains/gaia.json
 
 **Ardından şunu direkt kopyalayalım ve aşağıya inip dosyamızı oluşturalım.**
 > Stride Json
+> Cüzdan İsminiz Wallet Değilse Değiştirin.
 ```
 {
   "type": "cosmos",
@@ -285,6 +286,7 @@ configs/stride/chains/stride.json
 ```
 **Ardından şunu direkt kopyalayalım ve aşağıya inip dosyamızı oluşturalım.**
 > Gaia Json
+> Cüzdan İsminiz Wallet Değilse Değiştirin.
 ```
 {
   "type": "cosmos",
