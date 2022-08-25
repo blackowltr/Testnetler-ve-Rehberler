@@ -53,6 +53,8 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 
 ## Değişkenlerin Ayarlamasını Yapalım
 > RPC-GRPC komutunun çıktısında bulunan sunucu ip kullanmayacağız.
+> RPC değerinizi sunucu ip + port şeklinde değil, 127.0.0.1:port şeklinde girin.
+
 **Örneğin;**
 `127.0.0.1:16657`
 
