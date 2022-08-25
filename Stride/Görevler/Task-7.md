@@ -39,7 +39,7 @@ echo "$(curl -s ifconfig.me)$(grep -A 3 "\[rpc\]" ~/.stride/config/config.toml |
 echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | egrep -o ":[0-9]+")"
 ```
 
-**RPC değerinizi sunucu ip + port şeklinde değil, 127.0.0.1:port şeklinde girin.**
+### RPC değerinizi sunucu ip + port şeklinde değil, 127.0.0.1:port şeklinde girin.
 
 ### Chain A
 ```
