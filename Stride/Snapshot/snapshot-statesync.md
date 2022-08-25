@@ -5,7 +5,7 @@
 wget -O stride.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/stride.sh && chmod +x stride.sh && ./stride.sh
 ```
 
-## Snapshot, Blok Yüksekliği --> 68780
+## Snapshot, Blok Yüksekliği --> 70715
 ```
 sudo systemctl stop strided
 strided tendermint unsafe-reset-all --home $HOME/.stride --keep-addr-book
