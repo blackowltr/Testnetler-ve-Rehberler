@@ -343,7 +343,7 @@ journalctl -u hermesd -f -o cat
 
 ![image](https://user-images.githubusercontent.com/107190154/185925576-d245577a-13f3-4d3f-aad1-22bc2af84600.png)
 
-![image](https://user-images.githubusercontent.com/107190154/186750619-a84c4fe8-fd5a-494f-a44b-fa6fd4130ab7.png)
+![image](https://user-images.githubusercontent.com/107190154/186985845-9d9b8c73-47d4-46d8-bbb7-e584b6bb2fc3.png)
 
 **Form**
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
