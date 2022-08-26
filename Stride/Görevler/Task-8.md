@@ -254,7 +254,7 @@ journalctl -u relayerd -f -o cat
 
 **add file dedikten sonra çıkan boşluğa şunu yapıştıralım.**
 ```
-configs/stride/chains/gaia.json
+configs/stride/chains/stride.json
 ```
 
 **Ardından şunu direkt kopyalayalım ve aşağıya inip dosyamızı oluşturalım.**
@@ -284,7 +284,7 @@ configs/stride/chains/gaia.json
 **Tekrar add file diyoruz ve bu sefer şunu yapıştırıyoruz;**
 
 ```
-configs/stride/chains/stride.json
+configs/stride/chains/gaia.json
 ```
 **Ardından şunu direkt kopyalayalım ve aşağıya inip dosyamızı oluşturalım.**
 > Gaia Json
