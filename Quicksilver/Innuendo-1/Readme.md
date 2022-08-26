@@ -1,4 +1,4 @@
-## Quicksilver - İnnuendo-1 Rehberi
+## Quicksilver - İnnuendo-1 Kurulum Rehberi
 
 ## Kurulum için
 ```
@@ -107,14 +107,14 @@ quicksilverd tx staking edit-validator \
   --website="<website>" \
   --details="<açıklama>" \
   --chain-id=innuendo-1 \
-  --from=$WALLET
+  --from=Cüzdanismi
 ```
 
 ### Unjail Komutu
 ```
 quicksilverd tx slashing unjail \
   --broadcast-mode=block \
-  --from=$WALLET \
+  --from=Cüzdanismi \
   --chain-id=innuendo-1 \
   --gas=auto
 ```
