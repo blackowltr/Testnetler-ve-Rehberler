@@ -39,6 +39,7 @@ echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.stride/config/app.toml | e
 
 ## Yapılandırma Dosyamızı Ayarlayalım
 > Wallet yazan kısma cüzdan adınızı yazın
+> RPC-GRPC kısmına yukarıdaki komutların çıktısındaki sunucu ip + port şeklinde değil, şu şekilde yazın. 127.0.0.1:portnumarası
 
 ```
 cd $HOME && mkdir .icq
