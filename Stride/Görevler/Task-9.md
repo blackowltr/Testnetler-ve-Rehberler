@@ -49,8 +49,8 @@ chains:
   gaia-testnet:
     key: wallet
     chain-id: GAIA
-    rpc-addr: http://xxxxxx                # Gaia RPC yazacağız
-    grpc-addr: http://xxxxx                # Gaia GRPC yazacağız
+    rpc-addr: http://xxxxxx:portnumarası                # Gaia RPC yazacağız
+    grpc-addr: http://xxxxx:portnumarası                # Gaia GRPC yazacağız
     account-prefix: cosmos
     keyring-backend: test
     gas-adjustment: 1.2
@@ -64,8 +64,8 @@ chains:
   stride-testnet:
     key: wallet
     chain-id: STRIDE-TESTNET-4
-    rpc-addr: http://xxxxxx            # Stride RPC yazacağız
-    grpc-addr: http://xxxxxx           # Stride GRPC yazacağıze
+    rpc-addr: http://xxxxxx:portnumarası            # Stride RPC yazacağız
+    grpc-addr: http://xxxxxx:portnumarası           # Stride GRPC yazacağıze
     account-prefix: stride
     keyring-backend: test
     gas-adjustment: 1.2
