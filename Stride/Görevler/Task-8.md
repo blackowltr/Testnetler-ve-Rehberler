@@ -236,6 +236,8 @@ journalctl -u relayerd -f -o cat
 
 ![rrrrrr](https://user-images.githubusercontent.com/107190154/185925166-ef5b7a75-660e-47d9-a6d8-a424c9c7f288.png)
 
+![image](https://user-images.githubusercontent.com/107190154/186985703-fde38e0d-b754-44a7-9ab5-5089e19a74e7.png)
+
 ## Kalan İşlemlere Devam Edelim
 
 **Aşağıya bıraktığım linke gidip forklama işlemi yapacağız.**
