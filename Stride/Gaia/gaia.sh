@@ -73,6 +73,7 @@ gaiad init $NODENAME --chain-id $GAIA_CHAIN_ID
 
 # download genesis and addrbook
 wget -qO $HOME/.gaia/config/genesis.json "https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/gaia/gaia_genesis.json"
+wget -O $HOME/.gaia/config/addrbook.json "https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Stride/Gaia/addrbook.json"
 
 # set peers and seeds
 SEEDS=""
