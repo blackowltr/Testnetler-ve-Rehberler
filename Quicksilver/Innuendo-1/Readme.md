@@ -1,5 +1,10 @@
 ## Quicksilver - İnnuendo-1 Rehberi
 
+## Kurulum için
+```
+wget -O innuendo-1.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Quicksilver/Innuendo-1/innuendo-1.sh && chmod +x innuendo-1.sh && ./innuendo-1.sh
+```
+
 ### Sync Kontrol Komutu
 ```
 quicksilverd status 2>&1 | jq .SyncInfo
