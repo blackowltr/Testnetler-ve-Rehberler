@@ -17,6 +17,7 @@ gaiad status 2>&1 | jq .SyncInfo
 
 ## State Sync (Şart Değil, dileyen kullanabilir.)
 > Kullanırsanız bir müddet bekleyin. 10-15 dk kadar sürebilir.
+> [Peer için](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Stride/Gaia/Gaia-Peer.md)
 
 ```
 SNAP_RPC1="https://gaia.poolparty.stridenet.co:445" \
