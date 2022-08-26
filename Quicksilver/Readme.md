@@ -8,7 +8,7 @@
 |-------------|----------------|----------------|
 |     8GB     |    4x CPUs     |     300GB      |
 
-## Kuruluma Geçelim.
+## Kuruluma Geçelim.a
 
 ## root kullanıcı oluyoruz:
 ```
