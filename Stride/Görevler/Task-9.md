@@ -252,4 +252,4 @@ sudo rm -rf $HOME/interchain-queries
 **Form**
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
 
-### Herkese Kolay Gelsin.
+### Tebrikler Sabırla Tüm Görevleri Yapmış Oldunuz.:blush:
