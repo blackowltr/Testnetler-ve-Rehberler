@@ -45,4 +45,12 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.source/config/config.toml
 sudo systemctl restart sourced && journalctl -u sourced -f -o cat
 ```
 
+## Addrbook
+```
+sudo systemctl stop sourced
+rm $HOME/.source/config/addrbook.json
+wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/addrbook.json"
+sudo systemctl restart sourced && journalctl -u sourced -f -o cat
+```
+
 ### Kolay Gelsin..
