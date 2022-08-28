@@ -2,7 +2,7 @@
 
 **Bazı testler ve rehberlere buradan ulaşabilirsiniz.**
 
-**Hepinize Kolay Gelsin.**
+**Hepinize Kolay Gelsin.**:blush:
 
 <img src="https://github-readme-stats.vercel.app/api?username=brsbrc&show_icons=true&theme=highcontrast" align="center" width="450" height="350" >
 
