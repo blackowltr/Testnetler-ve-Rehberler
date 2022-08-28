@@ -9,17 +9,24 @@
 |1.4 GHz amd64 CPU|   4GB    | 250GB    |
 
 
-### Kuruluma Geçelim.
+## Kuruluma Geçelim, İsteyen Manuel İsteyen Tek Komutla (Scriptle Kurabilir)
 
-## Sistemi Kuruyoruz.
+### Scriptle Kurmak İsterseniz
+```
+wget -O source.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/source.sh && chmod +x source.sh && ./source.sh
+```
+
+## Manuel Kurulum Yapmak İsteyenler Buradan Başlayacak
+
+### Sistemi Kuruyoruz.
 ```
 sudo apt update && sudo apt upgrade -y
 ```
-## Kütüphane kurulumunu yapıyoruz.
+### Kütüphane kurulumunu yapıyoruz.
 ```
 sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils -y < "/dev/null"
 ```
-## Go Kurulumu
+### Go Kurulumu
 ```
 cd $HOME
 wget -O go1.18.2.linux-amd64.tar.gz https://go.dev/dl/go1.18.2.linux-amd64.tar.gz
@@ -30,42 +37,42 @@ echo 'export GO111MODULE=on' >> $HOME/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bashrc && . $HOME/.bashrc
 go version
 ```
-## Klonlama Yapıyoruz.
+### Klonlama Yapıyoruz.
 ```
 git clone -b testnet https://github.com/Source-Protocol-Cosmos/source.git
 ```
-## Yüklemeyi Başlatıyoruz.
+### Yüklemeyi Başlatıyoruz.
 ```
 cd ~/source
 make install
 ```
-## Nodeismi kısmına isminizi yazın.
+### Nodeismi kısmına isminizi yazın.
 ```
 sourced init nodeisminiz --chain-id SOURCECHAIN-TESTNET
 ```
-## Genesis Dosyasını İndiriyoruz.
+### Genesis Dosyasını İndiriyoruz.
 ```
 curl -s  https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json > ~/.source/config/genesis.json
 ```
-## Addrbook İndiriyoruz.
+### Addrbook İndiriyoruz.
 ```
 wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/mmc6185/node-testnets/main/source-protocol/addrbook.json"
 ```
-## Seed Ekliyoruz.
+### Seed Ekliyoruz.
 ```
 SEEDS="6ca675f9d949d5c9afc8849adf7b39bc7fccf74f@164.92.98.17:26656"
 PEERS=""
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.source/config/config.toml
 ```
-## Peer Ekliyoruz.
+### Peer Ekliyoruz.
 ```
 sed -i.bak 's/persistent_peers =.*/persistent_peers = "6ca675f9d949d5c9afc8849adf7b39bc7fccf74f@164.92.98.17:26656"/' $HOME/.source/config/config.toml
 ```
-## Gas Ayarımızı Yapıyoruz.
+### Gas Ayarımızı Yapıyoruz.
 ```
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.00125usource\"/" $HOME/.source/config/app.toml
 ```
-## Pruning ((Disk kullanımını düşürür - cpu ve ram kullanımını arttırır.)
+### Pruning ((Disk kullanımını düşürür - cpu ve ram kullanımını arttırır.)
 > Kullanmak Şart Değil.
 ```
 pruning="custom"
@@ -77,13 +84,13 @@ sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_rec
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.source/config/app.toml
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.source/config/app.toml
 ```
-## İndexer Kapatma (Disk kullanımını düşürür.)
+### İndexer Kapatma (Disk kullanımını düşürür.)
 > Şart Değil.
 ```
 indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.source/config/config.toml
 ```
-## Servis Dosyasını Oluşturuyoruz.
+### Servis Dosyasını Oluşturuyoruz.
 ```
 echo "[Unit]
 Description=Source-protocol Node
@@ -104,7 +111,7 @@ Storage=persistent
 EOF
 ```
 
-## Tekrar Başlatıyoruz, Sistemizi.
+### Tekrar Başlatıyoruz, Sistemizi.
 ```
 systemctl restart systemd-journald
 systemctl daemon-reload
@@ -112,17 +119,17 @@ systemctl enable sourced
 systemctl restart sourced
 ```
 
-## Log Kontrol
+### Log Kontrol
 ```
 journalctl -fu sourced -o cat
 ```
 
-## Sync Durumu
+### Sync Durumu
 ```
 sourced status 2>&1 | jq .SyncInfo
 ```
 
-## Snapshot (Blok;  1847709 )
+### Snapshot (Blok;  1847709 )
 > Şart Değil.
 ```
 sudo systemctl stop sourced
@@ -144,7 +151,7 @@ rm -rf $HOME/root
 sudo systemctl restart sourced && journalctl -u sourced -f -o cat
 ```
 
-## State Sync
+### State Sync
 > Şart Değil.
 ```
 sudo systemctl stop sourced
@@ -167,21 +174,21 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.source/config/config.toml
 sudo systemctl restart sourced && journalctl -u sourced -f -o cat
 ```
 
-## Discorda Katılıp Cüzdanımıza Token Alalım.
+### Discorda Katılıp Cüzdanımıza Token Alalım.
 
 > https://discord.gg/r8aPh4hR
 
-## Cüzdan Oluşturma
+### Cüzdan Oluşturma
 ```
 sourced keys add cüzdanismi
 ```
 
-## Cüzdan Recover
+### Cüzdan Recover
 ```
 sourced keys add cüzdanismi --recover
 ```
 
-## Validator Oluşturma
+### Validator Oluşturma
 ```
 sourced tx staking create-validator \
 --amount=950000usource \
@@ -197,7 +204,7 @@ sourced tx staking create-validator \
 -y
 ```
 
-## Node Silme Komutu
+### Node Silme Komutu
 ```
 sudo systemctl stop sourced
 sudo systemctl disable sourced
