@@ -73,7 +73,7 @@ sourced init $NODENAME --chain-id $SOURCE_CHAIN_ID
 
 # download genesis and addrbook
 wget -qO $HOME/.source/config/genesis.json  https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json > ~/.source/config/genesis.json
-wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/mmc6185/node-testnets/main/source-protocol/addrbook.json"
+wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/addrbook.json"
 
 # set peers and seeds
 SEEDS="6ca675f9d949d5c9afc8849adf7b39bc7fccf74f@164.92.98.17:26656"
