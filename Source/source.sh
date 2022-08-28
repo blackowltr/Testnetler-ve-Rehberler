@@ -131,4 +131,4 @@ sudo systemctl restart sourced
 
 echo '=============== Yükleme, Başarıyla Tamamlandı. ==================='
 echo -e 'Log Kontrol: \e[1m\e[32mjournalctl -u sourced -f -o cat\e[0m'
-echo -e "Sync Durumu: \e[1m\e[32mcurl -s localhost:${SOURCE_PORT}657/status | jq .result.sync_info\e[0m"
+echo -e "Sync Durumu: \e[1m\e[32msourced status 2>&1 | jq .SyncInfo\e[0m"
