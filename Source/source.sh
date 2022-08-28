@@ -69,7 +69,7 @@ sourced config keyring-backend test
 sourced config node tcp://localhost:${SOURCED_PORT}657
 
 # init
-sourced init $NODENAME --chain-id $SOURCED_CHAIN_ID
+sourced init $NODENAME --chain-id $SOURCE_CHAIN_ID
 
 # download genesis and addrbook
 wget -qO $HOME/.source/config/genesis.json  https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json > ~/.source/config/genesis.json
