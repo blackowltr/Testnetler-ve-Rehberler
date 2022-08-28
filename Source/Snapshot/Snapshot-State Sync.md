@@ -13,7 +13,7 @@ sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.source/config/app.tom
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.source/config/app.toml
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.source/config/app.toml
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.source/config/app.toml
-wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/source/sourcechain-testnet/addrbook.json"
+wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/addrbook.json"
 cd
 rm -rf ~/.source/data; \
 wget -O - http://snap.stake-take.com:8000/source.tar.gz | tar xf -
@@ -30,7 +30,7 @@ sourced unsafe-reset-all --home $HOME/.source
 SEEDS=""; \
 PEERS="9d16b552697cdce3c8b4f23de53708533d99bc59@165.232.144.133:26656,d565dd0cb92fa4b830662eb8babe1dcdc340c321@44.234.26.62:26656,2dbc3e6d52e5eb9357aec5cf493718f6078ffaad@144.76.224.246:36656"; \
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.source/config/config.toml
-wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/source/sourcechain-testnet/addrbook.json"
+wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/addrbook.json"
 SNAP_RPC="https://testnet.sourceprotocol.io:26657"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
