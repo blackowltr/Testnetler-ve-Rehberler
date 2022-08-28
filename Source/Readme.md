@@ -16,6 +16,10 @@
 wget -O source.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Source/source.sh && chmod +x source.sh && ./source.sh
 ```
 
+**Kurulum sonrasında log kontrol edemiyorsanız şu komutu girin ardından yeniden log kontrol yapın**
+```
+systemctl restart systemd-journald
+```
 ## Manuel Kurulum Yapmak İsteyenler Buradan Başlayacak
 
 ### Sistemi Kuruyoruz.
