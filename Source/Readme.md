@@ -133,7 +133,7 @@ journalctl -fu sourced -o cat
 sourced status 2>&1 | jq .SyncInfo
 ```
 
-### Snapshot (Blok;  1847709 )
+### Snapshot (Blok;  2124972 )
 > Şart Değil.
 ```
 sudo systemctl stop sourced
