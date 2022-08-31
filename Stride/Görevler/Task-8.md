@@ -350,4 +350,6 @@ Tx'i alıp aynı zamanda bu oluşturduğumuz github repomuzun linkini de formda 
 
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
 
+ **[Diğer Görevler İçin](https://github.com/brsbrc/Testnetler-ve-Rehberler/tree/main/Stride/G%C3%B6revler)**
+
 ### Hepinize Kolay Gelsin..
