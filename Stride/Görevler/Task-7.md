@@ -346,6 +346,8 @@ journalctl -u hermesd -f -o cat
 
 ![image](https://user-images.githubusercontent.com/107190154/186985845-9d9b8c73-47d4-46d8-bbb7-e584b6bb2fc3.png)
 
+ **[Diğer Görevler İçin](https://github.com/brsbrc/Testnetler-ve-Rehberler/tree/main/Stride/G%C3%B6revler)**
+
 ### Herkese Kolay Gelsin.
 
 
