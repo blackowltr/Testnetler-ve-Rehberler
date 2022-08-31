@@ -17,4 +17,9 @@ sed -i "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/;" $HOME/.gaia/co
 systemctl restart gaiad
 ```
 
+## Ben kendi peer'imi öğrenmek istiyorum diyorsanız;
+```
+echo "$(gaiad tendermint show-node-id)@$(curl ifconfig.me):26656" 
+```
+
 **Herkese Kolay Gelsin.**
