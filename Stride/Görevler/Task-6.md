@@ -46,4 +46,6 @@ strided q records list-user-redemption-record --limit 10000 --output json | jq '
 strided tx stakeibc claim-undelegated-tokens GAIA 280 stride15rdc0pzpr4x88wee3tjlu6f2alknh79ph03y2t --chain-id STRIDE-TESTNET-4 --from cüzdanismi --yes
 ```
 
+ **[Diğer Görevler İçin](https://github.com/brsbrc/Testnetler-ve-Rehberler/tree/main/Stride/G%C3%B6revler)**
+
 ### Hepinize kolay gelsin..
