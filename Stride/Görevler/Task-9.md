@@ -252,4 +252,6 @@ sudo rm -rf $HOME/interchain-queries
 **Form**
 > https://docs.google.com/forms/d/e/1FAIpQLSeoZEC5kd89KCQSJjn5Zpf-NQPX-Gc8ERjTIChK1BEbiVfMVQ/viewform
 
+ **[Diğer Görevler İçin](https://github.com/brsbrc/Testnetler-ve-Rehberler/tree/main/Stride/G%C3%B6revler)**
+
 ### Tebrikler Sabırla Tüm Görevleri Yapmış Oldunuz.:blush:
