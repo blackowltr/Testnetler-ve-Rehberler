@@ -1,4 +1,4 @@
-#Silme Komutları
+# Silme Komutları
 
 ## Stride Node Silme Komutu
 ```
