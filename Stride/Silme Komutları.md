@@ -11,6 +11,17 @@ sudo rm $HOME/stride -rf
 sed -i '/STRIDE_/d' ~/.bash_profile
 ```
 
+## Gaia Silme Komutu
+```
+sudo systemctl stop gaiad
+sudo systemctl disable gaiad
+sudo rm /etc/systemd/system/gaia* -rf
+sudo rm $(which gaiad) -rf
+sudo rm $HOME/.gaia* -rf
+sudo rm $HOME/gaia -rf
+sed -i '/GAIA_/d' ~/.bash_profile
+```
+
 ## Hermes Silme Komutu
 ```
 sudo systemctl stop hermesd
