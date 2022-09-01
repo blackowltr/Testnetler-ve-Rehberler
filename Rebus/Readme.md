@@ -8,6 +8,26 @@
 wget -O rebus.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Rebus/rebus.sh && chmod +x rebus.sh && ./rebus.sh
 ```
 
+## Snapshot (Blok Yüksekliği ---> 240483) 
+```
+sudo systemctl stop rebusd
+rebusd tendermint unsafe-reset-all --home $HOME/.rebusd --keep-addr-book
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.rebusd/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.rebusd/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.rebusd/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.rebusd/config/app.toml
+cd
+rm -rf ~/.rebusd/data; \
+wget -O - http://snap.stake-take.com:8000/rebus.tar.gz | tar xf -
+mv $HOME/root/.rebusd/data $HOME/.rebusd
+rm -rf $HOME/root
+sudo systemctl restart rebusd && journalctl -u rebusd -f -o cat
+```
+
 ## Cüzdan Oluşturma
 
 ```
