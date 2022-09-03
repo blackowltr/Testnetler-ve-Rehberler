@@ -27,6 +27,26 @@ wget -O teritori.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehbe
 journalctl -fu teritorid -o cat
 ```
 
+## Snapshot (Blok Yüksekliği ---> 708010)
+```
+sudo systemctl stop teritorid
+teritorid tendermint unsafe-reset-all --home $HOME/.teritorid --keep-addr-book
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.teritorid/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.teritorid/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.teritorid/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.teritorid/config/app.toml
+cd
+rm -rf ~/.teritorid/data; \
+wget -O - http://snap.stake-take.com:8000/teritori.tar.gz | tar xf -
+mv $HOME/root/.teritorid/data $HOME/.teritorid
+rm -rf $HOME/root
+sudo systemctl restart teritorid && journalctl -u teritorid -f -o cat
+```
+
 ## State Sync (Şart Değil)
 
 ```
