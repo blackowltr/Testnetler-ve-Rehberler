@@ -4,7 +4,7 @@
 
 **Hepinize Kolay Gelsin.**:blush:
 
-# 📊 GitHub Stats:
+# 📊 GitHub İstatistikleri:
 ![](https://github-readme-stats.vercel.app/api?username=brsbrc&theme=jolly&hide_border=true&include_all_commits=true&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=brsbrc&theme=jolly&hide_border=true)<br/>
 
