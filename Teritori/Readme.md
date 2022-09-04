@@ -1,5 +1,7 @@
 # Teritori-Testnet
 
+![TRTR1](https://user-images.githubusercontent.com/107190154/188327066-54bb7847-a9b1-4f96-b55d-f2cd89d472ea.gif)
+
 ## Sistem gereksinimleri:
 
 |CPU | RAM  | Disk  | 
