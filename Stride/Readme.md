@@ -1,6 +1,6 @@
 # Stride Testneti Kurulum Rehberi
 
-<img width="431" alt="stride111" src="https://user-images.githubusercontent.com/107190154/184557695-bc92418f-1eb8-4514-ae06-d89802efda9a.png">
+![streddd](https://user-images.githubusercontent.com/107190154/188332516-5fb7758d-50e0-4f38-8729-a59a274618cf.gif)
 
 > Not: Şu an kurduğumuz direkt chain-4 olan arkadaşlar.
 
