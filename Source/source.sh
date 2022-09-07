@@ -66,7 +66,7 @@ sudo cp $HOME/source/build/sourced /usr/local/bin
 # config
 sourced config chain-id $SOURCE_CHAIN_ID
 sourced config keyring-backend test
-sourced config node tcp://localhost:${SOURCED_PORT}657
+sourced config node tcp://localhost:${SOURCE_PORT}657
 
 # init
 sourced init $NODENAME --chain-id $SOURCE_CHAIN_ID
