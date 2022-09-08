@@ -1,12 +1,10 @@
 ## Zeeka Network - Full Node 
 
-### Zeeka Network - Full Node kurulumundan kısaca kahsedeceğim.
-
-### Full Node, bu sebeple sistem gereksinimleri küçük bir makineye kurabilirsiniz.
-
-### Bu Full Node için herhangi bir teşvik söz konusu değildir.
-
 ![zeeka](https://user-images.githubusercontent.com/107190154/189072552-813693a4-3c3a-4fbd-9735-28f36acb3f4a.png)
+
+**Zeeka Network - Full Node kurulumundan kısaca kahsedeceğim.**
+**Full Node, bu sebeple sistem gereksinimleri küçük bir makineye kurabilirsiniz.**
+**Bu Full Node için herhangi bir teşvik söz konusu değildir.**
 
 ## Komutu Çalıştırıp Kurulumu Başlatalım
 
