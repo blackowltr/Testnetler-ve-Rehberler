@@ -42,6 +42,9 @@ echo -e "\e[1m\e[32m2. Zeeka Reposu Klonlanıyor... \e[0m" && sleep 2
 # Klonlama ve Binary Kurulum
 git clone https://github.com/zeeka-network/bazuka
 cd bazuka
+
+echo -e "\e[1m\e[32m2. Bir Miktar Beklemelisiniz... \e[0m" && sleep 2
+
 cargo install --path .
 
 sleep 2
