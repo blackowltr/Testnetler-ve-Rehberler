@@ -28,10 +28,8 @@ sleep 2
 
 echo -e "\e[1m\e[32m1. Gerekli Paketler Yükleniyor... \e[0m" && sleep 2
 # Yükleme ve Yükseltme
-sudo apt update && sudo apt upgrade -y
-sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git
-make ncdu gcc git jq chrony liblz4-tool -y
-sudo apt install cmake -y
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
 
 sleep 2
 
