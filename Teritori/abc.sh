@@ -44,6 +44,8 @@ git clone https://github.com/zeeka-network/bazuka
 cd bazuka
 cargo install --path .
 
+sleep 2
+
 # İnitialize İşlemi
 bazuka init --seed $SEED --network debug --node 127.0.0.1:8765
 
