@@ -40,11 +40,11 @@ source "$HOME/.cargo/env"
 
 sleep 2
 
-echo -e "\e[1m\e[32m2. Zeeka Reposu Klonlanıyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m3. Zeeka Reposu Klonlanıyor... \e[0m" && sleep 2
 # Klonlama ve Binary Kurulum
 git clone https://github.com/zeeka-network/bazuka
 
-echo -e "\e[1m\e[32m2. Path Oluşturuluyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m4. Derleme Yapılıyor... \e[0m" && sleep 2
 cd bazuka
 cargo install --path .
 
@@ -55,7 +55,7 @@ bazuka init --seed $SEED --network debug --node 127.0.0.1:8765
 
 sleep 2
 
-echo -e "\e[1m\e[32m4. Servis Başlatılıyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m5. Servis Başlatılıyor... \e[0m" && sleep 2
 # Servis Oluşturma
 IPADDR=$(curl icanhazip.com)
 sudo tee <<EOF >/dev/null /etc/systemd/system/zeeka.service
