@@ -12,7 +12,7 @@
 wget -O zeeka.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Zeeka-Network/zeeka.sh && chmod +x zeeka.sh && ./zeeka.sh
 ```
 
-### **Rust Yüklenirken bu kısım geldiğinde "1" yazıp enter yapıyoruz ve yükleme deavm ediyor.**
+### **Rust Yüklenirken bu kısım geldiğinde "1" yazıp enter yapıyoruz ve yükleme devam ediyor.**
 
 ![image](https://user-images.githubusercontent.com/107190154/189104130-014ffcf8-0e6d-4cdf-8504-674a7f985d16.png)
 
