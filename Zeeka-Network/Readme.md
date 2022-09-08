@@ -14,7 +14,7 @@ wget -O zeeka.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberle
 
 ### **Rust Yüklenirken bu kısım geldiğinde "1" yazıp enter yapıyoruz ve yükleme devam ediyor.**
 
-![image](https://user-images.githubusercontent.com/107190154/189104130-014ffcf8-0e6d-4cdf-8504-674a7f985d16.png)
+![rust1](https://user-images.githubusercontent.com/107190154/189106844-95d84a45-19df-4ca7-b864-efb5a2306e2a.png)
 
 ## Log Kontrol
 ```
