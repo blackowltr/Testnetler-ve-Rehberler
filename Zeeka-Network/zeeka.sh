@@ -26,7 +26,7 @@ BOOTS='--bootstrap 152.228.155.120:8765 --bootstrap 95.182.120.179:8765 --bootst
 
 sleep 2
 
-echo -e "\e[1m\e[32m1. Gerekli Paketler Yükleniyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
 # Yükleme ve Yükseltme
 sudo apt-get update && apt-get upgrade -y
 sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
