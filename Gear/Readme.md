@@ -16,8 +16,7 @@ wget -O gear.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler
 journalctl -u gear -f -o cat 
 ```
 
-![gearr](https://user-images.githubusercontent.com/107190154/189469764-dbadc4f4-a11d-43a3-bc29-36fe122a9974.png)
-
+![gearr](https://user-images.githubusercontent.com/107190154/189469801-f01ce997-ab1d-4a7b-aafc-731600900b95.png)
 
 ### Hepinize Kolay Gelsin..
 
