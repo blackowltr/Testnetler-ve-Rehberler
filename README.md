@@ -1,7 +1,5 @@
 # Testnetler-ve-Rehberler
 
-![Black](https://user-images.githubusercontent.com/107190154/188326625-a4d5ce97-aa5f-43c0-8e3a-cc8ee5807a02.png)
-
 ### 📊 GitHub İstatistikleri:
 ![](https://github-readme-stats.vercel.app/api?username=brsbrc&theme=jolly&hide_border=true&include_all_commits=true&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=brsbrc&theme=jolly&hide_border=true)<br/>
