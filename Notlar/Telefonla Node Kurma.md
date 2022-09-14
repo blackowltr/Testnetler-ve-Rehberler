@@ -41,7 +41,7 @@ Not: Programda ücretsiz kullanım hakkı sunan paket HOBBY adlı paket, bize bu
 
 ![image](https://user-images.githubusercontent.com/107190154/190245237-8d6f8492-8fc6-48be-b2d6-0353bf971422.png)
 
--Sunucumuza hem telefondan bağlanmış oluyoruz hem de her bağlanma esansında şifre yazmak yerine tek donuşla sunucumuza erişim sağlayabiliyoruz.
+### Sunucumuza hem telefondan bağlanmış oluyoruz hem de her bağlanma esansında şifre yazmak yerine tek donuşla sunucumuza erişim sağlayabiliyoruz.
 
-Tüm arkadaşlara kolay gelsin, umarım işinize yarar bir içerik olmuştur.
-Okuyan, ilgilenen herkese şimdiden teşekkür ediyorum.
+### Tüm arkadaşlara kolay gelsin, umarım işinize yarar bir içerik olmuştur.
+### Okuyan, ilgilenen herkese şimdiden teşekkür ediyorum.
