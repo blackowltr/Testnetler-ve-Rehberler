@@ -9,7 +9,7 @@ sudo ufw enable
 sudo ufw allow XXXX
 ```
 
-**Ya da portların tamamnını açmak isterseniz;**
+**Ya da portların tamamını açmak isterseniz;**
 ```
 sudo ufw allow all
 ```
