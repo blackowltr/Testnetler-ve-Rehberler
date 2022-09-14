@@ -24,7 +24,7 @@ Bu hatayı aldığınızda çözüm olarak şu komutu girmelisiniz.
 sudo su
 ```
 
-![g1](https://user-images.githubusercontent.com/107190154/190076472-2fef0fb4-f7b9-4752-a658-98726cfedb33.jpg)
+![a11a1aa1](https://user-images.githubusercontent.com/107190154/190086640-f2fdb058-fd76-4428-bbbe-5f0db01c7eeb.jpg)
 
 <h1 align="center">Hata 2: command not found</h1> 
 
