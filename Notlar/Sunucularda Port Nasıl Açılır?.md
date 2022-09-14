@@ -36,6 +36,6 @@ sudo systemctl restart nodeismid
 lsof -i -P -n | grep LISTEN
 ```
 
-### Cosmos Projelerinde Port Numaraları
+## Cosmos Projelerinde Port Numaraları
 
-26656,26657,26658,26660,9090,6060
+### > 26656,26657,26658,26660,9090,6060
