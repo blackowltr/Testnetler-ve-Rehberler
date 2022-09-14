@@ -42,7 +42,7 @@ systemctl restart nodeismid
 
 nodeismid yazan yere şöyle yazacağız. (Yani kurduğumuz node isminin sonuna d harfi ekleyeceğiz.)
 
-örn: rebus içinse rebusd, stride içinse strided, stafihub içinse stafihubd, teritori içinse teritorid
+Örneğin: rebus içinse rebusd, stride içinse strided, stafihub içinse stafihubd, teritori içinse teritorid
 
 Örneğin; Rebus node için yukarıdaki görselde bulunan hatayı şu komutla düzeltebiliriz;
 ```
