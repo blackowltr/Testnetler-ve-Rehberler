@@ -1,6 +1,6 @@
 <h1 align="center">Herkese selamlar. Sizlere bugün node kurarken sıklıkla karşılaştığımız bazı hataların çözümünden bahsedeceğim.</h1>
 
-### Başlıklar
+<h1 align="center">Başlıklar</h1>
 
 **Hata 1: Error: invalid character 'o' looking for beginning of value**
 
