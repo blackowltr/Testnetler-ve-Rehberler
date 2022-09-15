@@ -31,6 +31,7 @@ cd geth-linux-amd64-1.10.24-972007a5/
 ### Şimdi devam edelim, kuruluma
 >Makinemizi güncelliyoruz.
 ```
+cd /root
 sudo apt update;sudo apt upgrade -y
 ```
 >Docker'ı Yüklüyoruz.
