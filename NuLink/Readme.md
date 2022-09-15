@@ -59,6 +59,7 @@ mkdir nulink
 ```
  cp buraya `Path of the secret key file` kısmında yazan yazıyı kopyalayın /root/nulink
  ```
+ **Bu Komutu yazmayı unutursanız hata alırsınız.**
  ```
  chmod -R 777 /root/nulink
 ```
@@ -97,19 +98,19 @@ nulink/nulink nulink ursula init \
 
 ![gitnulink](https://user-images.githubusercontent.com/107190154/190388655-5c68865f-cfda-4dde-885f-56bf72b6d2f8.png)
 
-Örnek Çıktı;
+### Örnek Çıktı;
 
-y/N kısmına y yazıp enter diyoruz.
+**y/N kısmına y yazıp enter diyoruz.**
 
-Ardından 8 karakterli bir şifre oluşturuyoruz. Bu şifreleri bir yere not edin kaybolmasın. 
+**Ardından 8 karakterli bir şifre oluşturuyoruz. Bu şifreleri bir yere not edin kaybolmasın.** 
 
-Şimdi karşımıza kelimelerimiz çıkacak, mavi renktedirler. Mutlaka bir yer yedekleyin. Tekrar kelimeleri görmen şansınız yok.
+**Şimdi karşımıza kelimelerimiz çıkacak, mavi renktedirler. Mutlaka bir yer yedekleyin. Tekrar kelimeleri görmen şansınız yok.**
 
-Ardından yine y/N sorusune y yazıp enter yapalım
+**Ardından yine y/N sorusune y yazıp enter yapalım.**
 
-Açılan sayfaya az önce gelen kelimelerimizi yapıştıralım ve enter diyelim
+**Açılan sayfaya az önce gelen kelimelerimizi yapıştıralım ve enter diyelim.**
 
-Arından Public Key ve keystore dosya dizinin yolunu gösteren bir çıktı alacağız. 
+**Arından Public Key ve keystore dosya dizinin yolunu gösteren bir çıktı alacağız.** 
 ```
 # step 1
  Detected IPv4 address (8.219.186.125) - Is this the public-facing address of Ursula? [y/N]: y
@@ -165,19 +166,10 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
 docker logs -f ursula
 ```
-Örnek Çıktı;
-```
-Authenticating Ursula
-Loaded Ursula (horus)
-✓ External IP matches configuration
-Starting services
-✓ Node Discovery (Horus)
-✓ Work Tracking
-✓ Start Operator Bonded Tracker
-✓ Rest Server https://8.219.186.125:9151
-Working ~ Keep Ursula Online!
-```
+![image](https://user-images.githubusercontent.com/107190154/190395106-60cea495-64fc-47fa-b078-03248ae71e47.png)
+
+### Artık Node'umuz çalışıyor. Hepinize Kolay Gelsin.
+
+**Herhangi bir sorun ya da hata alırsanız bana discorddan ulabilirsiniz.** [Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
 
 ### [Resmi Doküman için](https://docs.nulink.org/products/testnet)
-
-
