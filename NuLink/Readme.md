@@ -205,7 +205,7 @@ Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda 
 
 ![image](https://user-images.githubusercontent.com/107190154/190429119-fa098247-ca9d-421e-8168-76529b3cdeec.png)
 
-### Tokenlerimizi stake ettikten sonra şimdi `bond` işlemi yapacağız. `Bond owner` butonuna basalım.
+### Tokenlerimizi stake ettikten sonra şimdi `bond` işlemi yapacağız. `Bond Worker` butonuna basalım.
 
 ![image](https://user-images.githubusercontent.com/107190154/190430550-6c5daa38-6601-47b9-8bcd-e6935b387093.png)
 
