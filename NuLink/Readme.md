@@ -230,8 +230,8 @@ Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda 
 
 ### Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.
 
-[Nulink Türkiye Telegram Kanalı](https://t.me/NuLink_Turkey)
-[Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
+## [Nulink Türkiye Telegram Kanalı](https://t.me/NuLink_Turkey)
+## [Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
 
 ### [Resmi Doküman için](https://docs.nulink.org/products/testnet)
 ### [Feedback Formu](https://forms.gle/EeSxZBZToB74scru7)
