@@ -213,8 +213,8 @@ Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda 
 
 ### Worker adres az önce node kurarken oluşan public adresimiz, worker adres kısmına onu yazıyoruz.
 
-Node Url kısmına da şu şekilde yazacağız. **https://sunucuip:9151**
-> **örneğin: https://123.45.678:9151**
+### Node Url kısmına da şu şekilde yazacağız. **https://sunucuip:9151**
+### örneğin: https://123.45.678:9151
 
 ### Sonra confirm butonuna basıp cüzdanımıza gelen işlemi onaylayalım.
 
