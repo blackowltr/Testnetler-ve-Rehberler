@@ -55,9 +55,10 @@ mkdir nulink
 **Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
 
 ![nunaa](https://user-images.githubusercontent.com/107190154/190372480-43c054fc-433d-47b7-bbb0-b53fca52da3f.png)
-**Örneğin şöyle; cp /root....................................................................................... /root/nulink
+
+Örneğin şöyle; 
 ```
- cp buraya `Path of the secret key file` kısmında yazan yazıyı kopyalayın /root/nulink
+ cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-09-13T01-14-32.465358210Z--8b1819341bec211a45a2186c4d0030681ccce0ee /root/nulink
  ```
  **Bu Komutu yazmayı unutursanız hata alırsınız.**
  ```
@@ -91,10 +92,14 @@ nulink/nulink nulink ursula init \
 ```
 **signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız.**
 
-> Şöyle olacak, Örneğin;--signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe\
+Şöyle olacak;
+
+Örneğin;--signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe\
 
 **`operator-address` yazan yere az evvel worker hesabı oluşturduğumuzda karşımıza çıkan `public address'i` yazıyoruz.**
 **Örneğin; 0x8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe**
+>Sarı ile işaretli yerdeki adres `operator-address` olan yere yazacağız.
+![nununu](https://user-images.githubusercontent.com/107190154/190402707-09fb815c-2021-42af-ad5b-a13ec90dbc60.png)
 
 ![gitnulink](https://user-images.githubusercontent.com/107190154/190388655-5c68865f-cfda-4dde-885f-56bf72b6d2f8.png)
 
