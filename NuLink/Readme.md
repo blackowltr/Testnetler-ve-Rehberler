@@ -218,6 +218,12 @@ Node Url kısmına da şu şekilde yazacağız. **https://sunucuip:9151**
 
 ### Sonra confirm butonuna basıp cüzdanımıza gelen işlemi onaylayalım.
 
+![image](https://user-images.githubusercontent.com/107190154/190434229-ab890d36-4444-4d7b-8bec-a6abe1f66a0c.png)
+
+### Bu işlemi yaptıktan sonra artık `online` şekilde gözükecektir, node'unuz.
+
+![fnfnfn](https://user-images.githubusercontent.com/107190154/190434841-27277e1a-7c24-4941-953e-92a83f83ee6f.png)
+
 ### Not: Sitede node online olup sonradan offline gözükürse endişelenmeyin, siteden kaynaklı bir durum.
 
 ### İşlemler bu kadardı, yapılması gereken her şeyi yaptık. Hepinize kolay gelsin.
