@@ -14,9 +14,11 @@ sudo su
 sudo ufw allow 9151
 ```
 ## Linux sistem güncellemesi yapıyoruz.
+```
 sudo apt-get update && apt-get upgrade -y
+```
 
-## kütüphane kurulumunu yapıyoruz
+## Kütüphane kurulumunu yapıyoruz
 ```
 sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
 ```
