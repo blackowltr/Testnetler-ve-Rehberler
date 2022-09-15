@@ -173,3 +173,4 @@ docker logs -f ursula
 **Herhangi bir sorun ya da hata alırsanız bana discorddan ulabilirsiniz.** [Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
 
 ### [Resmi Doküman için](https://docs.nulink.org/products/testnet)
+### [Feedback Formu](https://forms.gle/EeSxZBZToB74scru7)
