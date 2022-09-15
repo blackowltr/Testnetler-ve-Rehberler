@@ -58,6 +58,8 @@ mkdir nulink
 **Örneğin şöyle; cp /root....................................................................................... /root/nulink
 ```
  cp buraya `Path of the secret key file` kısmında yazan yazıyı kopyalayın /root/nulink
+ ```
+ ```
  chmod -R 777 /root/nulink
 ```
 
@@ -86,11 +88,12 @@ nulink/nulink nulink ursula init \
 --operator-address adresiniz \
 --max-gas-price 100
 ```
-### signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız. Şöyle olacak, ///code/UTC--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Örneğin; --signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe \
+**signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız.**
 
-### `operator-address` yazan yere az evvel worker hesabı oluşturduğumuzda karşımıza çıkan `public address'i` yazıyoruz.
-Örneğin; 0x8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe
+> Şöyle olacak, Örneğin;--signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe\
+
+**`operator-address` yazan yere az evvel worker hesabı oluşturduğumuzda karşımıza çıkan `public address'i` yazıyoruz.**
+**Örneğin; 0x8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe**
 
 ![gitnulink](https://user-images.githubusercontent.com/107190154/190388655-5c68865f-cfda-4dde-885f-56bf72b6d2f8.png)
 
@@ -145,7 +148,7 @@ Generated configuration file at default filepath /home/circleci/.local/share/nul
 ![finalnu](https://user-images.githubusercontent.com/107190154/190388608-029e9da9-d664-4a0c-9c85-a149e32bfd7f.png)
 
 ### Aşağıdaki komutla node'u başlatıyoruz
-> Size bir tx verecektir, tx verdiyse işlem başarılıdır.
+> Direkt Girebilirsiniz. Size bir tx verecektir, tx verdiyse işlem başarılıdır.
 ```
 docker run --restart on-failure -d \
 --name ursula \
@@ -156,11 +159,9 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 ```
-
-Örnek çıktı;
 ![txnuu](https://user-images.githubusercontent.com/107190154/190388569-c7cc262a-b3c5-4003-9b00-bb828bf6d4fd.png)
 
-### Kontrol sağlyalım
+### Kontrol sağlayalım
 ```
 docker logs -f ursula
 ```
