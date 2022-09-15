@@ -189,40 +189,40 @@ docker logs -f ursula
 Cüzdanımızı metamask'a kurulum esnasında aldığımız kelimelerle import edelim ve siteye şu gidelim; https://test-staking.nulink.org/faucet
 Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda kendi geçiş yapıyor yapmazsa şuradan bsc [test](https://academy.binance.com/tr/articles/connecting-metamask-to-binance-smart-chain) ağını ekleyebilirsin.
 
-Ardından BSC test ağına test token alalım ve bsc test token geldikten sonra nlk token da alalım faucetten.
+### Ardından BSC test ağına test token alalım ve bsc test token geldikten sonra nlk token da alalım faucetten.
 
 ![image](https://user-images.githubusercontent.com/107190154/190427147-1447808c-0518-4880-8467-ce5da67b5e0e.png)
 
-Şimdi `Staking` kısmına gelelim. Şimdi aldığımız nlk tokenleri stake edeceğiz.
+### Şimdi `Staking` kısmına gelelim. Şimdi aldığımız nlk tokenleri stake edeceğiz.
 
 ![image](https://user-images.githubusercontent.com/107190154/190427972-b6543a26-662e-4833-b48d-16132ec17a45.png)
 
-Nlk tokenleri stake edelim.
+### Nlk tokenleri stake edelim.
 
 ![image](https://user-images.githubusercontent.com/107190154/190428750-73b8c80b-891e-4db7-bbff-f3d0a9f8c946.png)
 
-`Confirm` diyelim.
+### `Confirm` diyelim.
 
 ![image](https://user-images.githubusercontent.com/107190154/190429119-fa098247-ca9d-421e-8168-76529b3cdeec.png)
 
-Tokenlerimizi stake ettikten sonra şimdi `bond` işlemi yapacağız. `Bond owner` butonuna basalım.
+### Tokenlerimizi stake ettikten sonra şimdi `bond` işlemi yapacağız. `Bond owner` butonuna basalım.
 
 ![image](https://user-images.githubusercontent.com/107190154/190430550-6c5daa38-6601-47b9-8bcd-e6935b387093.png)
 
-Şimdi karşımıza gelen ekranda doldurmamız gereken yerler var.
+### Şimdi karşımıza gelen ekranda doldurmamız gereken yerler var.
 
-Worker adres az önce node kurarken oluşan public adresimiz, worker adres kısmına onu yazıyoruz.
+### Worker adres az önce node kurarken oluşan public adresimiz, worker adres kısmına onu yazıyoruz.
 
 Node Url kısmına da şu şekilde yazacağız. **https://sunucuip:9151**
 > **örneğin: https://123.45.678:9151**
 
-Sonra confirm butonuna basıp cüzdanımıza gelen işlemi onaylayalım.
+### Sonra confirm butonuna basıp cüzdanımıza gelen işlemi onaylayalım.
 
-Not: Sitede node online olup sonradan offline gözükürse endişelenmeyin, siteden kaynaklı bir durum.
+### Not: Sitede node online olup sonradan offline gözükürse endişelenmeyin, siteden kaynaklı bir durum.
 
-İşlemler bu kadardı, yapılması gereken her şeyi yaptık. Hepinize kolay gelsin.
+### İşlemler bu kadardı, yapılması gereken her şeyi yaptık. Hepinize kolay gelsin.
 
-**Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.** 
+### Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.
 
 [Nulink Türkiye Telegram Kanalı](https://t.me/NuLink_Turkey)
 [Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
