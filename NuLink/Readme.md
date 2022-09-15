@@ -57,7 +57,7 @@ mkdir nulink
 ![nunaa](https://user-images.githubusercontent.com/107190154/190372480-43c054fc-433d-47b7-bbb0-b53fca52da3f.png)
 **Örneğin şöyle; cp /root....................................................................................... /root/nulink
 ```
- cp buraya "`Path of the secret key file` kısmında yazan yazıyı kopyalayın" /root/nulink
+ cp buraya `Path of the secret key file` kısmında yazan yazıyı kopyalayın /root/nulink
  chmod -R 777 /root/nulink
 ```
 
