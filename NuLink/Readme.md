@@ -186,8 +186,9 @@ docker logs -f ursula
 
 ### Artık Node'umuz çalışıyor. Ancak işlemler daha bitmedi. Birkaç adım daha var.
 
-Cüzdanımızı metamask'a kurulum esnasında aldığımız kelimelerle import edelim ve siteye şu gidelim; https://test-staking.nulink.org/faucet
-Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda kendi geçiş yapıyor yapmazsa şuradan bsc [test](https://academy.binance.com/tr/articles/connecting-metamask-to-binance-smart-chain) ağını ekleyebilirsin.
+### Metamask'a girelim ve siteye şu gidelim; https://test-staking.nulink.org/faucet
+**Dilerseniz cüzdanınızı metamask'a kurulum esnasında aldığımız kelimelerle import edin, ya da herhangi bir cüzdanla işleme devam edebilirsiniz.**
+### Metamaskta BSC test ağına geçelim. (Siteye bağlanmaya çalıştığınızda kendi geçiş yapıyor yapmazsa şuradan bsc [test](https://academy.binance.com/tr/articles/connecting-metamask-to-binance-smart-chain) ağını ekleyebilirsin.
 
 ### Ardından BSC test ağına test token alalım ve bsc test token geldikten sonra nlk token da alalım faucetten.
 
