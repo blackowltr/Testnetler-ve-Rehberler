@@ -86,8 +86,8 @@ nulink/nulink nulink ursula init \
 --operator-address adresiniz \
 --max-gas-price 100
 ```
-**signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız. Şöyle olacak, ///code/UTC--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-Örneğin; --signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe \**
+### signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız. Şöyle olacak, ///code/UTC--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Örneğin; --signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe \
 
 ### `operator-address` yazan yere az evvel worker hesabı oluşturduğumuzda karşımıza çıkan `public address'i` yazıyoruz.
 Örneğin; 0x8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe
