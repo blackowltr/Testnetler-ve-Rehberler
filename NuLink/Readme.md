@@ -67,11 +67,12 @@ mkdir nulink
 ```
 ![nunaa](https://user-images.githubusercontent.com/107190154/190372480-43c054fc-433d-47b7-bbb0-b53fca52da3f.png)
 
-Örneğin şöyle; 
+Örneğin şöyle;
+### Bu bir komut değildir, örnektir.
 ```
  cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-09-13T01-14-32.465358210Z--8b1819341bec211a45a2186c4d0030681ccce0ee /root/nulink
  ```
- **Bu Komutu yazmayı unutursanız hata alırsınız.**
+ ### Bu Komutu yazmayı unutmayın. Unutursanız hata alırsınız.
  ```
  chmod -R 777 /root/nulink
 ```
