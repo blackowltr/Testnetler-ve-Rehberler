@@ -52,8 +52,11 @@ docker pull nulink/nulink:latest
 cd /root
 mkdir nulink
 ```
-**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
 
+**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
+```
+ cp burayapathofthesecretkeyfileyazın /root/nulink
+```
 ![nunaa](https://user-images.githubusercontent.com/107190154/190372480-43c054fc-433d-47b7-bbb0-b53fca52da3f.png)
 
 Örneğin şöyle; 
