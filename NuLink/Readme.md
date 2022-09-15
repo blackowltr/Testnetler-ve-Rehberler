@@ -85,7 +85,7 @@ docker run -it --rm \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
 nulink/nulink nulink ursula init \
---signer keystore: `Path of the secret key file` \
+--signer keystore:///code/ `Path of the secret key file` \
 --eth-provider https://data-seed-prebsc-2-s2.binance.org:8545  \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
