@@ -10,6 +10,8 @@
 
 **Hepinize kolay gelsin..**
 
+### [Video Rehber için](https://youtu.be/LOgLKYvJQgM)
+
 <h1 align="center">Kurulum</h1>
 
 ### Minimum Gereksinimler
