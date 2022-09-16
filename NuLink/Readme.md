@@ -71,22 +71,21 @@ cd /root
 mkdir nulink
 ```
 
-**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp `cp` den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
+**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp `cp` den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz. Aşağıda örnek şeklini gösterdim.**
 ```
  cp burayapathofthesecretkeyfileyazın /root/nulink
 ```
+### Bu Komutu yazmayı unutmayın. Unutursanız hata alırsınız.
+ ```
+ chmod -R 777 /root/nulink
+```
 ![nunaa](https://user-images.githubusercontent.com/107190154/190372480-43c054fc-433d-47b7-bbb0-b53fca52da3f.png)
 
-Örneğin şöyle;
-<h1 align="center">Bu bir komut değildir, örnektir</h1> 
+<h1 align="center">Bu girmeniz gereken bir komut değildir, örnektir</h1> 
 
 ```
  cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-09-13T01-14-32.465358210Z--8b1819341bec211a45a2186c4d0030681ccce0ee /root/nulink
  ```
- ### Bu Komutu yazmayı unutmayın. Unutursanız hata alırsınız.
- ```
- chmod -R 777 /root/nulink
-```
 
 ### Değişkenleri ayarlayacağız
 > Burada şifre olarak bazı karakterleri (en az 8 karakter) seçebilirsiniz.
