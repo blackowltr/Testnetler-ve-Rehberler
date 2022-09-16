@@ -88,7 +88,7 @@ mkdir nulink
  ```
 
 ### Değişkenleri ayarlayacağız
-> Burada şifre olarak bazı karakterleri (en az 8 karakter) seçebilirsiniz.
+> Burada en az 8 karakterli bir şifre seçebilirsiniz.
 ```
 export NULINK_KEYSTORE_PASSWORD=şifreniz
 
@@ -96,7 +96,7 @@ export NULINK_OPERATOR_ETH_PASSWORD=şifreniz
 ```
 
 ### Bu adım, NuLink çalışan node yapılandırmasını depolar ve yalnızca bir kez çalıştırılması gerekir.
-> Düzenlememiz gereken yerler var.
+> Düzenlememiz gereken yerler var. Aşağıda nasıl dolduracağınıza dair örnekleri yazdım.
 ```
 docker run -it --rm \
 -p 9151:9151 \
@@ -109,7 +109,7 @@ nulink/nulink nulink ursula init \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
 --payment-network bsc_testnet \
---operator-address adresiniz \
+--operator-address publicadresiniziyazın \
 --max-gas-price 100
 ```
 **signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız.**
@@ -122,6 +122,8 @@ nulink/nulink nulink ursula init \
 **Örneğin; 0x8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe**
 >Sarı ile işaretli yerdeki adres `operator-address` olan yere yazacağız.
 ![nununu](https://user-images.githubusercontent.com/107190154/190402707-09fb815c-2021-42af-ad5b-a13ec90dbc60.png)
+
+### Komutu düzenleyip girdikten sonra karşınıza şu şeklide bir ekran çıkacak.
 
 ![gitnulink](https://user-images.githubusercontent.com/107190154/190388655-5c68865f-cfda-4dde-885f-56bf72b6d2f8.png)
 
