@@ -189,7 +189,13 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
 ![txnuu](https://user-images.githubusercontent.com/107190154/190388569-c7cc262a-b3c5-4003-9b00-bb828bf6d4fd.png)
 
-### Kontrol sağlayalım
+### Log kontrol sağlayalım, sürekli log bakmak için komut yazmak yerine screen açalım.
+```
+apt install screen 
+```
+```
+screen -S log
+```
 ```
 docker logs -f ursula
 ```
