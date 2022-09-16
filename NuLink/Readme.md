@@ -2,6 +2,16 @@
 
 ![NuLinklogo](https://user-images.githubusercontent.com/107190154/190390683-f45a307d-73a1-476b-8216-f24f6ddff618.png)
 
+**Merhaba, arkadaşar. NuLink testneti için bir rehber hazırladım. Bu rehberle tüm nulink test sürecinde yapmanız gerekenleri yapmış olacaksınız.**
+
+**Lütfen yazılanları dikkatle okuyunuz. Atladığınız bir komut size hata aldıracaktır.**
+
+**En hata ya da hiç hatasız kurmak istiyorsanız, her adımı dikkatle yapın.**
+
+**Hepinize kolay gelsin..**
+
+<h1 align="center">Kurulum</h1>
+
 ### Minimum Gereksinimler
 
 |      CPU        |   RAM    |  Disk    | 
@@ -55,13 +65,13 @@ NuLink İmage dosyasını çekelim.
 ```
 docker pull nulink/nulink:latest
 ```
-### nuLink adında bir dosya oluşturuyoruz
+### nulink adında bir dosya oluşturuyoruz
 ```
 cd /root
 mkdir nulink
 ```
 
-**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
+**Burada `Path of the secret key file` yazan kısımda gördüğünüz kısmı alıp `cp` den sonraki kısma yapıştırıyorsunuz ve sonuna `/root/nulink` ekliyorsunuz.**
 ```
  cp burayapathofthesecretkeyfileyazın /root/nulink
 ```
@@ -86,7 +96,7 @@ export NULINK_OPERATOR_ETH_PASSWORD=şifreniz
 ```
 
 ### Bu adım, NuLink çalışan node yapılandırmasını depolar ve yalnızca bir kez çalıştırılması gerekir.
-> İlgili yerleri düzenledikten sonra komutu tek seferde girelim.
+> Düzenlememiz gereken yerler var.
 ```
 docker run -it --rm \
 -p 9151:9151 \
@@ -104,7 +114,7 @@ nulink/nulink nulink ursula init \
 ```
 **signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız.**
 
-**Şöyle olacak;**
+**Komutta şöyle görünecek;**
 
 Örneğin;--signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b18193XXXXXXXXXXXXXXXXXXXXXXXXXe\
 
@@ -130,7 +140,7 @@ nulink/nulink nulink ursula init \
 **Arından Public Key ve keystore dosya dizinin yolunu gösteren bir çıktı alacağız.** 
 ```
 # step 1
- Detected IPv4 address (8.219.186.125) - Is this the public-facing address of Ursula? [y/N]: y
+ Detected IPv4 address (123.45.678.9) - Is this the public-facing address of Ursula? [y/N]: y
  
  Please provide a password to lock Operator keys.
  Do not forget this password, and ideally store it using a password manager.
@@ -149,7 +159,7 @@ nulink/nulink nulink ursula init \
  # step 4
  Confirm seed words: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
  
-Public Key:   02bb2067d21a677ce928967c0ece79a9
+Public Key:   02bb2067d21a67XXXXXXXXXXXXXXXXXX
 Path to Keystore: /home/circleci/.local/share/nulink/keystore
 
 - You can share your public key with anyone. Others need it to interact with you.
