@@ -2,7 +2,7 @@
 
 ![NULINK](https://user-images.githubusercontent.com/107190154/190568136-14f5a7d8-5b15-46fb-8132-4d38a0779171.gif)
 
-**I created this guide so that you can easily install it with the help of a script.**
+### I created this guide so that you can easily install it with the help of a script.**
 
 ### The passwords you use during installation must be 8 characters. 
 
