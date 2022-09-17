@@ -13,6 +13,29 @@ echo ''
 
 sleep 2
 
+echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
+# Yükleme ve Yükseltme
+sudo apt-get update && apt-get upgrade -y
+sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
+
+sleep 2
+
+echo -e "\e[1m\e[32m2. Port Açılıyor... \e[0m" && sleep 2
+# Port Açma
+sudo su
+sudo ufw allow 9151
+sudo ufw allow 9152
+sleep 2
+
+echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
+# Hesap Oluşturma
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
+tar -xvzf geth-linux-amd64-1.10.24-972007a5.tar.gz
+cd geth-linux-amd64-1.10.24-972007a5/
+./geth account new --keystore ./keystore
+
+sleep 15
+
 # Değişkenin Atanması
 if [ ! $KEY ]; then
 	read -p "Path of secret key file yazın: " KEY
@@ -40,30 +63,7 @@ if [ ! $SFR ]; then
 	echo 'export SFR='$SFR >> $HOME/.bash_profile
 fi
 
-sleep 2
-
-echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
-# Yükleme ve Yükseltme
-sudo apt-get update && apt-get upgrade -y
-sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
-
-sleep 2
-
-echo -e "\e[1m\e[32m2. Port Açılıyor... \e[0m" && sleep 2
-# Port Açma
-sudo su
-sudo ufw allow 9151
-sudo ufw allow 9152
-sleep 2
-
-echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
-# Hesap Oluşturma
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
-tar -xvzf geth-linux-amd64-1.10.24-972007a5.tar.gz
-cd geth-linux-amd64-1.10.24-972007a5/
-./geth account new --keystore ./keystore
-
-sleep 15
+sleep 3
 
 echo -e "\e[1m\e[32m3. Docker Kuruluyor... \e[0m" && sleep 2
 # Docker Kurulum
