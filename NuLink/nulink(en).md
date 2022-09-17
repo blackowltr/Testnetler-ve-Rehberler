@@ -4,6 +4,10 @@
 
 **I created this guide so that you can easily install it with the help of a script.**
 
+### The passwords you use during installation must be 8 characters. 
+
+### All passwords that you created during installation must be the same.
+
 ### Run this script to start the installation
 
 ```
@@ -44,5 +48,5 @@
 ```
 docker logs -f ursula
 ```
-
-Discord id: blackowl#7099
+### if you see an output like the following when you check the log, this is not a problem. The reason for this; This is because the worker would send a confirm transaction to blockchain. It will automatically calculate the gas price using web3 library. And the price is too low so the transaction pool do not handling this transaction.
+Anlaşmazlık kimliği: blackowl#7099
