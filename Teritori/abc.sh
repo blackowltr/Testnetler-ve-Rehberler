@@ -134,4 +134,3 @@ sleep 2
 apt install screen && screen -S log
 docker logs -f ursula
 
-wget -O abc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Teritori/abc.sh && chmod +x abc.sh && ./abc.sh
