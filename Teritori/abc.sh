@@ -86,7 +86,7 @@ export NULINK_KEYSTORE_PASSWORD=SFR
 
 export NULINK_OPERATOR_ETH_PASSWORD=SFR
 
-sleep 2
+sleep 3
 
 # Servisi Başlatma
 docker run -it --rm \
@@ -115,7 +115,7 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 
-sleep 4
+sleep 5
 
 echo '------------------- Kurulum, Başarıyla Tamamlandı. Kolay Gelsin... -------------------' && sleep 2
 
