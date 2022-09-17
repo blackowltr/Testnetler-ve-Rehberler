@@ -49,11 +49,11 @@ sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential g
 
 sleep 2
 
-echo -e "\e[1m\e[32m2. 9151 Portu Açılıyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m2. Port Açılıyor... \e[0m" && sleep 2
 # Port Açma
 sudo su
 sudo ufw allow 9151
-
+sudo ufw allow 9152
 sleep 2
 
 echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
@@ -99,7 +99,7 @@ sleep 2
 
 # Servisi Başlatma
 docker run -it --rm \
--p 9151:9151 \
+-p 9152:9152 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
@@ -117,7 +117,7 @@ sleep 15
 # Node Başlatma
 docker run --restart on-failure -d \
 --name ursula \
--p 9151:9151 \
+-p 9152:9152 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
@@ -131,6 +131,5 @@ echo '------------------- Kurulum, Başarıyla Tamamlandı. Kolay Gelsin... ----
 sleep 2
 
 # Log Kaydı Görüntüleme
-apt install screen 
-screen -S log
+apt install screen && screen -S log
 docker logs -f ursula
