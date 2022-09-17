@@ -109,8 +109,8 @@ docker run --restart on-failure -d \
 -p 9152:9152 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
--e SFR \
--e SFR \
+-e $SFR \
+-e $SFR \
 nulink/nulink nulink ursula run --no-block-until-ready
 
 sleep 4
