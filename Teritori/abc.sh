@@ -49,6 +49,13 @@ sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential g
 
 sleep 2
 
+echo -e "\e[1m\e[32m2. 9151 Portu Açılıyor... \e[0m" && sleep 2
+# Port Açma
+sudo su
+sudo ufw allow 9151
+
+sleep 2
+
 echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
 # Hesap Oluşturma
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
