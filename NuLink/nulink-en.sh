@@ -83,13 +83,6 @@ sleep 2
  cp $KEY /root/nulink
 chmod -R 777 /root/nulink
 
-sleep 2
-
-# Creating a Password
-export NULINK_KEYSTORE_PASSWORD=$SFR
-
-export NULINK_OPERATOR_ETH_PASSWORD=$SFR
-
 sleep 3
 
 echo -e "\e[1m\e[32m4. Initializing Node Configuration... \e[0m" && sleep 2
@@ -98,7 +91,7 @@ docker run -it --rm \
 -p 9151:9151 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
--e NULINK_KEYSTORE_PASSWORD \
+-e $SFR \
 nulink/nulink nulink ursula init \
 --signer keystore:///code/$UTC \
 --eth-provider https://data-seed-prebsc-2-s2.binance.org:8545  \
@@ -116,8 +109,8 @@ docker run --restart on-failure -d \
 -p 9152:9152 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
--e NULINK_KEYSTORE_PASSWORD \
--e NULINK_OPERATOR_ETH_PASSWORD \
+-e SFR \
+-e SFR \
 nulink/nulink nulink ursula run --no-block-until-ready
 
 sleep 4
