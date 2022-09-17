@@ -17,11 +17,14 @@ echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
 # Yükleme ve Yükseltme
 sudo apt-get update && apt-get upgrade -y
 sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
+
+sleep 2
+
+echo -e "\e[1m\e[32m2. Port Açılıyor... \e[0m" && sleep 2
 # Port Açma
 sudo su
 sudo ufw allow 9151
 sudo ufw allow 9152
-
 sleep 2
 
 echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
@@ -65,7 +68,7 @@ sleep 3
 echo -e "\e[1m\e[32m3. Docker Kuruluyor... \e[0m" && sleep 2
 # Docker Kurulum
 cd /root
-sudo apt install docker.io
+sudo apt install docker.io -y
 sudo systemctl enable --now docker
 
 sleep 2
@@ -130,3 +133,5 @@ sleep 2
 # Log Kaydı Görüntüleme
 apt install screen && screen -S log
 docker logs -f ursula
+
+wget -O abc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Teritori/abc.sh && chmod +x abc.sh && ./abc.sh
