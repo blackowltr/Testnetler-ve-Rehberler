@@ -122,11 +122,4 @@ nulink/nulink nulink ursula run --no-block-until-ready
 
 sleep 5
 
-echo '------------------- Kurulum, Başarıyla Tamamlandı. Kolay Gelsin... -------------------' && sleep 2
-
-sleep 2
-
-# Log Kaydı Görüntüleme
-apt install screen && screen -S log
-docker logs -f ursula
-
+echo '------------------- Kurulum, Başarıyla Tamamlandı. Kolay Gelsin... -------------------'
