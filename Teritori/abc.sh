@@ -17,14 +17,10 @@ echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
 # Yükleme ve Yükseltme
 sudo apt-get update && apt-get upgrade -y
 sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
-
-sleep 2
-
-echo -e "\e[1m\e[32m2. Port Açılıyor... \e[0m" && sleep 2
 # Port Açma
 sudo su
 sudo ufw allow 9151
-sudo ufw allow 9152
+
 sleep 2
 
 echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
@@ -99,7 +95,7 @@ sleep 2
 
 # Servisi Başlatma
 docker run -it --rm \
--p 9152:9152 \
+-p 9151:9151 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
