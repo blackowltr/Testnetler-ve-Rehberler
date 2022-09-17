@@ -82,9 +82,9 @@ chmod -R 777 /root/nulink
 sleep 2
 
 # Şifre Oluşturma
-export NULINK_KEYSTORE_PASSWORD=SFR
+export NULINK_KEYSTORE_PASSWORD=$SFR
 
-export NULINK_OPERATOR_ETH_PASSWORD=SFR
+export NULINK_OPERATOR_ETH_PASSWORD=$SFR
 
 sleep 3
 
@@ -101,7 +101,7 @@ nulink/nulink nulink ursula init \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
 --payment-network bsc_testnet \
---operator-address PKEY \
+--operator-address $PKEY \
 --max-gas-price 100
 
 sleep 15
