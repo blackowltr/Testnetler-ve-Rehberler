@@ -88,7 +88,8 @@ export NULINK_OPERATOR_ETH_PASSWORD=SFR
 
 sleep 3
 
-# Servisi Başlatma
+echo -e "\e[1m\e[32m4. NuLink Çalışan Node Yapılandırması Depolanıyor... \e[0m" && sleep 2
+# NuLink çalışan node yapılandırmasını depolar
 docker run -it --rm \
 -p 9151:9151 \
 -v /root/nulink:/code \
