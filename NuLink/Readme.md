@@ -40,11 +40,14 @@ sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential g
 Bize gerekli olan dosyayı indiriyoruz ve ayarları yapıp bir worker hesabı oluşturuyoruz.
 ```
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
-
+```
+```
 tar -xvzf geth-linux-amd64-1.10.24-972007a5.tar.gz
-
+```
+```
 cd geth-linux-amd64-1.10.24-972007a5/
-
+```
+```
 ./geth account new --keystore ./keystore
 ```
 Şifre oluşturuyoruz. Bu kısımda şifreyi yazdıktan sonra bir kez daha aynı şifreyi yazıyorsunuz ve şifre oluşturuluyor.
