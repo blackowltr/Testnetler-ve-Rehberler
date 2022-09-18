@@ -49,4 +49,5 @@
 docker logs -f ursula
 ```
 ### if you see an output like the following when you check the log, this is not a problem. The reason for this; This is because the worker would send a confirm transaction to blockchain. It will automatically calculate the gas price using web3 library. And the price is too low so the transaction pool do not handling this transaction.
-Anlaşmazlık kimliği: blackowl#7099
+
+Discord ID: blackowl#7099
