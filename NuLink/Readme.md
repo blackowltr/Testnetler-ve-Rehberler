@@ -138,6 +138,8 @@ nulink/nulink nulink ursula init \
 
 **y/N kısmına y yazıp enter diyoruz.**
 
+**Ardından 8 karakterli bir şifre oluşturuyoruz. Bu şifreleri bir yere not edin kaybolmasın.**
+
 **Şimdi karşımıza kelimelerimiz çıkacak, mavi renktedirler. Mutlaka bir yer yedekleyin. Tekrar kelimeleri görmen şansınız yok.**
 
 **Ardından yine y/N sorusune y yazıp enter yapalım.**
