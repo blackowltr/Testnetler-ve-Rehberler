@@ -10,6 +10,8 @@
 
 **Hepinize kolay gelsin..**
 
+### Kurulum sırasında oluşturduğunuz şifrelerin hepsini aynı yapın.
+
 ### [Video Rehber için](https://youtu.be/LOgLKYvJQgM)
 
 <h1 align="center">Kurulum</h1>
