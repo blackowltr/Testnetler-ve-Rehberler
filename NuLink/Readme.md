@@ -111,7 +111,7 @@ docker run -it --rm \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
 nulink/nulink nulink ursula init \
---signer keystore:///code/ Path of the secret key file \
+--signer keystore:///code/Path of the secret key file \
 --eth-provider https://data-seed-prebsc-2-s2.binance.org:8545  \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
@@ -119,7 +119,7 @@ nulink/nulink nulink ursula init \
 --operator-address publicadresiniziyazın \
 --max-gas-price 100
 ```
-**signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız.**
+**signer keystore:, `///code/.......` bu kısma az evvel yukarıda da kullandığımız `Path of the secret key file` kısmında yazan yeri kopyalayacağız ancak `UTC` yazan yerden itibaren kopyalayacağız. Ve boşluk olmayacak şekilde yapıştıracağız**
 
 **Komutta şöyle görünecek;**
 
