@@ -81,6 +81,10 @@ chmod -R 777 /root/nulink
 
 sleep 3
 
+export NULINK_KEYSTORE_PASSWORD=NULINK_KEYSTORE_PASSWORD
+
+export NULINK_OPERATOR_ETH_PASSWORD=NULINK_OPERATOR_ETH_PASSWORD
+
 echo -e "\e[1m\e[32m4. Initializing Node Configuration... \e[0m" && sleep 2
 # Initialize Node Configuration
 docker run -it --rm \
