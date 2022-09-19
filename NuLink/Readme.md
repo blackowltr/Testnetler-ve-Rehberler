@@ -210,6 +210,18 @@ docker logs -f ursula
 ```
 ![image](https://user-images.githubusercontent.com/107190154/190395106-60cea495-64fc-47fa-b078-03248ae71e47.png)
 
+## Silme Komutları
+```
+docker kill ursula
+
+docker rm ursula
+
+rm -r nulink
+
+rm -r geth-linux-amd64-1.10.24-972007a5
+
+rm -r geth-linux-amd64-1.10.24-972007a5.tar.gz
+```
 ### Artık Node'umuz çalışıyor. Ancak işlemler daha bitmedi. Birkaç adım daha var.
 
 ### Metamask'a girelim ve şu siteye gidelim; https://test-staking.nulink.org/faucet
