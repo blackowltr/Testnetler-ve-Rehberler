@@ -1,3 +1,5 @@
+
+
 #!/bin/bash
 
 echo -e ''
@@ -13,87 +15,76 @@ echo ''
 
 sleep 2
 
-echo -e "\e[1m\e[32m1. Gerekli Kütüphaneler Yükleniyor... \e[0m" && sleep 2
-# Yükleme ve Yükseltme
+echo -e "\e[1m\e[32m1. Downloading Libraries.. \e[0m" && sleep 2
+# update and upgrade
 sudo apt-get update && apt-get upgrade -y
 sudo apt-get -y install libssl-dev && apt-get -y install cmake build-essential git wget jq make gcc
 
-echo -e "\e[1m\e[32m2. Worker Hesabı Oluşturuluyor... \e[0m" && sleep 2
-# Hesap Oluşturma
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
+echo -e "\e[1m\e[32m2. Creating a Worker Account... \e[0m" && sleep 2
+# Account Creation
+wget "https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz"
 tar -xvzf geth-linux-amd64-1.10.24-972007a5.tar.gz
-cd geth-linux-amd64-1.10.24-972007a5/
+cd $HOME/geth-linux-amd64-1.10.24-972007a5/
 ./geth account new --keystore ./keystore
 
-sleep 15
+sleep 13
 
-# Değişkenin Atanması
-if [ ! $KEY ]; then
-	read -p "Path of secret key file yazın: " KEY
-	echo 'export KEY='$KEY >> $HOME/.bash_profile
-fi
+source $HOME/.bash_profile
 
-sleep 2
 
-if [ ! $PKEY ]; then
-	read -p "Public adresinizi yazın: " PKEY
-	echo 'export PKEY='$PKEY >> $HOME/.bash_profile
-fi
+UTC="$(ls /root/geth-linux-amd64-1.10.24-972007a5/keystore/)"
+#echo $UTC
+PKEY="0x""$(awk -F \" '{print $4}' /root/geth-linux-amd64-1.10.24-972007a5/keystore/$UTC)" 
+#echo $PKEY
+KEY="/root/geth-linux-amd64-1.10.24-972007a5/keystore/"$UTC
+#echo $KEY
 
 sleep 2
 
-if [ ! $UTC ]; then
-	read -p "Path secret key file dosyanızı UTC kısmından başlayacak şekilde yazın: " UTC
-	echo 'export UTC='$UTC >> $HOME/.bash_profile
+if [ ! $NULINK_KEYSTORE_PASSWORD ]; then
+	read -p "Enter your Nulink Keystore Password: " NULINK_KEYSTORE_PASSWORD
+	echo "export NULINK_KEYSTORE_PASSWORD="$NULINK_KEYSTORE_PASSWORD >> $HOME/.bash_profile
 fi
 
-sleep 2
-
-if [ ! $SFR ]; then
-	read -p "Bir şifre oluşturun: " SFR
-	echo 'export SFR='$SFR >> $HOME/.bash_profile
+if [ ! $NULINK_OPERATOR_ETH_PASSWORD ]; then
+        read -p "Enter your ETH operator password(can be same as before): " NULINK_OPERATOR_ETH_PASSWORD
+        echo "export NULINK_OPERATOR_ETH_PASSWORD="$NULINK_OPERATOR_ETH_PASSWORD >> $HOME/.bash_profile
 fi
+
+echo -e "Your public address: \e[1m\e[32m$PKEY\e[0m"
+echo -e "Your path to secret key file: \e[1m\e[32m$KEY\e[0m"
+echo -e "Your Nulink Keystore Password: \e[1m\e[32m$NULINK_KEYSTORE_PASSWORD\e[0m"
+echo -e "Your Nulink ETH Operator Password: \e[1m\e[32m$NULINK_KEYSTORE_PASSWORD\e[0m"
 
 sleep 3
 
-echo -e "\e[1m\e[32m3. Docker Kuruluyor... \e[0m" && sleep 2
-# Docker Kurulum
+echo -e "\e[1m\e[32m3. Installing Docker... \e[0m" && sleep 2
+# Docker İnstall
 cd /root
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y </dev/null
-sudo chmod 666 /var/run/docker.sock
+sudo apt install docker.io -y
 sudo systemctl enable --now docker
 
 sleep 2
 
-echo -e "\e[1m\e[32m4. NuLink İmage Dosyası Çekiliyor... \e[0m" && sleep 2
+echo -e "\e[1m\e[32m4. Taking the latest NuLink image... \e[0m" && sleep 2
 docker pull nulink/nulink:latest
 
 sleep 2
 
-# Dosya Oluşturma
+# Creating a File
 cd /root
 mkdir nulink
 
 sleep 2
 
-# Secret key ekleme
- cp $KEY /root/nulink
+# Adding a secret keye
+cp $KEY /root/nulink
 chmod -R 777 /root/nulink
-
-sleep 2
-
-# Şifre Oluşturma
-export NULINK_KEYSTORE_PASSWORD=$SFR
-
-export NULINK_OPERATOR_ETH_PASSWORD=$SFR
 
 sleep 3
 
-echo -e "\e[1m\e[32m4. NuLink Çalışan Node Yapılandırması Depolanıyor... \e[0m" && sleep 2
-# NuLink çalışan node yapılandırmasını depolar
+echo -e "\e[1m\e[32m4. Initializing Node Configuration... \e[0m" && sleep 2
+# Initialize Node Configuration
 docker run -it --rm \
 -p 9151:9151 \
 -v /root/nulink:/code \
@@ -108,9 +99,9 @@ nulink/nulink nulink ursula init \
 --operator-address $PKEY \
 --max-gas-price 100
 
-sleep 15
+sleep 12
 
-# Node Başlatma
+# Starting a Node
 docker run --restart on-failure -d \
 --name ursula \
 -p 9152:9152 \
@@ -120,6 +111,11 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 
-sleep 5
+sleep 4
 
-echo '------------------- Kurulum, Başarıyla Tamamlandı. Kolay Gelsin... -------------------'
+echo '----The Installation was Completed Successfully. Good luck... ----'
+echo '---- If you have any questions, you can contact me. Discord id: blackowl#7099... ----'
+
+
+
+
