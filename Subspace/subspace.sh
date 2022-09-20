@@ -57,19 +57,19 @@ wget -qO subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-10 https://github.com/
 
 sleep 2
 
-echo -e "\e[1m\e[32m4. Binary Dosyalarımıza Execute Yetkisi veriliyor... \e[0m" && sleep 1
+#Binary Dosyalarımıza Execute Yetkisi veriliyor
 sudo chmod +x subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-10
 sudo chmod +x subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-10
 
 sleep 2
 
-echo -e "\e[1m\e[32m5. Binary Dosyaları /usr/local/bin Altına Taşınıyor... \e[0m" && sleep 1
+#Binary Dosyaları /usr/local/bin Altına Taşınıyor
 sudo mv subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-10 /usr/local/bin/subspaceNode
 sudo mv subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-10 /usr/local/bin/subspaceFarmer
 
 sleep 2
 
-echo -e "\e[1m\e[32m6. Servis Başlatılıyor... \e[0m" && sleep 1
+echo -e "\e[1m\e[32m4. Servis Başlatılıyor... \e[0m" && sleep 1
 #Servis Dosyası
 sudo tee <<EOF >/dev/null /etc/systemd/system/subspaced.service
 [Unit]
