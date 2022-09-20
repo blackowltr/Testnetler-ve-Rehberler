@@ -118,4 +118,3 @@ sudo systemctl restart farmerd
 
 echo '=============== Kurulum, Başarıyla Tamamlandı. ==================='
 echo -e 'Log Kontrol: \e[1m\e[32m  journalctl -u subspaced -f -o cat  \e[0m'
-echo -e "Sync Durumu: \e[1m\e[32m  curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_health", "params":[]}' http://localhost:9933  \e[0m"
