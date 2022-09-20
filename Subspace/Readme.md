@@ -11,6 +11,15 @@
 wget -O subspace.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Subspace/subspace.sh && chmod +x subspace.sh && ./subspace.sh
 ```
 
+### Log Kontrol
+```
+journalctl -u subspaced -f -o cat
+```
+### Sync Kontrol
+```
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_health", "params":[]}' http://localhost:9933
+```
+
 ### [Polkadot Cüzdan](https://polkadot.js.org/extension/)
 
 **Ayarlarınız bu şekildeyken çıkan cüzdan adresini kullanacaksınız.**
