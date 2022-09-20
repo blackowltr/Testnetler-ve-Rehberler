@@ -27,7 +27,16 @@
 sudo su
 sudo ufw allow 9151
 ```
+
+## Scriptle Kurulum için
+```
+wget -O nulink-tr.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/NuLink/nulink-tr.sh && chmod +x nulink-tr.sh && ./nulink-tr.sh
+```
+
+<h1 align="center">Manuel Kurulum</h1>
+
 ## Linux sistem güncellemesi yapıyoruz.
+
 ```
 sudo apt-get update && apt-get upgrade -y
 ```
