@@ -32,7 +32,7 @@ wget -O nulink-en.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 
 ## And the installation is now completed successfully, you can check your logging.
 
-![image](https://user-images.githubusercontent.com/107190154/190850125-a19d0d20-dc40-4d09-8951-b43941f394b0.png)
+![image](https://user-images.githubusercontent.com/107190154/191267098-05518491-7ab1-4741-bfef-30e3fc6ed099.png)
 
 ## [See here for the last remaining steps](https://docs.nulink.org/products/staking_dapp)
 
@@ -40,9 +40,11 @@ wget -O nulink-en.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 ```
 docker logs -f ursula
 ```
+
+![image](https://user-images.githubusercontent.com/107190154/191267126-17a0d6ae-51dc-4514-913c-310a1086d73d.png)
+
 ### if you see an output like the following when you check the log, this is not a problem. The reason for this; This is because the worker would send a confirm transaction to blockchain. It will automatically calculate the gas price using web3 library. And the price is too low so the transaction pool do not handling this transaction.
 
 ![unknown (1)](https://user-images.githubusercontent.com/107190154/190915109-11fb0c4a-9652-48be-8110-1731dd67752b.png)
-
 
 ### My Discord ID: blackowl#7099
