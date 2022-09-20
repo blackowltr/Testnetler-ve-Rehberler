@@ -13,7 +13,7 @@ wget -O subspace.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehbe
 
 ### [Polkadot Cüzdan](https://polkadot.js.org/extension/)
 
-**Ayarlarınız bu şekildeyken çıkan cüzdan adresini kullanacaksınız.
+**Ayarlarınız bu şekildeyken çıkan cüzdan adresini kullanacaksınız.**
 
 ![image](https://user-images.githubusercontent.com/107190154/191178602-56b0d32d-52cb-4a6e-8ac7-f24a6d5b4761.png)
 
