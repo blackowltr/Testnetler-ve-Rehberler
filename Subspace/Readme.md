@@ -2,8 +2,6 @@
 
 ![Adsız tasarım](https://user-images.githubusercontent.com/107190154/191179355-ac1b6ff1-095b-4937-8f2c-8578c0774345.gif)
 
-# [Orijinal script kurulum linki](https://github.com/brsbrc/Testnetler-ve-Rehberler/tree/main/Subspace)
-
 ## Sistem Gereksinimleri
 
 ![image](https://user-images.githubusercontent.com/107190154/191182167-f485e355-6eef-40f6-a442-f1525b51f654.png)
