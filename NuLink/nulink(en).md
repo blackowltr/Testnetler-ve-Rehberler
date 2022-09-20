@@ -11,6 +11,7 @@
 ### Run this script to start the installation
 
 ```
+wget -O nulink-en.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/NuLink/nulink-en.sh && chmod +x nulink-en.sh && ./nulink-en.sh
 ```
 
 ## You will create a password in this section.
@@ -20,15 +21,6 @@
 ## The public address of the key and the Path to the secret key file make a note of this information somewhere, it is important.
 
 ![image](https://user-images.githubusercontent.com/107190154/190849872-4a58ec31-866e-4bbe-8833-2490aaf80773.png)
-
-## Type the directory path of the secret key file in this section as follows.
-
-![image](https://user-images.githubusercontent.com/107190154/190849879-813d76de-0a9d-408d-85d3-e4bb3ab82adb.png)
-
-## Type in your public address, and then type in the secret key from the section of your file that starts with UTC
-> Study the example in the photo.
-
-![image](https://user-images.githubusercontent.com/107190154/190849908-1d09cc10-bddb-4da3-b106-d5d30be724fd.png)
 
 ## The words written in blue are your seed words. Don't lose them. Make a note of.
 
