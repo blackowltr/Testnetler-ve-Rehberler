@@ -209,7 +209,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
 
 ### Log kontrol sağlayalım, sürekli log bakmak için komut yazmak yerine screen açalım.
 ```
-apt install screen 
+apt install screen -y
 ```
 ```
 screen -S log
