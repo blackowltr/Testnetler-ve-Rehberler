@@ -126,7 +126,7 @@ sleep 5
 # Starting a Node
 docker run --restart on-failure -d \
 --name ursula \
--p 9152:9152 \
+-p 9151:9151 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
