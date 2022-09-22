@@ -48,3 +48,5 @@ docker logs -f ursula
 ![unknown (1)](https://user-images.githubusercontent.com/107190154/190915109-11fb0c4a-9652-48be-8110-1731dd67752b.png)
 
 ### My Discord ID: blackowl#7099
+
+## Thanks to [@HOdyseus](https://twitter.com/HOdyseus?t=oQJbCGmYzRVhDDfUhH1F3g&s=09) for his help.
