@@ -285,6 +285,29 @@ rm -r geth-linux-amd64-1.10.24-972007a5.tar.gz
 
 ### Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Not: Katılan ancak herhangi bir geri bildirim sağlamayan kullanıcılar herhangi bir ödül için uygun olmayacaktır.**
+
+**Test için gerekli olan feedback formu:**
+https://docs.google.com/forms/d/e/1FAIpQLSdFhnZWG6p6XLY3xqNSMRJbFFN3_M0nRXG4E23X0RPVB6b4yA/viewform
+
+**Feedback formu önemli, arkadaşlar.**
+
+**Tüm testi yaptığınız ve değerli geri bildirimler sağladığınız sürece, ödül almak için seçilme olasılığınız çok yüksek olacaktır.**
+
+**Formda eth adres kısmı için bana söylenen şu;**
+
+`Should be an address to get rewards. Not the one used in test.`
+
+**Türkçe meali; Ödül almak için bir adres olmalı. Testte kullanılan değil.**
+
+**Yani metamask cüzdan adresinizi yazabilirsiniz.**
+
+**Formu doldurmak için aceleci olmayın..**  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [Nulink Türkiye Telegram Kanalı](https://t.me/NuLink_Turkey)
 ## [Nulink Discord Kanalı](https://discord.gg/UZsCu6YT)
 
