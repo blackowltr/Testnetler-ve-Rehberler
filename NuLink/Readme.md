@@ -286,7 +286,7 @@ rm -r geth-linux-amd64-1.10.24-972007a5.tar.gz
 ### Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.
 
 ## [Nulink Türkiye Telegram Kanalı](https://t.me/NuLink_Turkey)
-## [Nulink Discord Kanalı](https://discord.gg/wGvjRWtw)
+## [Nulink Discord Kanalı](https://discord.gg/UZsCu6YT)
 
 ### [Resmi Doküman için](https://docs.nulink.org/products/testnet)
 ### [Feedback Formu](https://forms.gle/EeSxZBZToB74scru7)
