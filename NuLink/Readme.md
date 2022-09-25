@@ -8,7 +8,7 @@
 
 **En hata ya da hiç hatasız kurmak istiyorsanız, her adımı dikkatle yapın.**
 
-### NOT: Feedback vermeniz isteniyor ancak node kurduğunuz andan hemen sonra feedback vermek zorunda değilsiniz. İlla bir hata yazmak da zorunda değilsiniz, tutarlı ve projeye katkı sağlayacak bir öneride olabilir. Test bir müddet devam edecek ve çeşitli güncellemeler alacak, acele ile form doldurmak ya da `very nice project` yazmanız size hiçbir fayda sağlamaz.
+### NOT: Feedback vermeniz isteniyor ancak node kurduğunuz andan hemen sonra feedback vermek zorunda değilsiniz. İlla bir hata yazmak zorunda da değilsiniz, tutarlı ve projeye katkı sağlayacak bir öneride olabilir. Test bir müddet devam edecek ve çeşitli güncellemeler alacak, acele ile form doldurmak ya da `very nice project` yazmanız size hiçbir fayda sağlamaz.
 
 **Hepinize kolay gelsin..**
 
