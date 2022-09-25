@@ -286,6 +286,7 @@ rm -r geth-linux-amd64-1.10.24-972007a5.tar.gz
 ### Herhangi bir sorun ya da hata alırsanız bana telegramdan ya da discorddan ulabilirsiniz.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h1 align="center">Feedback Sorularına Cevaben...</h1>
 
 **Not: Katılan ancak herhangi bir geri bildirim sağlamayan kullanıcılar herhangi bir ödül için uygun olmayacaktır.**
 
