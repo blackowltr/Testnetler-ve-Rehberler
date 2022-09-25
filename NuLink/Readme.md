@@ -8,7 +8,7 @@
 
 **En hata ya da hiç hatasız kurmak istiyorsanız, her adımı dikkatle yapın.**
 
-### NOT: Feedback vermeniz isteniyor ancak node kurduğunuz ancak feedback vermek zorunda değilsiniz. Test bir müddet devam edecek ve çeşitli güncellemeler alacak, acele ile form doldurmak ya da `very nice project` yazmanız size hiçbir fayda sağlamaz.
+### NOT: Feedback vermeniz isteniyor ancak node kurduğunuz andan hemen sonra feedback vermek zorunda değilsiniz. İlla bir hata yazmak da zorunda değilsiniz, tutarlı ve projeye katkı sağlayacak bir öneride olabilir. Test bir müddet devam edecek ve çeşitli güncellemeler alacak, acele ile form doldurmak ya da `very nice project` yazmanız size hiçbir fayda sağlamaz.
 
 **Hepinize kolay gelsin..**
 
@@ -225,13 +225,17 @@ docker logs -f ursula
 ## Silme Komutları
 ```
 docker kill ursula
-
+```
+```
 docker rm ursula
-
+```
+```
 rm -r nulink
-
+```
+```
 rm -r geth-linux-amd64-1.10.24-972007a5
-
+```
+```
 rm -r geth-linux-amd64-1.10.24-972007a5.tar.gz
 ```
 ### Artık Node'umuz çalışıyor. Ancak işlemler daha bitmedi. Birkaç adım daha var.
