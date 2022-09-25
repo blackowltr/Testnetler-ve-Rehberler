@@ -8,6 +8,8 @@
 
 **En hata ya da hiç hatasız kurmak istiyorsanız, her adımı dikkatle yapın.**
 
+### NOT: Feedback vermeniz isteniyor ancak node kurduğunuz ancak feedback vermek zorunda değilsiniz. Test bir müddet devam edecek ve çeşitli güncellemeler alacak, acele ile form doldurmak ya da `very nice project` yazmanız size hiçbir fayda sağlamaz.
+
 **Hepinize kolay gelsin..**
 
 ### Kurulum sırasında oluşturduğunuz şifrelerin hepsini aynı yapın.
