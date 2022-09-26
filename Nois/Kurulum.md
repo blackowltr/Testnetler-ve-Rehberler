@@ -48,11 +48,11 @@ wget https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-002/g
 ```
 
 ### Seed ve Peer ayarı
-
+```
 SEEDS=""
 PEERS="a1222dfb8641e0cb55615b75e0122d5695be1f35@node-0.noislabs.com:26656,2df500525826199afc25665ee7cc45ceb86d68d7@node-1.noislabs.com:26656,61be6aa87471196757ea0f7b1d7897e97b4e09c2@node-2.noislabs.com:26656,cf16671c00eec9a9a047a5c6aa8510cb681b64b8@node-3.noislabs.com:26656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.nois/config/config.toml
-
+```
 
 ### Minimum gas değeri ayarlaması
 ```
