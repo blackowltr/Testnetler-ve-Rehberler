@@ -107,6 +107,32 @@ sudo systemctl restart noisd
 systemctl restart systemd-journald
 ```
 
+### Snapshot
+>Dileyen Kullanabilir.
+```
+sudo systemctl stop noisd
+noisd tendermint unsafe-reset-all --home $HOME/.noisd --keep-addr-book
+
+SNAP_RPC="https://nois-testnet-rpc.polkachu.com:443"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+peers="de14a239b0a942a6053bb5dc51606f568716bbaf@65.109.28.219:17356"
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.noisd/config/config.toml
+
+sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.noisd/config/config.toml
+
+sudo systemctl restart noisd
+sudo journalctl -fu noisd -o cat
+```
+
 ### Log Kontrol
 ``` 
 journalctl -fu noisd -o cat
