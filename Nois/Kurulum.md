@@ -1,4 +1,4 @@
-<h1 align="center">Noise Testnet Kurulum</h1>
+<h1 align="center">Nois Testnet Kurulum</h1>
 
 ![NOIS - TESTNET](https://user-images.githubusercontent.com/107190154/192220441-07b68638-67a6-4df5-9fe7-306fbccd8c21.gif)
 
