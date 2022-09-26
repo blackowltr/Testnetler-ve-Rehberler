@@ -2,6 +2,13 @@
 
 ![NOIS - TESTNET](https://user-images.githubusercontent.com/107190154/192220441-07b68638-67a6-4df5-9fe7-306fbccd8c21.gif)
 
+### Gereksinimler
+
+|      CPU        |   RAM    |  Disk    | 
+|-----------------|----------|----------|
+|4CPU|   8GB    | 200GB    |
+
+
 ## Kuruluma Başlayalım.
 
 ### Sistemi Güncelleyelim
@@ -78,8 +85,8 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 ### İndexer
 ```
-indexer="null" && \
-sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nois/config/config.toml
+indexer="null"
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.noisd/config/config.toml
 ```
 
 ### Servisi Başlatalım
