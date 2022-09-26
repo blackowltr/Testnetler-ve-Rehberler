@@ -33,6 +33,9 @@ sudo ufw allow 9151
 ## Scriptle Kurulum için
 > Scriptteki yardımları için [@HOdyseus](https://twitter.com/HOdyseus?t=oQJbCGmYzRVhDDfUhH1F3g&s=09) teşekkürler...
 ```
+sudo su
+```
+```
 wget -O nulink-tr.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/NuLink/nulink-tr.sh && chmod +x nulink-tr.sh && ./nulink-tr.sh
 ```
 
