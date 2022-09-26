@@ -8,6 +8,7 @@
 |-----------------|----------|----------|
 |4CPU|   8GB    | 200GB    |
 
+## [Explorer](https://explorer.nodestake.top/nois-testnet/)
 
 ## Kuruluma Başlayalım.
 
@@ -191,4 +192,4 @@ sed -i '/NOIS_/d' ~/.bash_profile
 ```
 
 ### Hepinize Kolay Gelsin.
-### Sorunuz olursa: https://t.me/NotitiaGroup
+### Sorunuz olursa Notitia Telegram Kanalımıza Bekleriz: https://t.me/NotitiaGroup
