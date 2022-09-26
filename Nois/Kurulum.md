@@ -147,7 +147,7 @@ journalctl -fu noisd -o cat
 
 ### Sync Durumu
 ``` 
-curl -s localhost:${NOIS_PORT}657/status | jq .result.sync_info
+noisd status 2>&1 | jq .SyncInfo
 ``` 
 
 ### Cüzdan Oluşturma
