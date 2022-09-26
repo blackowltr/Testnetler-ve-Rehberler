@@ -44,24 +44,24 @@ noisd init nodeisminiz --chain-id nois-testnet-002
 
 ### Genesis Dosyamızı indiriyoruz
 ```
-wget https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-002/genesis.json -O $HOME/.nois/config/genesis.json
+wget https://raw.githubusercontent.com/noislabs/testnets/main/nois-testnet-002/genesis.json -O $HOME/.noisd/config/genesis.json
 ```
 
 ### Seed ve Peer ayarı
 ```
 SEEDS=""
 PEERS="a1222dfb8641e0cb55615b75e0122d5695be1f35@node-0.noislabs.com:26656,2df500525826199afc25665ee7cc45ceb86d68d7@node-1.noislabs.com:26656,61be6aa87471196757ea0f7b1d7897e97b4e09c2@node-2.noislabs.com:26656,cf16671c00eec9a9a047a5c6aa8510cb681b64b8@node-3.noislabs.com:26656"
-sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.nois/config/config.toml
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.noisd/config/config.toml
 ```
 
 ### Minimum gas değeri ayarlaması
 ```
-sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.00125unois\"/" $HOME/.nois/config/app.toml
+sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.00125unois\"/" $HOME/.noisd/config/app.toml
 ```
 
 ### Prometheus ayarı
 ```
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.nois/config/config.toml
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.noisd/config/config.toml
 ```
 
 ### Pruning 
