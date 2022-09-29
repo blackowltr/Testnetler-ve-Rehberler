@@ -57,7 +57,7 @@ chmod +x kysor
 
 ### Kysor Çalıştırma
 ```
-./kysor start --valaccount moonbeam
+./kysor start --valaccount moonbeam --auto-download-binaries
 ```
 
 ```
