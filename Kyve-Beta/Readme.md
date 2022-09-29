@@ -5,8 +5,8 @@
 wget https://nc2.breithecker.de/s/BY4Lzj8TAQzgJZm/download/chain_linux_amd64.tar.gz
 tar -xvzf chain_linux_amd64.tar.gz
 ```
-```
 > isim kısmına kendi isminizi yazın.
+```
 ./chaind init [isim] --chain-id kyve-beta
 ```
 
