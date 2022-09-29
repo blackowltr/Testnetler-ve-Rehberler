@@ -18,7 +18,9 @@ mv genesis-v0.7.0-beta.json ~/.kyve/config/genesis.json
 ```
 
 ### Başlatalım
+```
 ./chaind start --p2p.persistent_peers="410bf0cb2cdb9a6e159c14b9d01531b9ecb1edd4@3.70.26.46:26656"
+```
 
 ### KYSOR Binary Dosyası
 ```
