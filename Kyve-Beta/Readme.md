@@ -7,7 +7,7 @@ tar -xvzf chain_linux_amd64.tar.gz
 ```
 > isim kısmına kendi isminizi yazın.
 ```
-./chaind init [isim] --chain-id kyve-beta
+./chaind init isim --chain-id kyve-beta
 ```
 
 ### Genesis Dosyası
