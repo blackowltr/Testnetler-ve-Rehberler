@@ -1,6 +1,6 @@
 #!/bin/bash
 #check docker cmd
-rm -rf wormhole
+rm -rf $HOME/wormhole
 which docker >/dev/null 2>&1
 if  [ $? -ne 0 ] ; then
      echo "docker not found, please install first!"
