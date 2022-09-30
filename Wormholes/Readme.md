@@ -65,7 +65,7 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 ![Ekran görüntüsü 2022-09-30 202320](https://user-images.githubusercontent.com/107190154/193323898-b09a073f-8ff3-4a0b-a991-f63086818616.png)
 
 ### Stake işlemini Gerçekleştirelim.
-> Minimum 7000 erb stake etmelisiniz.
+> Minimum 70000 erb stake etmelisiniz.
 ![image](https://user-images.githubusercontent.com/107190154/193324020-c5330cd3-00ba-4fc6-884c-3f8b9195fc6f.png)
 
 ## [Explorer](https://www.wormholesscan.com/#/)
