@@ -6,6 +6,8 @@
 
 ![image](https://user-images.githubusercontent.com/107190154/193319079-00dd8efb-61ed-4dd7-8d74-f7713cccad12.png)
 
+## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
+
 ### Kurulum için 
 ```
 cd /root
