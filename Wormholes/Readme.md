@@ -10,6 +10,9 @@
 
 ### Kurulum için 
 ```
+sudo su
+```
+```
 cd /root
 ```
 ```
