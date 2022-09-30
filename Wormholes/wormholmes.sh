@@ -25,12 +25,12 @@ if [ -d /wm/.wormholes/keystore ]; then
    read -p "Whether to clear the Wormholes blockchain data history, if yes, press the “y” button, and if not, click “enter.”：" xyz
    if [ "$xyz" = 'y' ]; then
          rm -rf /wm/.wormholes
-              read -p "Private Keyinizi Yazın：" ky
+              read -p "Enter your private key：" ky
    else
          echo "Do not clear"
    fi
 else
-   read -p "Private Keyinizi Yazın：" ky
+   read -p "Please import your private key：" ky
 fi
 
 mkdir -p /wm/.wormholes/wormholes
@@ -40,6 +40,6 @@ fi
 
 docker run -id -e KEY=$ky  -p 30303:30303 -p 8545:8545 -v /wm/.wormholes:/wm/.wormholes --name wormholes wormholestech/wormholes:v1
 
-echo "Private Keyiniz:"
+echo "Your private key is:"
 sleep 6
 docker exec -it wormholes /usr/bin/cat /wm/.wormholes/wormholes/nodekey
