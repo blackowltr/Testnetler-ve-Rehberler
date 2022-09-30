@@ -6,7 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/107190154/193319079-00dd8efb-61ed-4dd7-8d74-f7713cccad12.png)
 
-Kurulum için 
+### Kurulum için 
 ```
 wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
 ```
@@ -15,7 +15,6 @@ Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabili
 
 ### Şu işarete basalım.
 ![Ekran görüntüsü 2022-09-30 202147](https://user-images.githubusercontent.com/107190154/193323716-ecd5d453-f3f1-49cd-931a-cc151b63d15b.png)
-
 
 ### Settings Kısmına girelim.
 ![image](https://user-images.githubusercontent.com/107190154/193324401-133be871-43b4-4ac5-8d9e-c0768f28f2c1.png)
