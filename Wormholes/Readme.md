@@ -11,7 +11,7 @@
 wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
 ```
 
-Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabilirsiniz.
+### Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabilirsiniz.
 
 ### Şu işarete basalım.
 ![Ekran görüntüsü 2022-09-30 202147](https://user-images.githubusercontent.com/107190154/193323716-ecd5d453-f3f1-49cd-931a-cc151b63d15b.png)
@@ -63,3 +63,6 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ![image](https://user-images.githubusercontent.com/107190154/193322107-7716c1c4-fbce-47fa-b805-54119d9db9fd.png)
 
+### Hata ya da eksik varsa PR atabilirsiniz.
+
+## Sorularınız için: https://t.me/NotitiaGroup
