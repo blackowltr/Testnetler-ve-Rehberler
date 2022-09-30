@@ -8,6 +8,15 @@
 
 ### Kurulum için 
 ```
+cd /root
+```
+```
+sudo apt install docker.io
+```
+```
+sudo systemctl enable --now docker
+```
+```
 wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
 ```
 
