@@ -1,6 +1,6 @@
 # Wormholes Testnet Rehberi
 
-![1_U_UZup9cqHnCkI98MkhNCA](https://user-images.githubusercontent.com/107190154/193325488-a7aab3d1-45a2-4c83-b91a-ea1c5c612903.jpeg)
+![Wormholes - Testnet](https://user-images.githubusercontent.com/107190154/193325968-3f3954f0-e736-423e-9153-7f3aff500868.gif)
 
 ### Sistem Gereksinimleri (Minimum)
 
