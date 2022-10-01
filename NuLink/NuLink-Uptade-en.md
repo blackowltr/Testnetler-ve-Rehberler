@@ -9,6 +9,7 @@
 If the staking account and keystore file of the worker account is still available, then the update procedure is pretty trivial. Simply stop the node, pull the latest image and restart the node.
 
 1. Stop the running node in Docker
+> to find out the container ID: `docker ps`
  ```
 docker kill <container ID>
  ```
