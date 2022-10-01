@@ -11,7 +11,7 @@
 #### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor. 0x kaldırmadan kuranlarla ilgili ekip biz düzelteceğiz dedi.
 > Resmi dokümanda buna dair bir uyarı yoktu, durumu ekibe ilettim. Resmi dokümana da eklenecek.
 
-### Örnek: 0x123z987agwhwtd6tyuahpo98786atdfaAUGIFT yerine 123z987agwhwtd6tyuahpo98786atdfaAUGIFT yazmalısınız.
+**Örnek: 0x123z987agwhwtd6tyuahpo98786atdfaAUGIFT yerine 123z987agwhwtd6tyuahpo98786atdfaAUGIFT yazmalısınız.**
 
 ### Kurulum için 
 ```
