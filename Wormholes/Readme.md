@@ -21,6 +21,7 @@ sudo apt install docker.io
 ```
 sudo systemctl enable --now docker
 ```
+> Private keyinizi başında `0x` olmadan yazın.
 ```
 wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
 ```
@@ -36,7 +37,7 @@ wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Reh
 ### İşaretlediğim kısma tıklayın ve cüzdan şifrenizi yazın.
 ![Ekran görüntüsü 2022-09-30 202801](https://user-images.githubusercontent.com/107190154/193324554-fe77ddc7-17ea-4fa3-8e65-39d81b5e93ca.png)
 
-### Karşınıza çıkan sizin private keyiniz.
+### Karşınıza çıkan sizin private keyiniz. Scriptte sizden istenen yere private keyinizi başında `0x` olmadan yazın.
 ![Ekran görüntüsü 2022-09-30 203010](https://user-images.githubusercontent.com/107190154/193324930-e56d9ccb-b5b4-4c87-8499-38982dbe81ac.png)
 
 
