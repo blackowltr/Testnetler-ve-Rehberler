@@ -83,6 +83,11 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ![image](https://user-images.githubusercontent.com/107190154/193322107-7716c1c4-fbce-47fa-b805-54119d9db9fd.png)
 
+### Şu an yani 01.10.2022 - saat 09.05 itibarıyla bulunan validator sayısı --->> 120
+
+![image](https://user-images.githubusercontent.com/107190154/193395277-d5e12d39-0b89-4a0d-be52-26c99a0f1345.png)
+
+
 ### Hata ya da eksik varsa PR atabilirsiniz.
 
 ## Sorularınız için: https://t.me/NotitiaGroup
