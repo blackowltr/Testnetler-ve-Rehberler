@@ -10,7 +10,7 @@
 
 ### Kurulum için 
 ```
-sudo su
+sudo apt-get update && apt-get upgrade -y
 ```
 ```
 cd /root
