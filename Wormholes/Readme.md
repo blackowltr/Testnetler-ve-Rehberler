@@ -8,8 +8,8 @@
 
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
-#### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor.
-> Resmi dokümanda buna dair bir uyarı yoktu, durumu ekibe ilettim.
+#### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor. 0x kaldırmadan kuranlarla ilgili ekip biz düzelteceğiz dedi.
+> Resmi dokümanda buna dair bir uyarı yoktu, durumu ekibe ilettim. Resmi dokümana da eklenecek.
 
 ### Kurulum için 
 ```
