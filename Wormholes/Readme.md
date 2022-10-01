@@ -83,7 +83,7 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ![image](https://user-images.githubusercontent.com/107190154/193416095-5b76805d-da1a-488e-a26b-cc70f2d67741.png)
 
-### Şu an yani 01.10.2022 - saat 18.15 itibarıyla bulunan validator sayısı --->> 120
+### Şu an yani 01.10.2022 - saat 18.15 itibarıyla bulunan validator sayısı --->> 272
 
 ![image](https://user-images.githubusercontent.com/107190154/193416108-ee570151-c2d1-4f35-846d-d5fdd5925998.png)
 
