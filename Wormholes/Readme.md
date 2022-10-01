@@ -8,6 +8,9 @@
 
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
+#### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor.
+> Resmi dokümanda buna dair bir uyarı yoktu, durumu ekibe ilettim.
+
 ### Kurulum için 
 ```
 sudo apt-get update && apt-get upgrade -y
