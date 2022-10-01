@@ -44,16 +44,16 @@ docker rm <container ID>
 
 2. Pull the latest NuLink image.
 ```
-$ docker pull nulink/nulink:latest
+docker pull nulink/nulink:latest
 ```
 
 3. Delete the old host directory and create a new host directory 
 ```
-$ cd /root
+cd /root
     
-$ rm -rf nulink
+rm -rf nulink
 
-$ mkdir nulink
+mkdir nulink
 ```
 
 4.  Copy the keystore file of the Worker account to the host directory selected in step 3.(if you lost the old worker account, you could generate a new one and copy the keystore file of the new worker account here) **Please ensure that this directory has 777 permissions**:
@@ -80,18 +80,18 @@ docker run -it --rm \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
 nulink/nulink nulink ursula init \
---signer keystore:///code/UTC--2022-09-13T01-14-32.465358210Z--8b1819341bec211a45a2186c4d0030681ccce0ee \
+--signer keystore:///code/UTC--202XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \
 --eth-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
 --payment-network bsc_testnet \
---operator-address 0x8B1819341BEc211a45a2186C4D0030681cccE0Ee \
+--operator-address publicaddress \
 --max-gas-price 100
 ```
 
 7.   Launch the Node using the new configuration:
 
-```shell
+```
 docker run --restart on-failure -d \
 --name ursula \
 -p 9152:9152 \
