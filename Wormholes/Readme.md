@@ -56,7 +56,7 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 ### Bakiye Durumu Öğrenme
 > cüzdanadresiniziyazın kısmına kendi adresinizi yazın.
 ```
-curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x40F01a072167F2665078d20D6a12a210Af08c436","pending"],"id":1}' http://127.0.0.1:8545
+curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["cüzdanadresiniziyazın","pending"],"id":1}' http://127.0.0.1:8545
 ```
 
 ## Node Kurduk şimdi şu adrese gidelim stake işlemini yapalım: https://www.limino.com/#/wallet
