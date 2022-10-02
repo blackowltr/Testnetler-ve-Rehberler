@@ -1,5 +1,7 @@
 # NuLink Worker Update
 
+![NULINK - UPDATE](https://user-images.githubusercontent.com/107190154/193439759-3910565f-e794-48a8-9408-36ceab53d9db.gif)
+
 The NuLink worker node could be updated when a new version is released. If there is a mandatory update, all nodes need to be updated to the new version. The update procedure could be different for the docker environment and local environment.
 
 ## Update in docker environment
