@@ -32,7 +32,7 @@ sudo systemctl enable --now docker
 ```
 > Private keyinizi başında `0x` olmadan yazın.
 ```
-wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
+wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
 ```
 
 ### Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabilirsiniz.
