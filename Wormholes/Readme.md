@@ -8,10 +8,14 @@
 
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
-#### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor. 0x kaldırmadan kuranlarla ilgili ekip biz düzelteceğiz dedi.
-> Resmi dokümanda buna dair bir uyarı yoktu, durumu ekibe ilettim. Resmi dokümana da eklenecek.
+### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor. 0x kaldırmadan kuranlarla ilgili ekip biz düzelteceğiz dedi.
 
 **Örnek: 0x123z987agwhwtd6tyuahpo98786atdfaAUGIFT yerine 123z987agwhwtd6tyuahpo98786atdfaAUGIFT yazmalısınız.**
+
+## Daha evvel kurup güncelleme yapmak isteyenler için
+```
+wget -O wormholmes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholmes.sh && chmod +x wormholmes.sh && ./wormholmes.sh
+```
 
 ### Kurulum için 
 ```
