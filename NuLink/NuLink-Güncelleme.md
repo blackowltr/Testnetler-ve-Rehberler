@@ -62,7 +62,10 @@ rm -rf nulink
 mkdir nulink
 ```
 
-4.  Copy the keystore file of the Worker account to the host directory selected in step 3.(if you lost the old worker account, you could generate a new one and copy the keystore file of the new worker account here) **Please ensure that this directory has 777 permissions**:
+4.  Burada Path of the secret key file yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz. Aşağıda örnek şeklini gösterdim.
+
+**Örnek:  cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-01-11T01-12-01.4XXXXXXXX--8XXXXXXXXXXXXXXXXXXXXXXXXXXX /root/nulink**
+
 ```
 cp path of secret key kısmında yazanları girin /root/nulink
 ```
