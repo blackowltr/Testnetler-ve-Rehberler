@@ -8,10 +8,7 @@
 
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
-### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor.
-### Not: Ekip bu sorunu son güncelleme ile düzelttiklerini açıkladılar.
-
-**Örnek: 0x123z987agwhwtd6tyuahpo98786atdfaAUGIFT yerine 123z987agwhwtd6tyuahpo98786atdfaAUGIFT yazmalısınız.**
+## [Resmi Türkiye Telegram Kanalı](https://t.me/wormholestrofficial)
 
 ## Daha evvel kurup güncelleme yapmak isteyenler için
 ```
@@ -31,7 +28,6 @@ sudo apt install docker.io
 ```
 sudo systemctl enable --now docker
 ```
-> Private keyinizi başında `0x` olmadan yazın.
 ```
 wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
 ```
@@ -47,7 +43,7 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 ### İşaretlediğim kısma tıklayın ve cüzdan şifrenizi yazın.
 ![Ekran görüntüsü 2022-09-30 202801](https://user-images.githubusercontent.com/107190154/193324554-fe77ddc7-17ea-4fa3-8e65-39d81b5e93ca.png)
 
-### Karşınıza çıkan sizin private keyiniz. Scriptte sizden istenen yere private keyinizi başında `0x` olmadan yazın.
+### Karşınıza çıkan sizin private keyiniz.
 ![Ekran görüntüsü 2022-09-30 203010](https://user-images.githubusercontent.com/107190154/193324930-e56d9ccb-b5b4-4c87-8499-38982dbe81ac.png)
 
 
