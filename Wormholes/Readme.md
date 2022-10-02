@@ -91,6 +91,6 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ![image](https://user-images.githubusercontent.com/107190154/193441277-2d618aa5-49a6-4641-b126-6867116c060c.png)
 
-### Hata ya da eksik varsa PR atabilirsiniz..
+### Hata ya da eksik varsa PR atabilirsiniz...
 
 ## Sorularınız için: https://t.me/NotitiaGroup
