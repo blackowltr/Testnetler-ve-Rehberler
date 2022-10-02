@@ -85,11 +85,11 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ### Örneğin benim cüzdanım:
 
-![image](https://user-images.githubusercontent.com/107190154/193416095-5b76805d-da1a-488e-a26b-cc70f2d67741.png)
+![image](https://user-images.githubusercontent.com/107190154/193441259-d6612456-a998-44f4-be81-65813df4f431.png)
 
-### Şu an yani 01.10.2022 - saat 18.15 itibarıyla bulunan validator sayısı --->> 272
+### Şu an yani 02.10.2022 - saat 09.35 itibarıyla bulunan validator sayısı --->> 336
 
-![image](https://user-images.githubusercontent.com/107190154/193416108-ee570151-c2d1-4f35-846d-d5fdd5925998.png)
+![image](https://user-images.githubusercontent.com/107190154/193441277-2d618aa5-49a6-4641-b126-6867116c060c.png)
 
 ### Hata ya da eksik varsa PR atabilirsiniz..
 
