@@ -9,6 +9,7 @@
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
 ### Not: Private keyinizi başında `0x` olmadan yazın. Aksi halde yeni bir key oluşturuyor.
+### Not: Ekip bu sorunu son güncelleme ile düzelttiklerini açıkladılar.
 
 **Örnek: 0x123z987agwhwtd6tyuahpo98786atdfaAUGIFT yerine 123z987agwhwtd6tyuahpo98786atdfaAUGIFT yazmalısınız.**
 
