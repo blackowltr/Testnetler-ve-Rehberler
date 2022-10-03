@@ -98,7 +98,12 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 ** 0.9.0 olan sürümde 0x'le yazdığınızda size farklı bir key oluşturuyordu.Bunu ekibe geri bildirimde bulunmuştum. Ekip 0x'i kaldırarak yaz diye bizzat söyledi ancak bu durumun hata olduğunun farkına bile varamayan bazı fenomen arkadaşlar yanlış yönlendirme yaptığımızı düşünerek hakkımda dezenformasyonda bulundular, şimdi aşağıya ekibin yazdığı yazıyı ispat olarak bırakıyorum. Lütfen, her duyduğunuza ya da her gördüğünüze koşulsuz itimat etmeyin. Hepinize kolaylıklar dilerim.**
 > 0.9.1 sürümüyle bu sorunu ekip düzeltti.
 
+**Ekibin ifadesi:
+´In version 0.9.1, the problem of the private key with the prefix 0x has been automatically removed. By default, the private key does not have 0x´**
+
+
 ![image](https://user-images.githubusercontent.com/107190154/193506206-da791f04-e234-43f0-a4d7-29aa04e5fe6e.png)
+
 
 ### Hata ya da eksik varsa PR atabilirsiniz...
 
