@@ -99,10 +99,9 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 > 0.9.1 sürümüyle bu sorunu ekip düzeltti.
 
 **Ekibin ifadesi:**
-**´In version 0.9.1, the problem of the private key with the prefix 0x has been automatically removed. By default, the private key does not have 0x´**
+**In version 0.9.1, the problem of the private key with the prefix 0x has been automatically removed. By default, the private key does not have 0x.**
 
 ![image](https://user-images.githubusercontent.com/107190154/193506206-da791f04-e234-43f0-a4d7-29aa04e5fe6e.png)
-
 
 ### Hata ya da eksik varsa PR atabilirsiniz...
 
