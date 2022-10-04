@@ -39,7 +39,20 @@ nulink/nulink nulink ursula run --no-block-until-ready
 
 ### Stake ve worker hesabınız yoksa ya da kaybettiyseniz
 
-1. Docker'da çalışan node'u durdurup ardından kaldırıyoruz
+### Worker Hesabı OLuşturmak İçin
+
+### Bize gerekli olan dosyayı indiriyoruz ve ayarları yapıp bir worker hesabı oluşturuyoruz.
+```
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.24-972007a5.tar.gz
+
+tar -xvzf geth-linux-amd64-1.10.24-972007a5.tar.gz
+
+cd geth-linux-amd64-1.10.24-972007a5/
+
+./geth account new --keystore ./keystore
+```
+
+1. Docker'da çalışan node'u durdurup ardından kaldırıyoruz. Eğer daha önce kaldırdıysanız 2. adımdan devam edin.
 > container ID öğrenmek için `docker ps` yazıp çıkan kısma göz atabilirsiniz.
 ```
 docker kill container ID
@@ -111,6 +124,11 @@ nulink/nulink nulink ursula run \
 --config-file /root/nulink/ursula.json \
  --no-block-until-ready
 ```
+
+### Başarılı Bir Kurulum Örneği:
+
+![image](https://user-images.githubusercontent.com/107190154/193912627-c68faa7e-6455-4caa-8e6e-1d17720bc79e.png)
+
 
 8.  Node'un çalışma durumunu kontrol edin ve yeni worker hesabını yeni staking hesabına bağlayın [NuLink Staking](https://test-staking.nulink.org/).
 
