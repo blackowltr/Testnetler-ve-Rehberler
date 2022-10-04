@@ -106,4 +106,7 @@ nulink/nulink nulink ursula run \
  --no-block-until-ready
 ```
 
+![image](https://user-images.githubusercontent.com/107190154/193913379-7dbf2ce3-71a7-4ece-8471-626bdddd2ac6.png)
+
+
 8.  Check the node running status and bond the new worker account to new staking account in [Dapp](https://test-staking.nulink.org/).
