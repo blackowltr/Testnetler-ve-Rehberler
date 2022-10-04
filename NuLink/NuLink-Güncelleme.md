@@ -15,8 +15,14 @@ Sadece node'u durdurun, en son NuLink image dosyasını çekin ve node'u yeniden
 1. Çalışan node'u durduralım
 > container ID öğrenmek için `docker ps` yazıp çıkan kısma göz atabilirsiniz.
  ```
-docker kill container ID
+docker kill <container ID>
+docker rm <container ID>
  ```
+ ```
+export NULINK_KEYSTORE_PASSWORD=eskişifre
+
+export NULINK_OPERATOR_ETH_PASSWORD=eskişifre
+```
 
 2. NuLink image dosyasını çekelim
 ```
