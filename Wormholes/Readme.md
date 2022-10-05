@@ -8,12 +8,13 @@
 
 ## [Orijinal Doküman](https://www.wormholes.com/docs/Install/run/index.html)
 
-## [Resmi Türkiye Telegram Kanalı](https://t.me/wormholestrofficial)
+------------------------------------------------------------------------------------------------------------------
 
-## Daha evvel kurup güncelleme yapmak isteyenler için
+## Güncelleme ---- v0.9.2 
 ```
 wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
 ```
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Kurulum için 
 ```
