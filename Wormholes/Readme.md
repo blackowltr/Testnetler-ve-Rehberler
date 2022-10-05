@@ -12,7 +12,7 @@
 
 ## Güncelleme ---- v0.9.2 
 ```
-wget -O https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholess.sh && chmod +x wormholess.sh && ./wormholess.sh
+wget -O wormholess.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholess.sh && chmod +x wormholess.sh && ./wormholess.sh
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ sudo apt install docker.io
 sudo systemctl enable --now docker
 ```
 ```
-wget -O https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholess.sh && chmod +x wormholess.sh && ./wormholess.sh
+wget -O wormholess.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholess.sh && chmod +x wormholess.sh && ./wormholess.sh
 ```
 
 ### Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabilirsiniz.
