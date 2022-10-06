@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-## Güncelleme ---- v0.9.2 
+# Güncelleme ---- v0.9.3
 ```
 wget -O wormholess.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholess.sh && chmod +x wormholess.sh && ./wormholess.sh
 ```
