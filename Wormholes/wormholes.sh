@@ -1,4 +1,5 @@
 #!/bin/bash
+.
 #check docker cmd
 which docker >/dev/null 2>&1
 if  [ $? -ne 0 ] ; then
