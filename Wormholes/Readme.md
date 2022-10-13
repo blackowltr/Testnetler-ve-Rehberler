@@ -1,6 +1,6 @@
 # Wormholes Testnet Rehberi
 
-![Wormholes - Testnet](https://user-images.githubusercontent.com/107190154/193325968-3f3954f0-e736-423e-9153-7f3aff500868.gif)
+![BlackOwlww](https://user-images.githubusercontent.com/107190154/195496348-fabca337-183d-4998-b56c-9527fcb57af0.gif)
 
 ### Sistem Gereksinimleri (Minimum)
 
@@ -10,7 +10,8 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# Güncelleme ---- v0.9.4
+# <h1 align="center">Güncelleme ---- v0.9.4</h1>
+
 ```
 wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
 ```
@@ -88,11 +89,11 @@ curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method
 
 ### Örneğin benim cüzdanım:
 
-![image](https://user-images.githubusercontent.com/107190154/193441259-d6612456-a998-44f4-be81-65813df4f431.png)
+![image](https://user-images.githubusercontent.com/107190154/195496521-7c9560d2-acdc-483f-a87d-5414a4711877.png)
 
-### Şu an yani 02.10.2022 - saat 09.35 itibarıyla bulunan validator sayısı --->> 336
+### Şu an yani 13.10.2022 - saat 07.05 itibarıyla bulunan validator sayısı --->> 446
 
-![image](https://user-images.githubusercontent.com/107190154/193441277-2d618aa5-49a6-4641-b126-6867116c060c.png)
+![image](https://user-images.githubusercontent.com/107190154/195496443-f9a8f5ce-18fe-4df6-adcd-a426990c3fe7.png)
 
 # Açıklama (0x konusu hakkında)
 
