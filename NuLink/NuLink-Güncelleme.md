@@ -19,9 +19,9 @@ docker kill <container ID>
 docker rm <container ID>
  ```
  ```
-export NULINK_KEYSTORE_PASSWORD=eskişifre
+export NULINK_KEYSTORE_PASSWORD=eskişifreniz
 
-export NULINK_OPERATOR_ETH_PASSWORD=eskişifre
+export NULINK_OPERATOR_ETH_PASSWORD=eskişifreniz
 ```
 
 2. NuLink image dosyasını çekelim
@@ -63,7 +63,18 @@ cd geth-linux-amd64-1.10.24-972007a5/
 ```
 docker kill container ID
 docker rm container ID
- ```
+```
+### Docker'ı kurulum.
+```
+sudo apt install docker.io -y
+```
+```
+sudo systemctl enable --now docker
+```
+
+### Docker zaten sunucunuzda yüklü ise size şöyle bir çıktı verecektir:
+
+![image](https://user-images.githubusercontent.com/107190154/195498531-9463f14e-c8b2-415f-adf9-17c0b22283c2.png)
 
 2. NuLink image dosyasını çekelim
 ```
@@ -83,14 +94,15 @@ mkdir nulink
 
 4.  Burada Path of the secret key file yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz. Aşağıda örnek şeklini gösterdim.
 
-**Örnek:  cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-01-11T01-12-01.4XXXXXXXX--8XXXXXXXXXXXXXXXXXXXXXXXXXXX /root/nulink**
+**Örnek: cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-01-11T01-12-01.4XXXXXXXX--8XXXXXXXXXXXXXXXXXXXXXXXXXXX /root/nulink**
 
 ```
 cp path of secret key kısmında yazanları girin /root/nulink
 ```
 ```
 chmod -R 777 /root/nulink
-   ```
+```
+
 5.  Şifrelerimizi ayarlayalım 
 ```
 export NULINK_KEYSTORE_PASSWORD=8karakterlişifre
@@ -128,19 +140,16 @@ docker run --restart on-failure -d \
 nulink/nulink nulink ursula run \
 --rest-port 9152 \
 --config-file /root/nulink/ursula.json \
- --no-block-until-ready
+--no-block-until-ready
 ```
 
 ### Başarılı Bir Kurulum Örneği:
 
 ![image](https://user-images.githubusercontent.com/107190154/193912627-c68faa7e-6455-4caa-8e6e-1d17720bc79e.png)
 
-
 8.  Node'un çalışma durumunu kontrol edin ve yeni worker hesabını yeni staking hesabına bağlayın [NuLink Staking](https://test-staking.nulink.org/).
 
 ## [Nulink Türkiye Resmi Telegram Kanalı](https://t.me/NuLink_Turkey)
 ## Kendi [Telegram Sohbet](https://t.me/NotitiaGroup) ve [Duyuru Kanalım](https://t.me/NotitiaGroup)
 ## Herkese Kolay Gelsin..
-
-
 
