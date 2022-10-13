@@ -67,7 +67,7 @@ cd geth-linux-amd64-1.10.24-972007a5/
 docker kill container ID
 docker rm container ID
 ```
-### Docker'ı kurulum.
+### Docker'ı kuralım
 ```
 sudo apt install docker.io -y
 ```
