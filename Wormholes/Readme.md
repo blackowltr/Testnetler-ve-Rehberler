@@ -17,7 +17,7 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Kurulum için 
+# <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
 ```
 sudo apt-get update && apt-get upgrade -y
 ```
