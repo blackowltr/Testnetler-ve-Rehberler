@@ -9,7 +9,7 @@
  sudo ufw allow 9152
  ```
  
- <h1 align="center">Halihazırda Sunucusunda NuLink Kurulu Olanlar `Stake ve worker hesabınız varsa` burada bulunan komutları kullanın. </h1>
+ <h1 align="center">Halihazırda sunucusunda NuLink kurulu olanlar burada bulunan komutları kullanın. </h1>
 
 ## Kurulum
 
