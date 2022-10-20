@@ -22,7 +22,13 @@ Sadece node'u durdurun, en son NuLink image dosyasını çekin ve node'u yeniden
 docker kill <container ID>
 docker rm <container ID>
  ```
+ 
+ ### Örnek:
+```
+docker kill ursula
+docker rm ursula
  ```
+```
 export NULINK_KEYSTORE_PASSWORD=eskişifreniz
 
 export NULINK_OPERATOR_ETH_PASSWORD=eskişifreniz
