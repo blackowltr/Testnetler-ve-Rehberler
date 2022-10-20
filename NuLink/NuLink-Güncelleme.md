@@ -16,6 +16,7 @@
 ### Stake ve worker hesabınız varsa
 
 Sadece node'u durdurun, en son NuLink image dosyasını çekin ve node'u yeniden başlatın.
+
 **1. Çalışan node'u durduralım**
 ```
 docker kill ursula
