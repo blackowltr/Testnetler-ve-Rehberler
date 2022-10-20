@@ -16,14 +16,14 @@
 ### Stake ve worker hesabınız varsa
 
 Sadece node'u durdurun, en son NuLink image dosyasını çekin ve node'u yeniden başlatın.
-1. Çalışan node'u durduralım
+**1. Çalışan node'u durduralım**
 > container ID öğrenmek için `docker ps -a` yazıp çıkan kısma göz atabilirsiniz.
  ```
 docker kill <container ID>
 docker rm <container ID>
  ```
  
- ### Örnek:
+**Örnek:**
 ```
 docker kill ursula
 docker rm ursula
@@ -34,12 +34,12 @@ export NULINK_KEYSTORE_PASSWORD=eskişifreniz
 export NULINK_OPERATOR_ETH_PASSWORD=eskişifreniz
 ```
 
-2. NuLink image dosyasını çekelim
+**2. NuLink image dosyasını çekelim**
 ```
 docker pull nulink/nulink:latest
 ```
 
-3.  Node'u yeniden başlatalım
+**3.  Node'u yeniden başlatalım**
 ```
 docker run --restart on-failure -d \
 --name ursula \
@@ -50,6 +50,8 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 ```
+
+[NuLink Staking](https://test-staking.nulink.org/)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -91,12 +93,12 @@ sudo systemctl enable --now docker
 
 ![image](https://user-images.githubusercontent.com/107190154/195498531-9463f14e-c8b2-415f-adf9-17c0b22283c2.png)
 
-1. NuLink image dosyasını çekelim
+**1. NuLink image dosyasını çekelim**
 ```
 docker pull nulink/nulink:latest
 ```
 
-2. Eski klasörü kaldırıp yenisini oluşturalım 
+**2. Eski klasörü kaldırıp yenisini oluşturalım**
 ```
 cd /root
 ```
@@ -107,7 +109,7 @@ rm -rf nulink
 mkdir nulink
 ```
 
-3.  Burada Path of the secret key file yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz. Aşağıda örnek şeklini gösterdim.
+**3.  Burada Path of the secret key file yazan kısımda gördüğünüz kısmı alıp cp den sonraki kısma yapıştırıyorsunuz. Aşağıda örnek şeklini gösterdim.**
 
 **Örnek: cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-01-11T01-12-01.4XXXXXXXX--8XXXXXXXXXXXXXXXXXXXXXXXXXXX /root/nulink**
 
@@ -118,14 +120,14 @@ cp path of secret key kısmında yazanları girin /root/nulink
 chmod -R 777 /root/nulink
 ```
 
-4.  Şifrelerimizi ayarlayalım 
+**4. Şifrelerimizi ayarlayalım**
 ```
 export NULINK_KEYSTORE_PASSWORD=8karakterlişifre
 
 export NULINK_OPERATOR_ETH_PASSWORD=8karakterlişifre
 ```
 
-5.  Node Konfigürasyonunu ayarlayacağız ve port değişikliği yapacağız 
+**5. Node Konfigürasyonunu ayarlayacağız ve port değişikliği yapacağız** 
 ```
 docker run -it --rm \
 -p 9152:9152  \
@@ -142,7 +144,7 @@ nulink/nulink nulink ursula init \
 --max-gas-price 100
 ```
 
-6.   Yeni yapılandırmayı kullanarak Node'u başlatalım
+**6. Yeni yapılandırmayı kullanarak Node'u başlatalım**
 
 ```
 docker run --restart on-failure -d \
@@ -162,7 +164,7 @@ nulink/nulink nulink ursula run \
 
 ![image](https://user-images.githubusercontent.com/107190154/193912627-c68faa7e-6455-4caa-8e6e-1d17720bc79e.png)
 
-7.  Node'un çalışma durumunu kontrol edin ve yeni worker hesabını yeni staking hesabına bağlayın [NuLink Staking](https://test-staking.nulink.org/).
+**7.  Node'un çalışma durumunu kontrol edin ve yeni worker hesabını yeni staking hesabına bağlayın [NuLink Staking](https://test-staking.nulink.org/).**
 
 ## [Nulink Türkiye Resmi Telegram Kanalı](https://t.me/NuLink_Turkey)
 ## Kendi [Telegram Sohbet](https://t.me/NotitiaGroup) ve [Duyuru Kanalım](https://t.me/NotitiaGroup)
