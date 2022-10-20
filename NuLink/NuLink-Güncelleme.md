@@ -27,6 +27,7 @@ docker pull nulink/nulink:latest
 ```
 
 **3.  Node'u yeniden başlatalım**
+> Direkt girin, değişiklik yapmayın.
 ```
 docker run --restart on-failure -d \
 --name ursula \
