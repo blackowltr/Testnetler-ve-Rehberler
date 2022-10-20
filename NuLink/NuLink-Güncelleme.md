@@ -37,6 +37,10 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 ```
+### Başarılı bir güncelleme çıktısı
+
+![image](https://user-images.githubusercontent.com/107190154/196957169-d6a97dca-f971-4b14-9745-a55d905d99d1.png)
+
 
 ### Şu şekilde bir log çıktısı alıyorsanız, [NuLink Staking](https://test-staking.nulink.org/) buraya gidin ve bond worker işlemi yapın.
 
