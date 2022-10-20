@@ -2,13 +2,6 @@
 
 ![NULINK - UPDATE](https://user-images.githubusercontent.com/107190154/193439759-3910565f-e794-48a8-9408-36ceab53d9db.gif)
 
-### Port ayarı için
- ```
- sudo su
- sudo ufw enable
- sudo ufw allow 9152
- ```
- 
  <h1 align="center">Halihazırda sunucusunda NuLink kurulu olanlar burada bulunan komutları kullanın. </h1>
 
 ## Kurulum
