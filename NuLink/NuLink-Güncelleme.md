@@ -22,9 +22,9 @@ docker kill ursula
 docker rm ursula
 ```
 ```
-export NULINK_KEYSTORE_PASSWORD=eskişifreniz
+export NULINK_KEYSTORE_PASSWORD=mevcutşifreniz
 
-export NULINK_OPERATOR_ETH_PASSWORD=eskişifreniz
+export NULINK_OPERATOR_ETH_PASSWORD=mevcutşifreniz
 ```
 
 **2. NuLink image dosyasını çekelim**
