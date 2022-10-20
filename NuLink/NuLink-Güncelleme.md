@@ -13,7 +13,6 @@ Sadece node'u durdurun, en son NuLink image dosyasını çekin ve node'u yeniden
 **1. Çalışan node'u durduralım**
 ```
 docker kill ursula
-docker rm ursula
 ```
 ```
 export NULINK_KEYSTORE_PASSWORD=mevcutşifreniz
