@@ -33,15 +33,12 @@ docker pull nulink/nulink:latest
 ```
 docker run --restart on-failure -d \
 --name ursula \
--p 9152:9152 \
+-p 9151:9151 \
 -v /root/nulink:/code \
 -v /root/nulink:/home/circleci/.local/share/nulink \
 -e NULINK_KEYSTORE_PASSWORD \
 -e NULINK_OPERATOR_ETH_PASSWORD \
-nulink/nulink nulink ursula run \
---rest-port 9152 \
---config-file /root/nulink/ursula.json \
---no-block-until-ready
+nulink/nulink nulink ursula run --no-block-until-ready
 ```
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
