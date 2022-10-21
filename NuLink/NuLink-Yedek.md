@@ -34,7 +34,7 @@ docker pull nulink/nulink:latest
 
 ### Taşıma bittikten sonra şu komutu yazıp devam edin.
 ```
-rm -r /root/nulink/ursula.json
+rm -rf /root/nulink/ursula.json
 ```
 
 ### Bu kısma daha evvel kurulum yaparken size verilen bilgileri yazacağız. Örnek için görsele bakınız.
