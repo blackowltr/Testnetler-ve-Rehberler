@@ -38,14 +38,14 @@ Not: Katılan ancak herhangi bir geri bildirim sağlamayan kullanıcılar herhan
 
 ### Önemli Bağlantılar
 
-(Resmi Doküman)[https://docs.nulink.org/products/testnet]
+Resmi Doküman - - - - https://docs.nulink.org/products/testnet
 
-(Aşama 1 - Geri Bildirim Formu)[https://docs.google.com/forms/d/e/1FAIpQLSep0rgPRcMd2kUhz53GYmBoktu-u-8npU2DakmzGpmpCmYZPw/viewform]
+Aşama 1 - Geri Bildirim Formu - - - - https://docs.google.com/forms/d/e/1FAIpQLSep0rgPRcMd2kUhz53GYmBoktu-u-8npU2DakmzGpmpCmYZPw/viewform
 
-(Aşama 2- Geri Bildirim Formu)[https://docs.google.com/forms/d/e/1FAIpQLSfyXt9u_in78ETutHcWPCg2AuaRjdCvtb1WBeiGJXGLcX8oiA/viewform]
+Aşama 2- Geri Bildirim Formu - - - - https://docs.google.com/forms/d/e/1FAIpQLSfyXt9u_in78ETutHcWPCg2AuaRjdCvtb1WBeiGJXGLcX8oiA/viewform
 
-(NuLink Telegram)[https://t.me/NuLink2021]
+NuLink Telegram - - - - https://t.me/NuLink2021
 
-(NuLink Türkiye Telegram)[https://t.me/NuLink_Turkey]
+NuLink Türkiye Telegram - - - - https://t.me/NuLink_Turkey
 
-(Resmi Website)[https://www.nulink.org/]
+Resmi Website - - - - https://www.nulink.org/
