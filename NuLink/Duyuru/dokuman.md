@@ -6,11 +6,15 @@
 
 ### Testin 1. Aşaması
 Program, her biri ağın çeşitli boyutlarını test etmek ve genel ekosistemi büyütmek için tasarlanmış birden fazla aşamada çalışacak.
+
 Aşama 1'in Başlangıç ve Bitiş Tarihleri: (15 Eylül - 31 Aralık)
+
 Bu aşama, Nulink worker node işlevini ve Stake Dapp işlevini test etmeye odaklanacak ve Eylül-15'ten Aralık-31'e kadar sürecek. İşlevsel test uzmanları bir dizi rekabetçi göreve ve rehberli zorluklara katılacaklar. Her meydan okuma ile katılımcılar jeton kazanma fırsatına sahip olacaklar.
 
 ### Testin 2. Aşaması
+
 Aşama 2'nin Başlangıç ve Bitiş Tarihleri: (20 Ekim - 31 Aralık)
+
 Bu aşama, Nulink gizli dosya paylaşım aracısı işlevini ve Dapp işlevini test etmeye odaklanacaktır. İşlevsel test cihazları, her gizli dosya paylaşım işlevini test edecek ve ürünü geliştirmemize yardımcı olacak geri bildirim sağlayacaktır.
 
 ### Neden Testnet'e Katılmalısınız?
