@@ -1,3 +1,5 @@
+# NuLink Testnet Hakkında
+
 **Nulink Network Ekibi, topluluk üyelerinin teknolojiyi önizlemesi ve test aşamasında bize yardımcı olması için heyecan verici bir ödül programı ile birlikte test ağımız "Horus" un lansmanını duyurmaktan büyük heyecan duyuyor.** 
 
 **Gizli dosya paylaşım işlevimizi oluşturmak için çok çalışıyoruz. Piyasaya sürülmeye doğru ilerlerken, test ağımızın değerini bizim ve topluluğumuz için optimize etmek için mümkün olduğunca şeffaf olmanın kritik olduğunu düşünüyoruz.**
