@@ -26,6 +26,8 @@ NuLink Agent, Chrome Web Mağazası'nda yayınlanmadı. NuLink Agent'ı manuel o
 
 NuLink Agent'a ilk kez tıkladığınızda ana sayfa şöyle görünür:
 
+![avccc](https://user-images.githubusercontent.com/107190154/197932625-423a19d6-5b8d-4420-988a-40f7981d3d01.png)
+
 1- Cüzdan oluştur düğmesini tıklayın, önce bir cüzdan oluşturun.
 
 2- NuLink Agent için şifreyi ayarlayalım, uygulamayı güvence altına almak için şifreler kullanır, cüzdanınızı gizli kurtarma ifadenizden geri yükledikten veya oluşturduktan sonra, uygulamanın kilidini açmak için şifrenizi kullanırsınız. Cüzdan güvenliğinizi korumak için lütfen güçlü bir şifre belirleyin.
