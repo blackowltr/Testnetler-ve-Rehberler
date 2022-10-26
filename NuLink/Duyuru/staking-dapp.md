@@ -19,8 +19,12 @@ Not: BSC testnet için varsayılan RPC sunucusu bazen kararsız çalışmaktadı
 Adım 2- NLK test tokenlerini stake pool'a yatırın.
 Metamask cüzdan ile giriş yaptıktan sonra, lütfen bakiyeyi kontrol edin ve jetonları staking poola eklemek için "Staking" düğmesine tıklayın. İlk fon olarak staking hesabında yeterli NLK test token ve BNB test tokeni bulunmalıdır. Aktif bir worker'ı stake işlemini gerçekleştirdikten sonra bağlamayı unutmayın, aksi takdirde ödül verilmeyecektir.
 
+<img width="1636" alt="4" src="https://user-images.githubusercontent.com/107190154/197930998-cdee4870-b70d-45cc-9a63-bc0a27ef09e5.png">
+
 Adım 3- Ödül kazanmak için aktif bir worker'ı bağlayın.
 "Bond Worker"a tıklamadan önce aktif bir Worker node'una ihtiyaç vardır. Bir worker'ı çalıştırmak için lütfen buraya bakın. "Bond Worker"a tıkladığınızda Bond Worker sayfası açılır. Worker Adresini ve Node URL'sini girmeniz ve ardından bağlamayı onaylamanız yeterlidir. Şimdi tüm stake süreci tamamlandı ve ödül olarak NLK test token verilecek.
+
+<img width="1800" alt="5" src="https://user-images.githubusercontent.com/107190154/197931036-bed2d654-db3f-4451-947d-9d42d9e433fc.png">
 
 Adım 4- Stake'i bırak ve ayrıl.
 Stake'i durdurmak ve ödülle birlikte tüm fonları almak için aşağıdaki kontrol listesini takip edin:
@@ -31,12 +35,21 @@ Worker Node'umu nasıl bağlayabilirim ve Worker Node'umu nasıl kapatabilirim?
 "Unbound Worker"a tıklayın. Unbound işlemini onaylamak için bir pencere açılacaktır.
 Açıklama: Horus ağı için bir bond süresi 24 saattir. Bu da kullanıcının Worker'ı bağladıktan sonraki 24 saat içinde unbound yapamayacağı anlamına gelir.
 
+<img width="1655" alt="6" src="https://user-images.githubusercontent.com/107190154/197931070-c74c0ad5-4d59-4583-9e95-ef606baec475.png">
+
 Unbound işleminden sonra Worker node'u kapanmakta serbesttir.
 Unstake Nasıl Yapılır?
 Kaldırılıp kaldırılmayacağını sormak için "Unstake" açılır penceresine tıklayın. Staking'i onayladıktan sonra serbest bırakılacaktır.
 
+<img width="1283" alt="7" src="https://user-images.githubusercontent.com/107190154/197931102-29e24a6f-a922-4648-af4d-d7c885d90b54.png">
+
 Ödülünüzü nasıl geri çekebilirsiniz?
 Unstake yaptıktan sonra ödülü geri çekmek için "Claim" butonuna tıklayın.
 
+<img width="1163" alt="8" src="https://user-images.githubusercontent.com/107190154/197931129-c7ffd20a-f509-4940-940e-d14beb76b63c.png">
+
 Transaction (İşlem) Bildirimi
 Yukarıdaki tüm işlemler için Dapp, BSC testnet'te karşılık gelen bir işlem gönderir. Bildirim listesini görüntülemek için sağ üst köşedeki zile tıklayın. Her işlemin ayrıntılarını görmek için 'View details'e tıklayın.
+
+<img width="1799" alt="9" src="https://user-images.githubusercontent.com/107190154/197931164-366494e7-2184-4c8d-bfec-c324a2d6f77f.png">
+
