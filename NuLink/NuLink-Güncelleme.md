@@ -2,7 +2,8 @@
 
 ![NULINK - UPDATE](https://user-images.githubusercontent.com/107190154/193439759-3910565f-e794-48a8-9408-36ceab53d9db.gif)
 
- <h1 align="center">Halihazırda sunucusunda NuLink kurulu olanlar burada bulunan komutları kullanın. </h1>
+<h1 align="center">Halihazırda sunucusunda NuLink kurulu olanlar burada bulunan komutları kullanın. </h1>
+> Script ile güncellemek isterseniz aşağıda `Scriptle Güncelleme` Başlığındaki Komutu Çalıştırın.
 
 ## Kurulum
 
@@ -38,6 +39,13 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 ```
+
+## Scriptle Güncelleme
+
+```
+wget -O guncelleme.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/NuLink/guncelleme.sh && chmod +x guncelleme.sh && ./guncelleme.sh
+```
+
 ### Başarılı bir güncelleme çıktısı
 
 ![image](https://user-images.githubusercontent.com/107190154/196957169-d6a97dca-f971-4b14-9745-a55d905d99d1.png)
