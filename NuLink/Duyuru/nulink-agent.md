@@ -12,7 +12,7 @@ NuLink Agent, Chrome Web Mağazası'nda yayınlanmadı. NuLink Agent'ı manuel o
 
 2- Geliştirici modunun yanındaki butonu aktif edip Geliştirici Modunu etkinleştirin.
 
-3- Paketlenmemiş yükle düğmesini tıklayın ve uzantı yöneticisini seçin.
+3- Paketlenmemiş öğe yükle düğmesini tıklayın ve uzantı yöneticisini seçin.
 
 <img width="1259" alt="capture_20221024070843989" src="https://user-images.githubusercontent.com/107190154/197931995-443ecb2d-b524-47d1-a10b-a029e4b06a75.png">
 
