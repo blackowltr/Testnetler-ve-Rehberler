@@ -9,7 +9,7 @@ Program, her biri ağın çeşitli boyutlarını test etmek ve genel ekosistemi 
 
 Aşama 1'in Başlangıç ve Bitiş Tarihleri: (15 Eylül - 31 Aralık)
 
-Bu aşama, Nulink worker node işlevini ve Stake Dapp işlevini test etmeye odaklanacak ve Eylül-15'ten Aralık-31'e kadar sürecek. İşlevsel test uzmanları bir dizi rekabetçi göreve ve rehberli zorluklara katılacaklar. Her meydan okuma ile katılımcılar jeton kazanma fırsatına sahip olacaklar.
+Bu aşama, Nulink worker node işlevini ve Stake Dapp işlevini test etmeye odaklanacak ve Eylül-15'ten Aralık-31'e kadar sürecek. İşlevsel test uzmanları bir dizi rekabetçi göreve ve rehberli zorluklara katılacaklar. Her meydan okuma ile katılımcılar token kazanma fırsatına sahip olacaklar.
 
 ### Testin 2. Aşaması
 
@@ -24,7 +24,9 @@ Katılımcılar, özellikleri başarıyla test ettikleri ve geri bildirimlerini 
 Son ödülü almasanız bile, zaman zaman gerçekleşecek olan testleri tamamlamak için teşvik programlarının bir parçası olacaksınız. Kurallar ve liste aşamadan önce ilan edilecektir.
 
 Bu test ağı sizi, merkezi olmayan uygulamalar için gizlilik ve koruma teknolojisinin nasıl çalışacağına aşina olmaya hazırlayacaktır. Ayrıca, ürünümüzü geliştirmek için dikkate değer bir geri bildirim veya hata göndermeniz durumunda liderlik ve core geliştirme ekibine katılmanız için size heyecan verici bir fırsat sunar.
+
 Nulink ayrıca, Nulink işlevlerinin iyileştirilmesinde önemli bir rol oynayan toplulukta güçlü ve erken katkıda bulunan bir kişi olarak varlığınızı sağlamak için bir platform sağlar.
+
 Tüm test uzmanları, diğer Web3 meraklılarıyla tanışabileceğiniz ve sektör uzmanlarıyla ağınızı genişletebileceğiniz tüm topluluk kanallarımıza erişebilecek.
 
 Katılmak için Nulink Network ekibi, ürünü kurmak, işlevi test etmek ve sonucu göndermek için en basit şekilde ayrıntılı süreçler ve yönergeler geliştirmiştir. Testnet'e katılmak için resmi belgelerimizi doğru bir şekilde kullanmanız gerekir. Ve testten sonra, ödüle hak kazanabilmek için geri bildirim formunu göndermelisiniz.
