@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# <h1 align="center">Güncelleme ---- 0.9.5</h1>
+# <h1 align="center">Güncelleme ---- 0.9.6</h1>
 
 ```
 wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
