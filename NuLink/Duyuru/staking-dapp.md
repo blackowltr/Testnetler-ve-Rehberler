@@ -64,3 +64,16 @@ Açıklama: Horus ağı için bir bond süresi 24 saattir. Bu da kullanıcının
 
 <img width="1799" alt="9" src="https://user-images.githubusercontent.com/107190154/197931164-366494e7-2184-4c8d-bfec-c324a2d6f77f.png">
 
+### Önemli Bağlantılar
+
+[Resmi Doküman](https://docs.nulink.org/products/testnet)
+
+[Aşama 1 - Geri Bildirim Formu](https://docs.google.com/forms/d/e/1FAIpQLSep0rgPRcMd2kUhz53GYmBoktu-u-8npU2DakmzGpmpCmYZPw/viewform)
+
+[Aşama 2- Geri Bildirim Formu](https://docs.google.com/forms/d/e/1FAIpQLSfyXt9u_in78ETutHcWPCg2AuaRjdCvtb1WBeiGJXGLcX8oiA/viewform)
+
+[NuLink Discord](https://discord.gg/Aqaumg4C)
+
+[NuLink Telegram](https://t.me/NuLink2021)
+
+[NuLink Türkiye Telegram](https://t.me/NuLink_Turkey)
