@@ -2,6 +2,8 @@
 
 NuLink Agent, NuLink özel anahtarınızı ve kasa verilerinizi yönetmenizi sağlayan bir web tarayıcı uzantısıdır. Dosya paylaşımı veya diğer uygulamalarla etkileşime girmenizi sağlar.
 
+### Not: 2. aşamanın testidir.
+
 ## Kurulum
 
 NuLink Agent, Chrome Web Mağazası'nda yayınlanmadı. NuLink Agent'ı manuel olarak yükleyebilirsiniz.
@@ -59,3 +61,17 @@ Gaz ücretini özelleştirin
 Gaz ücreti, blok zincirindeki işlem ücretini ifade eder. Kullanıcıların işlemlerini doğrulamak veya tamamlamak için ödedikleri şey budur. Kullanıcı, işlem onay süresini hızlandırmak için gaz ücretini özelleştirebilir.
 
 ![a8](https://user-images.githubusercontent.com/107190154/197932217-57af8103-9a68-49cf-bfec-35d46a21a62d.png)
+
+### Önemli Bağlantılar
+
+[Resmi Doküman](https://docs.nulink.org/products/testnet)
+
+[Aşama 1 - Geri Bildirim Formu](https://docs.google.com/forms/d/e/1FAIpQLSep0rgPRcMd2kUhz53GYmBoktu-u-8npU2DakmzGpmpCmYZPw/viewform)
+
+[Aşama 2- Geri Bildirim Formu](https://docs.google.com/forms/d/e/1FAIpQLSfyXt9u_in78ETutHcWPCg2AuaRjdCvtb1WBeiGJXGLcX8oiA/viewform)
+
+[NuLink Discord](https://discord.gg/Aqaumg4C)
+
+[NuLink Telegram](https://t.me/NuLink2021)
+
+[NuLink Türkiye Telegram](https://t.me/NuLink_Turkey)
