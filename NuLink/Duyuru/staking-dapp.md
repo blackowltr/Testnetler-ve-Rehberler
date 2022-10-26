@@ -44,7 +44,7 @@ Açıklama: Horus ağı için bir bond süresi 24 saattir. Bu da kullanıcının
 
 <img width="1655" alt="6" src="https://user-images.githubusercontent.com/107190154/197931070-c74c0ad5-4d59-4583-9e95-ef606baec475.png">
 
-**Unbound işleminden sonra Worker node'u kapanmakta serbesttir.
+**Unbound işleminden sonra Worker node'u kapanmakta serbesttir.**
 
 ## Unstake Nasıl Yapılır?
 
