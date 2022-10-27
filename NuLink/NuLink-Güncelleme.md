@@ -1,6 +1,6 @@
 # NuLink Worker Update
 
-![NULINK - UPDATE](https://user-images.githubusercontent.com/107190154/193439759-3910565f-e794-48a8-9408-36ceab53d9db.gif)
+![BlackOwl-güncelleme](https://user-images.githubusercontent.com/107190154/198404814-c884c5a6-9add-4efe-baaa-861e74e99aec.png)
 
 <h1 align="center">Halihazırda sunucusunda NuLink kurulu olanlar burada bulunan komutları kullanın. </h1>
 Script ile güncellemek isterseniz aşağıda "Scriptle Güncelleme" Başlığındaki Komutu Çalıştırın.
