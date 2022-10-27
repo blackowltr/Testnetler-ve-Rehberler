@@ -4,6 +4,8 @@ NuLink Agent, NuLink özel anahtarınızı ve kasa verilerinizi yönetmenizi sa�
 
 ### Not: 2. aşamanın testidir.
 
+### Not: Hata veya yanlış varsa PR atın, arkadaşlar.
+
 ## Kurulum
 
 NuLink Agent, Chrome Web Mağazası'nda yayınlanmadı. NuLink Agent'ı manuel olarak yükleyebilirsiniz.
