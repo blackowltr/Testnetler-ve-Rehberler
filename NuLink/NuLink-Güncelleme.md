@@ -66,7 +66,6 @@ wget -O guncelleme.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Reh
 ### Port ayarı için
  ```
  sudo su
- sudo ufw enable
  sudo ufw allow 9152
  ```
 
