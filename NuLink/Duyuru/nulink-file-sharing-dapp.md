@@ -1,5 +1,7 @@
 # Genel Bakış
 
+### NOT: 2. aşamanın testidir.
+
 ### NOT: Herhangi bir görev sıralaması yok, her şeyi deneyin arkadaşlar.
 
 NuLink Dosya Paylaşım Uygulaması, veri paylaşım kullanıcılarının özel dosyayı yönetmesi ve yetkilendirme isteğini yerine getirmesi için giriş noktasıdır. NuLink Dosya Paylaşım Uygulamasına [buradan erişin.](https://filetransfer.nulink.org/)
