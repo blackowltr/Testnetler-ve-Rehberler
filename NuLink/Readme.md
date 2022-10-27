@@ -1,6 +1,6 @@
 # NuLink Testnet Katılım Rehberi
 
-![NULINK](https://user-images.githubusercontent.com/107190154/190568136-14f5a7d8-5b15-46fb-8132-4d38a0779171.gif)
+![BlackOwl](https://user-images.githubusercontent.com/107190154/198404332-e9288463-806e-4149-8ab8-1fcae4013285.png)
 
 **Merhaba, arkadaşar. NuLink testneti için bir rehber hazırladım. Bu rehberle tüm nulink test sürecinde yapmanız gerekenleri yapmış olacaksınız.**
 
