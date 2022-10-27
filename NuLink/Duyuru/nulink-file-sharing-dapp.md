@@ -1,9 +1,9 @@
 # Genel Bakış
-NuLink Dosya Paylaşım Uygulaması, veri paylaşım kullanıcılarının özel dosyayı yönetmesi ve yetkilendirme isteğini yerine getirmesi için giriş noktasıdır. NuLink Dosya Paylaşım Uygulamasına buradan erişin.
+NuLink Dosya Paylaşım Uygulaması, veri paylaşım kullanıcılarının özel dosyayı yönetmesi ve yetkilendirme isteğini yerine getirmesi için giriş noktasıdır. NuLink Dosya Paylaşım Uygulamasına [buradan erişin.](https://filetransfer.nulink.org/)
 
 Başlatma: NuLink Agent'a Bağlayın ve Oturum açın.
 
-NuLink Dosya Paylaşım Uygulamasını kullanmadan önce, NuLink-Agent'ı bağlamak için lütfen Agent düğmesine tıklayın. NuLink-Agent'a nasıl kayıt olunur ve kullanılır, lütfen bakın.
+NuLink Dosya Paylaşım Uygulamasını kullanmadan önce, NuLink-Agent'ı bağlamak için lütfen Agent düğmesine tıklayın. NuLink-Agent'a nasıl kayıt olunur ve kullanılır, [lütfen bakın.](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent.md)
 
 ![b1](https://user-images.githubusercontent.com/107190154/198390704-6e5de4cc-cbd6-44a0-b916-b98026da79c7.png)
 
