@@ -2,6 +2,8 @@
 
 NuLink Agent, NuLink özel anahtarınızı ve kasa verilerinizi yönetmenizi sağlayan bir web tarayıcı uzantısıdır. Dosya paylaşımı veya diğer uygulamalarla etkileşime girmenizi sağlar.
 
+## NLK Kontrat: 0xDa627a1f6Bc94079b0c65C70B3B307799118943D
+
 ### Not: 2. aşamanın testidir.
 
 ### Not: Hata veya yanlış varsa PR atın, arkadaşlar.
