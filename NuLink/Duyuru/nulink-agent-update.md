@@ -44,7 +44,7 @@ Agent'ı ilk kez açtığınızda ana sayfa şöyle görünür:
 1. Cüzdan oluştur düğmesini tıklayın, önce cüzdan oluşturun.
 2. Şifreyi Ayarla NuLink Agent, uygulamayı güvence altına almak için şifreler kullanır, cüzdanınızı gizli kurtarma ifadenizden geri yükledikten veya oluşturduktan sonra, uygulamanın kilidini açmak için şifrenizi kullanırsınız. Cüzdan güvenliğinizi korumak için lütfen güçlü bir şifre belirleyin.
 
-![sassa](https://user-images.githubusercontent.com/107190154/199298303-adb43b91-5215-49b3-bfb4-ddef1f4117cc.png
+![sassa](https://user-images.githubusercontent.com/107190154/199298303-adb43b91-5215-49b3-bfb4-ddef1f4117cc.png)
 
 3. Oluşturma Oluşturma başarılı olduğunda, yedek anımsatıcı ifadesine gidin.
 
