@@ -1,5 +1,7 @@
 # NuLink Agent Güncelleme
 
+![Nulınk agentqq](https://user-images.githubusercontent.com/107190154/199301061-fdfc4793-e228-4cad-bf76-6f7cd3e50be9.png)
+
 Agent güncelleştirildiğinde, kullanıcının Agent'ı en yeni sürüme güncelleştirmesi gerekir. Agent'ı güncellemek için üç adım vardır:
 
 1. Uzantıdaki eski paketi kaldırın
