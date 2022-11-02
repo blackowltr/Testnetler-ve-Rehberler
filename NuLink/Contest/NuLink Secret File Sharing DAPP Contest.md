@@ -2,6 +2,14 @@
 
 ![contest12](https://user-images.githubusercontent.com/107190154/199397779-8fa9a8f8-8712-4a9e-a5b5-02e4c0a60337.png)
 
+## Nasıl katılırım?
+
+[Buradan NuLink Agent Kurunuz.](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent.md)
+
+Daha önce kurduysanız güncelleme yapmalısınız, [buradan güncelleme yapabilirsiniz.](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent-update.md)
+
+[NuLink File Sharing Kullanımı](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-file-sharing-dapp.md)
+
 Bu web 3 altyapı oluşturma ve gizliliği koruyan uygulama kullanıcı deneyimi deneyine daha fazla kişinin katılmasını sağlamak için bir dosya paylaşım yarışması başlatıyoruz!
 
 NuLink Network Foundation, gizli dosya paylaşım hizmetini 20 Ekim'de başlattı. 
