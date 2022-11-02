@@ -4,11 +4,13 @@
 
 ## Nasıl katılırım?
 
-[Buradan NuLink Agent Kurunuz.](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent.md)
+[NuLink Agent Kurulumu](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent.md)
 
-Daha önce kurduysanız güncelleme yapmalısınız, [buradan güncelleme yapabilirsiniz.](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent-update.md)
+Daha önce kurduysanız güncelleme yapmalısınız, [buradan](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent-update.md) güncelleme yapabilirsiniz.
 
 [NuLink File Sharing Kullanımı](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-file-sharing-dapp.md)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 Bu web 3 altyapı oluşturma ve gizliliği koruyan uygulama kullanıcı deneyimi deneyine daha fazla kişinin katılmasını sağlamak için bir dosya paylaşım yarışması başlatıyoruz!
 
