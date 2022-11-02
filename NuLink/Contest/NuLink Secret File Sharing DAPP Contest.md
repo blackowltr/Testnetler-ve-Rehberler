@@ -12,6 +12,8 @@ Daha önce kurduysanız güncelleme yapmalısınız, [buradan](https://github.co
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+## Yarışma Hakkında
+
 Bu web 3 altyapı oluşturma ve gizliliği koruyan uygulama kullanıcı deneyimi deneyine daha fazla kişinin katılmasını sağlamak için bir dosya paylaşım yarışması başlatıyoruz!
 
 NuLink Network Foundation, gizli dosya paylaşım hizmetini 20 Ekim'de başlattı. 
@@ -32,7 +34,7 @@ Bu web 3 altyapı oluşturma ve gizliliği koruyan DAPP kullanıcı deneyimi den
 
 Kural aşağıdaki gibi çok basittir.
 
-### Kural
+## Kural
 
 Yarışma, katılımcıların dosya paylaşım sayısını (dosya paylaşım sayısı, başkaları için onayladığınız yüklenen dosyaların istek sayısı anlamına gelir) her hafta sıralayacak ve ödülü ilk 10 hesap kazanacaktır.
 
@@ -42,7 +44,7 @@ Sayım gelecek hafta için sıfırlanacak, bu da yarışmanın her hafta tekrarl
 
 Katılımcıların yarışmaya katılabilmek için profillerini düzenlemek (en azından hesap takma adını ayarlamak) ve en az 10 dosya yüklemek için NuLink Dosya Paylaşım Uygulamasını kullanmaları gerekir.
 
-### Ödül
+## Ödül
 
 Her hafta için, 10.000 NLK'lık bir havuzu paylaşacak olan ilk 10 sayım adresi kazanan olacak. 
 
