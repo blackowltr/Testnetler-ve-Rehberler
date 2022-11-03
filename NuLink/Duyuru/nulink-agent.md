@@ -8,6 +8,10 @@ NuLink Agent, NuLink özel anahtarınızı ve kasa verilerinizi yönetmenizi sa�
 
 ### Not: Hata veya yanlış varsa PR atın, arkadaşlar.
 
+# NLK Faucet
+
+[Faucet](https://filetransfer.nulink.org/faucet)
+
 # [Güncel NuLink Agent İçin](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/NuLink/Duyuru/nulink-agent-update.md)
 
 ## Kurulum
