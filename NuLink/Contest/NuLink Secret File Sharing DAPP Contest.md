@@ -12,6 +12,10 @@ Daha önce kurduysanız güncelleme yapmalısınız, [buradan](https://github.co
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+# Faucet
+
+## https://filetransfer.nulink.org/faucet
+
 ## Yarışma Hakkında
 
 Bu web 3 altyapı oluşturma ve gizliliği koruyan uygulama kullanıcı deneyimi deneyine daha fazla kişinin katılmasını sağlamak için bir dosya paylaşım yarışması başlatıyoruz!
