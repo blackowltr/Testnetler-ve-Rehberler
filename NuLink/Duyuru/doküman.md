@@ -11,6 +11,18 @@ Aşama 1'in Başlangıç ve Bitiş Tarihleri: (15 Eylül - 31 Aralık)
 
 Bu aşama, Nulink worker node işlevini ve Stake Dapp işlevini test etmeye odaklanacak ve Eylül-15'ten Aralık-31'e kadar sürecek. İşlevsel test uzmanları bir dizi rekabetçi göreve ve rehberli zorluklara katılacaklar. Her meydan okuma ile katılımcılar token kazanma fırsatına sahip olacaklar.
 
+------------
+
+# Dikkat
+
+31 Aralık 2022'ye kadar Nulink node çalıştırmak zorunda değilsiniz. Dileyen kapatabilir. Size kalmış bir durum.
+
+Kapatmadan önce siteden unbound işlemini yapıp ardından node'unuzu kapatmanız gerekli. 
+
+**Unbound yapmadan node'unuzu kapatmamaya özen gösterin.**
+
+---
+
 ### Testin 2. Aşaması
 
 Aşama 2'nin Başlangıç ve Bitiş Tarihleri: (20 Ekim - 31 Aralık)
