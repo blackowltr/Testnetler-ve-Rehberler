@@ -16,7 +16,7 @@
 
 ## Sistem Güncelleme ve Kütüphane Kurulumu
 ```
-sudo apt update && sudo apt upgrade -y & sudo apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen unzip cmake -y
+sudo apt update && sudo apt upgrade -y & sudo apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen unzip cmake -y 
 ```
 
 ## Go Kurulumu
@@ -105,19 +105,18 @@ mv $HOME/go/bin/gitopiad /usr/bin/
 
 ## Servis Dosyası
 ```
-tee /etc/systemd/system/gitopiad.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/gitopiad.service > /dev/null <<EOF
 [Unit]
-Description=Gitopia
+Description=gitopia
 After=network-online.target
 [Service]
-User=root
-ExecStart=$(which gitopiad) start
-Restart=always
+User=$USER
+ExecStart=$(which gitopiad) start --home $HOME/.gitopia
+Restart=on-failure
 RestartSec=3
-LimitNOFILE=10000
+LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
-EOF
 ```
 
 ## Node'u Başlatalım
