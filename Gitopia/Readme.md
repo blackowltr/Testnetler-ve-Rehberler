@@ -14,7 +14,7 @@
 
 ### [Eng-Doküman](https://gitopia.com/CryptoSailors/gitopia-node-installation/tree/master)
 
-## Sistemimizi Güncelleme ve Kütüphane Kurulumu
+## Sistem Güncelleme ve Kütüphane Kurulumu
 ```
 sudo apt update && sudo apt upgrade -y & sudo apt install make clang pkg-config libssl-dev libclang-dev build-essential git curl ntp jq llvm tmux htop screen unzip cmake -y
 ```
