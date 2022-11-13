@@ -45,7 +45,9 @@ git clone -b v1.2.0 gitopia://gitopia/gitopia
 
 ## Binary Kurulumu
 ```
-cd gitopia && make install
+cd $HOME && rm -rf gitopia
+git clone -b v1.2.0 gitopia://gitopia/gitopia && cd gitopia
+make install
 ```
 
 ## Versiyon Numarası Kontrolü
@@ -71,7 +73,9 @@ sed -i.bak -e "s/^indexer *=.*/indexer = \"null\"/" ~/.gitopia/config/config.tom
 
 ## Seed
 ```
-sed -i 's#seeds = ""#seeds = "399d4e19186577b04c23296c4f7ecc53e61080cb@seed.gitopia.com:26656"#' $HOME/.gitopia/config/config.toml
+SEEDS="399d4e19186577b04c23296c4f7ecc53e61080cb@seed.gitopia.com:26656"
+PEERS=""
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.gitopia/config/config.toml
 ```
 
 ## Pruning Açma
@@ -88,6 +92,7 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 ## Genesis File İndiriyoruz.
 ```
+wget -O $HOME/.gitopia/config/addrbook.json "http://65.108.6.45:8000/gitopia/addrbook.json"
 wget https://server.gitopia.com/raw/gitopia/testnets/master/gitopia-janus-testnet-2/genesis.json.gz
 gunzip genesis.json.gz
 mv genesis.json $HOME/.gitopia/config/genesis.json
