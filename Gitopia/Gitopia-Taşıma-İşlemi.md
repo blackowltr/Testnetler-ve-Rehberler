@@ -1,4 +1,4 @@
-# Gitopia Taşıma İşlemi (Gitopia Migration Process)
+# Gitopia Taşıma Rehberi (Gitopia Migration Guide)
 
 ![workout](https://user-images.githubusercontent.com/107190154/202605593-aad830fc-3dfa-4243-9951-540ab89500ff.png)
 
@@ -8,7 +8,7 @@
 ### Winscp veya benzer bir programla sunumuza bağlanalım.
 ### Let's connect to our presentation with Winscp or a similar program.
 
-![image](https://user-images.githubusercontent.com/107190154/202599151-39f97d17-da7f-41f6-99aa-839dab659206.png)
+<img width="848" alt="202599151-39f97d17-da7f-41f6-99aa-839dab659206" src="https://user-images.githubusercontent.com/107190154/202606278-86670acf-71fa-45c9-bf2e-5910184cd326.png">
 
 ### .gitopia adlı klasör siz de görünmüyorsa ctrl + alt + h ile görünür hale getirebilirsiniz.
 
@@ -71,5 +71,5 @@ gitopiad status 2>&1 | jq .SyncInfo
 ### That was it, thanks for reading. Don't forget to fork and star. If there are any problems or problems, you can contact me via discord. (blackowl#7099)
 
 # [Gitopia Türkiye](https://t.me/GitopiaTR)
-# [Notitia Sohbet Kanalı] (https://t.me/NotitiaGroup)
-# [Notitia Duyuru Kanalı] (https://t.me/NotitiaChannel)
+# [Notitia Sohbet Kanalı](https://t.me/NotitiaGroup)
+# [Notitia Duyuru Kanalı](https://t.me/NotitiaChannel)
