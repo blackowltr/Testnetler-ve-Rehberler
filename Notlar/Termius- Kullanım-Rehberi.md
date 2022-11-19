@@ -1,5 +1,8 @@
 # Termius Kullanım Rehberi
 
+![t3ss](https://user-images.githubusercontent.com/107190154/202873679-e98d98fe-0b4b-4308-8b3c-e67df628732c.png)
+
+
 ### Selamlar, Termius hakkında kısa bir rehber hazırladım. Eksik gedik varsa bunu bana bildirmekten geri durmayın.
 
 ---------------------------------------------------------------------------------------------------------
