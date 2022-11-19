@@ -1,7 +1,7 @@
 # Nulink Sıkça Sorulan Sorular
 
 ## WL nasıl alınır?
-### Aşama 1 + Aşama 2 için iyi geri bildirim gönderen kişiler (Her ikisi de olamlı, yalnız biri değil.).
+### Aşama 1 + Aşama 2 için iyi geri bildirim gönderen kişiler (Her iki aşama da olmalı, yalnız biri değil.).
 
 ## 1. Aşama nedir?
 ### 1. Aşama şimdi bitti. Bir node çalıştırmaya gerek yoktur. Node hala çalışıyorsa, onu durdurabilirsiniz.
