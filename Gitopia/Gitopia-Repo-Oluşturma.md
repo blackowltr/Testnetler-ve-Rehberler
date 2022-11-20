@@ -77,4 +77,18 @@ git push -u origin master
 
 ## Readme.md dosyamız oluşmuş olacak. Bu dosyanın içine girip içine gerekli dokümanları ekleyip kaydedelim.
 
+## Şu komutlarla repomuzu güncelleyelim.
+```
+echo "# repo-adı" >> README.md
+git init
+git add README.md
+git commit -m "açıklama"
+```
+
+```
+git remote add origin gitopia://BlackOwlTR/Kurulum
+git push -u origin master
+```
+
+### Hepinize Kolay Gelsin.
 
