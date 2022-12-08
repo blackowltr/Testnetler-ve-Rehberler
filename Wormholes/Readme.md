@@ -17,6 +17,13 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+### Kontrol : 
+```
+curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
+```
+
+>Örnek çıktı: v0.10.1
+
 # <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
 ```
 sudo apt-get update && apt-get upgrade -y
