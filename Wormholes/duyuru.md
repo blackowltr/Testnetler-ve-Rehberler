@@ -1,4 +1,4 @@
-# Wormholes Testine Dair Yapılması gerekenlerle ilgili doküman
+# Wormholes testine dair yapılması gerekenlerle ilgili doküman
 
 ## WormholesChain'de ERB Staking yaparak S-NFT'ye sahip olun, bunun nasıl yapılacağı hakkında bilgi almak için aşağıdaki resmi dokümana bakmalısınız.
 
