@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# <h1 align="center">Güncelleme ---- 0.11.1</h1>
+# <h1 align="center">Güncelleme ---- 0.11.3</h1>
 
 ```
 wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
@@ -22,7 +22,7 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
 ```
 
->Örnek çıktı: v0.11.1
+>Örnek çıktı: v0.11.3
 
 # <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
 ```
