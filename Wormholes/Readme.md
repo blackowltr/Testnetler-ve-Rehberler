@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# <h1 align="center">Güncelleme ---- 0.12.0</h1>
+# <h1 align="center">Güncelleme ---- 0.12.1</h1>
 > Bu komutları girin ve ardından alttaki güncelleme komutunu girip devam edin, arkadaşlar.
 ```
 docker stop wormholes
@@ -29,7 +29,7 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
 ```
 
->Örnek çıktı: v0.12.0
+>Örnek çıktı: v0.12.1
 
 # <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
 ```
