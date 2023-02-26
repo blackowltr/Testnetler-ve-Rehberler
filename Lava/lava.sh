@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -r -p "Node Adınızı Yazın: " NODE_MONIKER
+read -r -p "Enter node moniker: " NODE_MONIKER
 
 CHAIN_ID="lava-testnet-1"
 CHAIN_DENOM="ulava"
@@ -18,7 +18,7 @@ sleep 1
 
 source <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-scripts/master/utils/dependencies_install.sh)
 
-printCyan "4. Binary kuruluyor..." && sleep 1
+printCyan "4. Building binaries..." && sleep 1
 
 cd || return
 rm -rf lava
@@ -47,7 +47,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
-printCyan "5. Servis dosyası hazırlanıyor..." && sleep 1
+printCyan "5. Starting service and synchronization..." && sleep 1
 
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
 [Unit]
@@ -73,5 +73,6 @@ sudo systemctl enable lavad
 sudo systemctl start lavad
 
 printLine
-echo -e "Log Kontrol:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
-echo -e "Sync Durumu: ${CYAN}$BINARY_NAME status 2>&1 | jq .SyncInfo.catching_up${NC}"
+echo -e "Check logs:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
+echo -e "Check synchronization: ${CYAN}$BINARY_NAME status 2>&1 | jq .SyncInfo.catching_up${NC}"
+echo -e "More commands:         ${CYAN}$CHEAT_SHEET${NC}"
