@@ -9,6 +9,9 @@
 |   4| 8GB  | 160GB    |
 
 ## Script "NODEJUMPER" tarafından hazırlanmıştır. Kendisine emeklerinden ötürü teşekkür ederim.
+## NOT: Mod, herhangi bir teşvik olmadığını söyledi. 
+<img width="315" alt="image" src="https://user-images.githubusercontent.com/107190154/221443363-882ed8f7-84ba-4b2d-a531-79f0ace1e86c.png">
+
 
 ## Birinci komutla oto kurulumu başlatın ardından kurulum bitince ikinci komutu yazın.
 ```
