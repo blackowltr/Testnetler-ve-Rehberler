@@ -8,7 +8,9 @@
 |----|------|----------|
 |   4| 8GB  | 160GB    |
 
-## BirinciKomutla oto kurulumu başlatın ardından ikinci komutu yazın.
+## Script "NODEJUMPER" tarafından hazırlanmıştır. Kendisine emeklerinden ötürü teşekkür ederim.
+
+## Birinci komutla oto kurulumu başlatın ardından ikinci komutu yazın.
 ```
 source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh)
 ```
