@@ -8,9 +8,21 @@
 |----|------|----------|
 |   4| 8GB  | 160GB    |
 
-## Tek Komutla oto kurulum yapabilirsiniz.
+## BirinciKomutla oto kurulumu başlatın ardından ikinci komutu yazın.
 ```
 source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh)
+```
+```
+snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
+mv $HOME/.lava/data/priv_validator_state.json $HOME
+rm -rf  $HOME/.lava/data
+wget -P $HOME http://94.250.203.6:90/${snap}
+tar xf $HOME/${snap} -C $HOME/.lava
+rm $HOME/${snap}
+mv $HOME/priv_validator_state.json $HOME/.lava/data
+wget -qO $HOME/.lava/config/addrbook.json http://94.250.203.6:90/lava-addrbook.json
+sudo systemctl restart lavad
+sudo journalctl -u lavad -f -o cat
 ```
 ## Log Kontrol
 ```
