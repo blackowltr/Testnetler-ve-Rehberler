@@ -10,7 +10,7 @@
 
 ## Tek Komutla oto kurulum yapabilirsiniz.
 ```
-wget -O lava.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh && chmod +x lava.sh && ./lava.sh
+source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh)
 ```
 ## Log Kontrol
 ```
