@@ -31,24 +31,24 @@ echo -e "Port Numaranız: \e[1m\e[32m$PORT\e[0m"
 echo '================================================='
 
 sleep 1
-
+# sistem ayarları
 sudo apt update && sudo apt upgrade -y 
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y
 sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
+sudo apt autoremove -y
+sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
 
 sleep 1
+# Go kurulumu
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz \
+&& sudo tar -xvf go1.19.linux-amd64.tar.gz && sudo mv go /usr/local \
+&& echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile \
+&& source ~/.bash_profile; go version
 
- ver="1.18.2"
-  cd $HOME
-  wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
-  sudo rm -rf /usr/local/go
-  sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
-  rm "go$ver.linux-amd64.tar.gz"
-  echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
-  source ~/.bash_profile
+rm go1.19.linux-amd64.tar.gz
 
 sleep 1
-
+# Binary
 cd || return
 rm -rf lava
 git clone https://github.com/lavanet/lava
@@ -57,38 +57,46 @@ git checkout v0.6.0-RC3
 make install
 
 sleep 1
-
+# genesis
 wget -qO $HOME/.lava/config/genesis.json http://94.250.203.6:90/lava-genesis.json
 
 sleep 1
-
+# değişkenler
 lavad config keyring-backend test
 lavad config chain-id $CHAIN_ID
 lavad init "$NODENAME" --chain-id $CHAIN_ID
 
 sleep 1
 
-sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
-[Unit]
-Description=Lava Network Node
-After=network-online.target
-[Service]
-User=$USER
-ExecStart=$(which lavad) start
-Restart=on-failure
-RestartSec=10
-LimitNOFILE=10000
-[Install]
-WantedBy=multi-user.target
-
-sudo systemctl enable lavad
-sudo systemctl daemon-reload
+SEEDS="$SEEDS"
+PEERS=""
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.lava/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.lava/config/config.toml
 
 sleep 1
 
 lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
 
 sleep 1
+# Servis
+sudo tee /etc/systemd/system/lavad.service > /dev/null <<EOF
+[Unit]
+Description=Lava Network Node
+After=network-online.target
+[Service]
+User=$USER
+ExecStart=$(which $EXECUTE) start --home="$HOME/.lava"
+Restart=always
+RestartSec=180
+LimitNOFILE=infinity
+LimitNPROC=infinity
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable lavad
+sudo systemctl restart lavad
 
 snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
 mv $HOME/.lava/data/priv_validator_state.json $HOME
