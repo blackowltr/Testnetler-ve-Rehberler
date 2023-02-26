@@ -27,7 +27,6 @@ echo '================================================='
 echo -e "Node İsminiz: \e[1m\e[32m$NODENAME\e[0m"
 echo -e "Cüzdan İsminiz: \e[1m\e[32m$WALLET\e[0m"
 echo -e "Ağ Bilginiz: \e[1m\e[32m$CHAIN_ID\e[0m"
-echo -e "Port Numaranız: \e[1m\e[32m$PORT\e[0m"
 echo '================================================='
 
 sleep 1
@@ -49,11 +48,10 @@ rm go1.19.linux-amd64.tar.gz
 
 sleep 1
 # Binary
-cd || return
-rm -rf lava
-git clone https://github.com/lavanet/lava
-cd lava || return
-git checkout v0.6.0-RC3
+git clone https://github.com/lavanet/lava.git
+cd lava 
+ver=$(curl -s https://lava-test-rpc.theamsolutions.info/abci_info | jq -r ."result"."response"."version")
+git checkout v${ver}
 make install
 
 sleep 1
@@ -79,15 +77,15 @@ lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
 
 sleep 1
 # Servis
-sudo tee /etc/systemd/system/lavad.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/lavad.service << EOF
 [Unit]
 Description=Lava Network Node
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which $EXECUTE) start --home="$HOME/.lava"
+ExecStart=$(which lavad) start --home="$HOME/.lava"
 Restart=always
-RestartSec=180
+RestartSec=30
 LimitNOFILE=infinity
 LimitNPROC=infinity
 [Install]
@@ -97,6 +95,8 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable lavad
 sudo systemctl restart lavad
+
+sleep 1
 
 snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
 mv $HOME/.lava/data/priv_validator_state.json $HOME
