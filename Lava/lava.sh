@@ -1,78 +1,178 @@
-#!/bin/bash
+#! /bin/bash
 
-read -r -p "Enter node moniker: " NODE_MONIKER
+# Variables
 
-CHAIN_ID="lava-testnet-1"
-CHAIN_DENOM="ulava"
-BINARY_NAME="lavad"
-BINARY_VERSION_TAG="v0.6.0"
-CHEAT_SHEET="https://nodejumper.io/lava-testnet/cheat-sheet"
+EXECUTE=lavad
+CHAIN_ID=lava-testnet1
+PORT=26
+SYSTEM_FOLDER=.lava
+PROJECT_FOLDER=lava-config/testnet-1
+VERSION=v0.4.3
+REPO=https://github.com/lavanet/lava-config.git
+GENESIS_FILE=https://raw.githubusercontent.com/lavanet/lava-config/main/testnet-1/genesis_json/genesis.json
+ADDRBOOK=http://94.250.203.6:90/lava-addrbook.json
+MIN_GAS=
+DENOM=ulava
+SEEDS=5c2a752c9b1952dbed075c56c600c3a79b58c395@lava.testnet.seed.autostake.net:27066
+PEERS=5c2a752c9b1952dbed075c56c600c3a79b58c395@lava.testnet.peer.autostake.net:27066
+SEED_MODE="true"
+SNAP_NAME=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
+sleep 2
 
-printLine
-echo -e "Node moniker:       ${CYAN}$NODE_MONIKER${NC}"
-echo -e "Chain id:           ${CYAN}$CHAIN_ID${NC}"
-echo -e "Chain demon:        ${CYAN}$CHAIN_DENOM${NC}"
-echo -e "Binary version tag: ${CYAN}$BINARY_VERSION_TAG${NC}"
-printLine
+echo "export EXECUTE=${EXECUTE}" >> $HOME/.bash_profile
+echo "export CHAIN_ID=${CHAIN_ID}" >> $HOME/.bash_profile
+echo "export PORT=${PORT}" >> $HOME/.bash_profile
+echo "export SYSTEM_FOLDER=${SYSTEM_FOLDER}" >> $HOME/.bash_profile
+echo "export PROJECT_FOLDER=${PROJECT_FOLDER}" >> $HOME/.bash_profile
+echo "export VERSION=${VERSION}" >> $HOME/.bash_profile
+echo "export REPO=${REPO}" >> $HOME/.bash_profile
+echo "export GENESIS_FILE=${GENESIS_FILE}" >> $HOME/.bash_profile
+echo "export PEERS=${PEERS}" >> $HOME/.bash_profile
+echo "export SEEDS=${SEEDS}" >> $HOME/.bash_profile
+echo "export MIN_GAS=${MIN_GAS}" >> $HOME/.bash_profile
+echo "export DENOM=${DENOM}" >> $HOME/.bash_profile
+echo "export SEED_MODE=${SEED_MODE}" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 sleep 1
 
-source <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-scripts/master/utils/dependencies_install.sh)
+if [ ! $MONIKER ]; then
+	read -p "Node Adınızı Yazın: " MONIKER
+	echo 'export MONIKER='$MONIKER >> $HOME/.bash_profile
+fi
 
-printCyan "4. Building binaries..." && sleep 1
+sleep 1
 
-cd || return
-rm -rf lava
-git clone https://github.com/lavanet/lava
-cd lava || return
-git checkout v0.6.0-RC3
-make install
-lavad version
+if [ ! $WALLET_NAME ]; then
+	read -p "Cüzdan Adınızı Yazın : " WALLET_NAME
+	echo 'export WALLET_NAME='$WALLET_NAME >> $HOME/.bash_profile
+fi
 
-lavad config keyring-backend test
-lavad config chain-id $CHAIN_ID
-lavad init "$NODE_MONIKER" --chain-id $CHAIN_ID
+# Updates
 
-curl -s https://raw.githubusercontent.com/K433QLtr6RA9ExEq/GHFkqmTzpdNLDd6T/main/testnet-1/genesis_json/genesis.json > $HOME/.lava/config/genesis.json
-curl -s https://snapshots1-testnet.nodejumper.io/lava-testnet/addrbook.json > $HOME/.lava/config/addrbook.json
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y
+sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
 
-SEEDS="3a445bfdbe2d0c8ee82461633aa3af31bc2b4dc0@prod-pnet-seed-node.lavanet.xyz:26656,e593c7a9ca61f5616119d6beb5bd8ef5dd28d62d@prod-pnet-seed-node2.lavanet.xyz:26656"
+ver="1.18"
+cd $HOME
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm "go$ver.linux-amd64.tar.gz"
+
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+go version
+
+sleep 1
+
+
+cd $HOME
+git clone $REPO
+cd $PROJECT_FOLDER
+source setup_config/setup_config.sh
+mkdir -p $HOME/$SYSTEM_FOLDER/config
+cp default_lavad_config_files/* $HOME/$SYSTEM_FOLDER/config
+cp genesis_json/genesis.json $HOME/$SYSTEM_FOLDER/config/genesis.json
+
+sleep 1
+cd $HOME
+mkdir -p $HOME/go/bin
+cd go
+cd bin
+wget https://lava-binary-upgrades.s3.amazonaws.com/testnet/$VERSION/lavad
+chmod +x lavad
+source $HOME/.bash_profile
+
+cd $HOME
+
+#Reset network
+$EXECUTE tendermint unsafe-reset-all --home $HOME/$SYSTEM_FOLDER
+
+
+$EXECUTE init $MONIKER --chain-id $CHAIN_ID
+
+#GENESIS AND DATA FILES
+
+if [ $GENESIS_FILE ]; then
+	wget $GENESIS_FILE -O $HOME/$SYSTEM_FOLDER/config/genesis.json
+fi
+
+sleep 1
+
+#if [ $ADDRBOOK ]; then
+#    wget -qO $HOME/$SYSTEM_FOLDER/config/addrbook.json $ADDRBOOK
+#fi
+
+if [ $ADDRBOOK ]; then
+	wget $ADDRBOOK -O $HOME/$SYSTEM_FOLDER/config/addrbook.json
+fi
+
+
+
+SEEDS="$SEEDS"
 PEERS=""
-sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.lava/config/config.toml
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.lava/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.lava/config/config.toml
 
-sed -i 's|^pruning *=.*|pruning = "custom"|g' $HOME/.lava/config/app.toml
-sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.lava/config/app.toml
-sed -i 's|^pruning-interval *=.*|pruning-interval = "10"|g' $HOME/.lava/config/app.toml
-sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config/app.toml
+sleep 1
 
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
-printCyan "5. Starting service and synchronization..." && sleep 1
 
-sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
+#wget -O lava.sh https://node101.io/testnet/lava-testnet1/lava.sh && chmod +x lava.sh && ./lava.sh
+
+
+#SNAPSHOT
+SNAPSHOT_URL=http://94.250.203.6:90/${SNAP_NAME}
+if [ $SNAPSHOT_URL ]; then
+    mv $HOME/.lava/data/priv_validator_state.json $HOME
+	rm -rf  $HOME/.lava/data
+	wget -P $HOME $SNAPSHOT_URL
+	tar xf $HOME/${SNAP_NAME} -C $HOME/.lava
+	rm $HOME/${SNAP_NAME}
+	mv $HOME/priv_validator_state.json $HOME/.lava/data
+	wget -qO $HOME/.lava/config/addrbook.json http://94.250.203.6:90/lava-addrbook.json
+	
+	
+	
+	
+	
+	#cd $HOME
+	#rm -rf ~/$SYSTEM_FOLDER/data
+	#mkdir -p ~/$SYSTEM_FOLDER/data
+	#wget -O - $SNAPSHOT_URL | tar xf - \
+	#	-C ~/$SYSTEM_FOLDER/data/
+    #echo "{}" >> $HOME/.lava/data/priv_validator_state.json
+fi
+
+
+cd $HOME
+
+# Creating your systemd service
+
+sudo tee /etc/systemd/system/$EXECUTE.service > /dev/null <<EOF
 [Unit]
-Description=Lava Network Node
+Description=Lava Node
 After=network-online.target
 [Service]
 User=$USER
-ExecStart=$(which lavad) start
-Restart=on-failure
-RestartSec=10
-LimitNOFILE=10000
+ExecStart=$(which $EXECUTE) start --home="$HOME/.lava"
+Restart=always
+RestartSec=180
+LimitNOFILE=infinity
+LimitNPROC=infinity
 [Install]
 WantedBy=multi-user.target
 EOF
 
-lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
-
-SNAP_NAME=$(curl -s https://snapshots1-testnet.nodejumper.io/lava-testnet/info.json | jq -r .fileName)
-curl "https://snapshots1-testnet.nodejumper.io/lava-testnet/${SNAP_NAME}" | lz4 -dc - | tar -xf - -C "$HOME/.lava"
-
 sudo systemctl daemon-reload
-sudo systemctl enable lavad
-sudo systemctl start lavad
+sudo systemctl enable $EXECUTE
+sudo systemctl restart $EXECUTE
 
-printLine
-echo -e "Check logs:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
-echo -e "Check synchronization: ${CYAN}$BINARY_NAME status 2>&1 | jq .SyncInfo.catching_up${NC}"
-echo -e "More commands:         ${CYAN}$CHEAT_SHEET${NC}"
+
+echo '=============== SETUP IS FINISHED ==================='
+echo -e "Log Kontrol : \e[1m\e[32mjournalctl -fu ${EXECUTE} -o cat\e[0m"
+echo -e "Sync Kontrol: \e[1m\e[32mcurl -s localhost:${PORT}657/status | jq .result.sync_info\e[0m"
+
+source $HOME/.bash_profile
