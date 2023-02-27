@@ -127,6 +127,14 @@ nibid tx staking create-validator \
 --gas-prices 0.025unibi \
 --from CÜZDANADINIZ
 ```
+## Nibi-Perps'te hangi havuzların işlem için açık olduğunu ve güncel mark ve endeks fiyatlarını görmek için sorgulayın.
+```
+nibid query vpool all-pools
+```
+## Marj olarak 100 μNUSD ile 10 kaldıraç ve sınırlanmamış  slipaj ile BTC'de long bir pozisyon açın.
+```
+nibid tx perp open-position buy ubtc:unusd 10 100 0 --from CÜZDAN --home $HOME/.nibid
+```
 
 ## Validator Düzenleme
 ```
