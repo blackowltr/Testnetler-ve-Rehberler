@@ -186,7 +186,7 @@ After=network-online.target
 [Service]
 Type=exec
 User=$USER
-ExecStart=/usr/local/bin/pricefeeder
+ExecStart=/usr/local/bin/pricefeeder start
 Restart=on-failure
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGTERM
