@@ -9,11 +9,19 @@ sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
 sudo apt autoremove -y
 sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
 
+echo -e "\e[1m\e[32m1. Go Yükleniyor... \e[0m" && sleep 1
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz \
+&& sudo tar -xvf go1.19.linux-amd64.tar.gz && sudo mv go /usr/local \
+&& echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile \
+&& source ~/.bash_profile; go version
+
+rm -rf go1.19.linux-amd64.tar.gz
+
 echo -e "\e[1m\e[32m1. Binary... \e[0m" && sleep 1
-cd || return
+cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava
-cd lava || return
+cd lava
 git checkout v0.6.0-RC3
 make install
 lavad version
