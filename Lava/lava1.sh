@@ -45,6 +45,8 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
+
 echo -e "\e[1m\e[32m1. Servis Dosyası Oluşturuluyor ve Node Başlatılıyor... \e[0m" && sleep 1
 
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
@@ -61,11 +63,6 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 
-lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
-
-sudo systemctl daemon-reload
-sudo systemctl enable lavad
-
 snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
 mv $HOME/.lava/data/priv_validator_state.json $HOME
 rm -rf  $HOME/.lava/data
@@ -74,5 +71,7 @@ tar xf $HOME/${snap} -C $HOME/.lava
 rm $HOME/${snap}
 mv $HOME/priv_validator_state.json $HOME/.lava/data
 wget -qO $HOME/.lava/config/addrbook.json http://94.250.203.6:90/lava-addrbook.json
+sudo systemctl daemon-reload
+sudo systemctl enable lavad
 sudo systemctl restart lavad
 sudo journalctl -u lavad -f -o cat
