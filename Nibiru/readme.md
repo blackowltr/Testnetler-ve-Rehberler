@@ -12,7 +12,7 @@
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install curl build-essential git wget jq make gcc tmux chrony -y
 ```
-## Güncelleme ve kütüphane kurulumunu yapıyoruz.
+##Go kurulumu
 ```
 ver="1.19.2"
 cd $HOME
