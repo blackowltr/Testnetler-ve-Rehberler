@@ -153,6 +153,8 @@ nibid tx staking create-validator \
 --from CÜZDANADINIZ
 ```
 
+# Bu https://app.nibiru.fi/ siteden kendinize ya da diğer validatorlere stake edebilir, diğer işlemleri gerçekleştirebilirsiniz.
+
 # ADIM-2
 
 ## Pricefeeder ayarlaması
