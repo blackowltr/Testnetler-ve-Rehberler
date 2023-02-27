@@ -104,7 +104,8 @@ sudo journalctl -u nibid -f -o cat
 nibid status 2>&1 | jq .SyncInfo
 ```
 ## Cüzdan Oluşturma
-## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adrsi ile kaydolun.
+## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adresi ile kaydolun.
+> Kayıt :https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
 ```
 nibid keys add CÜZDAN
 ```
