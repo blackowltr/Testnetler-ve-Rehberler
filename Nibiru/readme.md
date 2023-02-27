@@ -182,8 +182,7 @@ After=network-online.target
 
 [Service]
 Type=exec
-User=<your user>
-Group=<your group>
+User=$USER
 ExecStart=/usr/local/bin/pricefeeder
 Restart=on-failure
 ExecReload=/bin/kill -HUP $MAINPID
