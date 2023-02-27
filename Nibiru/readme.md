@@ -34,6 +34,7 @@ curl -s https://get.nibiru.fi/@v0.19.2! | bash
 nibid version
 ```
 ## Initialize işlemi
+> NODEADINIZ yazan yere isminizi yazın.
 ```
 nibid init NODEADINIZ --chain-id=nibiru-itn-1 --home $HOME/.nibid
 ```
