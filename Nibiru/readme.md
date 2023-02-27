@@ -104,7 +104,11 @@ sudo journalctl -u nibid -f -o cat
 nibid status 2>&1 | jq .SyncInfo
 ```
 ## Cüzdan Oluşturma
-### Burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
+## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adrsi ile kaydolun.
+```
+nibid keys add CÜZDAN
+```
+### Zaten daha önce kaydolduysanız burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
 ```
 nibid keys add CÜZDAN --recover
 ```
