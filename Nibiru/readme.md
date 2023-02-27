@@ -210,6 +210,24 @@ sudo systemctl start pricefeeder
 ```
 journalctl -fu pricefeeder
 ```
+# Faydalı Komutlar
+
+## Başka validator delege etme
+```
+nibid tx staking delegate VALOPERADRES 10000000unibi --from=CÜZDANADI --chain-id nibiru-itn-1 --gas=auto
+```
+## Redelege
+```
+nibid tx staking redelegate gönderenvaloper alıcıvaloperadres 10000000unibi --chain-id nibiru-itn-1 --from=CÜZDANADI --gas=auto
+```
+## Cüzdandan cüzdana transfer
+```
+nibid tx bank send GÖNDERENADRES ALICIADRES 10000000unibi --from=CÜZDANADI --chain-id nibiru-itn-1 --gas=auto
+```
+## Oy kullanma 
+```
+nibid tx gov vote 1 yes --from CÜZDANADI --chain-id nibiru-itn-1
+```
 ## Validator Düzenleme
 ```
 nibid tx staking edit-validator \
