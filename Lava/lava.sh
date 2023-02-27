@@ -1,29 +1,27 @@
 #!/bin/bash
 
-read -r -p "Enter node moniker: " NODE_MONIKER
+read -r -p "Node Adınızı Yazın: " NODE_MONIKER
 
-CHAIN_ID="lava-testnet-1"
-CHAIN_DENOM="ulava"
-BINARY_NAME="lavad"
-BINARY_VERSION_TAG="v0.6.0"
-CHEAT_SHEET="https://nodejumper.io/lava-testnet/cheat-sheet"
+echo -e "\e[1m\e[32m1. Sistem Güncellemesi ve Kütüphane Kurulumu Yapılıyor... \e[0m" && sleep 1
+sudo apt update && sudo apt upgrade -y 
+sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y
+sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
+sudo apt autoremove -y
+sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
 
-printLine
-echo -e "Node moniker:       ${CYAN}$NODE_MONIKER${NC}"
-echo -e "Chain id:           ${CYAN}$CHAIN_ID${NC}"
-echo -e "Chain demon:        ${CYAN}$CHAIN_DENOM${NC}"
-echo -e "Binary version tag: ${CYAN}$BINARY_VERSION_TAG${NC}"
-printLine
-sleep 1
+echo -e "\e[1m\e[32m1. Go Yükleniyor... \e[0m" && sleep 1
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz \
+&& sudo tar -xvf go1.19.linux-amd64.tar.gz && sudo mv go /usr/local \
+&& echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile \
+&& source ~/.bash_profile; go version
 
-source <(curl -s https://raw.githubusercontent.com/nodejumper-org/cosmos-scripts/master/utils/dependencies_install.sh)
+rm -rf go1.19.linux-amd64.tar.gz
 
-printCyan "4. Building binaries..." && sleep 1
-
-cd || return
+echo -e "\e[1m\e[32m1. Binary... \e[0m" && sleep 1
+cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava
-cd lava || return
+cd lava
 git checkout v0.6.0-RC3
 make install
 lavad version
@@ -47,7 +45,9 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
-printCyan "5. Starting service and synchronization..." && sleep 1
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
+
+echo -e "\e[1m\e[32m1. Servis Dosyası Oluşturuluyor ve Node Başlatılıyor... \e[0m" && sleep 1
 
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
 [Unit]
@@ -63,16 +63,15 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 
-lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book
-
-SNAP_NAME=$(curl -s https://snapshots1-testnet.nodejumper.io/lava-testnet/info.json | jq -r .fileName)
-curl "https://snapshots1-testnet.nodejumper.io/lava-testnet/${SNAP_NAME}" | lz4 -dc - | tar -xf - -C "$HOME/.lava"
-
+snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
+mv $HOME/.lava/data/priv_validator_state.json $HOME
+rm -rf  $HOME/.lava/data
+wget -P $HOME http://94.250.203.6:90/${snap}
+tar xf $HOME/${snap} -C $HOME/.lava
+rm $HOME/${snap}
+mv $HOME/priv_validator_state.json $HOME/.lava/data
+wget -qO $HOME/.lava/config/addrbook.json http://94.250.203.6:90/lava-addrbook.json
 sudo systemctl daemon-reload
 sudo systemctl enable lavad
-sudo systemctl start lavad
-
-printLine
-echo -e "Check logs:            ${CYAN}sudo journalctl -u $BINARY_NAME -f --no-hostname -o cat ${NC}"
-echo -e "Check synchronization: ${CYAN}$BINARY_NAME status 2>&1 | jq .SyncInfo.catching_up${NC}"
-echo -e "More commands:         ${CYAN}$CHEAT_SHEET${NC}"
+sudo systemctl restart lavad
+sudo journalctl -u lavad -f -o cat
