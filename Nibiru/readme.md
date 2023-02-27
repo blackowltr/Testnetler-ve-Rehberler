@@ -113,9 +113,9 @@ nibid keys add CÜZDAN
 ```
 nibid keys add CÜZDAN --recover
 ```
-## Faucet
+## Faucet ---> https://discord.gg/nibiru
 
-https://discord.gg/nibiru
+<img width="840" alt="image" src="https://user-images.githubusercontent.com/107190154/221564563-8ed5bc8f-2dcc-467c-946f-495ef31c4d36.png">
 
 ## Validator Oluşturma
 ```
