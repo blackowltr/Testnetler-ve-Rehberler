@@ -148,7 +148,7 @@ curl -s https://get.nibiru.fi/pricefeeder! | bash
 ```
 ## Değişiklik yapmadan direkt yapıştırın terminale.
 ```
-EXPORT CHAIN_ID="nibiru-itn-1"
+export CHAIN_ID="nibiru-itn-1"
 ```
 ## Bu komutu da direkt girin.
 ```
@@ -156,7 +156,7 @@ nibid keys add pricefeeder
 ```
 ## Cüzdan çıktısındaki kelimeleri tek tırnak arasına kopyalayın, tırnakları silmeyin ve ardından terminale yapıştırın.
 ```
-EXPORT FEEDER_MNEMONIC='BURAYAKELİMELERİKOPYALAYIN'
+export FEEDER_MNEMONIC='BURAYAKELİMELERİKOPYALAYIN'
 ```
 ## Servis dosyamızı oluşturalım.
 > Tek seferde girin komutu
