@@ -108,16 +108,18 @@ sudo journalctl -u nibid -f -o cat
 nibid status 2>&1 | jq .SyncInfo
 ```
 ## Cüzdan Oluşturma
+
+## KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin. Siteye bağlandığınızda oto olarak ekleniyor.
+
+### Zaten daha önce kaydolduysanız burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
+```
+nibid keys add CÜZDAN --recover
+```
 ## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adresi ile kaydolun.
 > Kayıt :https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
 ```
 nibid keys add CÜZDAN
 ```
-### Zaten daha önce kaydolduysanız burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
-```
-nibid keys add CÜZDAN --recover
-```
-## KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin. Siteye bağlandığınızda oto olarak ekleniyor.
 
 ## Faucet ---> https://discord.gg/nibiru
 
