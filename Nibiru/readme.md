@@ -159,7 +159,7 @@ nibid tx staking create-validator \
 ```
 curl -s https://get.nibiru.fi/pricefeeder! | bash
 ```
-## Değişiklik yapmadan direkt yapıştırın terminale.
+## Değişkenleri ayarlayalım
 > export FEEDER_MNEMONIC, export VALIDATOR_ADDRESS kısımlarını düzeltin.
 ```
 export CHAIN_ID="nibiru-itn-1"
