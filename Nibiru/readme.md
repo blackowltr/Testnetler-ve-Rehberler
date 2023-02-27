@@ -43,6 +43,8 @@ sed -i 's|seeds =.*|seeds = "'$(curl -s https://networks.itn.nibiru.fi/$NETWORK/
 ```
 sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025unibi"/g' $HOME/.nibid/config/app.toml
 ```
+
+## Ağ ile daha hızlı senkron olmak için State Sync parametrelerini ayarlayın (isteğe bağlıdır ancak önerilir)
 ```
 NETWORK=nibiru-itn-1
 sed -i 's|enable =.*|enable = true|g' $HOME/.nibid/config/config.toml
