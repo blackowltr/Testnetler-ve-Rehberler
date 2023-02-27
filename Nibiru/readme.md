@@ -108,10 +108,6 @@ nibid status 2>&1 | jq .SyncInfo
 ```
 nibid keys add CÜZDAN --recover
 ```
-## Cüzdan Kurtarma
-```
-nibid keys add CÜZDAN --recover
-```
 ## Validator Oluşturma
 ```
 nibid tx staking create-validator \
