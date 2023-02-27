@@ -221,6 +221,11 @@ nibid tx staking edit-validator \
 --from=CÜZDANADINIZ
 ```
 
+## Unjail 
+```
+nibid tx slashing unjail --from CÜZDANADI --chain-id nibiru-itn-1 --gas-prices 0.1unibi --gas-adjustment 1.5 --gas auto -y 
+```
+
 ## Node Silme Komutları
 ```
 sudo systemctl stop nibid
