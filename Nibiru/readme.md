@@ -115,7 +115,7 @@ nibid keys add CÜZDAN
 ```
 nibid keys add CÜZDAN --recover
 ```
-## KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin.
+## KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin. Siteye bağlandığınızda oto olarak ekleniyor.
 
 ## Faucet ---> https://discord.gg/nibiru
 
