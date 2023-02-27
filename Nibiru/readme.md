@@ -8,6 +8,8 @@
 |----|------|----------|
 |   4| 16GB  | 1000GB    |
 
+## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
+
 ## Güncelleme ve kütüphane kurulumunu yapıyoruz.
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
