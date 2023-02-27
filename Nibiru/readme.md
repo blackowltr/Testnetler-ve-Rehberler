@@ -114,14 +114,8 @@ nibid keys add CÜZDAN
 nibid keys add CÜZDAN --recover
 ```
 ## Faucet
->ADDR kısmına cüzdan adresinizi yazın. Ardından komutu çalıştırın.
-```
-FAUCET_URL="https://faucet.itn-1.nibiru.fi/"
-ADDR="CÜZDANADRESNİZİYAZIN" 
-curl -X POST -d '{"address": "'"$ADDR"'", "coins": ["11000000unibi","100000000unusd","100000000uusdt"]}' $FAUCET_URL
-```
-<img width="732" alt="image" src="https://user-images.githubusercontent.com/107190154/221563857-627ad448-5b65-4f7c-9ce6-d805bdfa9de2.png">
 
+https://discord.gg/nibiru
 
 ## Validator Oluşturma
 ```
