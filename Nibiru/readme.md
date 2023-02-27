@@ -10,7 +10,11 @@
 
 ## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
 
-## Tarayıcı: https://explorer.ppnv.space/nibiru
+## Tarayıcı: 
+
+https://nibiru.explorers.guru/
+
+https://explorer.ppnv.space/nibiru
 
 ## Rehberde hata ya da eksik varsa PR atın.
 
