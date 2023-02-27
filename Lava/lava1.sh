@@ -63,6 +63,7 @@ LimitNOFILE=10000
 WantedBy=multi-user.target
 EOF
 
+echo -e "\e[1m\e[32m1.  Node Senkronize Ediliyor... \e[0m" && sleep 1
 snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
 mv $HOME/.lava/data/priv_validator_state.json $HOME
 rm -rf  $HOME/.lava/data
