@@ -13,21 +13,9 @@
 <img width="315" alt="image" src="https://user-images.githubusercontent.com/107190154/221443363-882ed8f7-84ba-4b2d-a531-79f0ace1e86c.png">
 
 
-## Birinci komutla oto kurulumu başlatın ardından kurulum bitince ikinci komutu yazın.
+## Aşağıdaki komutla oto kurulumu başlatın.
 ```
 source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh)
-```
-```
-snap=$(curl -s http://94.250.203.6:90 | egrep -o ">lavad-snap*.*tar" | tr -d ">")
-mv $HOME/.lava/data/priv_validator_state.json $HOME
-rm -rf  $HOME/.lava/data
-wget -P $HOME http://94.250.203.6:90/${snap}
-tar xf $HOME/${snap} -C $HOME/.lava
-rm $HOME/${snap}
-mv $HOME/priv_validator_state.json $HOME/.lava/data
-wget -qO $HOME/.lava/config/addrbook.json http://94.250.203.6:90/lava-addrbook.json
-sudo systemctl restart lavad
-sudo journalctl -u lavad -f -o cat
 ```
 ## Log Kontrol
 ```
