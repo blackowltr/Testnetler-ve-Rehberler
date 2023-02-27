@@ -50,7 +50,7 @@ sed -i 's|rpc_servers =.*|rpc_servers = "'$(curl -s https://networks.itn.nibiru.
 sed -i 's|trust_height =.*|trust_height = "'$(curl -s https://networks.itn.nibiru.fi/$NETWORK/trust_height)'"|g' $HOME/.nibid/config/config.toml
 sed -i 's|trust_hash =.*|trust_hash = "'$(curl -s https://networks.itn.nibiru.fi/$NETWORK/trust_hash)'"|g' $HOME/.nibid/config/config.toml
 ```
-## Serviss dosyamızı oluşturup başlatalım.
+## Servis dosyamızı oluşturup başlatalım.
 ```
 sudo tee /etc/systemd/system/nibid.service > /dev/null <<EOF
 [Unit]
