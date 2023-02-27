@@ -160,41 +160,41 @@ nibid tx staking create-validator \
 curl -s https://get.nibiru.fi/pricefeeder! | bash
 ```
 ## Değişiklik yapmadan direkt yapıştırın terminale.
+
+## Bu komutu da direkt girin.
+> export FEEDER_MNEMONIC, export VALIDATOR_ADDRESS kısımlarını düzeltin.
 ```
 export CHAIN_ID="nibiru-itn-1"
-```
-## Bu komutu da direkt girin.
-```
-nibid keys add pricefeeder
-```
-## Cüzdan çıktısındaki kelimeleri tek tırnak arasına kopyalayın, tırnakları silmeyin ve ardından terminale yapıştırın.
-```
-export FEEDER_MNEMONIC='BURAYAKELİMELERİKOPYALAYIN'
+export GRPC_ENDPOINT="localhost:9090"
+export WEBSOCKET_ENDPOINT="ws://localhost:26657/websocket"
+export EXCHANGE_SYMBOLS_MAP='{ "bitfinex": { "ubtc:uusd": "tBTCUSD", "ueth:uusd": "tETHUSD", "uusdt:uusd": "tUSTUSD" }, "binance": { "ubtc:uusd": "BTCUSD", "ueth:uusd": "ETHUSD", "uusdt:uusd": "USDTUSD", "uusdc:uusd": "USDCUSD", "uatom:uusd": "ATOMUSD", "ubnb:uusd": "BNBUSD", "uavax:uusd": "AVAXUSD", "usol:uusd": "SOLUSD", "uada:uusd": "ADAUSD", "ubtc:unusd": "BTCUSD", "ueth:unusd": "ETHUSD", "uusdt:unusd": "USDTUSD", "uusdc:unusd": "USDCUSD", "uatom:unusd": "ATOMUSD", "ubnb:unusd": "BNBUSD", "uavax:unusd": "AVAXUSD", "usol:unusd": "SOLUSD", "uada:unusd": "ADAUSD" } }'
+export FEEDER_MNEMONIC="CÜZDANKELİMELERİNİZİYAZIN"
+export VALIDATOR_ADDRESS="VALOPERADRESİNİZİYAZIN"
 ```
 ## Servis dosyamızı oluşturalım.
 > Tek seferde girin komutu
 ```
-sudo tee /etc/systemd/system/pricefeeder.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/pricefeeder.service<<EOF
 [Unit]
-Description=pricefeeder
+Description=Nibiru Pricefeeder
 Requires=network-online.target
 After=network-online.target
 
 [Service]
 Type=exec
-User=$USER
-ExecStart=/usr/local/bin/pricefeeder start
+User=<your user>
+Group=<your group>
+ExecStart=/usr/local/bin/pricefeeder
 Restart=on-failure
 ExecReload=/bin/kill -HUP $MAINPID
 KillSignal=SIGTERM
 PermissionsStartOnly=true
 LimitNOFILE=65535
-Environment=CHAIN_ID='$CHAIN_ID'
-Environment=GRPC_ENDOPINT='$GRPC_ENDOPINT'
-Environment=WEB_ENDPOINT='$WEB_ENDPOINT'
+Environment=CHAIN_ID=$CHAIN_ID'
+Environment=GRPC_ENDPOINT='$GRPC_ENDPOINT'
+Environment=WEBSOCKET_ENDPOINT='$WEBSOCKET_ENDPOINT'
 Environment=EXCHANGE_SYMBOLS_MAP='$EXCHANGE_SYMBOLS_MAP'
 Environment=FEEDER_MNEMONIC='$FEEDER_MNEMONIC'
-Environment=VALIDATOR_ADDRESS='$VALIDATOR_ADDRESS'
 
 [Install]
 WantedBy=multi-user.target
@@ -202,8 +202,8 @@ EOF
 ```
 ## Başlatalım
 ```
-sudo systemctl daemon-reload && /
-sudo systemctl enable pricefeeder && /
+sudo systemctl daemon-reload && \
+sudo systemctl enable pricefeeder && \
 sudo systemctl start pricefeeder
 ```
 ## Kontrol edelim
