@@ -202,7 +202,9 @@ EOF
 ```
 ## Başlatalım
 ```
-sudo systemctl daemon-reload && sudo systemctl enable pricefeeder && sudo systemctl start pricefeeder
+sudo systemctl daemon-reload
+sudo systemctl enable pricefeeder
+sudo systemctl start pricefeeder
 ```
 ## Kontrol edelim
 ```
