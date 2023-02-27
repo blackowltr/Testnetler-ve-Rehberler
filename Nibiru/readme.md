@@ -113,6 +113,14 @@ nibid keys add CÜZDAN
 ```
 nibid keys add CÜZDAN --recover
 ```
+## Faucet
+```
+>ADDR kısmına cüzdan adresinizi yazın. Ardından komutu çalıştırın.
+FAUCET_URL="https://faucet.itn-1.nibiru.fi/"
+ADDR="CÜZDANADRESNİZİYAZIN" 
+curl -X POST -d '{"address": "'"$ADDR"'", "coins": ["11000000unibi","100000000unusd","100000000uusdt"]}' $FAUCET_URL
+```
+
 ## Validator Oluşturma
 ```
 nibid tx staking create-validator \
@@ -127,15 +135,64 @@ nibid tx staking create-validator \
 --gas-prices 0.025unibi \
 --from CÜZDANADINIZ
 ```
-## Nibi-Perps'te hangi havuzların işlem için açık olduğunu ve güncel mark ve endeks fiyatlarını görmek için sorgulayın.
-```
-nibid query vpool all-pools
-```
-## Marj olarak 100 μNUSD ile 10 kaldıraç ve sınırlanmamış  slipaj ile BTC'de long bir pozisyon açın.
-```
-nibid tx perp open-position buy ubtc:unusd 10 100 0 --from CÜZDAN --home $HOME/.nibid
-```
 
+# ADIM-2
+
+## Pricefeeder ayarlaması
+```
+curl -s https://get.nibiru.fi/pricefeeder! | bash
+```
+## Değişiklik yapmadan direkt yapıştırın terminale.
+```
+EXPORT CHAIN_ID="nibiru-itn-1"
+```
+## Bu komutu da direkt girin.
+```
+nibid keys add pricefeeder
+```
+## Cüzdan çıktısındaki kelimeleri tek tırnak arasına kopyalayın, tırnakları silmeyin ve ardından terminale yapıştırın.
+```
+EXPORT FEEDER_MNEMONIC='BURAYAKELİMELERİKOPYALAYIN'
+```
+## Servis dosyamızı oluşturalım.
+> Tek seferde girin komutu
+```
+sudo tee /etc/systemd/system/pricefeeder.service > /dev/null <<EOF
+[Unit]
+Description=pricefeeder
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=exec
+User=$USER
+ExecStart=/usr/local/bin/pricefeeder start
+Restart=on-failure
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGTERM
+PermissionsStartOnly=true
+LimitNOFILE=65535
+Environment=CHAIN_ID='$CHAIN_ID'
+Environment=GRPC_ENDOPINT='$GRPC_ENDOPINT'
+Environment=WEB_ENDPOINT='$WEB_ENDPOINT'
+Environment=EXCHANGE_SYMBOLS_MAP='$EXCHANGE_SYMBOLS_MAP'
+Environment=FEEDER_MNEMONIC='$FEEDER_MNEMONIC'
+Environment=VALIDATOR_ADDRESS='$VALIDATOR_ADDRESS'
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+## Başlatalım
+```
+sudo systemctl daemon-reload && /
+sudo systemctl enable pricefeeder && /
+sudo systemctl start pricefeeder
+```
+## Kontrol edelim
+```
+journalctl -fu pricefeeder
+```
 ## Validator Düzenleme
 ```
 nibid tx staking edit-validator \
