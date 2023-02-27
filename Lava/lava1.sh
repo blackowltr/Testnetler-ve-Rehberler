@@ -2,15 +2,14 @@
 
 read -r -p "Node Adınızı Yazın: " NODE_MONIKER
 
-printCyan "Sistem Güncellemesi ve Kütüphane Kurulumu Yapılıyor..." && sleep 1
+echo -e "\e[1m\e[32m1. Sistem Güncellemesi ve Kütüphane Kurulumu Yapılıyor... \e[0m" && sleep 1
 sudo apt update && sudo apt upgrade -y 
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential git make ncdu -y
 sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd
 sudo apt autoremove -y
 sudo apt install make clang pkg-config libssl-dev build-essential git jq llvm libudev-dev -y
 
-printCyan "4. Binary..." && sleep 1
-
+echo -e "\e[1m\e[32m1. Binary... \e[0m" && sleep 1
 cd || return
 rm -rf lava
 git clone https://github.com/lavanet/lava
@@ -38,7 +37,7 @@ sed -i 's|^snapshot-interval *=.*|snapshot-interval = 2000|g' $HOME/.lava/config
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.025ulava"|g' $HOME/.lava/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.lava/config/config.toml
 
-printCyan "Servis Başlatılıyor..." && sleep 1
+echo -e "\e[1m\e[32m1. Servis Dosyası Oluşturuluyor ve Node Başlatılıyor... \e[0m" && sleep 1
 
 sudo tee /etc/systemd/system/lavad.service > /dev/null << EOF
 [Unit]
