@@ -65,6 +65,11 @@ sed -i 's|seeds =.*|seeds = "'$(curl -s https://networks.itn.nibiru.fi/$NETWORK/
 ```
 sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025unibi"/g' $HOME/.nibid/config/app.toml
 ```
+## İndexer Kapatma (şart değil)
+```
+indexer="null"
+sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nibid/config/config.toml
+```
 ## Pruning ayarları(şart değil)
 ```
 pruning="custom"
