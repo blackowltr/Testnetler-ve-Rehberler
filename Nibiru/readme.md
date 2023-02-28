@@ -34,7 +34,7 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
 source ~/.bash_profile
 go version
 ```
-## Nibid Kurulumu
+## Nibid kurulumu
 ```
 curl -s https://get.nibiru.fi/@v0.19.2! | bash
 ```
@@ -128,12 +128,12 @@ nibid status 2>&1 | jq .SyncInfo
 
 ### Zaten daha önce kaydolduysanız burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
 ```
-nibid keys add CÜZDAN --recover
+nibid keys add CUZDAN --recover
 ```
 ## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adresi ile kaydolun.
 > Kayıt :https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
 ```
-nibid keys add CÜZDAN
+nibid keys add CUZDAN
 ```
 
 ## Faucet ---> https://discord.gg/nibiru , https://app.nibiru.fi/faucet
