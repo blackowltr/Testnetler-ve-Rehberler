@@ -56,13 +56,6 @@ curl -s https://networks.itn.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/ge
 ```
 curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 ```
-```
-NETWORK=nibiru-itn-1
-curl -s https://networks.itn.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
-```
-```
-curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
-```
 ## Seed ayarı
 ```
 NETWORK=nibiru-itn-1
