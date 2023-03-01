@@ -242,11 +242,12 @@ nibid tx gov vote 1 yes --from CÜZDANADI --chain-id nibiru-itn-1
 ## Validator Düzenleme
 ```
 nibid tx staking edit-validator \
---moniker=NODEADINIZ \
---identity=<KEYBASE ID> \
---website="<WEBSİTENİZ>" \
---details="<AÇIKLAMA>" \
+--new-moniker=BlackOwl \
+--identity KEYBASE.IO ID'NİZ \
+--details "AÇIKLAMA" \
+--website "WEBSİTEADRESNİZ" \
 --chain-id nibiru-itn-1 \
+--gas-prices 0.025unibi \
 --from=CÜZDANADINIZ
 ```
 
