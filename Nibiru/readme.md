@@ -2,13 +2,17 @@
 
 ![ghgf](https://user-images.githubusercontent.com/107190154/221386540-dab23489-6e59-4df3-b818-75e1c16130d1.png)
 
-### Sistem Gereksinimleri 
+### Sistem Gereksinimleri
+> Burada yazan gereksinimler önerilen gereksinimlerdir. İlla 1000GB alana sahip bir sunucu kullanmanız gerekmiyor. Rehberde kurulum yaparken indexer kapatma ve Pruning ayarlarını da yapmış olacaksınız. Bu sayede yüksek disk kapasitesi olmayan bir sunucuya da kurabilirsiniz. Örn: 400GB-600GB gibi.
 
 |CPU | RAM  | Disk  | 
 |----|------|----------|
 |   4| 16GB  | 1000GB    |
 
 ## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
+## [Nibiru Discord](https://discord.gg/nibiru)
+## [Nibiru Twitter](https://twitter.com/NibiruChain)
+## [BlackOwl Twitter](https://twitter.com/brsbtc)
 
 ## Tarayıcı: 
 
@@ -122,13 +126,13 @@ nibid status 2>&1 | jq .SyncInfo
 ```
 ## Cüzdan Oluşturma
 
-## KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin. Siteye bağlandığınızda oto olarak ekleniyor.
+### KEPLR'a yeni test ağını eklemek için önce eski nibiru-testnet-2 ağını kaldırın ve https://app.nibiru.fi/ buraya bağlanarak yeni test ağını ekleyin. Siteye bağlandığınızda oto olarak ekleniyor.
 
 ### Zaten daha önce kaydolduysanız burada kayıt olurken kullandığınız cüzdanı import edin kelimelerle.
 ```
 nibid keys add CUZDAN --recover
 ```
-## Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adresi ile kaydolun.
+### Daha kayıt olmadıysanız kurulumu yaptıktan sonra oluşturduğunuz cüzdan adresi ile kaydolun.
 > Kayıt :https://gleam.io/yW6Ho/nibiru-incentivized-testnet-registration
 ```
 nibid keys add CUZDAN
@@ -153,13 +157,13 @@ nibid tx staking create-validator \
 --from CÜZDANADINIZ
 ```
 
-# Bu https://app.nibiru.fi/ siteden kendinize ya da diğer validatorlere stake edebilir, diğer işlemleri gerçekleştirebilirsiniz.
+## Bu https://app.nibiru.fi/ siteden kendinize ya da diğer validatorlere stake edebilir, diğer işlemleri gerçekleştirebilirsiniz.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## **Pricefeeder Kurulumu** 
+# **Pricefeeder Kurulumu** 
 
-### _(Aktif sette değilseniz şu an için bir önemi yok bu kısmın. İlla kuracağım derseniz hem tecrübe edinmek hem de denemek için kurabilirsiniz.)_
+### Aktif sette değilseniz şu an için bir önemi yok bu kısmın. İlla kuracağım derseniz hem tecrübe edinmek hem de denemek için kurabilirsiniz.
 
 ## Pricefeeder ayarlaması
 ```
@@ -257,3 +261,5 @@ sudo rm $HOME/.nibid* -rf
 sudo rm $HOME/nibiru -rf
 sed -i '/NIBIRU_/d' ~/.bash_profile
 ```
+
+Herkese Kolay Gelsin.
