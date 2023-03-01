@@ -167,8 +167,6 @@ nibid tx staking create-validator \
 
 # **Pricefeeder Kurulumu** 
 
-### Aktif sette değilseniz şu an için bir önemi yok bu kısmın. İlla kuracağım derseniz hem tecrübe edinmek hem de denemek için kurabilirsiniz.
-
 ## Pricefeeder ayarlaması
 ```
 curl -s https://get.nibiru.fi/pricefeeder! | bash
