@@ -52,8 +52,6 @@ nibid init NODEADINIZ --chain-id=nibiru-itn-1 --home $HOME/.nibid
 ```
 NETWORK=nibiru-itn-1
 curl -s https://networks.itn.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
-```
-```
 curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 ```
 ## Seed ayarı
