@@ -157,14 +157,18 @@ nibid tx staking create-validator \
 
 # Bu https://app.nibiru.fi/ siteden kendinize ya da diğer validatorlere stake edebilir, diğer işlemleri gerçekleştirebilirsiniz.
 
-# ADIM-2
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## **Pricefeeder Kurulumu** 
+
+### _(Aktif sette değilseniz şu an için bir önemi yok bu kısmın. İlla kuracağım derseniz hem tecrübe edinmek hem de denemek için kurabilirsiniz.)_
 
 ## Pricefeeder ayarlaması
 ```
 curl -s https://get.nibiru.fi/pricefeeder! | bash
 ```
 ## Değişkenleri ayarlayalım
-> export FEEDER_MNEMONIC, export VALIDATOR_ADDRESS kısımlarını düzeltin.
+> export FEEDER_MNEMONIC, export VALIDATOR_ADDRESS kısımlarını düzeltin. Diğer kısımları olduğu gibi bırakalım.
 ```
 export CHAIN_ID="nibiru-itn-1"
 export GRPC_ENDPOINT="localhost:9090"
