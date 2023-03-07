@@ -256,21 +256,21 @@ journalctl -fu pricefeeder
 ```
 # Faydalı Komutlar
 
-## Başka validator delege etme
+## Kendinize ya da başka validatore delege etme
 ```
-nibid tx staking delegate VALOPERADRES 10000000unibi --from=CÜZDANADI --chain-id nibiru-itn-1 --gas=auto
+nibid tx staking delegate VALOPERADRESİNİZİYAZIN 1000000unibi --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 ## Redelege
 ```
-nibid tx staking redelegate gönderenvaloper alıcıvaloperadres 10000000unibi --chain-id nibiru-itn-1 --from=CÜZDANADI --gas=auto
+nibid tx staking redelegate gönderenvaloper alıcıvaloperadres 10000000unibi --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 ## Cüzdandan cüzdana transfer
 ```
-nibid tx bank send GÖNDERENADRES ALICIADRES 10000000unibi --from=CÜZDANADI --chain-id nibiru-itn-1 --gas=auto
+nibid tx bank send GÖNDERENADRES ALICIADRES 10000000unibi --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 ## Oy kullanma 
 ```
-nibid tx gov vote 1 yes --from CÜZDANADI --chain-id nibiru-itn-1
+nibid tx gov vote 1 yes --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 ## Validator Düzenleme
 ```
@@ -286,7 +286,7 @@ nibid tx staking edit-validator \
 
 ## Unjail 
 ```
-nibid tx slashing unjail --from CÜZDANADI --chain-id nibiru-itn-1 --gas-prices 0.1unibi --gas-adjustment 1.5 --gas auto -y 
+nibid tx slashing unjail --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 
 ## Node Silme Komutları
