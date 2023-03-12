@@ -115,7 +115,7 @@ sudo systemctl enable nibid
 sudo systemctl restart nibid && journalctl -fu nibid -o cat
 ```
 
-# Dileyen Snapshot ya da State Sync kullanabilir. İkisinden birini tercih edebilirsiniz.
+# Dileyen Snapshot ya da State Sync kullanabilir. İkisinden birini tercih edebilirsiniz ancak benim önerim Snapshot kullanmanız olacaktır.
 
 ## Ağ ile daha hızlı senkron olmak için Snapshot
 ```
