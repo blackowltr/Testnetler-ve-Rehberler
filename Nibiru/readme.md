@@ -91,9 +91,33 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 
 sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025unibi"/g' $HOME/.nibid/config/app.toml
 ```
+
+## Servis dosyamızı oluşturup başlatalım.
+```
+sudo tee /etc/systemd/system/nibid.service > /dev/null <<EOF
+[Unit]
+Description=Nibiru
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which nibid) start
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable nibid
+sudo systemctl restart nibid && journalctl -fu nibid -o cat
+```
+
 # Dileyen Snapshot ya da State Sync kullanabilir. İkisinden birini tercih edebilirsiniz.
 
-## Ağ ile daha hızlı senkron olmak için Snapshot (595950 Blok)
+## Ağ ile daha hızlı senkron olmak için Snapshot
 ```
 sudo systemctl stop nibid
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
@@ -132,28 +156,6 @@ mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validato
 ```
 ```
 sudo systemctl start nibid && sudo journalctl -u nibid -f --no-hostname -o cat
-```
-## Servis dosyamızı oluşturup başlatalım.
-```
-sudo tee /etc/systemd/system/nibid.service > /dev/null <<EOF
-[Unit]
-Description=Nibiru
-After=network-online.target
-
-[Service]
-User=$USER
-ExecStart=$(which nibid) start
-Restart=always
-RestartSec=3
-LimitNOFILE=65535
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-sudo systemctl daemon-reload
-sudo systemctl enable nibid
-sudo systemctl restart nibid && journalctl -fu nibid -o cat
 ```
 ## Log Kontrol
 ```
