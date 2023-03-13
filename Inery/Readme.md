@@ -164,13 +164,13 @@ cline wallet import --private-key ACCOUNT_PRIVATE_KEY
 `ACCOUNT_NAME` hesap adınız.
 `ACCOUNT_PUBLIC_KEY` kullanıcı panelinizde bulunuyor.
 ```
-cline system regproducer ACCOUNT_NAME ACCOUNT_PUBLIC_KEY 0.0.0.0:9010
+cline master bind ACCOUNT_NAME ACCOUNT_PUBLIC_KEY YOUR_SERVER_IP:9010
 ```
 
 ### Hesap Onaylama
 `ACCOUNT_NAME` hesap adınız.
 ```
-cline system makeprod approve ACCOUNT_NAME ACCOUNT_NAME
+cline master approve ACCOUNT_NAME
 ```
 
 ### Master Node'unuzu Kontrol Etme
