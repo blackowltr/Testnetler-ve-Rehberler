@@ -8,6 +8,8 @@
 |----|------|----------|
 |   4| 8GB  | 200B    |
 
+### Explorer: https://lava.explorers.guru/
+
 ## Aşağıdaki komutla oto kurulumu başlatın.
 ```
 source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Lava/lava.sh)
