@@ -6,7 +6,7 @@
 
 |CPU | RAM  | Disk  | 
 |----|------|----------|
-|   4| 8GB  | 160GB    |
+|   4| 8GB  | 200B    |
 
 ## Aşağıdaki komutla oto kurulumu başlatın.
 ```
