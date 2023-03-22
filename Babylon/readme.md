@@ -122,9 +122,9 @@ babylond status 2>&1 | jq .SyncInfo
 babylond keys add cüzdanadi
 ```
 ## BLS Key
-> İSİM yazan yere cüzdan adınızı yazın.
+> Cüzdan Adresi kısmını doldurmayı unutmayın.
 ```
-babylond create-bls-key "İSİM"
+babylond create-bls-key "CüzdanAdresi"
 ```
 ## Faucet: https://discord.gg/babylonchain
 
