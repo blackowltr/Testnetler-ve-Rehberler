@@ -4,6 +4,7 @@
 ![kjıh89uıwo](https://user-images.githubusercontent.com/107190154/227424365-9335dd44-6a8c-41b9-a2bc-5b0153b82cfa.png)
 
 ## Discord : https://discord.gg/scriptnetwork
+## Explorer: https://explorer.script.tv/
 
 <h1 align="center">Kurulum</h1>
 
