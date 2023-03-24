@@ -157,7 +157,7 @@ tmux new -s detail
 <img width="462" alt="fasfafa" src="https://user-images.githubusercontent.com/107190154/227427252-bed818bb-2046-4204-85c5-9a10f4dd18b3.png">
 
 ## Tokenler cüzdanımıza geldi.
-<img width="302" alt="image" src="https://user-images.githubusercontent.com/107190154/227427959-8f80083d-19a4-427f-b74c-3daf4fc15012.png">
+<img width="879" alt="image" src="https://user-images.githubusercontent.com/107190154/227428278-b62958b7-d45c-4b1f-96a3-177ec3582489.png">
 
 ## Stake kısmına gidiyoruz.
 <img width="788" alt="jhgfd" src="https://user-images.githubusercontent.com/107190154/227423359-b2c78bb9-33de-482c-9054-da01fe1fafad.png">
