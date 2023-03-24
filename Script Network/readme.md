@@ -181,6 +181,10 @@ tmux new -s detail
 ## Ardından cüzdan şifrenizi yazın ve işlemi onaylayın.
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/107190154/227424127-b726d251-def7-428e-8bd4-b69b7a3f6f9c.png">
 
+## Cüzdanımızdan 10k olan bakiye düşüyor ve Stake işlemi gerçekleşiyor. Teyit etmek için Explorerdan da bakabilirsiniz.
+
+<img width="1160" alt="image" src="https://user-images.githubusercontent.com/107190154/227429801-e1d1bd2b-022b-418c-961f-b59f96db5ad9.png">
+
 ##  Her şey bu kadardı..
 
 <h1 align="center">NOT</h1>
