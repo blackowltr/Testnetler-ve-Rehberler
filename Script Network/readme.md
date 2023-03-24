@@ -152,8 +152,9 @@ tmux new -s detail
 <img width="788" alt="image" src="https://user-images.githubusercontent.com/107190154/227423077-f5ae4d4e-a8fd-4efd-ad27-2b2a0b517920.png">
 
 ## Faucet için Receive yazan kısma gidiyoruz ve alttaki faucet butonuna basıyoruz.
-<img width="884" alt="image" src="https://user-images.githubusercontent.com/107190154/227426941-197e558f-d619-4f7a-8f8e-6b1e8e665fb5.png">
-<img width="462" alt="image" src="https://user-images.githubusercontent.com/107190154/227427001-c8dd7eb3-2870-4033-bf08-e72f909ff1e8.png">
+
+<img width="884" alt="fasfasfas" src="https://user-images.githubusercontent.com/107190154/227427238-48186492-8939-4392-8fee-84ff6e6bf2e6.png">
+<img width="462" alt="fasfafa" src="https://user-images.githubusercontent.com/107190154/227427252-bed818bb-2046-4204-85c5-9a10f4dd18b3.png">
 
 ## Stake kısmına gidiyoruz.
 <img width="788" alt="jhgfd" src="https://user-images.githubusercontent.com/107190154/227423359-b2c78bb9-33de-482c-9054-da01fe1fafad.png">
@@ -169,6 +170,9 @@ tmux new -s detail
 
 ## Örnek
 <img width="465" alt="image" src="https://user-images.githubusercontent.com/107190154/227427152-8b3e3559-aa33-473d-8523-1d517bb0d221.png">
+
+## Ben summary olan kısmı anlamadım, nereden bulurum diyorsanız şunu yapın. `tmux attach -t detail` bu komutu yazın ve açılan yerde sizin summary bilginiz yazmakta. Aşağıya bıraktığım görseli inceleyin.
+<img width="1138" alt="76edf" src="https://user-images.githubusercontent.com/107190154/227427727-c30691e1-2868-4491-9075-159c85e68027.png">
 
 ## Ardından cüzdan şifrenizi yazın ve işlemi onaylayın.
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/107190154/227424127-b726d251-def7-428e-8bd4-b69b7a3f6f9c.png">
