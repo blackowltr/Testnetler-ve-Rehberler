@@ -1,9 +1,9 @@
 # Script Network Test Rehberi
+>Sistem Gereksinimleri çok düşük. Sıradan bir sunucuya dahi kurabilirsiniz.
 
 ![kjıh89uıwo](https://user-images.githubusercontent.com/107190154/227424365-9335dd44-6a8c-41b9-a2bc-5b0153b82cfa.png)
 
 ## Discord : https://discord.gg/scriptnetwork
->Sistem Gereksinimleri çok düşük. Sıradan bir sunucuya dahi kurabilirsiniz.
 
 <h1 align="center">Kurulum</h1>
 
