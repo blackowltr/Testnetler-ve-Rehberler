@@ -160,7 +160,7 @@ tmux new -s detail
 <img width="879" alt="image" src="https://user-images.githubusercontent.com/107190154/227428278-b62958b7-d45c-4b1f-96a3-177ec3582489.png">
 
 ## Stake kısmına gidiyoruz.
-<img width="788" alt="jhgfd" src="https://user-images.githubusercontent.com/107190154/227423359-b2c78bb9-33de-482c-9054-da01fe1fafad.png">
+<img width="879" alt="jhgfdfghnngf" src="https://user-images.githubusercontent.com/107190154/227428396-4baf8f51-6416-4a77-8f0c-f0d6cd8835e1.png">
 
 ## Deposit Stake'e tıklıyoruz.
 <img width="653" alt="sssswe" src="https://user-images.githubusercontent.com/107190154/227423459-e3150501-5bed-42ed-9c21-75f55a72d04a.png">
