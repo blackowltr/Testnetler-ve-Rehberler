@@ -151,7 +151,9 @@ tmux new -s detail
 ## Ve artık cüzdanımıza eriştik.
 <img width="788" alt="image" src="https://user-images.githubusercontent.com/107190154/227423077-f5ae4d4e-a8fd-4efd-ad27-2b2a0b517920.png">
 
-## Faucet için Discord'a bakın denmiş ama ben bulamadım. Bu kısmı tokensiz kısaca izah edeceğim.
+## Faucet için Receive yazan kısma gidiyoruz ve alttaki faucet butonuna basıyoruz.
+<img width="884" alt="image" src="https://user-images.githubusercontent.com/107190154/227426941-197e558f-d619-4f7a-8f8e-6b1e8e665fb5.png">
+<img width="462" alt="image" src="https://user-images.githubusercontent.com/107190154/227427001-c8dd7eb3-2870-4033-bf08-e72f909ff1e8.png">
 
 ## Stake kısmına gidiyoruz.
 <img width="788" alt="jhgfd" src="https://user-images.githubusercontent.com/107190154/227423359-b2c78bb9-33de-482c-9054-da01fe1fafad.png">
@@ -165,10 +167,13 @@ tmux new -s detail
 ## Burada ise aşağıdaki görselde yazdıklarımı yapın.
 <img width="466" alt="Adsızlkjhgfgdf" src="https://user-images.githubusercontent.com/107190154/227423981-1852204f-68dc-4cb2-a5d2-9803b6347096.png">
 
+## Örnek
+<img width="465" alt="image" src="https://user-images.githubusercontent.com/107190154/227427152-8b3e3559-aa33-473d-8523-1d517bb0d221.png">
+
 ## Ardından cüzdan şifrenizi yazın ve işlemi onaylayın.
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/107190154/227424127-b726d251-def7-428e-8bd4-b69b7a3f6f9c.png">
 
-##  Her şey bu kadardı.. Faucet Konusunda bana da haber verirseniz sevinirim. Ben bulamadım.
+##  Her şey bu kadardı..
 
 <h1 align="center">NOT</h1>
 
