@@ -63,6 +63,6 @@ docker logs -f goracle-nr
 ```
 <img width="755" alt="image" src="https://user-images.githubusercontent.com/107190154/227458977-98f2fca9-83b0-4c36-99f7-f3ca3ed03469.png">
 
-### Artık Goracle Node Başarıyla Kurulmuş Oldu. Kolaye Gelsin..
+### Artık Goracle Node Başarıyla Kurulmuş Oldu. Kolay Gelsin..
 
 
