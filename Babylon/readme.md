@@ -130,23 +130,20 @@ babylond create-bls-key "CüzdanAdresi"
 
 ## Validator Oluşturma
 ```
-babylond tx checkpointing create-validator \
-  --amount=500ubbn \
-  --pubkey=$(babylond tendermint show-validator) \
-  --moniker=Monikeradi \
-  --details="https://linktr.ee/coinhunters" \
-  --website="https://coinhunterstr.com/" \
-  --chain-id=bbn-test1 \
-  --gas="auto" \
-  --gas-adjustment=1.2 \
-  --gas-prices="0.0025ubbn" \
-  --keyring-backend=test \
-  --from=cüzdanadi \
-  --commission-rate="0.10" \
-  --commission-max-rate="0.20" \
-  --commission-max-change-rate="0.01" \
-  --min-self-delegation="1" \
--y
+babylond tx staking create-validator \
+--amount=100ubbn \
+--pubkey=$(babylond tendermint show-validator) \
+--moniker=NODEADINIZ \
+--chain-id=bbn-test1 \
+--commission-rate=0.10 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.05 \
+--min-self-delegation="1" \
+--gas-prices=0.1ubbn \
+--gas-adjustment=1.5 \
+--gas=auto \
+--from=CÜZDANADINIZ \
+--yes
 ```
 
 ### Herkese Kolay Gelsin.
