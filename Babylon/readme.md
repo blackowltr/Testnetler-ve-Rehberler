@@ -1,5 +1,7 @@
 # Babylon Testner Kurulum Rehberi
 
+![sdadassd](https://user-images.githubusercontent.com/107190154/227907150-8c4503f4-0df1-4d97-9ec0-dfe77e87a10d.png)
+
 ### Sistem Gereksinimleri
 | CPU     | RAM      | Disk     |
 | ------------- | ------------- | -------- |
