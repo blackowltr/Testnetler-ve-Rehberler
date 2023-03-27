@@ -60,7 +60,7 @@ wget -qO $HOME/.babylond/config/addrbook.json wget "https://snapshot.yeksin.net/
 ```
 SEEDS="03ce5e1b5be3c9a81517d415f65378943996c864@18.207.168.204:26656,a5fabac19c732bf7d814cf22e7ffc23113dc9606@34.238.169.221:26656"
 PEERS=""
-sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.babylond/config/config.toml
+sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.babylond/config/config.toml
 ```
 ## Pruning Ayarı (Disk Kullanımının Azaltılması Amacıyla)
 ```
@@ -85,17 +85,16 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${B
 
 ## Servis Dosyası Oluşturma
 ```
-sudo tee /etc/systemd/system/babylond.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/babylond.service > /dev/null << EOF
 [Unit]
-Description=Babylon Network Node
-After=network.target
+Description=Babylon Node
+After=network-online.target
 [Service]
-Type=simple
 User=$USER
 ExecStart=$(which babylond) start
 Restart=on-failure
 RestartSec=10
-LimitNOFILE=65535
+LimitNOFILE=10000
 [Install]
 WantedBy=multi-user.target
 EOF
