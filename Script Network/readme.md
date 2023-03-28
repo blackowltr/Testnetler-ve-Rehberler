@@ -9,6 +9,10 @@
 <h1 align="center">Kurulum</h1>
 
 ```
+sudo su
+```
+
+```
 sudo apt-get update && sudo apt-get upgrade -y 
 ```
 
