@@ -26,30 +26,14 @@ sudo apt install tmux
 
 ## Go Kurulumu
 ```
-wget https://go.dev/dl/go1.19.2.linux-amd64.tar.gz 
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
-```
-
-## Değişken Ekleme
->Bu komutla .profile dosyamıza erişeceğiz.
-```
-sudo nano .profile
-```
-
-## Aşağıdaki komutu .profile dosyamızın en altına kopyalayalım
->Kopyaladıktan sonra ctrl + x ardında y ve enter ile kaydedip çıkalım.
-```
-export PATH=$PATH:/usr/local/go/bin
-```
-<img width="393" alt="dsffsdfsdfsd" src="https://user-images.githubusercontent.com/107190154/227425076-104d7239-9466-4199-9039-6f73c6a28a9a.png">
-
-## Bu komutla devam edin.
-```
-source .profile
-```
-
-## Go versiyon kontrol etme
-```
+ver="1.19.2"
+cd $HOME
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+rm "go$ver.linux-amd64.tar.gz"
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
+source ~/.bash_profile
 go version
 ```
 
