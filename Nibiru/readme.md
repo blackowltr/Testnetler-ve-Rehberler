@@ -65,7 +65,7 @@ curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nib
 ## Seed ve Peers ayarı
 ```
 SEEDS="3f472746f46493309650e5a033076689996c8881@nibiru-testnet.rpc.kjnodes.com:39659,a431d3d1b451629a21799963d9eb10d83e261d2c@seed-1.itn-1.nibiru.fi:26656,6a78a2a5f19c93661a493ecbe69afc72b5c54117@seed-2.itn-1.nibiru.fi:26656"
-PEERS=""
+PEERS="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:39656,1587dd54b6e1f373ccf61401980816fbd7f7e43a@35.232.147.245:26656,30abc253688f7e70a6dcae9f0850e41a0245db3a@129.226.148.203:26656,104a00413d0fc7ec208c810c50d49932da355bd5@129.226.159.141:26656,6fefa7ece2ff81d1c228c31eda72692d9299d8bc@38.242.248.145:26656,f28e811d5c509cad0d14a6757a1eea1441be3e13@65.108.9.164:22456,aac16ac16e941f944c3c911db963e23159c6d637@38.242.246.213:26656,4715d949ee0ed2be527a21a6a8d0985430103017@109.205.182.232:26656,d5cc6d9f81b5cf808981233a6f8029e0d775504a@165.232.148.181:32656,883e3477ad5360a63c9f9d66a7b731e99dfe2dfd@138.68.101.57:38656,971fa24215b57d81be85a68a0a85b0b64d122dfc@5.166.240.95:26656,4ff2d57f41c0162dcfed7ac55077ed36e8721c18@31.220.86.18:26656,785ffb99f8724319d44254cbb47b3428aaaa25a5@38.242.236.134:26656,07323474e3685dd9ab23c5d515f62ff929c8dab2@45.147.248.163:26656,25dc5ada7df01293cc7af2b44b24356e054228a2@217.79.255.69:26656,a3de1f505133b416a47f546b4d4ccbdc442a891b@84.46.251.68:26656,fc015be87e5c15953a6508403c99a6c8d9493622@194.34.232.35:39656,01277e798525ff4df01ce6301a769b6898f408ea@95.217.156.93:26656,efaee8ff19257f93a8bb632aeeec29068e9f39c1@95.214.53.37:26656,30a63eaa77f7f95d741d16c2564441c4422fdb25@185.219.142.120:26656,766f17b24c11b5eac20cf938f619bc2e43331988@38.242.229.238:26656,6173aa0fb340ab41724d72339d164a86e7a6d0ac@185.229.119.95:26656,63c350ff4e6cc8cd4eb93332b2014473c9db9d8f@83.229.83.167:26656,2d635a85087168f8ff3d17d1fa9c609195642775@206.189.134.31:26656,a10fd4adadd7ca8f430ad88ffdc93366e9471b00@149.102.135.51:26656,64fc94a56f69bae2ba8c23bfdf0f0c0ece535e68@184.174.34.119:26656"
 sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
 ```
 # Minimum gas price ayarı ve prometheus ayarı
@@ -73,12 +73,12 @@ sed -i 's|^seeds *=.*|seeds = "'$SEEDS'"|; s|^persistent_peers *=.*|persistent_p
 sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001unibi"|g' $HOME/.nibid/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 ```
-## İndexer Kapatma (şart değil)
+## İndexer Kapatma (şart değil, kullanım amacımız disk kullanımını azaltmak için.)
 ```
 indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nibid/config/config.toml
 ```
-## Pruning ayarları(şart değil)
+## Pruning ayarları(şart değil, kullanım amacımız disk kullanımını azaltmak için.)
 ```
 sed -i 's|^pruning *=.*|pruning = "custom"|g' $HOME/.nibid/config/app.toml
 sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.nibid/config/app.toml
@@ -118,15 +118,16 @@ sudo systemctl start nibid
 ## Ağ ile daha hızlı senkron olmak için Snapshot
 ```
 sudo systemctl stop nibid
-cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
-rm -rf $HOME/.nibid/data
+cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 ```
 ```
-SNAP_NAME=$(curl -s https://snapshots2-testnet.nodejumper.io/nibiru-testnet/info.json | jq -r .fileName)
-curl "https://snapshots2-testnet.nodejumper.io/nibiru-testnet/${SNAP_NAME}" | lz4 -dc - | tar -xf - -C $HOME/.nibid
+curl https://snapshots2-testnet.nodejumper.io/nibiru-testnet/nibiru-itn-1_2023-04-02.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
 ```
 ```
-sudo systemctl start nibid && sudo journalctl -u nibid -f --no-hostname -o cat
+sudo systemctl start nibid
+sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 
 ## Ağ ile daha hızlı senkron olmak için State Sync
@@ -272,9 +273,17 @@ nibid tx bank send GÖNDERENADRES ALICIADRES 10000000unibi --from CÜZDANADINIZI
 ```
 nibid tx distribution withdraw-all-rewards --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
+## Unbound 
+```
+nibid tx staking unbond VALOPERADRESİNİZ 1000000unibi --from CÜZDANADINIZ --chain-id nibiru-itn-1 --gas-prices 0.1unibi --gas-adjustment 1.5 --gas auto -y 
+```
 ## Oy kullanma 
 ```
 nibid tx gov vote 1 yes --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
+```
+## Unjail 
+```
+nibid tx slashing unjail --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
 ```
 ## Validator Düzenleme
 ```
@@ -287,12 +296,6 @@ nibid tx staking edit-validator \
 --gas-prices 0.025unibi \
 --from CÜZDANADINIZ
 ```
-
-## Unjail 
-```
-nibid tx slashing unjail --from CÜZDANADINIZIYAZIN --chain-id nibiru-itn-1 --gas-adjustment 1.4 --gas auto --gas-prices 0.025unibi -y
-```
-
 ## Node Silme Komutları
 ```
 sudo systemctl stop nibid
