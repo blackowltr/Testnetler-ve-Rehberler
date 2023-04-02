@@ -16,6 +16,8 @@
 
 ## Tarayıcı: 
 
+https://explorer.nibiru.fi/nibiru-itn-1
+
 https://nibiru.explorers.guru/
 
 https://explorer.ppnv.space/nibiru
