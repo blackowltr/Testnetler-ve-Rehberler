@@ -257,6 +257,9 @@ sudo systemctl start pricefeeder
 ```
 journalctl -fu pricefeeder
 ```
+
+<img width="1210" alt="image" src="https://user-images.githubusercontent.com/107190154/229848167-7c64a81f-16a5-4558-98a2-b0aeec697adf.png">
+
 # Faydalı Komutlar
 
 ## Kendinize ya da başka validatore delege etme
