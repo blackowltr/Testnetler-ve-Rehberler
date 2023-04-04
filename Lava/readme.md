@@ -18,27 +18,15 @@ source <(curl -s https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberle
 ## Snapshot
 ```
 sudo systemctl stop lavad
-cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup
-rm -rf $HOME/.lava/data
-curl https://files.itrocket.net/testnet/lava/snap_lava.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.lava
-mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json
-```
-```
-sudo systemctl restart lavad && sudo journalctl -u lavad -f
-```
 
-## 82570 Blok Güncelleme
-```
-sudo systemctl stop lavad
+cp $HOME/.lava/data/priv_validator_state.json $HOME/.lava/priv_validator_state.json.backup 
 
-cd $HOME
-rm -rf $HOME/lava
-git clone https://github.com/lavanet/lava.git
-cd lava
-git checkout v0.6.0-RC3
-make install
+lavad tendermint unsafe-reset-all --home $HOME/.lava --keep-addr-book 
+curl https://snapshots1-testnet.nodejumper.io/lava-testnet/lava-testnet-1_2023-04-04.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.lava
 
-sudo systemctl start lavad
+mv $HOME/.lava/priv_validator_state.json.backup $HOME/.lava/data/priv_validator_state.json 
+
+sudo systemctl restart lavad
 sudo journalctl -u lavad -f --no-hostname -o cat
 ```
 ## Log Kontrol
@@ -73,19 +61,11 @@ lavad tx staking create-validator \
 ```
 sudo systemctl stop lavad
 sudo systemctl disable lavad
-rm /etc/systemd/system/lavad.service
+sudo rm /etc/systemd/system/lavad.service
 sudo systemctl daemon-reload
-rm -rf $HOME/go/bin/lavad
-rm -rf lavad.sh
-cd $HOME
-rm -rf lava
-rm -rf .lava
-rm -rf $(which lavad)
-rm -rf /usr/bin/lavad
-rm -rf /usr/local/bin/lavad
-rm -rf go
-rm -rf .bash_profile
-rm -rf .profile
+rm -rf $HOME/.lava
+rm -rf $HOME/lava
+sudo rm $(which lavad) 
 ```
 
 ## Herkese Kolay Gelsin.
