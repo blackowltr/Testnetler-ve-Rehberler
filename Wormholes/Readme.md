@@ -24,12 +24,16 @@ wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehb
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Kontrol : 
+### Versiyon Kontrol : 
 ```
 curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
 ```
-
 >Örnek çıktı: v0.13.0
+
+### Log Kontrol Komutu
+```
+wget -O monitor.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/monitor/monitor.sh && chmod +x monitor.sh && ./monitor.sh
+```
 
 # <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
 ```
