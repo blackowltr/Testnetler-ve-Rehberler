@@ -7,5 +7,3 @@
 **-Nibiru’da bir akıllı sözleşme oluşturun.**
 
 **-Bir ExecuteContract işlemini başarıyla yayınlayın.**
-
-Rehber daha tamamlanmadı..
