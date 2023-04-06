@@ -18,10 +18,7 @@ nibid config node https://rpc.itn-1.nibiru.fi:443
 nibid config chain-id nibiru-itn-1
 nibid config broadcast-mode block
 nibid config keyring-backend file
-nibid keys add wallet --recover
 ```
-
-**Son komuttan sonra, cüzdan kelimelerinizi soracaktır. Kelimelerinizi yazın ardından şifre oluşturmanızı isteyecek bunu da yazıp enter tuşuna basın.**
 
 ## Bir klasör oluşturuyoruz ve buraya `cw1_whitelist.wasm` dosyamızı çekiyoruz.
 
