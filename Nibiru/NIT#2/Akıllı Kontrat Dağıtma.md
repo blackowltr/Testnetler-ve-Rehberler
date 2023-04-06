@@ -165,10 +165,12 @@ txhash: 11A3D0045FCD92BC453CE2D439305D25DDA0609C2DA85CD33DB840C9B2556D67
 nibid query wasm code-info CODEIDYAZIN
 ```
 
-### Örnek Çıktı:
+### Örnek Komut:
 ```
 nibid query wasm code-info 279
 ```
+
+### Örnek Çıktı:
 
 ![image](https://user-images.githubusercontent.com/107190154/230310001-6664577a-f52c-4abc-b903-51354056ca23.png)
 
