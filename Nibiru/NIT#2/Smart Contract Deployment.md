@@ -16,10 +16,7 @@ nibid config node https://rpc.itn-1.nibiru.fi:443
 nibid config chain-id nibiru-itn-1
 nibid config broadcast-mode block
 nibid config keyring-backend file
-nibid keys add YOURWALLETNAME --recover
 ```
-
-**After the last command, the wallet will ask for your seed phrases. Type your words, set your password and press enter.**
 
 ## `nibidcontract` We create a folder and download our `cw1_whitelist.wasm` file there.
 
