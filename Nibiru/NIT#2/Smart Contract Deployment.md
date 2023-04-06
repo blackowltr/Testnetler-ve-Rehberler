@@ -5,7 +5,7 @@
 ![nit-2-banner](https://user-images.githubusercontent.com/107190154/230292252-9282d47f-814f-4f33-90e4-cbe959aef7c3.jpg)
 
 ## Type the commands step by step into the terminal.
-**Note: You can also do this on a server where Nibiru is not installed.**
+**Note: You can also do this on a server where Nibiru is not installed. If you are doing this on a server where Nibiru is not installed, don't forget to import your wallet.**
 
 ```
 curl -s https://get.nibiru.fi/! | bash
