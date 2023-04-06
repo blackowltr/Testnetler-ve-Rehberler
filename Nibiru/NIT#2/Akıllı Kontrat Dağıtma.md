@@ -159,7 +159,6 @@ txhash: 11A3D0045FCD92BC453CE2D439305D25DDA0609C2DA85CD33DB840C9B2556D67
 
 <img width="453" alt="asdasda" src="https://user-images.githubusercontent.com/107190154/230312422-49f13ad1-fe53-4df2-bdc0-b6706818ab81.png">
 
-
 ### `Code Id` bilgilerinizi öğrenmek için aşağıdaki komutu kullanın.
 ```
 nibid query wasm code-info CODEIDYAZIN
@@ -173,6 +172,10 @@ nibid query wasm code-info 279
 ### Örnek Çıktı:
 
 ![image](https://user-images.githubusercontent.com/107190154/230310001-6664577a-f52c-4abc-b903-51354056ca23.png)
+
+## TX kontrol edelim: 
+
+<img width="1260" alt="image" src="https://user-images.githubusercontent.com/107190154/230322578-36951010-9278-4623-9ff9-a379bb0e0389.png">
 
 ### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/EPF8ZxD9zP
 
