@@ -4,11 +4,10 @@
 
 ![Nibiru Teşvikli Test Ağı](https://user-images.githubusercontent.com/107190154/230292010-0829ac0c-b088-4354-96cb-5aa236465060.png)
 
-
 ## Adımları sırasıyla yaparsanız sorunsuz şekilde yaparsınız.
 
 ### Terminali açın ve aşağıdaki komutla nibid binary’i yükleyin. Bu, Nibiru CLI uygulamasını barındırır.
-**Not: Bu işlemi Nibiru'nun kurulu olmadığı bir sunucuda da yapabilirsiniz.**
+**Not: Bu işlemi Nibiru'nun kurulu olmadığı bir sunucuda da yapabilirsiniz. Kurulu olmadığı bir sunucu yapacaksanız cüzdanınızı import etmeyi unutmayın.**
 
 ```
 curl -s https://get.nibiru.fi/! | bash
