@@ -26,7 +26,7 @@ curl -s https://get.nibiru.fi/! | bash
 nibid config node https://rpc.itn-1.nibiru.fi:443
 nibid config chain-id nibiru-itn-1
 nibid config broadcast-mode block
-nibid config keyring-backend os
+nibid config keyring-backend
 ```
 
 ## İlk olarak NibiruChain reposundan cw-nibiru dosyamızı çekiyoruz.
