@@ -435,7 +435,7 @@ txhash: 4BC17CEF06BD6844CB7A790AEC02382F855140E0FEFEE4BDF0DB22FA9DFC5E67
 
 <img width="1081" alt="image" src="https://user-images.githubusercontent.com/107190154/230661410-6b8f6057-9eca-4d7d-aa21-7881f6875e00.png">
 
-### Akıllı kontrat görevlerinin hepsini yerine getirmiş olduk.
+### Akıllı kontrat görevlerinin hepsini yerine getirmiş olduk. Eksiğimiz, hatamız varsa affola..
 
 ### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/EPF8ZxD9zP
 
