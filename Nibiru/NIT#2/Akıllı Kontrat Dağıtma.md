@@ -181,9 +181,6 @@ INIT='{"name":"blackowl","symbol":"bbw","decimals":6,"initial_balances":[{"addre
 >Code ID'nizi ve cüzdan adınızı yazın.
 ```
 ID=CODEIDYAZIN
-CUZDAN=CUZDANADINIZ
-```
-```
 nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto  --fees 80000unibi --no-admin -y
 ```
 
