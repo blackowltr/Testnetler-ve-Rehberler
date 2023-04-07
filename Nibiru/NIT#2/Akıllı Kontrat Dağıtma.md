@@ -156,13 +156,14 @@ txhash: 11A3D0045FCD92BC453CE2D439305D25DDA0609C2DA85CD33DB840C9B2556D67
 <img width="453" alt="asdasda" src="https://user-images.githubusercontent.com/107190154/230312422-49f13ad1-fe53-4df2-bdc0-b6706818ab81.png">
 
 ### `Code Id` bilgilerinizi öğrenmek için aşağıdaki komutu kullanın.
+>TXHASH yazın.
 ```
-nibid query wasm code-info CODEIDYAZIN
+nibid q tx TXHASHYAZIN | grep raw_log
 ```
 
 ### Örnek Komut:
 ```
-nibid query wasm code-info 279
+nibid q tx 03E3C233B758B88F401E552935FEDE73342B4E952AE242360CC9D450039AF4DB | grep raw_log
 ```
 
 ### Örnek Çıktı:
