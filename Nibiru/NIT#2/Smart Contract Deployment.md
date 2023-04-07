@@ -155,19 +155,10 @@ txhash: 11A3D0045FCD92BC453CE2D439305D25DDA0609C2DA85CD33DB840C9B2556D67
 <img width="453" alt="asdasda" src="https://user-images.githubusercontent.com/107190154/230312457-aa4270ab-6f26-4aff-92eb-bae8d956be76.png">
 
 ### Use the following command to get your `Code Id` information.
+> Don't forget to type "TXHASH".
 ```
-nibid query wasm code-info CODEIDYAZIN
+nibid q tx TXHASH -o json |  jq -r '.raw_log'
 ```
-
-### Example command:
-```
-nibid query wasm code-info 279
-```
-
-### Example output:
-
-![image](https://user-images.githubusercontent.com/107190154/230309945-5e540a62-014d-427f-bbcb-3aa35c392dd0.png)
-
 
 ### If you have any questions, you can ask on discord. : https://discord.gg/EPF8ZxD9zP
 
