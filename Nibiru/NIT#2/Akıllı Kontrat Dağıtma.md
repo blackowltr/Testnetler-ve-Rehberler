@@ -1,4 +1,4 @@
-# Nibiru’da bir akıllı sözleşme dağıtın.
+# Nibiru’da bir akıllı sözleşme dağıtma, başlatma ve yayınlama.
 
 ![Nibiru Teşvikli Test Ağı](https://user-images.githubusercontent.com/107190154/230292010-0829ac0c-b088-4354-96cb-5aa236465060.png)
 
