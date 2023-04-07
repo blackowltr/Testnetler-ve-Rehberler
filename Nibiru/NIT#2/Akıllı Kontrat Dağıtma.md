@@ -285,12 +285,17 @@ timestamp: ""
 tx: null
 txhash: 3E4B7146371CFE31C081CC20249661DA58D7AC8BDEBDA6C851E87D7E0A3884F5
 ```
+>Bu çıktı da contract_address kısmını da not düşelim kenara.
 
-### Bu çıktı da contract_address kısmını da not düşelim kenara.
+## Sözleşmenizin adresini içeren bir değişken ayarlayalım.
 
-**cw20 tokenlarımızdan bazılarını arkadaşlarımıza gönderelim. Token'arı göndermek istediğiniz adresi ve token sayısını belirtin.**
+```
+CONTRACT=$(nibid query wasm list-contract-by-code $id --output json | jq -r '.contracts[-1]')
+```
 
 <h1 align="center">Bir ExecuteContract işlemini başarıyla yayınlama</h1>
+
+**cw20 tokenlarımızdan bazılarını arkadaşlarımıza gönderelim. Token'arı göndermek istediğiniz adresi ve token sayısını belirtin.**
 
 ### Amount kısmından miktarı değiştirebilirsiniz.
 ```
