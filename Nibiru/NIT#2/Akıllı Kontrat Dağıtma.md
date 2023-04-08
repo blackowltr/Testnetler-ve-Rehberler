@@ -147,7 +147,7 @@ tx: null
 txhash: 4F66C6F701D5870EB07203BD72BBC0612E1517093CC8AD70E8CEB6D8D1E0F95E
 ```
 
-## `code id` ve `txhash` bir yere not edin.
+## `code id` ve `txhash` bir yere not edin. Nerede yazıyor diyorsanız yukarıdaki örnek çıktının son satırlarına bakın, sizde de aynı yerde cod_id şeklinde yazıyor olacaktır.
 
 ## Code ID'nizi unuttuysanız şu komutla bakabilirsiniz.
 > TXHASH kısmını doldurmayı unutmayın.
