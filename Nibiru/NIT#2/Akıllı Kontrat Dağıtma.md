@@ -35,16 +35,14 @@ git clone https://github.com/NibiruChain/cw-nibiru
 ```
 
 ## Kontratı ağa yüklüyoruz.
-> Sadece cüzdanadınız yazan yere cüzdan adınızı yazacaksınız. Başka bir yeri değiştirmeyeceksiniz.
+> Sadece cüzdan adınız yazan yere cüzdan adınızı yazacaksınız. Başka bir yeri değiştirmeyeceksiniz.
 ```
-CUZDAN="CÜZDANADINIZ"
-nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
+nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from CÜZDANADINIZIYAZIN --gas-adjustment 1.5 --gas auto --fees 90000unibi  -y 
 ```
 
 ### Örnek Komut:
 ```
-CUZDAN="BlackOwl"
-nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
+nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from BlackOwl --gas-adjustment 1.5 --gas auto  --fees 90000unibi  -y 
 ```
 
 ### Örnek Çıktı:
@@ -162,27 +160,22 @@ nibid q tx TXHASHYAZIN -o json |  jq -r '.raw_log'
 ```
 nibid q tx 7AF12037B5F01242C5AF25CFEBF78C2AE1ABC0ED50075113447A1C3B86628D70 -o json |  jq -r '.raw_log'
 ```
-
 <img width="1207" alt="image" src="https://user-images.githubusercontent.com/107190154/230658645-0b5af65c-6ad4-4acc-82c4-0c97cbba9358.png">
 
 <h1 align="center">Nibiru'da bir akıllı sözleşme başlatma</h1>
 
-## Bu aşamada bir token basacağız.
-
 ## Aşağıdaki örnek komuta göre doldurup komutu kullanınız.
->Name,symbol, adres kısımlarını dolduracaksınız.
->Code ID'nizi yazmayı unutmayın.
+>Name, symbol, adres kısımlarını dolduracaksınız.
+>Code ID'nizi yazmayı da unutmayın.
 ```
-INIT='{"name":"test","symbol":"test","decimals":6,"initial_balances":[{"address":"ADRES","amount":"5000000"}],"mint":{"minter":"ADRES"},"marketing":{}}'
-ID="CODEIDYAZIN"
-nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto  --fees 80000unibi --no-admin -y
+INIT='{"name":"isimyazın","symbol":"semboladıyazın","decimals":6,"initial_balances":[{"address":"ADRESİNİZİYAZIN","amount":"5000000"}],"mint":{"minter":"ADRESİNİZİYAZIN"},"marketing":{}}'
+nibid tx wasm instantiate CODEIDNİZİYAZIN $INIT --from CUZDANADINIZIYAZIN --label "test" --gas-adjustment 1.2 --gas auto --fees 80000unibi --no-admin -y
 ```
 
 ### Örnek Komut
 ```
 INIT='{"name":"blackowl","symbol":"bbw","decimals":6,"initial_balances":[{"address":"nibi1xxn6tgdc75gdh9l9tlvncy45dytshkvxcl0m6a","amount":"5000000"}],"mint":{"minter":"nibi1xxn6tgdc75gdh9l9tlvncy45dytshkvxcl0m6a"},"marketing":{}}'
-ID="910"
-nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto --fees 80000unibi --no-admin -y
+nibid tx wasm instantiate 1417 $INIT --from BlackOwl --label "test" --gas-adjustment 1.2 --gas auto --fees 80000unibi --no-admin -y
 ```
 
 <img width="591" alt="image" src="https://user-images.githubusercontent.com/107190154/230719508-3e872fa4-bad6-462e-97da-55b767d4b972.png">
@@ -291,9 +284,9 @@ txhash: 3E4B7146371CFE31C081CC20249661DA58D7AC8BDEBDA6C851E87D7E0A3884F5
 >Bu çıktı da contract_address kısmını da not düşelim kenara.
 
 ## Sözleşmenizin adresini içeren bir değişken ayarlayalım.
-> Burada bir şey değiştirmeyeceğiz. Olduğu gibi çalıştırın komutu.
+> CODE ID'nizi yazdıktan sonra komutu çalıştırın.
 ```
-CONTRACT=$(nibid query wasm list-contract-by-code $ID --output json | jq -r '.contracts[-1]')
+CONTRACT=$(nibid query wasm list-contract-by-code CODEIDNIZIYAZIN --output json | jq -r '.contracts[-1]')
 ```
 
 <h1 align="center">Bir ExecuteContract işlemini başarıyla yayınlama</h1>
@@ -307,9 +300,14 @@ TRANSFER='{"transfer":{"recipient":"GÖNDERMEKİSTEDİĞİNİZADRES","amount":"1
 ```
 
 ## Execute adımı
->Değişken atadığımız için burada da bir şey değiştirmenize gerek yok.
+>Cüzdan adınızı yazmayı unutmayın.
 ```
-nibid tx wasm execute $CONTRACT $TRANSFER --gas-adjustment 1.2 --gas auto --fees 4000unibi --from $CUZDAN -y
+nibid tx wasm execute $CONTRACT $TRANSFER --gas-adjustment 1.5 --gas auto --fees 6000unibi --from CUZDANADINIZIYAZIN -y
+```
+
+## Örnek Komut:
+```
+nibid tx wasm execute $CONTRACT $TRANSFER --gas-adjustment 1.5 --gas auto --fees 6000unibi --from BlackOwl -y
 ```
 
 ### Örnek Çıktı
