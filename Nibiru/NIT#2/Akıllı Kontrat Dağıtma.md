@@ -178,8 +178,6 @@ INIT='{"name":"blackowl","symbol":"bbw","decimals":6,"initial_balances":[{"addre
 nibid tx wasm instantiate 1417 $INIT --from BlackOwl --label "test" --gas-adjustment 1.2 --gas auto --fees 80000unibi --no-admin -y
 ```
 
-<img width="591" alt="image" src="https://user-images.githubusercontent.com/107190154/230719508-3e872fa4-bad6-462e-97da-55b767d4b972.png">
-
 ### Örnek Çıktı:
 ```
 code: 0
