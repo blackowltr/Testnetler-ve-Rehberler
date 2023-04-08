@@ -35,9 +35,15 @@ git clone https://github.com/NibiruChain/cw-nibiru
 ```
 
 ## Kontratı ağa yüklüyoruz.
-
+> Sadece cüzdanadınız yazan yere cüzdan adınızı yazacaksınız. Başka bir yeri değiştirmeyeceksiniz.
 ```
 CUZDAN=CÜZDANADINIZ
+nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
+```
+
+### Örnek Komut:
+```
+CUZDAN=BlackOwl
 nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
 ```
 
@@ -184,7 +190,13 @@ ID=CODEIDYAZIN
 nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto  --fees 80000unibi --no-admin -y
 ```
 
-Örnek Çıktı:
+### Örnek Komut:
+```
+ID=910
+nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto  --fees 80000unibi --no-admin -y
+```
+
+### Örnek Çıktı:
 ```
 code: 0
 codespace: ""
@@ -288,9 +300,9 @@ txhash: 3E4B7146371CFE31C081CC20249661DA58D7AC8BDEBDA6C851E87D7E0A3884F5
 >Bu çıktı da contract_address kısmını da not düşelim kenara.
 
 ## Sözleşmenizin adresini içeren bir değişken ayarlayalım.
-
+> Burada bir şey değiştirmeyeceğiz. Olduğu gibi çalıştırın komutu.
 ```
-CONTRACT=$(nibid query wasm list-contract-by-code $id --output json | jq -r '.contracts[-1]')
+CONTRACT=$(nibid query wasm list-contract-by-code $ID --output json | jq -r '.contracts[-1]')
 ```
 
 <h1 align="center">Bir ExecuteContract işlemini başarıyla yayınlama</h1>
@@ -298,11 +310,13 @@ CONTRACT=$(nibid query wasm list-contract-by-code $id --output json | jq -r '.co
 **cw20 tokenlarımızdan bazılarını arkadaşlarımıza gönderelim. Token'arı göndermek istediğiniz adresi ve token sayısını belirtin.**
 
 ### Amount kısmından miktarı değiştirebilirsiniz.
+>Göndermek istediğiniz adresi yazmayı unutmayın.
 ```
 TRANSFER='{"transfer":{"recipient":"GÖNDERMEKİSTEDİĞİNİZADRES","amount":"100"}}'
 ```
 
 ## Execute adımı
+>Değişken atadığımız için burada da bir şey değiştirmenize gerek yok.
 ```
 nibid tx wasm execute $CONTRACT $TRANSFER --gas-adjustment 1.2 --gas auto --fees 4000unibi --from $CUZDAN -y
 ```
