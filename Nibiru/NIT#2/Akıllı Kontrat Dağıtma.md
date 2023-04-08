@@ -37,13 +37,13 @@ git clone https://github.com/NibiruChain/cw-nibiru
 ## Kontratı ağa yüklüyoruz.
 > Sadece cüzdanadınız yazan yere cüzdan adınızı yazacaksınız. Başka bir yeri değiştirmeyeceksiniz.
 ```
-CUZDAN=CÜZDANADINIZ
+CUZDAN="CÜZDANADINIZ"
 nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
 ```
 
 ### Örnek Komut:
 ```
-CUZDAN=BlackOwl
+CUZDAN="BlackOwl"
 nibid tx wasm store $HOME/cw-nibiru/artifacts-cw-plus/cw20_base.wasm --from $CUZDAN --gas-adjustment 1.2 --gas auto  --fees 80000unibi  -y 
 ```
 
@@ -174,14 +174,14 @@ nibid q tx 7AF12037B5F01242C5AF25CFEBF78C2AE1ABC0ED50075113447A1C3B86628D70 -o j
 >Code ID'nizi yazmayı unutmayın.
 ```
 INIT='{"name":"test","symbol":"test","decimals":6,"initial_balances":[{"address":"ADRES","amount":"5000000"}],"mint":{"minter":"ADRES"},"marketing":{}}'
-ID=CODEIDYAZIN
+ID="CODEIDYAZIN"
 nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto  --fees 80000unibi --no-admin -y
 ```
 
 ### Örnek Komut
 ```
 INIT='{"name":"blackowl","symbol":"bbw","decimals":6,"initial_balances":[{"address":"nibi1xxn6tgdc75gdh9l9tlvncy45dytshkvxcl0m6a","amount":"5000000"}],"mint":{"minter":"nibi1xxn6tgdc75gdh9l9tlvncy45dytshkvxcl0m6a"},"marketing":{}}'
-ID=910
+ID="910"
 nibid tx wasm instantiate $ID $INIT --from $CUZDAN --label "test" --gas-adjustment 1.2 --gas auto --fees 80000unibi --no-admin -y
 ```
 
