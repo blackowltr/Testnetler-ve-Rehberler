@@ -10,7 +10,7 @@
 |   4| 16GB  | 1000GB    |
 
 ## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
-## [Nibiru Discord](https://discord.gg/nibiru)
+## [Nibiru Discord](https://discord.gg/gs89CUTUpe)
 ## [Nibiru Twitter](https://twitter.com/NibiruChain)
 ## [BlackOwl Twitter](https://twitter.com/brsbtc)
 
@@ -121,43 +121,48 @@ sudo systemctl start nibid
 ## Ağ ile daha hızlı senkron olmak için Snapshot
 ```
 sudo systemctl stop nibid
+```
+```
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
-nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
-```
-```
-curl https://snapshots2-testnet.nodejumper.io/nibiru-testnet/nibiru-itn-1_2023-04-02.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
+curl https://snapshots2-testnet.nodejumper.io/nibiru-testnet/nibiru-itn-1_2023-04-08.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
+
 mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
-```
-```
-sudo systemctl start nibid
+
+sudo systemctl restart nibid
 sudo journalctl -u nibid -f --no-hostname -o cat
 ```
-
 ## Ağ ile daha hızlı senkron olmak için State Sync
 ```
 sudo systemctl stop nibid
+```
+```
 cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup
-nibid tendermint unsafe-reset-all --home $HOME/.nibid
-```
-```
-STATE_SYNC_RPC=https://nibiru-testnet.rpc.kjnodes.com:443
-STATE_SYNC_PEER=d5519e378247dfb61dfe90652d1fe3e2b3005a5b@nibiru-testnet.rpc.kjnodes.com:39656
-LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
-SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
-SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 
-sed -i \
-  -e "s|^enable *=.*|enable = true|" \
-  -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
-  -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
-  -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
-  -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
-  $HOME/.nibid/config/config.toml
+SNAP_RPC="https://nibiru-testnet.nodejumper.io:443"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height)
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000))
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+PEERS="a1b96d1437fb82d3d77823ecbd565c6268f06e34@nibiru-testnet.nodejumper.io:27656"
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$PEERS'"|' $HOME/.nibid/config/config.toml
+
+sed -i 's|^enable *=.*|enable = true|' $HOME/.nibid/config/config.toml
+sed -i 's|^rpc_servers *=.*|rpc_servers = "'$SNAP_RPC,$SNAP_RPC'"|' $HOME/.nibid/config/config.toml
+sed -i 's|^trust_height *=.*|trust_height = '$BLOCK_HEIGHT'|' $HOME/.nibid/config/config.toml
+sed -i 's|^trust_hash *=.*|trust_hash = "'$TRUST_HASH'"|' $HOME/.nibid/config/config.toml
 
 mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json
-```
-```
-sudo systemctl start nibid && sudo journalctl -u nibid -f --no-hostname -o cat
+
+curl -s https://snapshots2-testnet.nodejumper.io/nibiru-testnet/wasm.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid/data
+
+sudo systemctl restart nibid
+sudo journalctl -u nibid -f --no-hostname -o cat
 ```
 ## Log Kontrol
 ```
