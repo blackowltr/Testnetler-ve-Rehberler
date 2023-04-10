@@ -19,4 +19,4 @@ sed -i -e "s|^node *=.*|node = \"$RPC\"|" $HOME/.nibid/config/client.toml
 systemctl restart nibid
 
 echo "İşlem Tamamlandı..."
-echo "Sorularınız olursa Nibiru discord TR kanalından sorabilirsiniz."
+echo "Testnete dair sorunuz olursa Nibiru discord TR kanalından sorabilirsiniz."
