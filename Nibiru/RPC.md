@@ -21,7 +21,7 @@ wget -O rpc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/
 
 <img width="268" alt="wertyt7" src="https://user-images.githubusercontent.com/107190154/231015229-44cd5068-94f3-4c9a-bde2-d9e1c9a5dad1.png">
 
-### Ardından Setting'e basın.
+### Ardından Settings'e basın.
 
 <img width="269" alt="wertyt7" src="https://user-images.githubusercontent.com/107190154/231015337-f106979b-5d9d-4336-b8a0-75fa0fde60df.png">
 
