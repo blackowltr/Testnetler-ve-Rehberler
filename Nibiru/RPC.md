@@ -30,7 +30,7 @@ wget -O rpc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/
 ```
 https://nibiru-testnet.nodejumper.io:443
 ```
-### LCD yazan yere şunu yapaıştırın.
+### LCD yazan yere şunu yapıştırın.
 ```
 https://nibiru-testnet.nodejumper.io:1317
 ```
