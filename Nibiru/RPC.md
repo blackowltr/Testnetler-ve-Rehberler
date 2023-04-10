@@ -8,10 +8,7 @@
 ```
 wget -O rpc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Nibiru/rpc.sh && chmod +x rpc.sh && ./rpc.sh
 ```
-
-## Bir diğer konu da Node kurmamış olan arkadaşlarımızın keplr üzerinde hata almaları ve işlem yapamamaları.
-
-### Bunun için de şunu yapıyorsunuz:
+<h1 align="center">Keplr RPC Değiştirme</h1>
 
 ### Keplr'a gelin. Nibiru ağına geçin.
 
