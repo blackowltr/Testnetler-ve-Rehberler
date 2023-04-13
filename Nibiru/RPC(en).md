@@ -8,6 +8,19 @@
 wget -O rpcen.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Nibiru/rpcen.sh && chmod +x rpcen.sh && ./rpcen.sh
 ```
 
+### alternative command
+```
+nibid config node RPC
+```
+
+### alternative RPC
+https://t-nibiru.rpc.utsa.tech:443/
+
+https://nibiru-testnet.nodejumper.io:443/
+
+https://rpc-t.nibiru.nodestake.top:443/ 
+
+
 <h1 align="center">Keplr - RPC Settings</h1>
 
 ### 1
