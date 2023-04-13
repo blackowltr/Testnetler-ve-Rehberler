@@ -8,6 +8,24 @@
 ```
 wget -O rpc.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Nibiru/rpc.sh && chmod +x rpc.sh && ./rpc.sh
 ```
+
+**Ya da bu komut yerine şunu da kullanabilirsiniz:**
+```
+nibid config node RPCYAZINIZ
+```
+### Örnek komut:
+```
+nibid config node https://nibiru-testnet.nodejumper.io:443/
+```
+
+### Kullanabileceğiniz RPC'ler:
+https://t-nibiru.rpc.utsa.tech:443/
+
+https://nibiru-testnet.nodejumper.io:443/
+
+https://rpc-t.nibiru.nodestake.top:443/ 
+
+
 <h1 align="center">Keplr RPC Değiştirme</h1>
 
 ### Keplr'a gelin. Nibiru ağına geçin.
