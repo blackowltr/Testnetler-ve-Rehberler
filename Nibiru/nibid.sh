@@ -21,6 +21,7 @@ fi
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
+NIBIRU_CHAIN_ID=nibiru-itn-1
 source $HOME/.bash_profile
 
 echo '================================================='
