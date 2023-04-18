@@ -26,7 +26,12 @@ https://explorer.ppnv.space/nibiru
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Kurulum
+# Oto Kurulum
+```
+wget -O nibid.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Nibiru/nibid.sh && chmod +x nibid.sh && ./nibid.sh
+```
+
+# Manuel Kurulum
 
 ## Güncelleme ve kütüphane kurulumunu yapıyoruz.
 ```
