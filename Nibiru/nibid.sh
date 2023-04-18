@@ -120,5 +120,10 @@ curl https://snapshots2-testnet.nodejumper.io/nibiru-testnet/nibiru-itn-1_2023-0
 
 mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
 
+# rpc 
+RPC="https://nibiru-testnet.nodejumper.io:443"
+sed -i -e "s|^node *=.*|node = \"$RPC\"|" $HOME/.nibid/config/client.toml
+
 sudo systemctl restart nibid
+
 sudo journalctl -u nibid -f --no-hostname -o cat
