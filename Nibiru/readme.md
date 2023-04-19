@@ -28,6 +28,9 @@ https://explorer.ppnv.space/nibiru
 
 # Oto Kurulum
 ```
+sudo su
+```
+```
 wget -O nibid.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Nibiru/nibid.sh && chmod +x nibid.sh && ./nibid.sh
 ```
 
