@@ -46,5 +46,5 @@ nibid tx gov vote PROPOSALID no --from CÜZDANADINIZ --chain-id nibiru-itn-1 --g
 nibid tx gov submit-proposal --title="BAŞLIK" --description="AÇIKLAMA" --type="Text" --deposit="10000000unibi" --from=CÜZDANADINIZ --fees 500unibi
 ``` 
 
-### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/EPF8ZxD9zP
+### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/nibirufi
 ### BlackOwl Twitter : https://twitter.com/brsbtc
