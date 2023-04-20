@@ -10,7 +10,7 @@
 |   4| 16GB  | 1TB    |
 
 ## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
-## [Nibiru Discord](https://discord.gg/gs89CUTUpe)
+## [Nibiru Discord](https://discord.gg/nibirufi)
 ## [Nibiru Twitter](https://twitter.com/NibiruChain)
 ## [BlackOwl Twitter](https://twitter.com/brsbtc)
 
