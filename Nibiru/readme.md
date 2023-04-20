@@ -16,6 +16,12 @@
 
 ## Tarayıcı: 
 
+https://explorer.kjnodes.com/nibiru-testnet
+
+https://exp.utsa.tech/nibiru-test
+
+https://nibiru.exploreme.pro/dashboard
+
 https://explorer.nibiru.fi/nibiru-itn-1
 
 https://nibiru.explorers.guru/
