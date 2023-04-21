@@ -200,7 +200,7 @@ nibid keys add CUZDAN --recover
 nibid keys add CUZDAN
 ```
 
-## Faucet ---> https://discord.gg/nibiruchain , https://app.nibiru.fi/faucet
+## Faucet ---> https://discord.gg/nibirufi , https://app.nibiru.fi/faucet
 
 <img width="840" alt="image" src="https://user-images.githubusercontent.com/107190154/221564563-8ed5bc8f-2dcc-467c-946f-495ef31c4d36.png">
 
