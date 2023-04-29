@@ -449,6 +449,6 @@ txhash: 1B1CBFE7902D4B33CAFD63269F38988050C472ED8051EEE96AA1E95E91E47986
 
 ### Akıllı kontrat görevlerinin hepsini yerine getirmiş olduk. Eksiğimiz, hatamız varsa affola..
 
-### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/nibirufi
+### Herhangi bir sorunuz varsa, discord'da sorabilirsiniz : https://discord.gg/DYT5AWMs
 
 ### BlackOwl Twitter : https://twitter.com/brsbtc 
