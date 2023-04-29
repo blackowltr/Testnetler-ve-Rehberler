@@ -10,7 +10,7 @@
 |   4| 16GB  | 1TB    |
 
 ## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
-## [Nibiru Discord](https://discord.gg/nibirufi)
+## [Nibiru Discord](https://discord.gg/DYT5AWMs)
 ## [Nibiru Twitter](https://twitter.com/NibiruChain)
 ## [BlackOwl Twitter](https://twitter.com/brsbtc)
 
@@ -201,7 +201,7 @@ nibid keys add CUZDAN --recover
 nibid keys add CUZDAN
 ```
 
-## Faucet ---> https://discord.gg/nibirufi , https://app.nibiru.fi/faucet
+## Faucet ---> https://discord.gg/DYT5AWMs , https://app.nibiru.fi/faucet
 
 <img width="840" alt="image" src="https://user-images.githubusercontent.com/107190154/221564563-8ed5bc8f-2dcc-467c-946f-495ef31c4d36.png">
 
