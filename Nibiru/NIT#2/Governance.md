@@ -46,6 +46,6 @@ nibid tx gov vote PROPOSALID no --from WALLETNAME --chain-id nibiru-itn-1 --gas-
 nibid tx gov submit-proposal --title="BAŞLIK" --description="AÇIKLAMA" --type="Text" --deposit="10000000unibi" --from=CÜZDANADINIZ --fees 500unibi
 ``` 
 
-### If you have any questions, you can ask on discord. : https://discord.gg/nibirufi
+### If you have any questions, you can ask on discord. : https://discord.gg/DYT5AWMs
 
 ### BlackOwl Twitter : https://twitter.com/brsbtc 
