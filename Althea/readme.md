@@ -1,5 +1,7 @@
 # Althea Node Kurulum Rehberi
 
+![Bir başlık ekleyin](https://user-images.githubusercontent.com/107190154/236601782-6ba64563-951b-4e98-95dc-4e510fbf8c4e.png)
+
 ```
 wget -O althea.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Althea/althea.sh && chmod +x althea.sh && ./althea.sh
 ```
