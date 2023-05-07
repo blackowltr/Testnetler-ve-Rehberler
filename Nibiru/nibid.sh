@@ -38,6 +38,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e "\e[1m\e[32m2. Kütüphaneler kuruluyor... \e[0m" && sleep 1
 # paketler
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
+sudo apt install -y curl git jq lz4 build-essential unzip
 
 # go
 if ! [ -x "$(command -v go)" ]; then
@@ -121,16 +122,8 @@ sudo systemctl enable nibid
 sudo systemctl start nibid
 
 #Snapshot
-sudo systemctl stop nibid
-
-cp $HOME/.nibid/data/priv_validator_state.json $HOME/.nibid/priv_validator_state.json.backup 
-
-nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book 
-curl https://snapshots2-testnet.nodejumper.io/nibiru-testnet/nibiru-itn-1_2023-04-26.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.nibid
-
-mv $HOME/.nibid/priv_validator_state.json.backup $HOME/.nibid/data/priv_validator_state.json 
-
-sudo systemctl restart nibid
+SNAP_NAME=$(curl -s https://snapshots2-testnet.nodejumper.io/nibiru-testnet/info.json | jq -r .fileName)
+curl "https://snapshots2-testnet.nodejumper.io/nibiru-testnet/${SNAP_NAME}" | lz4 -dc - | tar -xf - -C $HOME/.nibid
 
 # rpc 
 RPC="https://nibiru-testnet.nodejumper.io:443"
