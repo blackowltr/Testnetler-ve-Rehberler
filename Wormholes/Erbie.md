@@ -24,6 +24,8 @@ wget -O erbie_install.sh https://docker.erbie.io/erbie_install.sh && sudo bash e
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Bazı Komutlar
+
 ### Versiyon Kontrol : 
 ```
 curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
@@ -33,6 +35,22 @@ curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method
 ### Log Kontrol Komutu
 ```
 wget -O monitor.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/monitor/monitor.sh && chmod +x monitor.sh && ./monitor.sh
+```
+
+### Bağlantı Durumu İçin
+```
+curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method":"net_peerCount","id":1}' http://127.0.0.1:8545
+```
+
+### Blok Kontrol İçin
+```
+curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method":"eth_blockNumber","id":1}' http://127.0.0.1:8545
+```
+
+### Bakiye Durumu Öğrenme
+> cüzdanadresiniziyazın kısmına kendi adresinizi yazın.
+```
+curl -X POST -H 'Content-Type:application/json' --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0xE860DD0F14e7a52Fa3012BfA00f4793edCe87EBe","pending"],"id":1}' http://127.0.0.1:8545
 ```
 
 # <h1 align="center">Sıfırdan Kuracaklar İçin</h1>
