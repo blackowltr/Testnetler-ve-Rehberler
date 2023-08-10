@@ -28,7 +28,7 @@ wget -O erbie_install.sh https://docker.erbie.io/erbie_install.sh && sudo bash e
 ```
 curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"eth_version","id":64}' http://127.0.0.1:8545
 ```
->Örnek çıktı: v0.13.1
+>Örnek çıktı: son güncelleme
 
 ### Log Kontrol Komutu
 ```
