@@ -1,4 +1,4 @@
-# Wormholes Testnet Rehberi
+# Erbie Testnet Rehberi
 
 ![BlackOwlww](https://user-images.githubusercontent.com/107190154/195496348-fabca337-183d-4998-b56c-9527fcb57af0.gif)
 
@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# <h1 align="center">Güncelleme ---- 0.13.1</h1>
+# <h1 align="center">Güncelleme ---- Son Güncelleme/h1>
 > Bu komutları girin ve ardından alttaki güncelleme komutunu girip devam edin, arkadaşlar.
 ```
 docker stop wormholes
@@ -20,7 +20,7 @@ rm -rf /wm
 ```
 > Güncelleme Komutu
 ```
-wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
+wget -O erbie_install.sh https://docker.erbie.io/erbie_install.sh && sudo bash erbie_install.sh
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ sudo apt install docker.io
 sudo systemctl enable --now docker
 ```
 ```
-wget -O wormholes.sh https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Wormholes/wormholes.sh && chmod +x wormholes.sh && ./wormholes.sh
+wget -O erbie_install.sh https://docker.erbie.io/erbie_install.sh && sudo bash erbie_install.sh
 ```
 
 ### Sizden Kurulum sırasında private key isteyecek, peki bu keye nasıl ulaşabilirsiniz.
