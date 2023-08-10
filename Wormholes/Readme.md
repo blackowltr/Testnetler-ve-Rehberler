@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------------------------------------------------
 
-# <h1 align="center">Güncelleme ---- Son Güncelleme/h1>
+# <h1 align="center">Güncelleme ---- Son Güncelleme
 > Bu komutları girin ve ardından alttaki güncelleme komutunu girip devam edin, arkadaşlar.
 ```
 docker stop wormholes
