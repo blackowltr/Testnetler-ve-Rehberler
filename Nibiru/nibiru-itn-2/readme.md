@@ -24,6 +24,7 @@ https://explorer.nibiru.fi/
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
+
 ## Go kurulumu
 ```
 ver="1.19.2"
@@ -36,26 +37,31 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
 source ~/.bash_profile
 go version
 ```
+
 ## Nibid kurulumu
 ```
 curl -s https://get.nibiru.fi/@v0.21.9! | bash
 ```
+
 ## Versiyon kontrol edelim
 > Versiyon 0.21.9 olmalı
 ```
 nibid version
 ```
+
 ## Initialize işlemi
 > NODEADINIZ yazan yere isminizi yazın.
 ```
 nibid init NODEADINIZ --chain-id=nibiru-itn-2 --home $HOME/.nibid
 ```
+
 ## Genesis dosyası
 ```
 NETWORK=nibiru-itn-2
 curl -s https://networks.itn2.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
 curl -s https://rpc.itn-2.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 ```
+
 ## Seed ve Peers ayarı
 ```
 NETWORK=nibiru-itn-2
@@ -67,18 +73,26 @@ sed -i 's|seeds =.*|seeds = "'$(curl -s https://networks.itn2.nibiru.fi/$NETWORK
 sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025unibi"/g' $HOME/.nibid/config/app.toml
 sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.nibid/config/config.toml
 ```
+
 ## İndexer Kapatma (şart değil, kullanım amacımız disk kullanımını azaltmak için.)
 ```
 indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nibid/config/config.toml
 ```
-## Pruning ayarları(şart değil, kullanım amacımız disk kullanımını azaltmak için.)
+
+## Pruning ayarları (şart değil, kullanım amacımız disk kullanımını azaltmak için.)
 ```
-sed -i 's|^pruning *=.*|pruning = "custom"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^pruning-keep-recent  *=.*|pruning-keep-recent = "100"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^pruning-interval *=.*|pruning-interval = "10"|g' $HOME/.nibid/config/app.toml
-sed -i 's|^snapshot-interval *=.*|snapshot-interval = 0|g' $HOME/.nibid/config/app.toml
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="10"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.nibid/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.nibid/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.nibid/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.nibid/config/app.toml
+sed -i "s/snapshot-interval *=.*/snapshot-interval = 0/g" $HOME/.nibid/config/app.toml
 ```
+
 ## unsafe-reset
 ``` 
 nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
