@@ -27,14 +27,13 @@ sudo apt update && sudo apt upgrade -y && sudo apt install curl tar wget clang p
 
 ## Go kurulumu
 ```
-ver="1.19.2"
-cd $HOME
+ver="1.20.3"
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
 rm "go$ver.linux-amd64.tar.gz"
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> ~/.bash_profile
-source ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
+source $HOME/.bash_profile
 go version
 ```
 
@@ -59,7 +58,6 @@ nibid init NODEADINIZ --chain-id=nibiru-itn-2 --home $HOME/.nibid
 ```
 NETWORK=nibiru-itn-2
 curl -s https://networks.itn2.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
-curl -s https://rpc.itn-2.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 ```
 
 ## Seed ve Peers ayarı
@@ -100,15 +98,15 @@ nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
 
 ## Servis dosyamızı oluşturup başlatalım.
 ```
-sudo tee /etc/systemd/system/nibid.service > /dev/null <<EOF
+tee /etc/systemd/system/nibid.service > /dev/null <<EOF
 [Unit]
-Description=Nibiru
+Description=nibid
 After=network-online.target
 
 [Service]
 User=$USER
 ExecStart=$(which nibid) start
-Restart=always
+Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
 
