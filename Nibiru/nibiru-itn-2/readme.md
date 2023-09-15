@@ -279,15 +279,15 @@ nibid status 2>&1 | jq .SyncInfo
     - Nibiru node'unu tamamen kaldırmak için aşağıdaki komutları kullanabilirsiniz:
 
     ```bash
-cd $HOME
-sudo systemctl stop nibid
-sudo systemctl disable nibid
-sudo rm /etc/systemd/system/nibid.service
-sudo systemctl daemon-reload
-rm -f $(which nibid)
-rm -rf $HOME/.nibid
-rm -rf $HOME/nibiru
-  ```
+   cd $HOME
+   sudo systemctl stop nibid
+   sudo systemctl disable nibid
+   sudo rm /etc/systemd/system/nibid.service
+   sudo systemctl daemon-reload
+   rm -f $(which nibid)
+   rm -rf $HOME/.nibid
+   rm -rf $HOME/nibiru
+    ```
 
 ### Herkese Kolay Gelsin.
 
