@@ -37,23 +37,21 @@ mv selfchaind /root/go/bin/
 ```
 
 ## Step 4: Initialize Node
-
-Replace `<NodeName>` with your Moniker, for example, `<NodeName> = BlackOwl`.
-
+>*NODENAME
 ```bash
-selfchaind init <NodeName> --chain-id=self-dev-1
+selfchaind init *NODENAME --chain-id=self-dev-1
 ```
 
 ### Download Genesis
 
 ```bash
-curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/genesis.json > $HOME/.selfchain/config/genesis.json
+curl -Ls https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Selfchain/genesis.json > $HOME/.selfchain/config/genesis.json 
 ```
 
 ### Download addrbook
 
 ```bash
-curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/addrbook.json > $HOME/.selfchain/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Selfchain/addrbook.json > $HOME/.selfchain/config/addrbook.json
 ```
 
 ### Create Service
@@ -63,25 +61,27 @@ sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
 [Unit]
 Description=selfchaind Daemon
 After=network-online.target
-
 [Service]
 User=$USER
 ExecStart=$(which selfchaind) start
 Restart=always
 RestartSec=3
 LimitNOFILE=65535
-
 [Install]
 WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable selfchaind
+sudo systemctl start selfchaind
 ```
 
-### Run Node
+## Snapshot 
+```
+SNAP_NAME=$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
 
-```bash
-sudo systemctl start selfchaind
+curl -o - -L https://ss-t.self.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar -x -C $HOME/.selfchain
+sudo systemctl restart selfchaind
+journalctl -u selfchaind -f
 ```
 
 ### Check Sync Status
