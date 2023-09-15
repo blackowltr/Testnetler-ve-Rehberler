@@ -2,9 +2,9 @@
 
 echo -e ''
 echo -e '\e[40m\e[92m'
-echo ' ██████╗ ██╗      █████╗  ██████╗██╗  ██╗ ██████╗ ██╗    ██╗██╗'     
+echo ' ██████╗ ██╗      █████╗  ██████╗██╗  ██╗ ██████╗ ██╗    ██╗██╗'
 echo ' ██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝██╔═══██╗██║    ██║██║'
-echo ' ██████╔╝██║     ███████║██║     █████╔╝ ██║   ██║██║ █╗ ██║██║'    
+echo ' ██████╔╝██║     ███████║██║     █████╔╝ ██║   ██║██║ █╗ ██║██║'
 echo ' ██╔══██╗██║     ██╔══██║██║     ██╔═██╗ ██║   ██║██║███╗██║██║'
 echo ' ██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚██████╔╝╚███╔███╔╝███████╗'
 echo ' ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝'
@@ -30,10 +30,12 @@ echo '================================================='
 sleep 2
 
 # Step 1: Update the System
+echo "Step 1: Updating the System..."
 sudo apt update
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
 
 # Step 2: Install Go
+echo "Step 2: Installing Go..."
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
@@ -48,6 +50,7 @@ source $HOME/.profile
 go version
 
 # Step 3: Install Node
+echo "Step 3: Installing Node..."
 cd $HOME
 mkdir -p /root/go/bin/
 wget https://ss-t.self.nodestake.top/selfchaind
@@ -55,15 +58,19 @@ chmod +x selfchaind
 mv selfchaind /root/go/bin/
 
 # Step 4: Initialize Node
+echo "Step 4: Initializing Node..."
 selfchaind init $NODENAME --chain-id=self-dev-1
 
 # Download Genesis
+echo "Downloading Genesis..."
 wget -O .selfchain/config/genesis.json  https://raw.githubusercontent.com/hotcrosscom/selfchain-genesis/main/networks/devnet/genesis.json
 
 # Download addrbook
+echo "Downloading addrbook..."
 curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/addrbook.json > $HOME/.selfchain/config/addrbook.json
 
 # Create Service
+echo "Creating Service..."
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
 [Unit]
 Description=selfchaind Daemon
