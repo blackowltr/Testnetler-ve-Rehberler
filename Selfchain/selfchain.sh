@@ -55,7 +55,7 @@ chmod +x selfchaind
 mv selfchaind /root/go/bin/
 
 # Step 4: Initialize Node
-selfchaind init <NodeName> --chain-id=self-dev-1
+selfchaind init $NODENAME --chain-id=self-dev-1
 
 # Download Genesis
 curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/genesis.json > $HOME/.selfchain/config/genesis.json
