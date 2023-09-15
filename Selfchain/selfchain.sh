@@ -1,6 +1,8 @@
+Tabii ki, başlıkları renklendirmek için ANSI renk kodları kullanabiliriz. İşte başlıkları renklendirilmiş bir betik:
+
+```bash
 #!/bin/bash
 
-echo -e ''
 echo -e '\e[40m\e[92m'
 echo ' ██████╗ ██╗      █████╗  ██████╗██╗  ██╗ ██████╗ ██╗    ██╗██╗'
 echo ' ██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝██╔═══██╗██║    ██║██║'
@@ -9,33 +11,34 @@ echo ' ██╔══██╗██║     ██╔══██║██║  
 echo ' ██████╔╝███████╗██║  ██║╚██████╗██║  ██╗╚██████╔╝╚███╔███╔╝███████╗'
 echo ' ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝'
 echo -e '\e[0m'
-echo ''
 
-# degiskenler
+# Değişkenler
 if [ ! $NODENAME ]; then
-	read -p "Node isminiz giriniz: " NODENAME
+	read -p $'\e[1m\e[93mLütfen node ismini giriniz: \e[0m' NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
+
 if [ ! $WALLET ]; then
 	echo "export WALLET=wallet" >> $HOME/.bash_profile
 fi
+
 SELF_CHAIN_ID=self-dev-1
 source $HOME/.bash_profile
 
-echo '================================================='
-echo -e "Node isminiz: \e[1m\e[32m$NODENAME\e[0m"
-echo -e "Cüzdan isminiz: \e[1m\e[32m$WALLET\e[0m"
-echo -e "Chain id: \e[1m\e[32m$SELF_CHAIN_ID\e[0m"
-echo '================================================='
+echo -e '\e[1m\e[32m================================================='
+echo -e "Node İsmi: $NODENAME"
+echo -e "Cüzdan İsmi: $WALLET"
+echo -e "Chain ID: $SELF_CHAIN_ID"
+echo -e '=================================================\e[0m'
 sleep 2
 
-# Step 1: Update the System
-echo "Step 1: Updating the System..."
+# Adım 1: Sistemi Güncelleme
+echo -e '\e[1m\e[34mAdım 1: Sistemi Güncelleme...\e[0m'
 sudo apt update
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
 
-# Step 2: Install Go
-echo "Step 2: Installing Go..."
+# Adım 2: Go Kurma
+echo -e '\e[1m\e[34mAdım 2: Go Kurma...\e[0m'
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
@@ -49,28 +52,28 @@ EOF
 source $HOME/.profile
 go version
 
-# Step 3: Install Node
-echo "Step 3: Installing Node..."
+# Adım 3: Node Kurma
+echo -e '\e[1m\e[34mAdım 3: Node Kurma...\e[0m'
 cd $HOME
 mkdir -p /root/go/bin/
 wget https://ss-t.self.nodestake.top/selfchaind
 chmod +x selfchaind
 mv selfchaind /root/go/bin/
 
-# Step 4: Initialize Node
-echo "Step 4: Initializing Node..."
+# Adım 4: Node Başlatma
+echo -e '\e[1m\e[34mAdım 4: Node Başlatma...\e[0m'
 selfchaind init $NODENAME --chain-id=self-dev-1
 
-# Download Genesis
-echo "Downloading Genesis..."
+# Genesis'i İndirme
+echo -e '\e[1m\e[34mGenesis'i İndirme...\e[0m'
 wget -O .selfchain/config/genesis.json  https://raw.githubusercontent.com/hotcrosscom/selfchain-genesis/main/networks/devnet/genesis.json
 
-# Download addrbook
-echo "Downloading addrbook..."
+# Addrbook'u İndirme
+echo -e '\e[1m\e[34mAddrbook'u İndirme...\e[0m'
 curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/addrbook.json > $HOME/.selfchain/config/addrbook.json
 
-# Create Service
-echo "Creating Service..."
+# Servis Oluşturma
+echo -e '\e[1m\e[34mServis Oluşturma...\e[0m'
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
 [Unit]
 Description=selfchaind Daemon
@@ -90,5 +93,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable selfchaind
 sudo systemctl start selfchaind
 
-echo "Selfchain Node Setup Completed."
-echo "Don't forget to follow my account: https://twitter.com/brsbtc"
+echo -e '\e[1m\e[32mSelfchain Node Kurulumu Tamamlandı.'
+echo -e 'Beni takip etmeyi unutmayın: \e[4m\e[96mhttps://twitter.com/brsbtc\e[0m'
+```
+
+Bu betikte başlıklar sarı (\e[93m) ve mavi (\e[34m) renkte vurgulanmıştır. Ayrıca, sonunda Twitter hesabınıza bağlantı eklenmiştir. Daha fazla özelleştirme yapmak için renk kodlarını değiştirebilirsiniz.
