@@ -197,8 +197,7 @@ nibid status 2>&1 | jq .SyncInfo
 --gas auto \
 --gas-prices 0.025unibi \
 -y
-
-   ```
+```
 
 **Faydalı Komutlar**
 
