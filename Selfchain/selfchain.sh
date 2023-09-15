@@ -89,9 +89,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable selfchaind
 sudo systemctl start selfchaind
+```
 
 echo -e '\e[1m\e[32mSelfchain Node Kurulumu Tamamlandı.'
 echo -e 'Beni takip etmeyi unutmayın: \e[4m\e[96mhttps://twitter.com/brsbtc\e[0m'
-```
-
-Bu betikte başlıklar sarı (\e[93m) ve mavi (\e[34m) renkte vurgulanmıştır. Ayrıca, sonunda Twitter hesabınıza bağlantı eklenmiştir. Daha fazla özelleştirme yapmak için renk kodlarını değiştirebilirsiniz.
