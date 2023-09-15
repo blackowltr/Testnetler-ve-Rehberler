@@ -2,14 +2,20 @@
 
 ![image](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/8afb86d4-79a2-4a88-92da-16edadd067e6)
 
-## Step 1: Update the System
+In this guide, you will find the necessary steps to install a Selfchain Node. Each step includes explanations and commands. Remember to customize it with your own moniker and specific settings when needed.
+
+## Step 1: Update the System and Install Required Tools
+
+First, update your system and install the necessary tools.
 
 ```bash
 sudo apt update
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
 ```
 
-## Step 2: Install Go
+## Step 2: Install the Go Language
+
+The Go language is required to run the Selfchain Node.
 
 ```bash
 rm -rf $HOME/go
@@ -26,7 +32,9 @@ source $HOME/.profile
 go version
 ```
 
-## Step 3: Install Node
+## Step 3: Download and Install the Selfchain Node
+
+Download and install the Selfchain Node software.
 
 ```bash
 cd $HOME
@@ -34,27 +42,36 @@ mkdir -p /root/go/bin/
 wget https://ss-t.self.nodestake.top/selfchaind
 chmod +x selfchaind
 mv selfchaind /root/go/bin/
+selfchaind version
 ```
 
-## Step 4: Initialize Node
->*NODENAME
-```bash
-selfchaind init *NODENAME --chain-id=self-dev-1
-```
+## Step 4: Initialize Your Node
 
-### Download Genesis
+Initialize your node, replacing "<NodeName>" with your chosen moniker.
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Selfchain/genesis.json > $HOME/.selfchain/config/genesis.json 
+selfchaind init <NodeName> --chain-id=self-dev-1
 ```
 
-### Download addrbook
+## Step 5: Download the Genesis File
+
+Download the genesis file.
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Selfchain/addrbook.json > $HOME/.selfchain/config/addrbook.json
+curl -Ls https://ss-t.self.nodestake.top/genesis.json > $HOME/.selfchain/config/genesis.json
 ```
 
-### Create Service
+## Step 6: Download the Addrbook File
+
+Download the addrbook file.
+
+```bash
+curl -Ls https://ss-t.self.nodestake.top/addrbook.json > $HOME/.selfchain/config/addrbook.json
+```
+
+## Step 7: Create a Service
+
+Create a systemd service for the Selfchain Node.
 
 ```bash
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
@@ -72,23 +89,27 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable selfchaind
-sudo systemctl start selfchaind
 ```
 
-## Snapshot 
-```
+## Step 8: Optional - Download a Snapshot
+
+If you want to download a snapshot, follow these steps:
+
+```bash
 SNAP_NAME=$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
+curl -o - -L https://ss-t.self.nodestake.top/${SNAP_NAME} | lz4 -c -d - | tar -x -C $HOME/.selfchain
+```
 
-curl -o - -L https://ss-t.self.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar -x -C $HOME/.selfchain
+## Step 9: Start Your Node
+
+Start your node and view the logs.
+
+```bash
 sudo systemctl restart selfchaind
 journalctl -u selfchaind -f
 ```
 
-### Check Sync Status
-
-```bash
-journalctl -u selfchaind -f
-```
+Congratulations, you have successfully installed and started your Selfchain Node! If you have any further questions or need assistance, don't forget to follow me on [Twitter](https://twitter.com/brsbtc).
 
 ## Step 5: Create the Keys
 
