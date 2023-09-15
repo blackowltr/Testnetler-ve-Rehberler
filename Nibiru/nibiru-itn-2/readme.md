@@ -181,7 +181,7 @@ nibid status 2>&1 | jq .SyncInfo
 
 1. KEPLR'da Yeni Test Ağını Eklemek
 
-   - Önce eski "nibiru-itn-1" ağını kaldırın ve [KEPLR web sitesine](https://app.nibiru.fi/) giderek yeni test ağını ekleyin. Siteye bağlandığınızda, yeni test ağı otomatik olarak eklenir.
+   - Önce eski "nibiru-itn-1" ağını kaldırın ve [Nibiru web sitesine](https://app.nibiru.fi/) giderek yeni test ağını ekleyin. Siteye bağlandığınızda, yeni test ağı otomatik olarak eklenir.
 
 2. Cüzdanı İçe Aktarın
 
