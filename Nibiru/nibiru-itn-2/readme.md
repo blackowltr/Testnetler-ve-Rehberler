@@ -182,22 +182,22 @@ nibid status 2>&1 | jq .SyncInfo
 
    ```bash
    nibid tx staking create-validator \
---amount 1000000unibi \
---pubkey $(nibid tendermint show-validator) \
---moniker "NODEADINIZ" \
---identity "KEYBASEID" \
---website "WEBSITEADRESİNİZ" \
---chain-id nibiru-itn-2 \
---commission-rate 0.05 \
---commission-max-rate 0.20 \
---commission-max-change-rate 0.01 \
---min-self-delegation 1 \
---from CUZDANADINIZ \
---gas-adjustment 1.4 \
---gas auto \
---gas-prices 0.025unibi \
--y
-```
+   --amount 1000000unibi \
+   --pubkey $(nibid tendermint show-validator) \
+   --moniker "NODEADINIZ" \
+   --identity "KEYBASEID" \
+   --website "WEBSITEADRESİNİZ" \
+   --chain-id nibiru-itn-2 \
+   --commission-rate 0.05 \
+   --commission-max-rate 0.20 \
+   --commission-max-change-rate 0.01 \
+   --min-self-delegation 1 \
+   --from CUZDANADINIZ \
+   --gas-adjustment 1.4 \
+   --gas auto \
+   --gas-prices 0.025unibi \
+   -y
+   ```
 
 **Faydalı Komutlar**
 
