@@ -58,7 +58,7 @@ mv selfchaind /root/go/bin/
 selfchaind init $NODENAME --chain-id=self-dev-1
 
 # Download Genesis
-curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/genesis.json > $HOME/.selfchain/config/genesis.json
+wget -O .selfchain/config/genesis.json  https://raw.githubusercontent.com/hotcrosscom/selfchain-genesis/main/networks/devnet/genesis.json
 
 # Download addrbook
 curl -Ls https://github.com/Adamtruong6868/Selfchain.xyz/blob/main/addrbook.json > $HOME/.selfchain/config/addrbook.json
