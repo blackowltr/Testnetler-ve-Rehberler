@@ -2,23 +2,44 @@
 
 ![6565yy](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/f05367a7-b1db-4ba7-96a2-7f75ef02ba15)
 
-### Sistem Gereksinimleri
-> Burada yazan gereksinimler önerilen gereksinimlerdir. İlla 1000GB alana sahip bir sunucu kullanmanız gerekmiyor. Rehberde kurulum yaparken indexer kapatma ve Pruning ayarlarını da yapmış olacaksınız. Bu sayede yüksek disk kapasitesi olmayan bir sunucuya da kurabilirsiniz. Örn: 400GB-600GB gibi.
+## Faydalı Bağlantılar
 
-|CPU | RAM  | Disk  | 
-|----|------|----------|
-|   4| 16GB  | 1TB    |
+- [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
+- [Nibiru Discord](https://discord.gg/nibirufi)
+- [Nibiru Twitter](https://twitter.com/NibiruChain)
+- [Tarayıcı](https://explorer.nibiru.fi/)
+- [BlackOwl Twitter](https://twitter.com/brsbtc)
 
-## [Resmi Doküman](https://nibiru.fi/docs/run-nodes/testnet/)
-## [Nibiru Discord](https://discord.gg/nibirufi)
-## [Nibiru Twitter](https://twitter.com/NibiruChain)
-## [BlackOwl Twitter](https://twitter.com/brsbtc)
+**Bu bağlantıları kullanarak Nibiru hakkında daha fazla bilgi edinebilirsiniz!**
 
-## Tarayıcı: 
+## Sistem Gereksinimleri
 
-https://explorer.nibiru.fi/
+| **CPU** | **RAM** | **Disk** |
+|---------|---------|----------|
+| 4 çekirdek | 16GB RAM | 1TB depolama |
+
+# Nibiru itn-2 kurulum rehberine Hoş Geldiniz!
+
+Merhaba! Bu rehber için sizlerden ufak bir ricam var.
+
+1. Rehberi yıldızlayın!
+   - Rehberi beğendiyseniz, lütfen yıldız eklemeyi unutmayın. Bu, rehberin daha fazla kişi tarafından görülmesine yardımcı olur.
+
+2. Rehberi forklayın ve siz de geliştirmeye başlayın!
+   - Kendi GitHub hesabınıza bu rehberi forklayarak üzerinde çalışabilir, yeni özellikler ekleyebilir ve hataları düzeltebilirsiniz.
+
+3. Değişikliklerinizi benimle paylaşın!
+   - Yaptığınız değişiklikleri bu projeye geri göndermek için bir pull request oluşturun. Değişikliklerinizi inceleyip rehbere entegre etmekten mutluluk duyarı.
+
+Teşekkürler! Bana verdiğiniz destek için minnettarım. 
+
+İyi çalışmalar! 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<h1 align="center">Kurulum</h1>
+
+<p align="center">Rehberi adım adım takip edin.</p>
 
 **Adım 1: Güncelleme ve Kütüphane Kurulumu**
 >Öncelikle sistemi güncelleyin ve gerekli kütüphaneleri kurun. Bu komut, sistem paketlerini güncelleyecek, gerekli araçları ve kütüphaneleri yükleyecektir.
