@@ -1,6 +1,3 @@
-Tabii ki, başlıkları renklendirmek için ANSI renk kodları kullanabiliriz. İşte başlıkları renklendirilmiş bir betik:
-
-```bash
 #!/bin/bash
 
 echo -e '\e[40m\e[92m'
