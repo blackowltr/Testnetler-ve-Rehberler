@@ -20,14 +20,9 @@ KEYNAME="$NODENAME"
 # Display a message indicating that KEYNAME is set to NODENAME
 echo -e $'\e[1;32mKEYNAME has been set to the same value as NODENAME.\e[0m'
 
-# Display the node name and key name entered by the user
-# Frame lines
-FRAME_LINE="|-----------------|-----------------|"
-
-# Print the header row with frame lines
-echo "$FRAME_LINE"
-printf "| %-15s | %-15s |\n" "Node Name" "Key Name"
-echo "$FRAME_LINE"
+# Display the values of NODENAME and KEYNAME with colors
+echo -e $'\e[1;36mNode Name:\e[0m' "$NODENAME"
+echo -e $'\e[1;36mKey Name:\e[0m' "$KEYNAME"
 
 # Update the System and Install Required Tools
 echo -e $'\e[1;34mUpdating the system and installing required tools...\e[0m'
