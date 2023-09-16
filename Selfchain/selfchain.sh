@@ -11,14 +11,19 @@ echo ' ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═
 echo -e '\e[0m'
 echo ''
 
-# Prompt the user to enter the node name and key name
+# Prompt the user to enter the node name (NODENAME)
 read -p $'\e[1;32mEnter your desired node name (NODENAME):\e[0m ' NODENAME
-read -p $'\e[1;32mEnter your desired key name (KEYNAME):\e[0m ' KEYNAME
+
+# Set KEYNAME to the same value as NODENAME
+KEYNAME="$NODENAME"
+
+# Display a message indicating that KEYNAME is set to NODENAME
+echo -e $'\e[1;32mKEYNAME has been set to the same value as NODENAME.\e[0m'
 
 # Display the node name and key name entered by the user
-echo -e $'\e[1;36mNode name:\e[0m '$NODENAME
-echo -e $'\e[1;36mKey name:\e[0m '$KEYNAME
-echo -e $'\e[1;32mThese values will be used for the installation.\e[0m'
+printf "| %-15s | %-15s |\n" "Node Name" "Key Name"
+printf "| %-15s | %-15s |\n" "$NODENAME" "$KEYNAME"
+printf "| %-35s |\n" "These values will be used for the installation."
 
 # Update the System and Install Required Tools
 echo -e $'\e[1;34mUpdating the system and installing required tools...\e[0m'
@@ -54,7 +59,7 @@ sleep 3
 
 # Initialize Your Node
 echo -e $'\e[1;34mInitializing Your Node...\e[0m'
-selfchaind init $NODENAME --chain-id=self-dev-1
+selfchaind init "$NODENAME" --chain-id=self-dev-1
 sleep 3
 
 # Download the Genesis File
