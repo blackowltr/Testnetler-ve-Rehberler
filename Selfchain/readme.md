@@ -211,6 +211,10 @@ selfchaind tx staking create-validator \
 Replace the following placeholders:
 - `Your Node Name`: Choose a name for your node.
 - `your_wallet_address`: Replace with your wallet address.
+- `--identity=""`: Set your node's identity.
+- `--details=""`: Provide additional details about your node.
+- `--security-contact=""`: Specify your node's security contact.
+- `--website=""`: Add a website URL if applicable.
 
 ### 4. Stake More Tokens (Optional)
 
