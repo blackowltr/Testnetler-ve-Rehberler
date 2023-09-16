@@ -2,6 +2,12 @@
 
 ![image](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/8afb86d4-79a2-4a88-92da-16edadd067e6)
 
+ Here are the recommended system requirements for a Selfchain node:
+
+- **Processor (CPU):** 4 or 8 cores
+- **Memory (RAM):** 16GB
+- **Disk Storage:** 100GB
+
 In this guide, you will find the necessary steps to install a Selfchain Node. Each step includes explanations and commands. Remember to customize it with your own moniker and specific settings when needed.
 
 If you prefer not to perform a manual installation, you can use a script for automated installation. Click the link below to access the installation script:
