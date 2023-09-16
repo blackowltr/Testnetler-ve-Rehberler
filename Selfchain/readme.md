@@ -170,7 +170,7 @@ In this section, we'll guide you through the process of generating keys and sett
 First, you need to generate the necessary keys. Replace `KEYNAME` with your preferred key name:
 
 ```bash
-selfchaind keys --home ~/.selfchain --keyring-backend file --keyring-dir keys add KEYNAME
+selfchaind keys add KEYNAME
 ```
 
 ### 2. Check Sync Status
