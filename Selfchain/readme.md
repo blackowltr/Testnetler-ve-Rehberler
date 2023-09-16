@@ -107,15 +107,31 @@ sudo systemctl enable selfchaind
 sudo systemctl start selfchaind
 ```
 
-## 9. Optional - Downloading a Snapshot
+## 9. Optional - Downloading a State Sync
 
-Optionally, you can download a snapshot:
+Optionally, you can download a state sync:
 
 ```bash
-SNAP_NAME=\$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
-curl -o - -L https://ss-t.self.nodestake.top/\${SNAP_NAME} | lz4 -c -d - | tar -x -C $HOME/.selfchain
-```
+sudo systemctl stop selfchaind
+selfchaind tendermint unsafe-reset-all --home ~/.selfchain/ --keep-addr-book
 
+SNAP_RPC="https://rpc-t.self.nodestake.top:443"
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" ~/.selfchain/config/config.toml
+more ~/.selfchain/config/config.toml | grep 'rpc_servers'
+more ~/.selfchain/config/config.toml | grep 'trust_height'
+more ~/.selfchain/config/config.toml | grep 'trust_hash'
+
+sudo systemctl restart selfchaind
+journalctl -u selfchaind -f
+```
 
 ## 10. Follow for Updates
 
