@@ -4,6 +4,12 @@
 
 In this guide, you will find the necessary steps to install a Selfchain Node. Each step includes explanations and commands. Remember to customize it with your own moniker and specific settings when needed.
 
+If you prefer not to perform a manual installation, you can use a script for automated installation. Click the link below to access the installation script:
+
+[Click here to install Selfchain using the installation script](https://github.com/brsbrc/Testnetler-ve-Rehberler/blob/main/Selfchain/selfchain-script.md)
+
+If you prefer to perform the manual installation or want to learn more about the installation process, you can continue reading the detailed manual installation guide.
+
 ## 1. Installing Required Tools
 
 Update your system and install the necessary tools:
