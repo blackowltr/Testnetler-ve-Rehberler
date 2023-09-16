@@ -117,10 +117,6 @@ else
   echo -e $'\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m'
 fi
 
-# Backing up priv.validator.key.json to the home directory.
-cp $HOME/.selfchain/config/priv.validator.key.json $HOME/priv.validator.key.json.bak
-sleep 2
-
 # Follow me on Twitter for updates: https://twitter.com/brsbtc
 echo "For updates and more information, follow me on Twitter: https://twitter.com/brsbtc"
 
