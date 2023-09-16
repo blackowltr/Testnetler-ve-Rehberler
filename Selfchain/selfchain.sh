@@ -111,22 +111,15 @@ echo -e $'\e[1;34mStarting Your Node...\e[0m'
 sudo systemctl restart selfchaind
 
 # Check if the Selfchain Node started successfully
-if journalctl -u selfchaind -f | grep -q "exit code"; then
-  echo -e $'\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m'
-else
+if sudo systemctl is-active --quiet selfchaind; then
   echo -e $'\e[1;32mSelfchain Node has been successfully installed and started!\e[0m'
+else
+  echo -e $'\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m'
 fi
 
 # Backing up priv.validator.key.json to the home directory.
 cp $HOME/.selfchain/config/priv.validator.key.json $HOME/priv.validator.key.json.bak
 sleep 2
-
-# Create a wallet password
-read -s -p $'\e[1;32mCreate a wallet password:\e[0m ' WALLET_PASSWORD
-echo ""
-sleep 2
-# Save the wallet password to a text file
-echo "$WALLET_PASSWORD" > walletinfo.txt
 
 # Follow me on Twitter for updates: https://twitter.com/brsbtc
 echo "For updates and more information, follow me on Twitter: https://twitter.com/brsbtc"
