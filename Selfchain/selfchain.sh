@@ -59,14 +59,12 @@ sleep 3
 
 # Download the Genesis File
 echo -e $'\e[1;34mDownloading the Genesis File...\e[0m'
-wget -O genesis.json https://snapshots.polkachu.com/testnet-genesis/selfchain/genesis.json --inet4-only
-mv genesis.json ~/.selfchain/config
+curl -Ls https://ss-t.self.nodestake.top/genesis.json > $HOME/.selfchain/config/genesis.json 
 sleep 2
 
 # Download the Addrbook File
 echo -e $'\e[1;34mDownloading the Addrbook File...\e[0m'
-wget -O addrbook.json https://snapshots.polkachu.com/testnet-addrbook/selfchain/addrbook.json --inet4-only
-mv addrbook.json ~/.selfchain/config
+curl -Ls https://ss-t.self.nodestake.top/addrbook.json > $HOME/.selfchain/config/addrbook.json 
 sleep 2
 
 # Seed and Peer Settings
@@ -129,8 +127,6 @@ echo ""
 sleep 2
 # Save the wallet password to a text file
 echo "$WALLET_PASSWORD" > walletinfo.txt
-
-selfchaind keys --home ~/.selfchain --keyring-backend file --keyring-dir keys add $KEYNAME
 
 # Follow me on Twitter for updates: https://twitter.com/brsbtc
 echo "For updates and more information, follow me on Twitter: https://twitter.com/brsbtc"
