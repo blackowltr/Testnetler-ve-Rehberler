@@ -190,4 +190,9 @@ By following these simple steps, you'll be well on your way to generating your k
 
 This guide has been designed to provide you with a clear and straightforward set of instructions for setting up your Selfchain node. Please take your time to go through each step carefully.
 
+### 5. Removing Your Selfchain Node
+```bash
+sudo systemctl stop selfchaind && rm -rf ~/.selfchain /etc/systemd/system/selfchaind.service && sudo systemctl disable selfchaind && sudo systemctl daemon-reload
+```
+
 -BlackOwl
