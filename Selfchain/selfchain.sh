@@ -13,19 +13,9 @@ echo ''
 
 # Prompt the user to enter the node name (NODENAME)
 read -p $'\e[1;32mEnter your desired node name (NODENAME):\e[0m ' NODENAME
-
-# Set KEYNAME to the same value as NODENAME
-KEYNAME="$NODENAME"
-
-# Display a message indicating that KEYNAME is set to NODENAME
-echo -e $'\e[1;32mKEYNAME has been set to the same value as NODENAME.\e[0m'
-
-# Sleep for 3 seconds (you can adjust the duration as needed)
 sleep 3
 
-# Display the values of NODENAME and KEYNAME with colors
 echo -e $'\e[1;36mNode Name:\e[0m' "$NODENAME"
-echo -e $'\e[1;36mKey Name:\e[0m' "$KEYNAME"
 sleep 3
 
 # Update the System and Install Required Tools
