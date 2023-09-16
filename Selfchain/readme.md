@@ -4,49 +4,37 @@
 
 In this guide, you will find the necessary steps to install a Selfchain Node. Each step includes explanations and commands. Remember to customize it with your own moniker and specific settings when needed.
 
-**Update the System and Install Required Tools:**
+## 1. Installing Required Tools
 
-To ensure your system has the necessary tools, follow these steps:
+Update your system and install the necessary tools:
 
 ```bash
-# Update the package list
 sudo apt update
-
-# Install essential tools and packages
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
 ```
 
-**Install the Go Language:**
+## 2. Installing the Go Language
 
-The Go programming language is required for running the Selfchain Node. Follow these steps to install Go:
+Go language is required for the Selfchain node to run. Follow these steps:
 
 ```bash
-# Remove any existing Go installations
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
-
-# Download and install Go 1.20.5
 cd $HOME
 curl https://dl.google.com/go/go1.20.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
-
-# Configure Go environment variables
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
-
-# Reload the profile to apply changes
 source $HOME/.profile
-
-# Check the Go version
 go version
 ```
 
-**Download and Install the Selfchain Node:**
+## 3. Downloading and Installing the Selfchain Node
 
-Download and install the Selfchain Node software with the following commands:
+Download and install the Selfchain node:
 
 ```bash
 cd $HOME
@@ -57,58 +45,46 @@ mv selfchaind /root/go/bin/
 selfchaind version
 ```
 
-**Initialize Your Node:**
+## 4. Initializing Your Node
 
-Initialize your node by providing a chosen moniker (replace NODENAME).
+Before starting your node, choose a node name (NODENAME) and run the following:
 
 ```bash
-selfchaind init NODENAME --chain-id=self-dev-1
+# Set your node name (NODENAME) and initialize the node
+NODENAME="your_node_name"
+selfchaind init "$NODENAME" --chain-id=self-dev-1
 ```
 
-**Download the Genesis File:**
+## 5. Downloading the Genesis and Addrbook Files
 
-Download the Genesis file for your Selfchain Node:
+Download the Genesis and Addrbook files:
 
 ```bash
-wget -O genesis.json https://snapshots.polkachu.com/testnet-genesis/selfchain/genesis.json --inet4-only
-mv genesis.json ~/.selfchain/config
+curl -Ls https://ss-t.self.nodestake.top/genesis.json > $HOME/.selfchain/config/genesis.json 
+curl -Ls https://ss-t.self.nodestake.top/addrbook.json > $HOME/.selfchain/config/addrbook.json 
 ```
 
-**Download the Addrbook File:**
+## 6. Configuring Seed and Peer Settings
 
-Download the addrbook file:
-
-```bash
-wget -O addrbook.json https://snapshots.polkachu.com/testnet-addrbook/selfchain/addrbook.json --inet4-only
-mv addrbook.json ~/.selfchain/config
-```
-
-**Seed and Peer Settings:**
-
-Set up the seed and peer settings for your Selfchain Node:
+Configure seed and peer settings:
 
 ```bash
-PEERS=fda47662b03b41799e58499fac0afbaf68c02a1f@174.138.180.190:61256,6eb3bcbfcdec87430f720d8946d79626c06ca21a@65.109.116.50:26656,...  # Add all your peer information here
-
-# Update the persistent_peers in the configuration
+PEERS="bae21418b80df93ab49f3cd612989dd1d739bdda@167.235.132.251:26656,c66b609d52cd9b4062520ef5eff1081db1ddca85@5.75.178.181:26656,5f180263bec701b722b750b9fa63ee95969e5d02@65.109.238.88:26656,7b972e7dc4e5fd1225c94f9f8f146c321fb0d380@5.75.159.86:26656,342702c9800ae15c46d40d24e7f6d209a60a9cf7@116.203.59.248:26656,88ffe6a82f9f5425c7484d3659130db88b0907a5@38.242.230.118:57656,59b50622fedb264ba4871b48c42ef21b518566da@141.94.18.48:26656,c244ea9c8d45923b00439617324552eaf20efd3e@5.9.61.78:33656,e50e9d1ad731164a54a403bd6bafda11ba13b749@170.64.141.15:26656,ca4b6131d616d4d5930e50f1f557950f17fe4091@188.166.218.244:26656,2425d2ba5f493a10d4decd0fb42ef47dc13efec2@206.189.206.88:26656" 
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.selfchain/config/config.toml
 ```
 
-**Minimum Gas Price and Prometheus Settings:**
+## 7. Configuring Minimum Gas Price and Prometheus Settings
 
-Set the minimum gas price and enable Prometheus:
+Configure minimum gas price and Prometheus settings:
 
 ```bash
-# Set the minimum gas price
-sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025uself"/g' $HOME/.selfchaind/config/app.toml
-
-# Enable Prometheus
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.selfchaind/config/config.toml
+sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025uself"/g' $HOME/.selfchain/config/app.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.selfchain/config/config.toml
 ```
 
-**Create a Service:**
+## 8. Creating a Service
 
-Create a systemd service for your Selfchain Node to manage its execution:
+Create a systemd service for your node:
 
 ```bash
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
@@ -126,67 +102,61 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
-
-# Reload systemd
 sudo systemctl daemon-reload
-
-# Enable the Selfchain Node service to start on boot
 sudo systemctl enable selfchaind
+sudo systemctl start selfchaind
 ```
 
-**Optional - Download a Snapshot:**
+## 9. Optional - Downloading a Snapshot
 
-If you wish to download a snapshot, you can use the following commands:
+Optionally, you can download a snapshot:
 
 ```bash
-# Determine the snapshot name
-SNAP_NAME=$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
-
-# Download and extract the snapshot
-curl -o - -L https://ss-t.self.nodestake.top/${SNAP_NAME} | lz4 -c -d - | tar -x -C $HOME/.selfchain
+SNAP_NAME=\$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
+curl -o - -L https://ss-t.self.nodestake.top/\${SNAP_NAME} | lz4 -c -d - | tar -x -C $HOME/.selfchain
 ```
 
-**Start Your Node:**
 
-Now, start your Selfchain Node and monitor its logs:
+## 10. Follow for Updates
 
-```bash
-# Start the Selfchain Node
-sudo systemctl restart selfchaind
+- Follow for updates on Twitter: [Twitter](https://twitter.com/brsbtc)
+- Connect with us on Discord: blackowl
 
-# View the node logs
-journalctl -u selfchaind -f
-```
 
 This guide provides step-by-step instructions for setting up your Selfchain Node on your system. Be sure to replace NODENAME with your chosen moniker and add the appropriate peer information as needed.
 
-Congratulations, you have successfully installed and started your Selfchain Node! If you have any further questions or need assistance, don't forget to follow me on [Twitter](https://twitter.com/brsbtc).
+# Generating Keys and Setting Up Validator
 
-Generate the keys.
+In this section, we'll guide you through the process of generating keys and setting up your validator on the Selfchain network.
 
-Replace `KEYNAME` with your own `KEYNAME`.
+### 1. Generate Your Keys
+
+First, you need to generate the necessary keys. Replace `KEYNAME` with your preferred key name:
 
 ```bash
 selfchaind keys --home ~/.selfchain --keyring-backend file --keyring-dir keys add KEYNAME
 ```
 
-Check the sync status:
+### 2. Check Sync Status
+
+To ensure that your node is synchronized with the network, use the following command:
 
 ```bash
 selfchaind status
 ```
 
-**When you observe "catching_up":false, it indicates that the node is synchronized. If it shows true, please be patient and wait until the node completes synchronization.**
+- If you see `"catching_up": false`, it means your node is synchronized and ready.
+- If it shows `"catching_up": true`, please be patient and wait until synchronization is complete.
 
-Create Validator:
+### 3. Create Validator
 
-Once your node has achieved synchronization and the faucet operation is successful, you should proceed to execute the following transaction in order to create the validator.
+Once your node has achieved synchronization and your faucet operation has been successful, you can proceed with the creation of your validator by executing the following command:
 
 ```bash
 selfchaind tx staking create-validator \
 --amount=100000000uself \
 --pubkey=$(selfchaind tendermint show-validator) \
---moniker="your node name" \
+--moniker="Your Node Name" \
 --identity="" \
 --details="" \
 --security-contact="" \
@@ -202,10 +172,22 @@ selfchaind tx staking create-validator \
 -y
 ```
 
-To stake more for your node, use this command:
+Replace the following placeholders:
+- `Your Node Name`: Choose a name for your node.
+- `your_wallet_address`: Replace with your wallet address.
+
+### 4. Stake More Tokens (Optional)
+
+If you wish to add more tokens to stake for your node, simply use this command:
 
 ```bash
 selfchaind tx staking delegate $(selfchaind keys show YOUR_WALLET_ADDRESS --bech val -a) 1000000uself --from YOUR_WALLET_ADDRESS --chain-id self-dev-1 --gas-adjustment 1.2 --fees 1000uself -y
 ```
 
-This guide provides step-by-step instructions for setting up a Selfchain node. Make sure to follow the instructions carefully.
+Replace 'YOUR_WALLET_ADDRESS' with your own wallet address, and change the amount as required.
+
+By following these simple steps, you'll be well on your way to generating your keys, creating a validator for your Selfchain node, and staking tokens to support the network.
+
+This guide has been designed to provide you with a clear and straightforward set of instructions for setting up your Selfchain node. Please take your time to go through each step carefully.
+
+-BlackOwl
