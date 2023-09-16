@@ -10,23 +10,24 @@ echo ' ██████╔╝███████╗██║  ██║╚�
 echo ' ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝'
 echo -e '\e[0m'
 echo ''
-echo -e '\e[40m\e[97m\e[1m  🦉 BlackOwl 🦉  \e[0m'
 
-# Prompt the user to enter NODENAME and KEYNAME
-read -p "Enter your desired node name (NODENAME): " NODENAME
-read -p "Enter your desired key name (KEYNAME): " KEYNAME
+# Prompt the user to enter the node name and key name
+read -p $'\e[1;32mEnter your desired node name (NODENAME):\e[0m ' NODENAME
+read -p $'\e[1;32mEnter your desired key name (KEYNAME):\e[0m ' KEYNAME
 
-# Display the entered NODENAME and KEYNAME
-echo "You entered NODENAME: $NODENAME"
-echo "You entered KEYNAME: $KEYNAME"
-echo "These values will be used for the installation."
+# Display the node name and key name entered by the user
+echo -e $'\e[1;36mNode name:\e[0m '$NODENAME
+echo -e $'\e[1;36mKey name:\e[0m '$KEYNAME
+echo -e $'\e[1;32mThese values will be used for the installation.\e[0m'
 
 # Update the System and Install Required Tools
+echo -e $'\e[1;34mUpdating the system and installing required tools...\e[0m'
 sudo apt update
 sudo apt-get install git curl build-essential make jq gcc snapd chrony lz4 tmux unzip bc -y
-sleep 2
+sleep 3
 
 # Install the Go Language
+echo -e $'\e[1;34mInstalling the Go Language...\e[0m'
 rm -rf $HOME/go
 sudo rm -rf /usr/local/go
 cd $HOME
@@ -39,42 +40,49 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
 source $HOME/.profile
 go version
-sleep 2
+sleep 3
 
 # Download and Install the Selfchain Node
+echo -e $'\e[1;34mDownloading and installing the Selfchain Node...\e[0m'
 cd $HOME
 mkdir -p /root/go/bin/
 wget https://ss-t.self.nodestake.top/selfchaind
 chmod +x selfchaind
 mv selfchaind /root/go/bin/
 selfchaind version
-sleep 2
+sleep 3
 
 # Initialize Your Node
+echo -e $'\e[1;34mInitializing Your Node...\e[0m'
 selfchaind init $NODENAME --chain-id=self-dev-1
-sleep 2
+sleep 3
 
 # Download the Genesis File
+echo -e $'\e[1;34mDownloading the Genesis File...\e[0m'
 wget -O genesis.json https://snapshots.polkachu.com/testnet-genesis/selfchain/genesis.json --inet4-only
 mv genesis.json ~/.selfchain/config
 sleep 2
 
 # Download the Addrbook File
+echo -e $'\e[1;34mDownloading the Addrbook File...\e[0m'
 wget -O addrbook.json https://snapshots.polkachu.com/testnet-addrbook/selfchain/addrbook.json --inet4-only
 mv addrbook.json ~/.selfchain/config
 sleep 2
 
 # Seed and Peer Settings
+echo -e $'\e[1;34mConfiguring Seed and Peer Settings...\e[0m'
 PEERS="fda47662b03b41799e58499fac0afbaf68c02a1f@174.138.180.190:61256,6eb3bcbfcdec87430f720d8946d79626c06ca21a@65.109.116.50:26656,..."  # Add all your peer information here
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.selfchain/config/config.toml
 sleep 2
 
 # Minimum Gas Price and Prometheus Settings
-sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025uself"/g' $HOME/.selfchaind/config/app.toml
-sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.selfchaind/config/config.toml
+echo -e $'\e[1;34mConfiguring Minimum Gas Price and Prometheus Settings...\e[0m'
+sed -i 's/minimum-gas-prices =.*/minimum-gas-prices = "0.025uself"/g' $HOME/.selfchain/config/app.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.selfchain/config/config.toml
 sleep 2
 
 # Create a Service
+echo -e $'\e[1;34mCreating a Service...\e[0m'
 sudo tee /etc/systemd/system/selfchaind.service > /dev/null <<EOF
 [Unit]
 Description=selfchaind Daemon
@@ -95,18 +103,20 @@ sudo systemctl enable selfchaind
 sleep 2
 
 # Optional - Download a Snapshot
+echo -e $'\e[1;34mDownloading an Optional Snapshot...\e[0m'
 SNAP_NAME=$(curl -s https://ss-t.self.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
 curl -o - -L https://ss-t.self.nodestake.top/${SNAP_NAME} | lz4 -c -d - | tar -x -C $HOME/.selfchain
 sleep 2
 
 # Start Your Node
+echo -e $'\e[1;34mStarting Your Node...\e[0m'
 sudo systemctl restart selfchaind
 
 # Check if the Selfchain Node started successfully
 if journalctl -u selfchaind -f | grep -q "exit code"; then
-  echo "Selfchain Node installation or startup encountered an error."
+  echo -e $'\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m'
 else
-  echo "Selfchain Node has been successfully installed and started!"
+  echo -e $'\e[1;32mSelfchain Node has been successfully installed and started!\e[0m'
 fi
 
 # Backing up priv.validator.key.json to the home directory.
@@ -114,7 +124,7 @@ cp $HOME/.selfchain/config/priv.validator.key.json $HOME/priv.validator.key.json
 sleep 2
 
 # Create a wallet password
-read -s -p "Create a wallet password: " WALLET_PASSWORD
+read -s -p $'\e[1;32mCreate a wallet password:\e[0m ' WALLET_PASSWORD
 echo ""
 sleep 2
 # Save the wallet password to a text file
