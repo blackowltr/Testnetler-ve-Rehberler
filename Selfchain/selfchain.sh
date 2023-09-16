@@ -20,9 +20,13 @@ KEYNAME="$NODENAME"
 # Display a message indicating that KEYNAME is set to NODENAME
 echo -e $'\e[1;32mKEYNAME has been set to the same value as NODENAME.\e[0m'
 
+# Sleep for 3 seconds (you can adjust the duration as needed)
+sleep 3
+
 # Display the values of NODENAME and KEYNAME with colors
 echo -e $'\e[1;36mNode Name:\e[0m' "$NODENAME"
 echo -e $'\e[1;36mKey Name:\e[0m' "$KEYNAME"
+sleep 3
 
 # Update the System and Install Required Tools
 echo -e $'\e[1;34mUpdating the system and installing required tools...\e[0m'
@@ -114,15 +118,15 @@ sleep 2
 echo -e $'\e[1;34mStarting Your Node...\e[0m'
 sudo systemctl restart selfchaind
 
-# Port Değiştirme Komutları
+# Port Change Commands"
 echo -e $'\e[1;34mChanging Ports...\e[0m'
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6260\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28660\"%" $HOME/.selfchain/config/config.toml && sed -i.bak -e "s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:9290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:9291\"%; s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:1517\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:8745\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:8746\"%; s%^address = \"127.0.0.1:8545\"%address = \"127.0.0.1:8745\"%; s%^ws-address = \"127.0.0.1:8546\"%ws-address = \"127.0.0.1:8746\"%" $HOME/.selfchain/config/app.toml && sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:28657\"%" $HOME/.selfchain/config/client.toml
 
 # Check if the Selfchain Node started successfully
 if sudo systemctl is-active --quiet selfchaind; then
-  echo -e $'\e[1;32mSelfchain Node has been successfully installed and started!\e[0m'
+  echo -e "\e[1;32mSelfchain Node has been installed and started successfully!\e[0m"
 else
-  echo -e $'\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m'
+  echo -e "\e[1;31mSelfchain Node installation or startup encountered an error.\e[0m"
 fi
 
 # Follow me on Twitter for updates: https://twitter.com/brsbtc
