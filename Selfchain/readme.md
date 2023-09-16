@@ -133,6 +133,20 @@ sudo systemctl restart selfchaind
 journalctl -u selfchaind -f
 ```
 
+## Warning: Port Issue
+
+If you encounter an "already in use..." error, it indicates a port problem. In such cases, you need to change the port configurations to resolve this issue. Here's an example command to change the ports:
+
+Please note that you can use this command if the ports mentioned are different from the ones you are using.
+
+```bash
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:28658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:28657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6260\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:28656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":28660\"%" $HOME/.selfchain/config/config.toml && sed -i.bak -e "s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:9290\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:9291\"%; s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:1517\"%; s%^address = \"0.0.0.0:8545\"%address = \"0.0.0.0:8745\"%; s%^ws-address = \"0.0.0.0:8546\"%ws-address = \"0.0.0.0:8746\"%; s%^address = \"127.0.0.1:8545\"%address = \"127.0.0.1:8745\"%; s%^ws-address = \"127.0.0.1:8546\"%ws-address = \"127.0.0.1:8746\"%" $HOME/.selfchain/config/app.toml && sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:28657\"%" $HOME/.selfchain/config/client.toml
+sudo systemctl restart selfchaind
+journalctl -u selfchaind -f
+```
+
+Make sure to adjust the port values as needed, and this will help you resolve the port problem.
+
 ## 10. Follow for Updates
 
 - Follow for updates on Twitter: [Twitter](https://twitter.com/brsbtc)
