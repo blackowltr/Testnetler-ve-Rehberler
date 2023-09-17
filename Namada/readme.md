@@ -36,7 +36,6 @@ sudo apt install cargo nodejs -y < "/dev/null"
 
 ## Adım 3: Protobuf ve Değişkenleri Ayarlama
 >$VALIDATOR_ALIAS kısmını değiştirmeyi unutmayın.
-Protobuf ve gerekli değişkenleri ayarlayacağımız bir sonraki adıma geçiyoruz:
 
 ```bash
 cd $HOME && rustup update
