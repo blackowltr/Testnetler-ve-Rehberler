@@ -35,7 +35,6 @@ sudo apt install cargo nodejs -y < "/dev/null"
 ```
 
 ## Adım 3: Protobuf ve Değişkenleri Ayarlama
->NODEADINIZ kısmını değiştirmeyi unutmayın.
 
 ```bash
 cd $HOME && rustup update
@@ -57,6 +56,7 @@ echo "export WALLET=wallet" >> ~/.bash_profile
 echo "export BASE_DIR=$HOME/.local/share/namada" >> ~/.bash_profile
 ```
 
+>NODEADINIZ kısmını değiştirmeyi unutmayın.
 ```
 echo "export VALIDATOR_ALIAS=NODEADINIZ" >> ~/.bash_profile
 source ~/.bash_profile
