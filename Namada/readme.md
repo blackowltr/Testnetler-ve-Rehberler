@@ -58,6 +58,10 @@ echo "export BASE_DIR=$HOME/.local/share/namada" >> ~/.bash_profile
 echo "export VALIDATOR_ALIAS=$VALIDATOR_ALIAS" >> ~/.bash_profile
 ```
 
+```
+source ~/.bash_profile
+```
+
 ## Adım 4: Namada ve Tendermint'i Yükleme
 
 Namada ve Tendermint'i yükleyelim:
