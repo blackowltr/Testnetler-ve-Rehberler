@@ -35,7 +35,7 @@ sudo apt install cargo nodejs -y < "/dev/null"
 ```
 
 ## Adım 3: Protobuf ve Değişkenleri Ayarlama
-
+>$VALIDATOR_ALIAS kısmını değiştirmeyi unutmayın.
 Protobuf ve gerekli değişkenleri ayarlayacağımız bir sonraki adıma geçiyoruz:
 
 ```bash
@@ -56,6 +56,7 @@ echo "export CBFT=v0.37.2" >> ~/.bash_profile
 echo "export CHAIN_ID=public-testnet-13.facd514666d5" >> ~/.bash_profile
 echo "export WALLET=wallet" >> ~/.bash_profile
 echo "export BASE_DIR=$HOME/.local/share/namada" >> ~/.bash_profile
+echo "export VALIDATOR_ALIAS=$VALIDATOR_ALIAS" >> ~/.bash_profile
 ```
 
 ## Adım 4: Namada ve Tendermint'i Yükleme
