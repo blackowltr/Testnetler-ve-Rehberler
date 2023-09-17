@@ -34,12 +34,12 @@ sleep 2
 echo -e "\e[1m\e[32m1. Sistem güncellemesi yapılıyor... \e[0m" && sleep 1
 # update
 sudo apt update && sudo apt upgrade -y
-
+sleep 1
 echo -e "\e[1m\e[32m2. Kütüphaneler kuruluyor... \e[0m" && sleep 1
 # paketler
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 sudo apt install -y curl git jq lz4 build-essential unzip
-
+sleep 1
 # go
 if ! [ -x "$(command -v go)" ]; then
   ver="1.19.2"
@@ -53,7 +53,13 @@ if ! [ -x "$(command -v go)" ]; then
 fi
 
 echo -e "\e[1m\e[32m3. Nibiru kurulumu yapılıyor... \e[0m" && sleep 1
-curl -s https://get.nibiru.fi/@v0.21.9! | bash
+cd $HOME
+rm -rf nibiru
+git clone https://github.com/NibiruChain/nibiru.git
+cd nibiru
+git checkout v0.21.9
+make install
+sleep 2 
 
 # config
 nibid config chain-id $NIBIRU_CHAIN_ID
@@ -62,6 +68,7 @@ nibid config node tcp://localhost:${NIBIRU_PORT}657
 
 # başlatma
 nibid init $NODENAME --chain-id=nibiru-itn-2 --home $HOME/.nibid
+sleep 1
 
 # genesis ve addrbook
 NETWORK=nibiru-itn-2
