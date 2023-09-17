@@ -1,6 +1,6 @@
 # Selfchain Node Installation Guide
 
-![image](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/8afb86d4-79a2-4a88-92da-16edadd067e6)
+![dddddd](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/26807302-879a-45ab-96d2-10fd01bf609f)
 
  Here are the recommended system requirements for a Selfchain node:
 
