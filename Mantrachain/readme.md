@@ -122,7 +122,7 @@ sudo systemctl start mantrachaind
 
 ## Snapshot ile hızlı sync
 
-Snapshot'ını indirin:
+Snapshot'ı indirin:
 
 ```
 SNAP_NAME=$(curl -s https://ss-t.mantra.nodestake.top/ | egrep -o ">20.*\.tar.lz4" | tr -d ">")
