@@ -132,6 +132,145 @@ curl -o - -L https://ss-t.mantra.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar
 ## Senkronizasyon Kontrolü
 
 Node'unuzun senkronize olup olmadığını kontrol edin:
+> Komut çıktısı "false" ise ağ ile senkronize olduğunuz anlamına gelir.
 ```
 mantrachaind status 2>&1 | jq .SyncInfo
+```
+
+# Faydalı Komutlar
+
+### Cüzdan Oluşturma
+```
+mantrachaind keys add CÜZDANADINIZ
+```
+
+### Cüzdan Kurtarma
+```
+mantrachaind keys add CÜZDANADINIZ --recover
+```
+
+### Cüzdan Listeleme
+```
+mantrachaind keys list
+```
+
+### Cüzdan Silme
+```
+mantrachaind keys delete CÜZDANADINIZ
+```
+
+### Cüzdan Bakiyesini Kontrol Etme
+```
+mantrachaind q bank balances $(mantrachaind keys show CÜZDANADINIZ -a)
+```
+
+### Validator Oluşturma
+`
+--moniker=NODEADINIZ ve --from=CÜZDANADINIZ kısımlarını düzenlemeyi unutmayın.
+`
+```
+mantrachaind tx staking create-validator \
+--amount=10000000uaum \
+--pubkey=$(mantrachaind tendermint show-validator) \
+--moniker=NODEADINIZ \
+--chain-id="mantrachain-1" \
+--commission-rate="0.10" \
+--commission-max-rate="0.20" \
+--commission-max-change-rate="0.01" \
+--min-self-delegation="1000000" \
+--from=CÜZDANADINIZ \
+--gas-adjustment 1.4 \
+--gas=auto \
+-y
+```
+
+### Validator Düzenleme
+`
+--new-moniker=NODEADINIZ ve --from=CÜZDANADINIZ kısımlarını düzenlemeyi unutmayın.
+`
+```
+mantrachaind tx staking edit-validator \
+--new-moniker=NODEADINIZ \
+--chain-id=mantrachain-1 \
+--from=CÜZDANADINIZ \
+--gas-adjustment 1.4 \
+--gas="auto" \
+-y
+```
+
+###  Unjail Komutu
+`
+CÜZDANADINIZ kısmını unutmayın.
+`
+```
+mantrachaind tx slashing unjail --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Jail Nedenini Kontrol Etme
+```
+mantrachaind query slashing signing-info $(mantrachaind tendermint show-validator)
+```
+
+### Ödülleri Çekme
+`
+CÜZDANADINIZ kısmını unutmayın.
+`
+```
+mantrachaind tx distribution withdraw-all-rewards --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Komisyonlu Ödülleri Çekme
+`
+CÜZDANADINIZ kısmını unutmayın.
+`
+```
+mantrachaind tx distribution withdraw-rewards $(mantrachaind keys show CÜZDANADINIZ --bech val -a) --commission --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Tokenları Kendi Validatorünüze Delege Etme
+```
+mantrachaind tx staking delegate $(mantrachaind keys show CÜZDANADINIZ --bech val -a) 1000000uaum --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Tokenları Başka Bir Validator'e Yeniden Delege Etme
+```
+mantrachaind tx staking redelegate $(mantrachaind keys show CÜZDANADINIZ --bech val -a) YENİVALOPERADRES 1000000uaum --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Tokenların Delegasyonunu Kaldırma
+```
+mantrachaind tx staking unbond $(mantrachaind keys show CÜZDANADINIZ --bech val -a) 1000000uaum --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Token Gönderme
+```
+mantrachaind tx bank send GÖNDERENCÜZDAN ALICICÜZDAN 1000000uaum --from CÜZDANADINIZ --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Oylama Katılma
+`
+CÜZDANADI'nızı yazmayı unutmayın. "yes" kısmını eğer hayır oyu kullanacaksanız "no" ile değiştirin.
+`
+```
+mantrachaind tx gov vote 1 yes --from CÜZDANADI --chain-id mantrachain-1 --gas-adjustment 1.4 --gas auto -y
+```
+
+### Zincir Verisini Sıfırlama
+
+```
+mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain --keep-addr-book
+```
+
+## MantraChain Node Silme Komutu
+
+**UYARI! Bu komutu dikkatli kullanın. Önce cüzdanınızı ve priv.validator.key.json dosyanızı yedekleyin, çünkü bu işlem sunucunuzdan MantraChain'i tamamen kaldırır.**
+
+```
+sudo systemctl stop mantrachaind
+sudo systemctl disable mantrachaind
+sudo rm /etc/systemd/system/mantrachaind.service
+sudo systemctl daemon-reload
+rm -f $(which mantrachaind)
+rm -rf .mantrachain
+rm -rf mantrachaind
 ```
