@@ -4,6 +4,8 @@
 
 Bu rehberde, MantraChain node'unu kurma adımlarını bulacaksınız. Bu adımları takip ederek MantraChain node'unu başarıyla kurabilirsiniz. Kolay gelsin..
 
+### Rehberi yıldızlamayı ve forklamayı unutmayın..
+
 ## Gereksinimler
 
 **MantraChain node'unu çalıştırmak için aşağıdaki gereksinimlere sahip olmanız önerilir:**
