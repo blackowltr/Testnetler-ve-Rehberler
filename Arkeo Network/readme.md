@@ -88,3 +88,26 @@ curl -o - -L https://ss-t.arkeo.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar 
 sudo systemctl restart arkeod
 journalctl -u arkeod -f
 ```
+
+## Cüzdan Oluşturma 
+```bash
+arkeod keys add CÜZDANADI 
+```
+
+## Validator Oluşturma
+```bash
+arkeod tx staking create-validator \
+--amount=1000000uarkeo \
+--pubkey=$(arkeod tendermint show-validator) \
+--moniker="NODEADIN" \
+--chain-id=arkeo \
+--commission-rate=0.15 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.01 \
+--min-self-delegation=1 \
+--from=CÜZDANADIN \
+--gas-prices=0.1uarkeo \
+--gas-adjustment=1.5 \
+--gas=auto \
+-y 
+```
