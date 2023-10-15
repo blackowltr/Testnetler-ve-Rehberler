@@ -42,7 +42,7 @@ arkeod version
 ```
 
 ## Node'u Başlat
-Kendi takma adınızı "NodeAdın" ile değiştirin.
+Kendi node adınızı "NodeAdın" ile değiştirin.
 ```bash
 arkeod init NodeAdın --chain-id=arkeo
 ```
