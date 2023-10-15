@@ -41,7 +41,7 @@ mv arkeod /root/go/bin/
 arkeod version
 ```
 
-##Node'u Başlat
+## Node'u Başlat
 Kendi takma adınızı "NodeAdın" ile değiştirin.
 ```bash
 arkeod init NodeAdın --chain-id=arkeo
