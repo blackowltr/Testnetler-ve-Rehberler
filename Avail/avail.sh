@@ -63,14 +63,14 @@ cargo run --locked --release -- --chain kate -d ./output
 sleep 2
 
 # servis oluşturma
-sudo tee /etc/systemd/system/availd.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/availd.service <<EOF
 [Unit]
 Description=Avail Validator
 After=network.target
 StartLimitIntervalSec=0
 [Service]
 User=root
-ExecStart= /root/avail/target/release/data-avail --base-path `pwd`/data --chain kate --name $moniker
+ExecStart=/root/avail/target/release/data-avail --base-path `pwd`/data --chain kate --name $moniker
 Restart=always
 RestartSec=120
 [Install]
