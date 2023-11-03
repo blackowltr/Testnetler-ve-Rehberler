@@ -23,7 +23,7 @@ sudo apt install make clang pkg-config libssl-dev build-essential git screen pro
 sleep 2
 
 # rust
-yes 1 | curl https://sh.rustup.rs -sSf | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 sleep 2
 
 # rust ortam değişkeni ekleme
