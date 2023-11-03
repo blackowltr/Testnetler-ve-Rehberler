@@ -131,6 +131,16 @@ SNAP_NAME=$(curl -s https://ss-t.mantra.nodestake.top/ | egrep -o ">20.*\.tar.lz
 curl -o - -L https://ss-t.mantra.nodestake.top/${SNAP_NAME}  | lz4 -c -d - | tar -x -C $HOME/.mantrachain
 ```
 
+## Peer 
+>Peer sorunu yaşarsanız bu komutu kullanarak peer ekleyebilirsiniz.
+```
+peers=$(curl -s https://ss-t.mantra.nodestake.top/peers.txt)
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.mantrachain/config/config.toml
+
+sudo systemctl restart mantrachaind
+journalctl -u mantrachaind -f
+```
+
 ## Senkronizasyon Kontrolü
 
 Node'unuzun senkronize olup olmadığını kontrol edin:
