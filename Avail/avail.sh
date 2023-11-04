@@ -62,3 +62,5 @@ sleep 2
 # Cargo aracı ile Rust uygulamasını çalıştırma
 cargo run --locked --release -- --chain kate -d ./output
 sleep 2
+
+echo "Kurulum başarıyla tamamlandı. Servis oluşturma adımından devam edin."
