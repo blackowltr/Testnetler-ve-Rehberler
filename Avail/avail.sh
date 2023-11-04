@@ -11,9 +11,6 @@ echo ' ╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═
 echo -e '\e[0m'
 echo ''
 
-# Moniker yazın
-read -p "Lütfen bir moniker girin: " moniker
-
 # Sistem güncelleme 
 sudo apt update
 sudo apt upgrade -y
