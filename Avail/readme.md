@@ -24,7 +24,8 @@ wget https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Avail
 
 ```
 sudo touch /etc/systemd/system/availd.service
-
+```
+```
 sudo nano /etc/systemd/system/availd.service
 ```
 
@@ -45,10 +46,12 @@ WantedBy=multi-user.target
 ```
 ```
 sudo systemctl enable availd.service
-sudo systemctl start availd.service
 ```
 ```
 sudo systemctl start availd.service
+```
+```
+sudo systemctl status availd.service
 ```
 
 ### Log kontrol: 
