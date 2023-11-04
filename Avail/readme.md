@@ -20,7 +20,38 @@ screen -S avail
 wget https://raw.githubusercontent.com/brsbrc/Testnetler-ve-Rehberler/main/Avail/avail.sh && chmod +x avail.sh && ./avail.sh
 ```
 
-Log kontrol: 
+## Servis dosyası oluşturalım.
+
+```
+sudo touch /etc/systemd/system/availd.service
+
+sudo nano /etc/systemd/system/availd.service
+```
+
+## Moniker adınızı düzenlemeyi unutmayın.
+
+```
+[Unit]
+Description=Avail Validator
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+User=root
+ExecStart= /root/avail/target/release/data-avail --base-path `pwd`/data --chain kate --name MONIKERADINIZ
+Restart=always
+RestartSec=120
+[Install]
+WantedBy=multi-user.target
+```
+```
+sudo systemctl enable availd.service
+sudo systemctl start availd.service
+```
+```
+sudo systemctl start availd.service
+```
+
+### Log kontrol: 
 ```
 journalctl -f -u availd
 ```
