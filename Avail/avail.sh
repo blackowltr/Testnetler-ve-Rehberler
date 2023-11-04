@@ -21,7 +21,7 @@ sudo apt install -y make clang pkg-config libssl-dev build-essential git screen 
 sleep 2
 
 # Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl https://sh.rustup.rs -sSf | sh
 sleep 2
 
 # Rust ortam değişkeni ekleme
