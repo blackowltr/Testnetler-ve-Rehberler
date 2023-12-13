@@ -2,6 +2,8 @@
 
 ![image](https://github.com/brsbrc/Testnetler-ve-Rehberler/assets/107190154/d4b4cc0c-e95f-4909-982c-134c56e6a957)
 
+### [Başvuru adresi](https://juneo.com/forms)
+
 ## 1) Node Kurulum
 
 ### 1. Makinemizi güncelleyelim ve kütüphane kurulumlarını tamamlayalım.
