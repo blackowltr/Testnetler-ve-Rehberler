@@ -36,8 +36,8 @@ artelad init "YourNodeName" --chain-id artela_11822-1
 ```
 ## Download Genesis and Addrbook Files
 ```
-curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/genesis.json > $HOME/.artelad/config/genesis.json
-curl -L https://snapshots-testnet.nodejumper.io/artela-testnet/addrbook.json > $HOME/.artelad/config/addrbook.json
+curl -L https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Artela/genesis.json > $HOME/.artelad/config/genesis.json
+curl -L https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Artela/addrbook.json > $HOME/.artelad/config/addrbook.json
 ```
 ## Set Seeds and Peers
 ```
