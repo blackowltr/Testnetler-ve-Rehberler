@@ -9,25 +9,6 @@ check_rpc_connection() {
     fi
 }
 
-# İlerleme gösterme fonksiyonu
-show_progress() {
-    local -r total_loops=20  # Toplam döngü sayısı
-    local -r sleep_time=5    # Bekleme süresi (saniye cinsinden)
-    local current_loop=0
-    local percentage=0
-
-    echo -n 'Processing '
-
-    while [ $current_loop -lt $total_loops ]; do
-        printf '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b%02d%%' "$percentage"
-        sleep "$sleep_time"
-        ((current_loop++))
-        ((percentage = current_loop * 100 / total_loops))
-    done
-
-    printf '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b100%%'
-}
-
 # IP adresini al
 IP=$(wget -qO- eth0.me)
 
@@ -46,7 +27,6 @@ while [ $SUCCESS -eq 0 ]; do
         # Config dosyasını düzenle ve node'u yeniden başlat
         sed -i '/\[rpc\]/,/\[/{s/^laddr = "tcp:\/\/127\.0\.0\.1:/laddr = "tcp:\/\/0.0.0\.0:/}' $HOME/.initia/config/config.toml
         sudo systemctl restart initiad &>/dev/null
-        sleep 5
 
         # Yeniden RPC bağlantısını kontrol et
         check_rpc_connection
@@ -57,16 +37,14 @@ while [ $SUCCESS -eq 0 ]; do
             PORT=${PORT#:} && \
             sudo ufw allow $PORT/tcp &>/dev/null
             sudo systemctl restart initiad &>/dev/null
-            sleep 5
 
             # Son kez RPC bağlantısını kontrol et
             check_rpc_connection
         fi
     fi
-done | show_progress
+done
 
-# İlerleme döngüsünü sonlandır
-echo
+# RPC bağlantısı başarılı oldu
 echo "RPC BAĞLANTISI BAŞARILI"
 echo "Public RPC URL'si: $RPC_URL"
 echo "Beni X'te takip edin: https://x.com/brsbtc"
