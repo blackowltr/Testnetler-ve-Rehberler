@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# RPC bağlantısını kontrol et
+# Fonksiyon: RPC bağlantısını kontrol et
 check_rpc_connection() {
     if curl $RPC_URL/status &>/dev/null; then
         SUCCESS=1
@@ -16,7 +16,7 @@ IP=$(wget -qO- eth0.me)
 RPC_PORT=$(grep -A 3 "\[rpc\]" $HOME/.initia/config/config.toml | grep -oP ":\K[0-9]+")
 RPC_URL="http://$IP:$RPC_PORT"
 
-# Bağlantı başarılı olana kadar döngüye gir
+# Bağlantı başarılı olana kadar döngü
 SUCCESS=0
 while [ $SUCCESS -eq 0 ]; do
     # RPC bağlantısını kontrol et
