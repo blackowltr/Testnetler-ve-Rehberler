@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # Kullanıcıdan teklif numarasını ve cüzdan adını al
-read -p "Lütfen teklif numarasını girin: " PROPOSAL
+read -p "Lütfen teklif numarasını girin (sadece sayılar): " PROPOSAL
+# Sadece sayı girişini kontrol et
+if ! [[ $PROPOSAL =~ ^[0-9]+$ ]]; then
+    echo "Geçersiz giriş. Teklif numarası sadece sayılar içerebilir."
+    exit 1
+fi
+
 read -p "Lütfen cüzdan adını girin: " WALLET
 
 # Kullanıcıya seçenekleri göster ve oy al
