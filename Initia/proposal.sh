@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Kullanıcıdan teklif numarasını ve cüzdan adını al
-read -p "Lütfen teklif numarasını girin (sadece sayılar): " PROPOSAL
+read -p "Lütfen teklif numarasını girin: " PROPOSAL
 # Sadece sayı girişini kontrol et
 if ! [[ $PROPOSAL =~ ^[0-9]+$ ]]; then
     echo "Geçersiz giriş. Teklif numarası sadece sayılar içerebilir."
@@ -40,3 +40,6 @@ esac
 
 # Oy kullanma işlemini gerçekleştir
 initiad tx gov vote $PROPOSAL $VOTE --from $WALLET --chain-id initiation-1 --gas-prices 0.15uinit --gas-adjustment 1.5 --gas auto -y
+
+# Oylamanın başarılı olduğuna dair mesajı yazdır
+echo "Oylama başarıyla gerçekleştirildi. Lütfen X'te takip etmeye devam edin: https://x.com/brsbtc"
