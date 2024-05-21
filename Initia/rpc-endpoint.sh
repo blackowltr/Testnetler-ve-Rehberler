@@ -9,6 +9,21 @@ check_rpc_connection() {
     fi
 }
 
+# İlerleme gösterme fonksiyonu
+show_progress() {
+    local -r delay='0.1'      # İlerlemenin yenilenme sıklığı (saniye cinsinden)
+    local -r chars='/-\|'     # İlerleme karakterleri
+    local i=0
+
+    echo -n 'Processing '
+
+    while true; do
+        printf '\b%s' "${chars:$i:1}"
+        sleep "$delay"
+        ((i = (i + 1) % ${#chars}))
+    done
+}
+
 # IP adresini al
 IP=$(wget -qO- eth0.me)
 
@@ -44,9 +59,7 @@ while [ $SUCCESS -eq 0 ]; do
             check_rpc_connection
         fi
     fi
-done | pv -W > /dev/null
+done | show_progress
 
-# RPC bağlantısı başarılı oldu
-echo -e "\n\033[1;32mRPC BAĞLANTISI BAŞARILI\033[0m"
-echo -e "Public RPC URL'si: $RPC_URL"
-echo -e "\nBeni X'te takip edin: https://x.com/brsbtc"
+# İlerleme döngüsünü sonlandır
+echo -e '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b
