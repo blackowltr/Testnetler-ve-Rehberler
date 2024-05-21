@@ -1,8 +1,4 @@
 #!/bin/bash
-# Bu script, initia-testnet için snapshot alır ve yerel makinede kurar.
-
-# Herhangi bir hata durumunda betiği durdur
-set -e
 
 # initiad'i durdur
 sudo systemctl stop initiad
@@ -17,8 +13,7 @@ initiad tendermint unsafe-reset-all --home $HOME/.initia --keep-addr-book
 sleep 5
 
 # Yedekten geri yükle ve kurulum yap
-(curl -o initia-testnet_latest.tar.lz4 https://snapshots-testnet.nodejumper.io/initia-testnet/initia-testnet_latest.tar.lz4 && \
-lz4 -dc initia-testnet_latest.tar.lz4 | tar -xf - -C $HOME/.initia) &
+(curl -L https://snapshots.kjnodes.com/initia-testnet/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.initia) &
 wait
 sleep 5
 
