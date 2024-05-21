@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Fonksiyon: RPC bağlantısını kontrol et
+check_rpc_connection() {
+    if curl $RPC_URL/status; then
+        SUCCESS=1
+    else
+        SUCCESS=0
+    fi
+}
+
 # IP adresini al
 IP=$(wget -qO- eth0.me)
 
@@ -8,31 +17,28 @@ RPC_PORT=$(grep -A 3 "\[rpc\]" $HOME/.initia/config/config.toml | grep -oP ":\K[
 RPC_URL="http://$IP:$RPC_PORT"
 
 # RPC bağlantısını kontrol et
-if curl $RPC_URL/status; then
-    SUCCESS=1
-else
+check_rpc_connection
+
+# Eğer bağlantı başarısızsa, gerekli işlemleri yap
+if [ "$SUCCESS" = "0" ]; then
     # Config dosyasını düzenle ve node'u yeniden başlat
     sed -i '/\[rpc\]/,/\[/{s/^laddr = "tcp:\/\/127\.0\.0\.1:/laddr = "tcp:\/\/0.0.0\.0:/}' $HOME/.initia/config/config.toml
     sudo systemctl restart initiad
     sleep 5
 
     # Yeniden RPC bağlantısını kontrol et
-    if curl $RPC_URL/status; then
-        SUCCESS=1
-    else
-        # Firewall'u kontrol et ve bağlantı noktasını aç
+    check_rpc_connection
+
+    # Eğer hala bağlantı başarısızsa, firewall'u kontrol et ve bağlantı noktasını aç
+    if [ "$SUCCESS" = "0" ]; then
         PORT=$(grep -A 3 "\[rpc\]" $HOME/.initia/config/config.toml | egrep -o ":[0-9]+") && \
         PORT=${PORT#:} && \
-        echo $PORT
-
         sudo ufw allow $PORT/tcp
         sudo systemctl restart initiad
         sleep 5
 
         # Son kez RPC bağlantısını kontrol et
-        if curl $RPC_URL/status; then
-            SUCCESS=1
-        fi
+        check_rpc_connection
     fi
 fi
 
