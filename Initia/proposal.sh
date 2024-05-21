@@ -43,7 +43,7 @@ TX_RESULT=$(initiad tx gov vote $PROPOSAL $VOTE --from $WALLET --chain-id initia
 
 # TX_RESULT içerisindeki "txhash" bilgisini kontrol et
 if [[ $TX_RESULT =~ "txhash" ]]; then
-    echo "Oylama başarıyla gerçekleştirildi. Lütfen xte takip etmeye devam edin: https://x.com/brsbtc"
+    echo "Oylama başarıyla gerçekleştirildi. Lütfen X'te beni takip edin: https://x.com/brsbtc"
 else
     echo "Oylama işlemi sırasında bir hata oluştu. Lütfen yeniden deneyin."
 fi
