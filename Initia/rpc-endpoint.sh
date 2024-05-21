@@ -27,6 +27,7 @@ while [ $SUCCESS -eq 0 ]; do
         # Config dosyasını düzenle ve node'u yeniden başlat
         sed -i '/\[rpc\]/,/\[/{s/^laddr = "tcp:\/\/127\.0\.0\.1:/laddr = "tcp:\/\/0.0.0\.0:/}' $HOME/.initia/config/config.toml
         sudo systemctl restart initiad &>/dev/null
+        sleep 5
 
         # Yeniden RPC bağlantısını kontrol et
         check_rpc_connection
@@ -37,6 +38,7 @@ while [ $SUCCESS -eq 0 ]; do
             PORT=${PORT#:} && \
             sudo ufw allow $PORT/tcp &>/dev/null
             sudo systemctl restart initiad &>/dev/null
+            sleep 5
 
             # Son kez RPC bağlantısını kontrol et
             check_rpc_connection
@@ -45,6 +47,6 @@ while [ $SUCCESS -eq 0 ]; do
 done
 
 # RPC bağlantısı başarılı oldu
-echo "RPC BAĞLANTISI BAŞARILI"
-echo "Public RPC URL'si: $RPC_URL"
-echo "Beni X'te takip edin: https://x.com/brsbtc"
+echo -e "\n\033[1;32mRPC BAĞLANTISI BAŞARILI\033[0m"
+echo -e "Public RPC URL'si: $RPC_URL"
+echo -e "\nBeni X'te takip edin: https://x.com/brsbtc"
