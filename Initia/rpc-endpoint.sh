@@ -44,7 +44,7 @@ while [ $SUCCESS -eq 0 ]; do
             check_rpc_connection
         fi
     fi
-done
+done | pv -W > /dev/null
 
 # RPC bağlantısı başarılı oldu
 echo -e "\n\033[1;32mRPC BAĞLANTISI BAŞARILI\033[0m"
