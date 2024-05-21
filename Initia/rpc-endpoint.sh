@@ -11,17 +11,21 @@ check_rpc_connection() {
 
 # İlerleme gösterme fonksiyonu
 show_progress() {
-    local -r delay='0.1'      # İlerlemenin yenilenme sıklığı (saniye cinsinden)
-    local -r chars='/-\|'     # İlerleme karakterleri
-    local i=0
+    local -r total_loops=20  # Toplam döngü sayısı
+    local -r sleep_time=5    # Bekleme süresi (saniye cinsinden)
+    local current_loop=0
+    local percentage=0
 
     echo -n 'Processing '
 
-    while true; do
-        printf '\b%s' "${chars:$i:1}"
-        sleep "$delay"
-        ((i = (i + 1) % ${#chars}))
+    while [ $current_loop -lt $total_loops ]; do
+        printf '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b%02d%%' "$percentage"
+        sleep "$sleep_time"
+        ((current_loop++))
+        ((percentage = current_loop * 100 / total_loops))
     done
+
+    printf '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b100%%'
 }
 
 # IP adresini al
@@ -62,4 +66,7 @@ while [ $SUCCESS -eq 0 ]; do
 done | show_progress
 
 # İlerleme döngüsünü sonlandır
-echo -e '\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b
+echo
+echo "RPC BAĞLANTISI BAŞARILI"
+echo "Public RPC URL'si: $RPC_URL"
+echo "Beni X'te takip edin: https://x.com/brsbtc"
