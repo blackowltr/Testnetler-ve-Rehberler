@@ -43,3 +43,6 @@ if [ "$SUCCESS" = "1" ]; then
 else
     echo -e "\n\033[1;31mRPC bağlantısı başarısız oldu.\033[0m"
 fi
+
+# Beni takip et
+echo -e "\nBeni X'te takip edin: https://x.com/brsbtc"
