@@ -12,7 +12,7 @@ if curl $RPC_URL/status; then
     SUCCESS=1
 else
     # Config dosyasını düzenle ve node'u yeniden başlat
-    sed -i '/\[rpc\]/,/\[/{s/^laddr = "tcp:\/\/127\.0\.0\.1:/laddr = "tcp:\/\/0.0.0.0:/}' $HOME/.initia/config/config.toml
+    sed -i '/\[rpc\]/,/\[/{s/^laddr = "tcp:\/\/127\.0\.0\.1:/laddr = "tcp:\/\/0.0.0\.0:/}' $HOME/.initia/config/config.toml
     sudo systemctl restart initiad
     sleep 5
 
@@ -21,8 +21,10 @@ else
         SUCCESS=1
     else
         # Firewall'u kontrol et ve bağlantı noktasını aç
-        PORT=$(grep -A 3 "\[rpc\]" $HOME/.initia/config/config.toml | grep -oP ":\K[0-9]+")
-        PORT=${PORT#:}
+        PORT=$(grep -A 3 "\[rpc\]" $HOME/.initia/config/config.toml | egrep -o ":[0-9]+") && \
+        PORT=${PORT#:} && \
+        echo $PORT
+
         sudo ufw allow $PORT/tcp
         sudo systemctl restart initiad
         sleep 5
