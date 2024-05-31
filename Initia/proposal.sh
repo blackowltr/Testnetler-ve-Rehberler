@@ -39,7 +39,7 @@ case $CHOICE in
 esac
 
 # Oy kullanma işlemini gerçekleştir
-TX_RESULT=$(initiad tx gov vote $PROPOSAL $VOTE --from $WALLET --chain-id initiation-1 --gas-prices 0.15uinit --gas-adjustment 1.5 --gas auto -y)
+TX_RESULT=$(initiad tx gov vote $PROPOSAL $VOTE --from $WALLET --chain-id initiation-1 --fees=563000move/944f8dd8dc49f96c25fea9849f16436dcfa6d564eec802f3ef7f8b3ea85368ff --node https://initia-rpc.blackowl.tech -y)
 
 # TX_RESULT içerisindeki "txhash" bilgisini kontrol et
 if [[ $TX_RESULT =~ "txhash" ]]; then
