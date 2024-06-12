@@ -40,9 +40,9 @@ EOF
 # Step 4: Launch Oracle and Restart Node
 echo "Step 4: Launching Oracle service and restarting Initiad..."
 sudo systemctl daemon-reload
-sudo systemctl enable oracle
-sudo systemctl start oracle
+sudo systemctl enable oracle.service
+sudo systemctl start oracle.service
 sudo systemctl restart initiad
-sudo journalctl -u oracle -f -o cat
+sudo journalctl -u oracle.service -f -o cat
 
 echo “Follow my account X: https://x.com/brsbtc”
