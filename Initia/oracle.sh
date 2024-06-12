@@ -26,7 +26,7 @@ Description=oracle
 [Service]
 Type=simple
 User=$USER
-ExecStart=/usr/bin/slinky --oracle-config-path "$HOME/slinky/config/core/oracle.json" --market-map-endpoint 0.0.0.0:$PORT
+ExecStart=/usr/bin/slinky --oracle-config-path "$HOME/slinky/config/core/oracle.json" --market-map-endpoint 127.0.0.1:$PORT
 Restart=on-abort
 StandardOutput=syslog
 StandardError=syslog
