@@ -42,7 +42,7 @@ echo "Step 4: Launching Oracle service and restarting Initiad..."
 sudo systemctl daemon-reload
 sudo systemctl enable oracle.service
 sudo systemctl start oracle.service
-sudo systemctl restart initiad
+sudo systemctl restart initia.service
 sudo journalctl -u oracle.service -f -o cat
 
 echo “Follow my account X: https://x.com/brsbtc”
