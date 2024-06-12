@@ -15,9 +15,10 @@ sed -i '0,/^enabled *=/{//!b};:a;n;/^enabled *=/!ba;s|^enabled *=.*|enabled = "t
 sed -i -e 's|^oracle_address *=.*|oracle_address = "127.0.0.1:8080"|' "$HOME"/.initia/config/app.toml
 sed -i -e 's|^client_timeout *=.*|client_timeout = "500ms"|' "$HOME"/.initia/config/app.toml
 
-# Step 3: Create Oracle Service
+# Step 3: Create Oracle Service and Define PORT
 echo "Step 3: Creating Oracle service..."
 PORT=$(echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" "$HOME"/.initia/config/app.toml | egrep -o ":[0-9]+" | cut -d ":" -f 2)")
+echo "PORT is set to: $PORT"
 
 sudo tee /etc/systemd/system/oracle.service > /dev/null <<EOF
 [Unit]
