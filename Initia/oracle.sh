@@ -17,8 +17,7 @@ sed -i -e 's|^client_timeout *=.*|client_timeout = "500ms"|' "$HOME"/.initia/con
 
 # Step 3: Create Oracle Service and Define PORT
 echo "Step 3: Creating Oracle service..."
-PORT=$(grep -oP '(?<="port":")[^"]+' /etc/systemd/system/oracle.service | awk '{print $1}')
-echo "PORT is set to: $PORT"
+PORT=$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" ~/.initia/config/app.toml | sed -n 's/.*:\([0-9]\+\).*/\1/p')
 
 sudo tee /etc/systemd/system/oracle.service > /dev/null <<EOF
 [Unit]
@@ -37,6 +36,8 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+
+sudo sed -i "s|--market-map-endpoint [^ ]*|--market-map-endpoint 0.0.0.0:$PORT|" /etc/systemd/system/oracle.service
 
 # Step 4: Launch Oracle and Restart Node
 echo "Step 4: Launching Oracle service and restarting Initiad..."
