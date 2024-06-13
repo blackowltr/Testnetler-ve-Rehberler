@@ -24,12 +24,12 @@ sed -i -e 's|^client_timeout *=.*|client_timeout = "500ms"|' $HOME/.initia/confi
 #### Step 3: Create Oracle Service
 Create a systemd service to manage the Oracle.
 
-# Determine your GRPC port
+#### Determine your GRPC port
 ```bash
 PORT=$(echo "$(curl -s ifconfig.me)$(grep -A 6 "\[grpc\]" $HOME/.initia/config/app.toml | egrep -o ":[0-9]+")")
 ```
 
-# Create the systemd service file
+#### Create the systemd service file
 ```bash
 sudo tee /etc/systemd/system/oracle.service > /dev/null <<EOF
 [Unit]
@@ -61,10 +61,9 @@ sudo systemctl restart initiad
 sudo journalctl -u oracle.service -f -o cat
 ```
 
-### Uninstalling Oracle
+#### Uninstalling Oracle
 If you want to provide instructions for uninstallation:
 
-# Stop and disable Oracle service
 ```bash
 sudo systemctl stop oracle.service
 sudo systemctl disable oracle.service
