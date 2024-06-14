@@ -78,5 +78,5 @@ echo "Verifying the proof..."
 cargo nexus verify
 sleep 1.5  # Wait for 1.5 seconds
 
-echo "Script execution completed."
+echo "Proof completed successfully."
 echo "Don't forget to follow me on X: https://x.com/brsbtc"
