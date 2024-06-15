@@ -23,6 +23,7 @@ if ! command -v rustup &> /dev/null; then
     source "$HOME/.cargo/env"
 else
     echo "Rust is already installed. Skipping installation."
+    source "$HOME/.cargo/env"
 fi
 sleep 1.5  # Wait for 1.5 seconds
 
@@ -80,7 +81,7 @@ fn main() {
 }
 EOF
 
-# Step 6: Run the Program
+# Step 6: Run Your Program
 echo "Running the Nexus Program..."
 cargo nexus run
 sleep 1.5  # Wait for 1.5 seconds
