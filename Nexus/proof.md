@@ -1,12 +1,14 @@
 # Guide to Easily Create Nexus zkVM Proof
 
-### Nexus Proof with one command!
-
+### 1. Nexus Proof with one command!
 ```
 curl -sSL https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Nexus/proof.sh | bash
 ```
+#### Congratulations on successfully creating a Proof! 
 
-## Easy Installation and Execution Guide for Nexus zkVM Proof Using Bash Script
+> You can get information about the script by reading the following articles.
+
+## 2. Easy Installation and Execution Guide for Nexus zkVM Proof Using Bash Script
 
 This guide will help you set up and run the Nexus zkVM project using the provided Bash script. The script installs necessary tools, creates a new Nexus project, and runs a sample program.
 
