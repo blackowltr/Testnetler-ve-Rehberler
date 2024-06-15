@@ -1,66 +1,58 @@
 #!/bin/bash
 
-set -e  # Exit script on any error
+set -e  # Hata alındığında script'i durdur
 
-# Step 1: Install CMAKE
-echo "Installing CMAKE..."
+# CMAKE yükle
+echo "CMAKE yükleniyor..."
 sudo apt install cmake -y
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Step 2: Install Build Essential Package
-echo "Installing Build Essential Package..."
+# Build Essential paketi yükle
+echo "Build Essential paketi yükleniyor..."
 sudo apt update
 sudo apt install build-essential -y
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Step 3: Install Rust and Nexus zkVM
-echo "Installing Rust and Nexus zkVM..."
+# Rust ve Nexus zkVM yükle
+echo "Rust ve Nexus zkVM yükleniyor..."
 
-# Install Rust
+# Rust yükle
 if ! command -v rustup &> /dev/null; then
-    echo "Rust is not installed. Installing Rust..."
+    echo "Rust yüklü değil. Rust yükleniyor..."
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     source "$HOME/.cargo/env"
 else
-    echo "Rust is already installed. Skipping installation."
+    echo "Rust zaten yüklü. Atlanıyor..."
     source "$HOME/.cargo/env"
 fi
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Add RISC-V target
-if ! rustup target list | grep -q 'riscv32i-unknown-none-elf'; then
+# RISC-V hedefini ekle
+if ! rustup target list | grep -q 'riscv32i-unknown-none-elf (installed)'; then
     rustup target add riscv32i-unknown-none-elf
 else
-    echo "RISC-V target already added. Skipping."
+    echo "RISC-V hedefi zaten eklenmiş. Atlanıyor..."
 fi
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Install Nexus zkVM
+# Nexus zkVM yükle
 if ! cargo install --list | grep -q 'nexus-tools'; then
     cargo install --git https://github.com/nexus-xyz/nexus-zkvm nexus-tools --tag 'v1.0.0'
 else
-    echo "Nexus zkVM already installed. Skipping installation."
+    echo "Nexus zkVM zaten yüklü. Atlanıyor..."
 fi
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Verify installation
-echo "Verifying Nexus zkVM installation..."
-cargo nexus --help
-sleep 1.5  # Wait for 1.5 seconds
-
-# Step 4: Create a new Nexus Project
-echo "Creating a new Nexus Project..."
+# Yeni Nexus projesi oluştur
+echo "Yeni Nexus projesi oluşturuluyor..."
 cargo nexus new nexus-project
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Step 5: Navigate to Project Directory and Edit Files
-echo "Navigating to project directory and editing main.rs..."
-
-# Navigate to project directory
+# Proje dizinine gidip main.rs dosyasını düzenle
+echo "Proje dizinine gidiliyor ve main.rs dosyası düzenleniyor..."
 cd nexus-project/src
-sleep 1.5  # Wait for 1.5 seconds
 
-# Edit main.rs file
+# main.rs dosyasını düzenle
 cat << EOF > main.rs
 #![no_std]
 #![no_main]
@@ -81,21 +73,22 @@ fn main() {
 }
 EOF
 
-# Step 6: Run Your Program
-echo "Running the Nexus Program..."
+# Programı çalıştır
+echo "Nexus Programı çalıştırılıyor..."
+cd ..
 cargo nexus run
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Step 7: Prove Your Program
-echo "Generating proof for the Nexus Program..."
+# Program için proof oluştur
+echo "Nexus Programı için proof oluşturuluyor..."
 cargo nexus prove
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Step 8: Verify Your Proof
-echo "Verifying the proof..."
+# Proof'u doğrula
+echo "Proof doğrulanıyor..."
 cargo nexus verify
-sleep 1.5  # Wait for 1.5 seconds
+sleep 1.5
 
-# Final message
-echo "Proof completed successfully."
-echo "Don't forget to follow me on X: https://x.com/brsbtc"
+# Son mesaj
+echo "Script başarıyla tamamlandı."
+echo "Beni X'te takip etmeyi unutma: https://x.com/brsbtc"
