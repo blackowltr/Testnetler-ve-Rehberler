@@ -9,8 +9,11 @@ Testnette kanıt göndermek için aşağıdaki komutu çalıştırarak Aligned'�
 ```bash
 curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/install_aligned.sh | bash
 ```
+```
+source /root/.bashrc
+```
 
-Herhangi bir sorun yaşarsanız, aynı komutu çalıştırarak güncelleme yapabilirsiniz.
+> Herhangi bir sorun yaşarsanız, aynı komutu çalıştırarak güncelleme yapabilirsiniz.
 
 ## Örnek SP1 Kanıt Dosyalarını İndir
 
