@@ -5,7 +5,7 @@
 | **Staking Hedefi**           | Token arzının %40'ı                         |
 | **Maksimum Staking Enflasyonu**| Başlangıçta %0, en fazla %5                  |
 | **Unbonding Süresi**         | 14 gün                                      |
-| **Doğrulayıcı Eşiği**        | Minimum 10k NAM gerekli                     |
+| **Validatör Eşiği**        | Minimum 10k NAM gerekli                     |
 | **Jailing Eşiği**            | Ardışık 15 saatlik çevrimdışı süre          |
 | **Slashing**                    | Hatalı miktarla üssel olarak orantılı, minimum %0.1 |
 | **Aktif Validatörler**     | 255                                         |
