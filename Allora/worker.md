@@ -1,19 +1,10 @@
 # Allora Price Prediction Worker Node Kurulumu
 
-## Sitemi Güncelleme
+## Sistemi Güncelleme, Python Kurulumu ve Gerekli Kütüphanelerin Kurulması
 ```shell
 apt update && apt upgrade -y
-```
-
-## Gerekli Kütüphanelerin Kurulması
-```shell
+sudo apt install python3 && sudo apt install python3-pip
 apt install ca-certificates curl gnupg lsb-release git htop liblz4-tool screen wget make jq gcc unzip lz4 build-essential pkg-config libssl-dev libreadline-dev libffi-dev zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev -y < "/dev/null"
-```
-
-## Phyton Kurulumu
-```shell
-apt install python3
-apt install python3-pip
 ```
 
 ## Docker Kurulumu
@@ -24,8 +15,8 @@ sudo sh get-docker.sh
 
 ## Docker Compose Kurulumu
 ```shell
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
 ### Go Kuralım
