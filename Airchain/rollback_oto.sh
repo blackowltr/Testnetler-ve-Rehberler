@@ -64,5 +64,5 @@ do
     fi
 
     # 1 saat bekle
-    sleep 3600
+    sleep 1800
 done
