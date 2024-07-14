@@ -13,7 +13,7 @@ screen -S fix
 cd tracks
 ```
 
-## 2. Script Dosyasını Oluşturun
+## 2. Script Dosyasını Sunucunuza Çekin
 
 Script dosyasını oluşturmak için aşağıdaki komutu çalıştırarak gerekli dosyayı indirin:
 
