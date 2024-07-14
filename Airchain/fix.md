@@ -21,11 +21,7 @@ Script dosyasını oluşturmak için aşağıdaki komutu çalıştırarak gerekl
 wget -q -O /root/tracks/fix.sh https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Airchain/fix.sh  
 ```
 
-## 3. Dosyayı Kaydedin ve Kapayın
-
-Dosyayı kaydetmek ve editörden çıkmak için sırasıyla `CTRL + X`, `Y` ve `Enter` tuşlarına basın.
-
-## 4. Scripti Çalıştırın
+## 3. Scripti Çalıştırın
 
 Son olarak, scripti çalıştırmak için aşağıdaki komutları uygulayın:
 
