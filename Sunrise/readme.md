@@ -1,5 +1,7 @@
 # Sunrise Testnet Kılavuzu
 
+![Sunrise](https://github.com/user-attachments/assets/483346fb-0037-4b64-89bc-61c118281479)
+
 Hey Sunrisers! 🌅
 
 Sunrise Awakening Testnet'e hoş geldiniz! Bu kılavuz, teşvikli testnetimize katılmak ve testnet uygulamasını kullanmaya başlamak için bilmeniz gereken her şeyi size anlatacak.
