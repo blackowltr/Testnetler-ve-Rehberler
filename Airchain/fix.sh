@@ -4,7 +4,7 @@
 while true
 do
     # Log dosyasını kontrol et
-    if journalctl -u tracksd -n 100 --no-pager --no-hostname -o cat | grep -Eq "rpc error: code = Unknown desc = failed to execute message|Failed to get transaction by hash: not found"; then
+    if journalctl -u tracksd -n 100 --no-pager --no-hostname -o cat | grep -Eq "rpc error: code = Unknown desc = failed to execute message|Failed to get transaction by hash: not found|Retrying the transaction after 10 seconds..."; then
         echo "Hata bulundu, işlemler başlatılıyor..."
 
         # Servisleri durdur
@@ -60,9 +60,9 @@ do
 
         echo "İşlemler tamamlandı."
     else
-        echo "Hata bulunamadı, kontrol için 5 dakika bekleniyor..."
+        echo "Hata bulunamadı, kontrol için 2 dakika bekleniyor..."
     fi
 
-    # 5 dakika bekle
-    sleep 300
+    # 2 dakika bekle
+    sleep 120
 done
