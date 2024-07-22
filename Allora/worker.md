@@ -251,9 +251,6 @@ docker compose build
 docker compose up -d
 ```
 
-🚨 Ben başlatınca aşağıdaki hatayı aldım. Yukarıdaki docker-compose.yml dosyasın düzenlemesinde portlarla ilişkili mi anlayamadım.
-![image](https://github.com/koltigin/Allora-Price-Prediction-Worker-Node/assets/102043225/bc7469e3-8cad-445d-8519-f94862f78bdf)
-
 ### Node Kontrolü
 
 Allora docker konteynır (`basic-coin-prediction-node`) id'sini almak için aşağıdaki kodu girin.  
