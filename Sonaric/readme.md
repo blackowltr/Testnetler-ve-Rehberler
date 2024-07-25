@@ -11,7 +11,7 @@
 
 ### Kurulum
 ```shell
-wget -O - https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Sonaric/sonaric.sh | bash
+wget -qO - https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Sonaric/sonaric.sh | bash
 ```
 
 ### Yedekleme
