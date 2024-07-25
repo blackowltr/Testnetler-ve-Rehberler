@@ -23,3 +23,14 @@ sonaric identity-export -o mysonaric.identity
 ```shell
 sonaric points
 ```
+## Operator Rolü Alma
+
+Discord'a gidin: https://discord.gg/Ngn5faGa
+
+Herhangi bir chatte gelin /addnode yazın ve enter'layın.
+
+Çıkan kodu aşağıdaki komuta yazın.
+
+```shell
+ curl -sSL http://get.sonaric.xyz/scripts/register.sh | bash -s -- KODYAZBURAYA 
+```
