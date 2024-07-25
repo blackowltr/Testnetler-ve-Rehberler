@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Renkli ve vurgulu açılış mesajı
+# giriş
 echo -e ''
 echo -e '\e[40m\e[92m'
 echo ' ██████╗ ██╗      █████╗  ██████╗██╗  ██╗ ██████╗ ██╗    ██╗██╗'     
@@ -91,5 +91,5 @@ if [ "$change_moniker" == "y" ]; then
     echo -e '\e[32mMoniker adı başarıyla değiştirildi.\e[0m'
 fi
 
-# Kapanış mesajı
+# Kapanış
 echo -e '\e[32mHerhangi bir sorun yaşarsanız destek için benimle iletişime geçin ve beni X\'te takip etmeyi unutmayın. https://x.com/brsbtc\e[0m'
