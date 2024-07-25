@@ -66,7 +66,7 @@ if [ "$user_choice" == "1" ]; then
     # Node'un başarıyla kurulduğunu kontrol etme
     echo -e '\e[34mNode Kurulumunu Kontrol Etme\e[0m'
     sonaric node-info
-    if [ $? -ne 0 ]; then
+    if [ $? -ne 0 ];then
         echo -e '\e[31mNode kurulumu kontrolü başarısız oldu. Lütfen tekrar deneyin.\e[0m'
         exit 1
     fi
@@ -83,10 +83,6 @@ if [ "$user_choice" == "1" ]; then
     fi
     echo -e '\e[32mGUI başarıyla çalıştırıldı.\e[0m'
 
-    # Kapanış mesajı
-    echo -e '\e[32mEğer herhangi bir sorunla karşılaşırsanız, lütfen benimle iletişime geçin ve beni X üzerinde takip etmeyi unutmayın: https://x.com/brsbtc\e[0m'
-
-elif [ "$user_choice" == "2" ]; then
     # Sunucu bilgilerini yedekleme
     echo -e '\e[34mSunucu Bilgilerini Yedekleme\e[0m'
     sonaric identity-export -o mysonaric.identity
@@ -108,9 +104,35 @@ elif [ "$user_choice" == "2" ]; then
         fi
         echo -e '\e[32mMoniker ismi başarıyla değiştirildi.\e[0m'
     fi
+
+    # Kapanış mesajı
+    echo -e '\e[32mEğer herhangi bir sorunla karşılaşırsanız, lütfen benimle iletişime geçin ve beni X üzerinde takip etmeyi unutmayın: https://x.com/brsbtc\e[0m'
+
+elif [ "$user_choice" == "2" ]; then
+    # Sunucu bilgilerini yedekleme
+    echo -e '\e[34mSunucu Bilgilerini Yedekleme\e[0m'
+    sonaric identity-export -o mysonaric.identity
+    if [ $? -ne 0 ]; then
+        echo -e '\e[31mSunucu bilgilerini yedekleme başarısız oldu. Lütfen tekrar deneyin.\e[0m'
+        exit 1
+    fi
+    echo -e '\e[32mSunucu bilgileri başarıyla yedeklendi.\e[0m'
+
+    # Kullanıcıya Moniker ismini değiştirmek isteyip istemediğini sorma
+    echo -e '\e[34mMoniker ismini değiştirmek ister misiniz? (y/n)\e[0m'
+    read -p "Cevabınız: " change_moniker
+
+    if [ "$change_moniker" == "y" ]; then
+        sonaric node-rename
+        if [ $? -ne 0 ]; then
+
+
+            echo -e '\e[31mMoniker ismini değiştirme başarısız oldu. Lütfen tekrar deneyin.\e[0m'
+            exit 1
+        fi
+        echo -e '\e[32mMoniker ismi başarıyla değiştirildi.\e[0m'
+    fi
 else
     echo -e '\e[31mGeçersiz seçim. Lütfen 1 veya 2 seçin.\e[0m'
     exit 1
 fi
-
-echo -e '\e[32mYedekleme işlemini başarıyla  tamamladınız.\e[0m'
