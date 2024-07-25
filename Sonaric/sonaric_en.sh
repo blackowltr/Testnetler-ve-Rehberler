@@ -41,14 +41,14 @@ if [ $? -ne 0 ]; then
 fi
 echo -e '\e[32mRequired packages installed successfully.\e[0m'
 
-# Download required files
-echo -e '\e[34mDownloading Required Files\e[0m'
-wget https://raw.githubusercontent.com/Testnetnodes/Sonaric-Network/main/sonaric.sh && chmod +x sonaric.sh && ./sonaric.sh
+# Download and run the Sonaric installation script
+echo -e '\e[34mDownloading and Running Sonaric Installation Script\e[0m'
+wget https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Sonaric/sonaric.sh -O sonaric.sh && chmod +x sonaric.sh && ./sonaric.sh
 if [ $? -ne 0 ]; then
-    echo -e '\e[31mFile download failed. Please try again.\e[0m'
+    echo -e '\e[31mSonaric installation script execution failed. Please try again.\e[0m'
     exit 1
 fi
-echo -e '\e[32mRequired files downloaded successfully.\e[0m'
+echo -e '\e[32mSonaric installation script executed successfully.\e[0m'
 
 # Check if the node is successfully installed
 echo -e '\e[34mChecking Node Installation\e[0m'
@@ -62,6 +62,7 @@ echo -e '\e[32mNode installation checked successfully.\e[0m'
 # Run the GUI
 echo -e '\e[34mRunning the GUI\e[0m'
 IP=$(wget -qO- eth0.me)
+echo -e '\e[33mPlease enter your server password to proceed.\e[0m'
 ssh -L 127.0.0.1:44003:127.0.0.1:44003 -L 127.0.0.1:44004:127.0.0.1:44004 -L 127.0.0.1:44005:127.0.0.1:44005 -L 127.0.0.1:44006:127.0.0.1:44006 root@$IP
 if [ $? -ne 0 ]; then
     echo -e '\e[31mRunning the GUI failed. Please try again.\e[0m'
