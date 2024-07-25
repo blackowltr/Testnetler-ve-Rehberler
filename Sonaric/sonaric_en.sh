@@ -43,7 +43,7 @@ echo -e '\e[32mRequired packages installed successfully.\e[0m'
 
 # Download and run the Sonaric installation script
 echo -e '\e[34mDownloading and Running Sonaric Installation Script\e[0m'
-wget https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/main/Sonaric/sonaric.sh -O sonaric.sh && chmod +x sonaric.sh && ./sonaric.sh
+wget https://raw.githubusercontent.com/Testnetnodes/Sonaric-Network/main/sonaric.sh && chmod +x sonaric.sh && ./sonaric.sh
 if [ $? -ne 0 ]; then
     echo -e '\e[31mSonaric installation script execution failed. Please try again.\e[0m'
     exit 1
