@@ -7,28 +7,7 @@ exec 2>&1
 
 # Ana fonksiyon
 main() {
-    selection_screen
-    case "$user_choice" in
-        1)
-            perform_installation
-            ;;
-        2)
-            perform_backup
-            ;;
-        *)
-            printf "\e[31mGeçersiz seçim. Lütfen 1 veya 2 seçin.\e[0m\n" >&2
-            exit 1
-            ;;
-    esac
-}
-
-# Seçim ekranı
-selection_screen() {
-    printf "\e[34mSonaric Node Kurulum Rehberi'ne Hoş Geldiniz!\e[0m\n"
-    printf "\e[34mLütfen yapmak istediğiniz işlemi seçin:\e[0m\n"
-    printf "\e[34m1) Kurulum\e[0m\n"
-    printf "\e[34m2) Kurulum Sonrası Yedekleme\e[0m\n"
-    read -rp "Seçiminiz (1/2): " user_choice
+    perform_installation
 }
 
 # Kurulum işlemi
@@ -40,13 +19,6 @@ perform_installation() {
     check_node_installation
     run_gui
     print_closing_message
-}
-
-# Yedekleme işlemi
-perform_backup() {
-    check_sonaric_command
-    backup_server_info
-    prompt_moniker_change
 }
 
 # Hoş geldiniz mesajı
@@ -135,38 +107,6 @@ run_gui() {
 # Kapanış mesajı
 print_closing_message() {
     printf "\e[32mEğer herhangi bir sorunla karşılaşırsanız, lütfen benimle iletişime geçin ve beni X üzerinde takip etmeyi unutmayın: https://x.com/brsbtc\e[0m\n"
-}
-
-# Sunucu bilgilerini yedekleme
-backup_server_info() {
-    printf "\e[34mSunucu Bilgilerini Yedekleme\e[0m\n"
-    if ! sonaric identity-export -o mysonaric.identity; then
-        printf "\e[31mSunucu bilgilerini yedekleme başarısız oldu. Lütfen tekrar deneyin.\e[0m\n" >&2
-        exit 1
-    fi
-    printf "\e[32mSunucu bilgileri başarıyla yedeklendi.\e[0m\n"
-}
-
-# Sonaric komutunun kurulu olup olmadığını kontrol etme
-check_sonaric_command() {
-    if ! command -v sonaric &> /dev/null; then
-        printf "\e[31mSonaric komutu bulunamadı. PATH'e ekleyip tekrar deneyin.\e[0m\n" >&2
-        exit 1
-    fi
-}
-
-# Kullanıcıya Moniker ismini değiştirmek isteyip istemediğini sorma
-prompt_moniker_change() {
-    printf "\e[34mMoniker değiştirmek ister misiniz? (y/n)\e[0m\n"
-    read -rp "Cevabınız: " change_moniker
-
-    if [[ "$change_moniker" == "y" ]]; then
-        if ! sonaric node-rename; then
-            printf "\e[31mMoniker değiştirme başarısız oldu. Lütfen tekrar deneyin.\e[0m\n" >&2
-            exit 1
-        fi
-        printf "\e[32mMoniker ismi başarıyla değiştirildi.\e[0m\n"
-    fi
 }
 
 main
