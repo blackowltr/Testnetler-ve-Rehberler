@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Kullanıcıdan Private Key'i al
-read -p "Lütfen private key'inizi girin: " PRIVATE_KEY_LOCAL
+# Kullanıcıdan Private Key'i al, girilen karakterleri gizle
+read -s -p "Lütfen private key'inizi girin: " PRIVATE_KEY_LOCAL
+echo  # Satır başına geçiş için eklenmiştir.
 
 # Sistemi güncelleyin ve gerekli paketleri yükleyin
 sudo apt update && sudo apt upgrade -y
