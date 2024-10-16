@@ -2,7 +2,7 @@
 
 ## Oto Kurulum
 
-Aşağıdaki komut ile kurulum işlemlerini hızlıca gerçekleştirebilirsiniz. Bu komut, scripti indirip çalıştırır ve gerekli adımları sizin için otomatik olarak yapar. 
+Aşağıdaki komut ile kurulum işlemlerini hızlıca gerçekleştirebilirsiniz.
 
 > **Not:** Private key'inizi girerken güvenlik amacıyla yazdığınız karakterler görünmeyecektir. Bu durum normaldir; bir sorun olduğunu düşünmeyin, girişiniz kaydediliyor.
 
@@ -19,6 +19,13 @@ Daha sonra, tekrar `screen -S executor` komutunu girin ve devam edin:
 
 ```shell
 bash <(curl -s https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/refs/heads/main/t3rn/t3rn.sh)
+```
+
+### Önemli Uyarılar
+- **Executor'ı çalıştırdıktan sonra sunucudan ayrılmak isterseniz, `Ctrl + A` tuşlarına basın, ardından `D` tuşuna basarak ayrılabilirsiniz.**
+- **Tekrar `screen` oturumuna dönmek istediğinizde, aşağıdaki komutu kullanın:**
+```shell
+screen -r executor
 ```
 ---
 
