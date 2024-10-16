@@ -33,45 +33,65 @@ screen -r executor
 
 ## Manuel Kurulum 
 
-1. İlk olarak, executor binary'sini indirip çıkarın:
+1. **Executor binary'sini indirin ve çıkarın:**
+
    ```bash
-   wget https://github.com/t3rn/executor-release/releases/download/v0.21.7/executor-linux-v0.21.7.tar.gz
-   tar -xvzf executor-linux-v0.21.7.tar.gz
+   wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
+   tar -xvzf executor-linux-v0.21.8.tar.gz
    cd /root/executor/executor/bin
    ```
 
-2. Testnet olarak ayarlayın:
+2. **Servisi oluşturun:**
+
+   Aşağıdaki komutu çalıştırarak `executor.service` dosyasını oluşturun:
+
    ```bash
-   export NODE_ENV=testnet
+   sudo tee /etc/systemd/system/executor.service > /dev/null <<EOF
+   [Unit]
+   Description=Executor Service
+   After=network-online.target
+   
+   [Service]
+   User=$USER
+   WorkingDirectory=$HOME/executor/executor/bin
+   ExecStart=$HOME/executor/executor/bin/executor
+   Environment="NODE_ENV=testnet"
+   Environment="LOG_LEVEL=debug"
+   Environment="LOG_PRETTY=false"
+   Environment="EXECUTOR_PROCESS_ORDERS=true"
+   Environment="EXECUTOR_PROCESS_CLAIMS=true"
+   Environment="PRIVATE_KEY_LOCAL=buraya"  # Kendi private key'inizi buraya ekleyin
+   Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn"
+   Restart=on-failure
+   RestartSec=5
+   LimitNOFILE=65535
+   
+   [Install]
+   WantedBy=multi-user.target
+   EOF
    ```
 
-3. Log seviyelerini ve format tercihlerini ayarlayın:
+   **Not:** `PRIVATE_KEY_LOCAL` kısmına *mutlaka kendi private key'inizi eklemeyi unutmayın*. Bu adım çok kritik!
+
+3. **Servisi Başlatın:**
+
+   Servisi aktif hale getirip başlatmak için şu adımları izleyin:
+
    ```bash
-   export LOG_LEVEL=debug
-   export LOG_PRETTY=false
+   sudo systemctl daemon-reload
+   sudo systemctl enable executor
+   sudo systemctl start executor
    ```
 
-4. Order ve claim işleme seçeneklerini aktif edin:
+4. **Durumu Kontrol Edin:**
+
+   Executor servisi doğru bir şekilde çalışıyor mu görmek için log kontrol edin:
+
    ```bash
-   export EXECUTOR_PROCESS_ORDERS=true
-   export EXECUTOR_PROCESS_CLAIMS=true
+   sudo journalctl -u executor.service
    ```
 
-5. Buraya kendi private key'inizi yazın:
-   ```bash
-   export PRIVATE_KEY_LOCAL=buraya
-   ```
+### Ek Bilgi:
+Test token'ları almak için [Faucet](https://faucet.brn.t3rn.io/) kullanabilirsiniz.
 
-6. Desteklenen ağları etkinleştirin:
-   ```bash
-   export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
-   ```
-
-7. Son olarak, executor'ü çalıştırın:
-   ```bash
-   ./executor
-   ```
-
-Test token için [Faucet](https://faucet.brn.t3rn.io/) kullanabilirsiniz.
-
-Beni X'te [takip etmeyi](https://x.com/brsbtc) unutmayın!
+Ayrıca beni X'te [takip edebilirsiniz](https://x.com/brsbtc)!
