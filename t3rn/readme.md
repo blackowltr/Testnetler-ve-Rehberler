@@ -41,54 +41,36 @@ screen -r executor
    cd /root/executor/executor/bin
    ```
 
-2. **Servisi oluşturun:**
-
-   Aşağıdaki komutu çalıştırarak `executor.service` dosyasını oluşturun:
-
+2. **Ortamı testnet olarak ayarlayın:**
    ```bash
-   sudo tee /etc/systemd/system/executor.service > /dev/null <<EOF
-   [Unit]
-   Description=Executor Service
-   After=network-online.target
-   
-   [Service]
-   User=$USER
-   WorkingDirectory=$HOME/executor/executor/bin
-   ExecStart=$HOME/executor/executor/bin/executor
-   Environment="NODE_ENV=testnet"
-   Environment="LOG_LEVEL=debug"
-   Environment="LOG_PRETTY=false"
-   Environment="EXECUTOR_PROCESS_ORDERS=true"
-   Environment="EXECUTOR_PROCESS_CLAIMS=true"
-   Environment="PRIVATE_KEY_LOCAL=buraya"  # Kendi private key'inizi buraya ekleyin
-   Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn"
-   Restart=on-failure
-   RestartSec=5
-   LimitNOFILE=65535
-   
-   [Install]
-   WantedBy=multi-user.target
-   EOF
+   export NODE_ENV=testnet
    ```
 
-   **Not:** `PRIVATE_KEY_LOCAL` kısmına *mutlaka kendi private key'inizi eklemeyi unutmayın*. Bu adım çok kritik!
-
-3. **Servisi Başlatın:**
-
-   Servisi aktif hale getirip başlatmak için şu adımları izleyin:
-
+3. **Log seviyelerini ve format tercihlerinizi ayarlayın:**
    ```bash
-   sudo systemctl daemon-reload
-   sudo systemctl enable executor
-   sudo systemctl start executor
+   export LOG_LEVEL=debug
+   export LOG_PRETTY=false
    ```
 
-4. **Durumu Kontrol Edin:**
-
-   Executor servisi doğru bir şekilde çalışıyor mu görmek için log kontrol edin:
-
+4. **Order ve claim işleme seçeneklerini aktif hale getirin:**
    ```bash
-   sudo journalctl -u executor.service
+   export EXECUTOR_PROCESS_ORDERS=true
+   export EXECUTOR_PROCESS_CLAIMS=true
+   ```
+
+5. **Private keyinizi yazın (buraya yazan kısma kendi private key'inizi yazın):**
+   ```bash
+   export PRIVATE_KEY_LOCAL=buraya
+   ```
+
+6. **Desteklenen ağları etkinleştirin:**
+   ```bash
+   export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+   ```
+
+7. **Son olarak, executor'ü çalıştırın:**
+   ```bash
+   ./executor
    ```
 
 ### Ek Bilgi:
