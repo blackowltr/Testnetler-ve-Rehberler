@@ -1,45 +1,34 @@
 #!/bin/bash
 
-# Kullanıcıdan özel anahtarı al (gizli olarak)
-read -s -p "Lütfen private keyinizi girin: " PRIVATE_KEY
-echo  # Satır sonu ekle
+# Kullanıcıdan Private Key'i al, girilen karakterleri gizle
+read -s -p "Lütfen private key'inizi girin: " PRIVATE_KEY_LOCAL
+echo  # Satır başına geçiş için eklenmiştir.
+
+# Sistemi güncelleyin ve gerekli paketleri yükleyin
+sudo apt update && sudo apt upgrade -y
+sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 # Executor binary'sini indirin ve çıkarın
 wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
 tar -xvzf executor-linux-v0.21.8.tar.gz
+cd /root/executor/executor/bin
 
-# Çalışma dizinine git
-cd /root/executor/executor/bin || exit
+# Testnet ayarları
+export NODE_ENV=testnet
 
-# Service dosyasını oluşturun
-sudo tee /etc/systemd/system/executor.service > /dev/null <<EOF
-[Unit]
-Description=Executor Service
-After=network-online.target
+# Log seviyeleri ve format tercihleri
+export LOG_LEVEL=debug
+export LOG_PRETTY=false
 
-[Service]
-User=$USER
-WorkingDirectory=$HOME/executor/executor/bin
-ExecStart=$HOME/executor/executor/bin/executor
-Environment="NODE_ENV=testnet"
-Environment="LOG_LEVEL=debug"
-Environment="LOG_PRETTY=false"
-Environment="EXECUTOR_PROCESS_ORDERS=true"
-Environment="EXECUTOR_PROCESS_CLAIMS=true"
-Environment="PRIVATE_KEY_LOCAL=${PRIVATE_KEY}" 
-Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn"
-Restart=on-failure
-RestartSec=5
-LimitNOFILE=65535
+# Order ve claim işleme seçenekleri
+export EXECUTOR_PROCESS_ORDERS=true
+export EXECUTOR_PROCESS_CLAIMS=true
 
-[Install]
-WantedBy=multi-user.target
-EOF
+# Kullanıcının girdiği private key'i ayarlayın
+export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 
-# Servisi başlat
-sudo systemctl daemon-reload
-sudo systemctl enable executor
-sudo systemctl start executor
+# Desteklenen ağları etkinleştirin
+export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
 
-# Durumu kontrol et
-echo "Executor servisi başlatıldı. Durumu kontrol etmek için logları inceleyin:"
+# Executor'ü çalıştırın
+./executor
