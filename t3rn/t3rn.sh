@@ -9,8 +9,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 # Executor binary'sini indirin ve çıkarın
-wget https://github.com/t3rn/executor-release/releases/download/v0.21.7/executor-linux-v0.21.7.tar.gz
-tar -xvzf executor-linux-v0.21.7.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
+tar -xvzf executor-linux-v0.21.8.tar.gz
 cd /root/executor/executor/bin
 
 # Testnet ayarları
