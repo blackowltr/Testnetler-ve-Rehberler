@@ -7,7 +7,7 @@
    cd /root/executor/executor/bin
    ```
 
-2. Ortamı testnet olarak ayarlayın:
+2. Testnet olarak ayarlayın:
    ```bash
    export NODE_ENV=testnet
    ```
