@@ -43,4 +43,3 @@ sudo systemctl start executor
 
 # Durumu kontrol et
 echo "Executor servisi başlatıldı. Durumu kontrol etmek için logları inceleyin:"
-sudo journalctl -u executor.service
