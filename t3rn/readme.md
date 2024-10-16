@@ -1,4 +1,6 @@
-# Executor Kurulum Rehberi
+# Executor Kurulum Rehberi (t3rn)
+
+![image](https://github.com/user-attachments/assets/373769eb-4416-44bd-9d6a-9d9fcb4363e7)
 
 ## Oto Kurulum
 
