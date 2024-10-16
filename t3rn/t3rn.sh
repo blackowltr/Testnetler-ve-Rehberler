@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Kullanıcıdan özel anahtarı al (gizli olarak)
-read -s -p "Lütfen private key'inizi girin: " PRIVATE_KEY
+read -s -p "Lütfen private keyinizi girin: " PRIVATE_KEY
 echo  # Satır sonu ekle
 
 # Executor binary'sini indirin ve çıkarın
@@ -26,7 +26,7 @@ Environment="LOG_LEVEL=debug"
 Environment="LOG_PRETTY=false"
 Environment="EXECUTOR_PROCESS_ORDERS=true"
 Environment="EXECUTOR_PROCESS_CLAIMS=true"
-Environment="PRIVATE_KEY_LOCAL=${PRIVATE_KEY}"  # Kullanıcıdan alınan özel anahtar
+Environment="PRIVATE_KEY_LOCAL=${PRIVATE_KEY}" 
 Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn"
 Restart=on-failure
 RestartSec=5
