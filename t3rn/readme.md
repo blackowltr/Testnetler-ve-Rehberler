@@ -24,7 +24,7 @@
    export EXECUTOR_PROCESS_CLAIMS=true
    ```
 
-5. Özel anahtarını ayarlayın (buraya kendi private key'inizi yazın):
+5. Buraya kendi private key'inizi yazın:
    ```bash
    export PRIVATE_KEY_LOCAL=buraya
    ```
