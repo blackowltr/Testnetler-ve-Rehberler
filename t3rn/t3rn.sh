@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Kullanıcıdan özel anahtarı al
-read -p "Lütfen private key'inizi girin: " PRIVATE_KEY
+# Kullanıcıdan özel anahtarı al (gizli olarak)
+read -s -p "Lütfen özel anahtarınızı girin: " PRIVATE_KEY
+echo  # Satır sonu ekle
 
 # Executor binary'sini indirin ve çıkarın
 wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
