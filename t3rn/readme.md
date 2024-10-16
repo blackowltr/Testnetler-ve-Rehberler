@@ -1,4 +1,16 @@
-# Kurulum 
+# Executor Kurulum Rehberi
+
+## Oto Kurulum
+
+Aşağıdaki komut ile kurulum işlemlerini hızlıca gerçekleştirebilirsiniz. Bu komut, scripti indirip çalıştırır ve gerekli adımları sizin için otomatik olarak yapar.
+> Private key'inizi girerken güvenlik amacıyla yazdığınız karakterler görünmeyecektir. Bu durum normaldir; bir sorun olduğunu düşünmeyin, girişiniz kaydediliyor.
+```shell
+bash <(curl -s https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/refs/heads/main/t3rn/t3rn.sh)
+```
+
+---
+
+## Manuel Kurulum 
 
 1. İlk olarak, executor binary'sini indirip çıkarın:
    ```bash
@@ -40,3 +52,5 @@
    ```
 
 Test token için [Faucet](https://link_to_faucet) kullanabilirsiniz.
+
+Beni X'te [takip etmeyi](https://x.com/brsbtc) unutmayın!
