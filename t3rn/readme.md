@@ -2,12 +2,24 @@
 
 ## Oto Kurulum
 
-Aşağıdaki komut ile kurulum işlemlerini hızlıca gerçekleştirebilirsiniz. Bu komut, scripti indirip çalıştırır ve gerekli adımları sizin için otomatik olarak yapar.
-> Private key'inizi girerken güvenlik amacıyla yazdığınız karakterler görünmeyecektir. Bu durum normaldir; bir sorun olduğunu düşünmeyin, girişiniz kaydediliyor.
+Aşağıdaki komut ile kurulum işlemlerini hızlıca gerçekleştirebilirsiniz. Bu komut, scripti indirip çalıştırır ve gerekli adımları sizin için otomatik olarak yapar. 
+
+> **Not:** Private key'inizi girerken güvenlik amacıyla yazdığınız karakterler görünmeyecektir. Bu durum normaldir; bir sorun olduğunu düşünmeyin, girişiniz kaydediliyor.
+
+```shell
+screen -S executor
+```
+
+Eğer yukarıdaki komutu çalıştırırken hata alırsanız, `screen` paketinin kurulu olup olmadığını kontrol edin. Aşağıdaki komutu kullanarak `screen` paketini yükleyebilirsiniz:
+```shell
+sudo apt install screen
+```
+
+Daha sonra, tekrar `screen -S executor` komutunu girin ve devam edin:
+
 ```shell
 bash <(curl -s https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/refs/heads/main/t3rn/t3rn.sh)
 ```
-
 ---
 
 ## Manuel Kurulum 
