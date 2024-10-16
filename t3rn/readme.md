@@ -72,6 +72,6 @@ screen -r executor
    ./executor
    ```
 
-Test token için [Faucet](https://link_to_faucet) kullanabilirsiniz.
+Test token için [Faucet](https://faucet.brn.t3rn.io/) kullanabilirsiniz.
 
 Beni X'te [takip etmeyi](https://x.com/brsbtc) unutmayın!
