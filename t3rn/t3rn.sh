@@ -9,8 +9,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
 
 # Executor binary'sini indirin ve çıkarın
-wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
-tar -xvzf executor-linux-v0.21.8.tar.gz
+wget https://github.com/t3rn/executor-release/releases/download/v0.21.10/executor-linux-v0.21.10.tar.gz
+tar -xvzf executor-linux-v0.21.10.tar.gz
 cd /root/executor/executor/bin
 
 # Testnet ayarları
@@ -21,7 +21,7 @@ export LOG_LEVEL=debug
 export LOG_PRETTY=false
 
 # Order ve claim işleme seçenekleri
-export EXECUTOR_PROCESS_ORDERS=true
+export EXECUTOR_PROCESS_ORDERS=false
 export EXECUTOR_PROCESS_CLAIMS=true
 
 # Kullanıcının girdiği private key'i ayarlayın
