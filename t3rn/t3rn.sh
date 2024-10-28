@@ -11,7 +11,7 @@ sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -
 # Executor binary'sini indirin ve çıkarın
 wget https://github.com/t3rn/executor-release/releases/download/v0.21.10/executor-linux-v0.21.10.tar.gz
 tar -xvzf executor-linux-v0.21.10.tar.gz
-cd executor-linux-v0.21.10/bin  # Dizin yolunu güncelleyin
+cd executor/executor/bin  # Dizin yolunu güncelleyin
 
 # Testnet ayarları
 export NODE_ENV=testnet
