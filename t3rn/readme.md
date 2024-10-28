@@ -54,8 +54,8 @@ screen -r executor
 
 4. **Order ve claim işleme seçeneklerini aktif hale getirin:**
    ```bash
-   export EXECUTOR_PROCESS_ORDERS=true
-   export EXECUTOR_PROCESS_CLAIMS=false
+   export EXECUTOR_PROCESS_ORDERS=false
+   export EXECUTOR_PROCESS_CLAIMS=true
    ```
 
 5. **Private keyinizi yazın (buraya yazan kısma kendi private key'inizi yazın):**
