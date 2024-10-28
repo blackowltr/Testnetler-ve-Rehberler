@@ -36,8 +36,8 @@ screen -r executor
 1. **Executor binary'sini indirin ve çıkarın:**
 
    ```bash
-   wget https://github.com/t3rn/executor-release/releases/download/v0.21.8/executor-linux-v0.21.8.tar.gz
-   tar -xvzf executor-linux-v0.21.8.tar.gz
+   wget https://github.com/t3rn/executor-release/releases/download/v0.21.10/executor-linux-v0.21.10.tar.gz
+   tar -xvzf executor-linux-v0.21.10.tar.gz
    cd /root/executor/executor/bin
    ```
 
@@ -55,7 +55,7 @@ screen -r executor
 4. **Order ve claim işleme seçeneklerini aktif hale getirin:**
    ```bash
    export EXECUTOR_PROCESS_ORDERS=true
-   export EXECUTOR_PROCESS_CLAIMS=true
+   export EXECUTOR_PROCESS_CLAIMS=false
    ```
 
 5. **Private keyinizi yazın (buraya yazan kısma kendi private key'inizi yazın):**
