@@ -27,8 +27,20 @@ export EXECUTOR_PROCESS_CLAIMS=true
 # Kullanıcının girdiği private key'i ayarlayın
 export PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL
 
-# Desteklenen ağları etkinleştirin
-export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+# Arbitrum Sepolia için RPC endpointleri
+export RPC_ENDPOINTS_ARBT='https://api.zan.top/arb-sepolia'
+
+# Base Sepolia için RPC endpointleri
+export RPC_ENDPOINTS_BSSP='https://base-sepolia.blockpi.network/v1/rpc/public'
+
+# Blast Sepolia için RPC endpointleri
+export RPC_ENDPOINTS_BLSS='https://endpoints.omniatech.io/v1/blast/sepolia/public'
+
+# Optimism Sepolia için RPC endpointleri
+export RPC_ENDPOINTS_OPSP='https://endpoints.omniatech.io/v1/op/sepolia/public'
+
+# RPC ile sipariş kabul etme
+export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
 
 # Executor'ü çalıştırın
 ./executor
