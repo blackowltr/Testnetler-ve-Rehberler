@@ -27,7 +27,7 @@ if [ $GIT_IS_AVAILABLE != 0 ]; then
   exit 1
 fi
 
-# Kullanıcıdan Prover ID'sini sor
+# Kullanıcıdan Prover ID'sini al ve kaydet
 if [ ! -f "$NEXUS_HOME/prover-id" ]; then
     echo "\nTo receive credit for proving in Nexus testnets..."
     echo "\t1. Go to ${GREEN}https://beta.nexus.xyz${NC}"
@@ -38,15 +38,21 @@ if [ ! -f "$NEXUS_HOME/prover-id" ]; then
 
     while [ ! -z "$PROVER_ID" ]; do
         if [ ${#PROVER_ID} -eq 28 ]; then
+            # Gerekirse dizini oluştur
+            mkdir -p "$NEXUS_HOME"
+
+            # Eski dosyayı yedekle
             if [ -f "$NEXUS_HOME/prover-id" ]; then
-                echo "Copying $NEXUS_HOME/prover-id to $NEXUS_HOME/prover-id.bak"
-                cp $NEXUS_HOME/prover-id $NEXUS_HOME/prover-id.bak
+                echo "Backing up existing Prover ID to $NEXUS_HOME/prover-id.bak"
+                cp "$NEXUS_HOME/prover-id" "$NEXUS_HOME/prover-id.bak"
             fi
-            echo "$PROVER_ID" > $NEXUS_HOME/prover-id
+
+            # Yeni Prover ID'yi yaz
+            echo "$PROVER_ID" > "$NEXUS_HOME/prover-id"
             echo "Prover ID saved to $NEXUS_HOME/prover-id."
             break
         else
-            echo "Unable to validate $PROVER_ID. Please make sure the full prover ID is copied."
+            echo "Invalid Prover ID. Please ensure it is 28 characters long."
         fi
         read -p "Enter your Prover ID again: " PROVER_ID </dev/tty
     done
