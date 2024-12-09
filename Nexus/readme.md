@@ -30,7 +30,7 @@ Kurulum tamamlandığında:
 1. İlk olarak, karşınıza çıkan soruya **`yes`** yanıtını verin ve Enter’a basın.  
 2. Daha sonra, kaydolurken aldığınız **Provider ID**’yi yapıştırarak Enter’a basın.  
 
-`Örn ID: E5XXXXXXXNZ7AcXXXXGpVXXXXN83`
+`Örnek ID: E5XXXXXXXNZ7AcXXXXGpVXXXXN83`
 
 ## Adım 4: Kazanç Süreci  
 
