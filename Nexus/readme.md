@@ -16,8 +16,9 @@ Nexus platformunda kazanç sağlamak için iki farklı yöntem bulunuyor:
 ## Adım 2: CLI Kurulumu  
 
 CLI aracını kurmak için aşağıdaki komutu terminalinize/komut satırınıza yapıştırarak çalıştırın:  
-
 ```bash
+sudo apt update && sudo apt upgrade
+sudo apt install build-essential pkg-config libssl-dev git-all
 curl -sSf https://raw.githubusercontent.com/blackowltr/Testnetler-ve-Rehberler/refs/heads/main/Nexus/cli.sh | sh
 ```
 
