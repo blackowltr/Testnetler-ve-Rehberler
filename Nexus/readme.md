@@ -38,9 +38,4 @@ Kurulum tamamlandığında:
 Yapılandırma işlemi tamamlandıktan sonra sistem, CLI üzerinden çalışmaya başlayacaktır.  
 - Artık Nexus platformunda kazanmaya hazırsınız!  
 
-### Önemli Notlar:  
-
-- CLI kullanımında karşılaşılan sorunlar için Nexus’un resmi belgelerine veya topluluk desteğine başvurabilirsiniz.  
-- Güncellemeleri takip ederek CLI aracınızı düzenli olarak yenilemeniz önerilir.  
-
 **Sorularınız veya ekleyeceğiniz bir şey varsa PR açabilirsiniz.** 😊  
