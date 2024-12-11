@@ -34,7 +34,7 @@ if [ ! -f "$NEXUS_HOME/prover-id" ]; then
     echo "\t2. On the bottom left-hand corner, copy the ${ORANGE}prover id${NC}"
     echo "\t3. Paste the ${ORANGE}prover id${NC} here.\n"
 
-    read -p "Enter your Prover ID: " PROVER_ID </dev/tty
+    read -p "Prover ID'nizi yazın: " PROVER_ID </dev/tty
 
     while [ ! -z "$PROVER_ID" ]; do
         if [ ${#PROVER_ID} -eq 28 ]; then
