@@ -36,8 +36,8 @@ screen -r executor
 1. **Executor binary'sini indirin ve çıkarın:**
 
    ```bash
-   wget https://github.com/t3rn/executor-release/releases/download/v0.21.10/executor-linux-v0.21.10.tar.gz
-   tar -xvzf executor-linux-v0.21.10.tar.gz
+   wget https://github.com/t3rn/executor-release/releases/download/v0.27.0/executor-linux-v0.27.0.tar.gz
+   tar -xvzf executor-linux-v0.27.0.tar.gz
    cd /root/executor/executor/bin
    ```
 
